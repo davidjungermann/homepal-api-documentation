@@ -18,9 +18,8 @@ namespace HomepalMockAPI.DatabaseConfiguration
         {
             using var connection = new SqliteConnection(databaseConfig.Name);
 
-            var table = connection.Query<string>("SELECT name FROM sqlite_master WHERE type='table' AND name = 'Buildings';");
-            var tableName = table.FirstOrDefault();
-            if (!string.IsNullOrEmpty(tableName) && tableName == "Buildings")
+            var table = connection.Query<string>("SELECT name FROM sqlite_master WHERE type='table'");
+            if (table != null && table.Any())
                 return;
         }
 
@@ -28,9 +27,8 @@ namespace HomepalMockAPI.DatabaseConfiguration
         {
             using var connection = new SqliteConnection("Data Source=:memory:");
 
-            var table = connection.Query<string>("SELECT name FROM sqlite_master WHERE type='table' AND name = 'Buildings';");
-            var tableName = table.FirstOrDefault();
-            if (!string.IsNullOrEmpty(tableName) && tableName == "Buildings")
+            var table = connection.Query<string>("SELECT name FROM sqlite_master WHERE type='table'");
+            if (table != null && table.Any())
                 return;
         }
 
