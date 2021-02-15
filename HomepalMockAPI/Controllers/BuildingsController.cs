@@ -9,16 +9,16 @@ namespace HomepalMockAPI.Controllers
 {
     [ApiController]
     [EnableCors]
-    public class BuildingController : ControllerBase
+    public class BuildingsController : ControllerBase
     {
-        private readonly IBuildingRepository buildingRepository;
+        private readonly IBuildingsRepository buildingRepository;
 
-        public BuildingController(IBuildingRepository buildingRepository)
+        public BuildingsController(IBuildingsRepository buildingRepository)
         {
             this.buildingRepository = buildingRepository;
         }
 
-        // GET: api/<BuildingController>
+        // GET: api/<BuildingsController>
         [Route("api/[controller]")]
         [HttpGet]
         public async Task<IEnumerable<Building>> Get()
@@ -26,7 +26,7 @@ namespace HomepalMockAPI.Controllers
             return await buildingRepository.Get();
         }
 
-        // GET: api/<BuildingController>/id
+        // GET: api/<BuildingsController>/id
         [Route("api/[controller]/{id}")]
         [HttpGet]
         public async Task<Building> Get(int id)
@@ -34,7 +34,7 @@ namespace HomepalMockAPI.Controllers
             return await buildingRepository.Get(id);
         }
 
-        // POST api/<BuildingController>
+        // POST api/<BuildingsController>
         [Route("api/[controller]")]
         [HttpPost]
         public async Task<int> Create([FromBody] Building building)
@@ -42,7 +42,7 @@ namespace HomepalMockAPI.Controllers
             return await buildingRepository.Create(building);
         }
 
-        // PUT api/<BuildingController>
+        // PUT api/<BuildingsController>
         [Route("api/[controller]")]
         [HttpPut]
         public async Task<int> Update([FromBody] Building building)
@@ -50,7 +50,7 @@ namespace HomepalMockAPI.Controllers
             return await buildingRepository.Update(building);
         }
 
-        // DELETE: api/<BuildingController>/id
+        // DELETE: api/<BuildingsController>/id
         [Route("api/[controller]/{id}")]
         [HttpDelete]
         public async Task<int> Delete(int id)

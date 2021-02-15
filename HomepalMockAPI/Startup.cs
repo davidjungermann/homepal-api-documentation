@@ -42,7 +42,7 @@ namespace HomepalMockAPI
             services.AddControllers();
             services.AddSingleton(new DatabaseConfig { Name = Configuration["DatabaseName"] });
             services.AddSingleton<IDatabaseBootstrap, DatabaseBootstrap>();
-            services.AddSingleton<IBuildingRepository, BuildingRepository>();
+            services.AddSingleton<IBuildingsRepository, BuildingsRepository>();
             services.AddControllersWithViews();
 
             // In production, the React files will be served from this directory

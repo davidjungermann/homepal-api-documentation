@@ -11,11 +11,11 @@ using System.Diagnostics;
 
 namespace HomepalMockAPI.DAL
 {
-    public class BuildingRepository : IBuildingRepository
+    public class BuildingsRepository : IBuildingsRepository
     {
         private readonly DatabaseConfig databaseConfig;
 
-        public BuildingRepository(DatabaseConfig databaseConfig)
+        public BuildingsRepository(DatabaseConfig databaseConfig)
         {
             this.databaseConfig = databaseConfig;
         }
