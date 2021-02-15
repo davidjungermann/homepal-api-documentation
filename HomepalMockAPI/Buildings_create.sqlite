@@ -1,0 +1,28 @@
+PRAGMA foreign_keys = OFF;
+
+DROP TABLE IF EXISTS Buildings;
+
+PRAGMA foreign_keys = ON;
+
+CREATE TABLE Buildings (
+	Id INTEGER PRIMARY KEY AUTOINCREMENT,
+	Type TEXT,
+	StreetName TEXT,
+	StreetNumber TEXT,
+	PostalCode TEXT
+);
+
+INSERT INTO
+	Buildings(
+		Type,
+		StreetName,
+		StreetNumber,
+		PostalCode
+	)
+VALUES
+	(
+		'Apartment',
+		'Kungsgatan',
+		'4A',
+		'22354'
+	);
