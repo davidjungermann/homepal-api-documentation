@@ -40,12 +40,12 @@ CREATE TABLE Agents (
 );
 
 CREATE TABLE Owners (
-	owner_id INTEGER NOT NULL,
+	owner_id INTEGER PRIMARY KEY,
 	FOREIGN KEY(owner_id) REFERENCES Agents(agent_id)
 );
 
 CREATE TABLE Customers (
-	customer_id INTEGER NOT NULL,
+	customer_id INTEGER PRIMARY KEY,
 	FOREIGN KEY(customer_id) REFERENCES Agents(agent_id)
 );
 
@@ -62,3 +62,30 @@ CREATE TABLE Leasables (
 	FOREIGN KEY(owner_id) REFERENCES Owners(owner_id),
 	FOREIGN KEY(building_id) REFERENCES Buildings(building_id)
 );
+
+INSERT INTO Regions(region_name)
+VALUES ("Skåne"), ("Norrland"), ("Södermanland"), ("Dalarna");
+
+INSERT INTO Agents(agent_name)
+VALUES ("Mitt Malmö"), ("Norrlandshus"), ("Kingens bostäder"), ("LKAB"), ("Stina Andersson"), ("Fia Andersson"), ("Erik Karlsson"), ("Kent Larsson");
+
+INSERT INTO Owners(owner_id)
+VALUES (1), (2), (3), (4);
+
+INSERT INTO Customers(customer_id)
+VALUES (5), (6), (7), (8);
+
+INSERT INTO RealEstates(real_estate_name, region_name, owner_id)
+VALUES ("Alfa", "Skåne", 1), ("Beta", "Norrland", 2), ("Gamma", "Södermanland", 3), ("Theta", "Dalarna", 4);
+
+INSERT INTO Buildings(building_class, building_street_name, building_street_number, building_postal_code, real_estate_id)
+VALUES ("ApartmentBuilding", "Skånegatan", "20", "223 33", 1), 
+       ("ApartmentBuilding", "Umeåvägen", "18", "333 44", 2), 
+	   ("LaundryBuilding", "Drottninggatan", "12", "453 11", 3), 
+	   ("EnvironmentalBuilding", "Hockeygatan", "76", "141 21", 4); 
+
+INSERT INTO Leasables(leasable_class, leasable_price, leasable_description, leasable_size, customer_id, owner_id, building_id)
+VALUES ("ResidentialPremise", 3483, "Apartment in central Malmö", "73 m²", 5, 1, 1),
+	   ("ResidentialPremise", 2500, "Apartment in the outskirts of Umeå", "145 m²", 6, 2, 2),
+	   ("StoragePremise", 1500, "Storage unit in connection with Laundry in Stockholm", "10 m²", 7, 3, 3),
+	   ("GaragePremise", 100, "Storage unit in connection with Environmental in Mora", "5 m²", 8, 4, 4);
