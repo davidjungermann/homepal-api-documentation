@@ -25,7 +25,7 @@ namespace HomepalMockAPI.DAL
         {
             using var connection = new SqliteConnection(databaseConfig.Name);
 
-            return await connection.QueryAsync<RealEstate>("SELECT * FROM RealEstate;");
+            return await connection.QueryAsync<RealEstate>("SELECT * FROM RealEstates;");
         }
 
         /* Returns all fields on a RealEstate based on id */
