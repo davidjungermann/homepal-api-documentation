@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace HomepalMockAPI.DAL
 {
-    public interface ICustomerRepository
+    public interface ICustomersRepository
     {
         Task<IEnumerable<Customer>> Get();
         Task<Customer> Get(int id);

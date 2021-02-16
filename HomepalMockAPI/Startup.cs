@@ -46,6 +46,8 @@ namespace HomepalMockAPI
             services.AddSingleton<IRegionsRepository, RegionsRepository>();
             services.AddSingleton<IRealEstatesRepository, RealEstatesRepository>();
             services.AddSingleton<IAgentsRepository, AgentsRepository>();
+            services.AddSingleton<ICustomersRepository, CustomersRepository>();
+            services.AddSingleton<IOwnersRepository, OwnersRepository>();
             services.AddControllersWithViews();
 
             // In production, the React files will be served from this directory

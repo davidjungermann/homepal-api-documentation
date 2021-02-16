@@ -11,11 +11,11 @@ using System.Diagnostics;
 
 namespace HomepalMockAPI.DAL
 {
-    public class OwnerRepository : IOwnerRepository
+    public class OwnersRepository : IOwnersRepository
     {
         private readonly DatabaseConfig databaseConfig;
 
-        public OwnerRepository(DatabaseConfig databaseConfig)
+        public OwnersRepository(DatabaseConfig databaseConfig)
         {
             this.databaseConfig = databaseConfig;
         }
@@ -44,8 +44,8 @@ namespace HomepalMockAPI.DAL
         {
             using var connection = new SqliteConnection(databaseConfig.Name);
 
-            return await connection.ExecuteAsync("INSERT INTO Owners (OwnerName)" +
-                "VALUES (@OwnerName);", owner);
+            return await connection.ExecuteAsync("INSERT INTO Owners (OwnerId)" +
+                "VALUES (@OwnerId);", owner);
         }
 
         /* Deletes a Owner based on id
