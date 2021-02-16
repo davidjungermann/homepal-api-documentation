@@ -8,7 +8,7 @@
 `sudo docker save homepalmockapi:latest | gzip > homepalmockapi.tar.gz`
 
 **Load image from file:**
-`sudo docker load < homepalmockiapi.tar.gz`
+`sudo docker load < homepalmockapi.tar.gz`
 
 
 
