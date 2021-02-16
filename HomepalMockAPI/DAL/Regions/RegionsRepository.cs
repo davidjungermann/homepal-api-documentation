@@ -28,16 +28,6 @@ namespace HomepalMockAPI.DAL
             return await connection.QueryAsync<Region>("SELECT * FROM Regions;");
         }
 
-        /* Returns all fields on a Region based on id */
-        public async Task<Region> Get(string name)
-        {
-            using var connection = new SqliteConnection(databaseConfig.Name);
-            var parameters = new DynamicParameters();
-            parameters.Add("@RegionName", name, DbType.Int32, ParameterDirection.Input);
-
-            return await connection.QuerySingleAsync<Region>("SELECT * FROM Regions WHERE [RegionName] = @RegionName;", parameters);
-        }
-
         /* Creates a new Region.
            @Returns number of row affected. */
         public async Task<int> Create(Region region)

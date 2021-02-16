@@ -26,14 +26,6 @@ namespace HomepalMockAPI.Controllers
             return await regionsRepository.Get();
         }
 
-        // GET: api/<RegionsController>/name
-        [Route("api/[controller]/{name}")]
-        [HttpGet]
-        public async Task<Region> Get(string name)
-        {
-            return await regionsRepository.Get(name);
-        }
-
         // POST api/<RegionsController>
         [Route("api/[controller]")]
         [HttpPost]
