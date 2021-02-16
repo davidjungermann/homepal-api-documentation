@@ -1,6 +1,6 @@
 namespace HomepalMockAPI.Models
 {
-    public class Regions
+    public class Region
     {
         public string RegionName { get; set; }
 

@@ -12,7 +12,7 @@ DROP TABLE IF EXISTS Leasables;
 PRAGMA foreign_keys = ON;
 
 CREATE TABLE Regions (
-	RegionName TEXT NOT NULL PRIMARY KEY
+	RegionName TEXT UNIQUE NOT NULL PRIMARY KEY
 );
 
 CREATE TABLE RealEstates (
