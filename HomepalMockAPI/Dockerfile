@@ -12,7 +12,7 @@ RUN apt-get install --yes nodejs
 # Copy the source from your machine onto the container.
 WORKDIR /src
 COPY . .
-RUN chmod 777 Buildings.db
+RUN chmod 777 HomepalMock.db
 
 # Install dependencies. 
 # https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-restore?tabs=netcore2x
