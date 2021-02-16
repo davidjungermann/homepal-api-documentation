@@ -2,10 +2,12 @@ namespace HomepalMockAPI.Models
 {
     public class Building
     {
-        public int Id { get; set; }
-        public string Type { get; set; }
-        public string StreetName { get; set; }
-        public string StreetNumber { get; set; }
-        public int PostalCode{ get; set; }
+        public int BuildingId { get; set; }
+        public string BuildingClass { get; set; }
+        public string BuildingStreetName { get; set; }
+        public string BuildingStreetNumber { get; set; }
+        public string BuildingPostalCode { get; set; }
+        public int RealEstateId { get; set; }
+
     }
 }
