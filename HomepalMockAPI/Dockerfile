@@ -21,7 +21,7 @@ RUN dotnet restore "./HomepalMockAPI.csproj"
 # Compile, then pack the compiled app and dependencies into a deployable unit.
 # https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-publish?tabs=netcore21
 RUN dotnet publish "HomepalMockAPI.csproj" -c Release -o /app/publish
-COPY Buildings.db /app/publish
+COPY HomepalMock.db /app/publish
 
 # Pull down an image from Docker Hub that includes only the ASP.NET core runtime:
 # https://hub.docker.com/_/microsoft-dotnet-aspnet
