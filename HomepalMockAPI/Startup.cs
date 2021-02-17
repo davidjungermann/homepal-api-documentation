@@ -80,7 +80,8 @@ namespace HomepalMockAPI
 
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Homepal Mock API");
+                c.RoutePrefix = "documentation";
             });
 
             app.UseStaticFiles();
