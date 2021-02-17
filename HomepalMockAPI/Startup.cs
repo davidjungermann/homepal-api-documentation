@@ -40,6 +40,7 @@ namespace HomepalMockAPI
                     });
             });
             services.AddControllers();
+            services.AddSwaggerGen();
             services.AddSingleton(new DatabaseConfig { Name = Configuration["DatabaseName"] });
             services.AddSingleton<IDatabaseBootstrap, DatabaseBootstrap>();
             services.AddSingleton<IBuildingsRepository, BuildingsRepository>();
@@ -75,6 +76,13 @@ namespace HomepalMockAPI
             }
 
             //app.UseHttpsRedirection();
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
+
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
 
