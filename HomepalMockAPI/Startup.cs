@@ -29,18 +29,14 @@ namespace HomepalMockAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors(options =>
-            {
-                options.AddDefaultPolicy(
-                    builder =>
-                    {
-                        builder.WithOrigins("http://localhost:3000")
-                                        .AllowAnyHeader()
-                                        .AllowAnyMethod();
-                    });
-            });
             services.AddControllers();
             services.AddSwaggerGen();
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Homepal Mock API", Version = "v1" });
+            });
+
             services.AddSingleton(new DatabaseConfig { Name = Configuration["DatabaseName"] });
             services.AddSingleton<IDatabaseBootstrap, DatabaseBootstrap>();
             services.AddSingleton<IBuildingsRepository, BuildingsRepository>();
@@ -77,16 +73,8 @@ namespace HomepalMockAPI
 
             //app.UseHttpsRedirection();
             app.UseSwagger();
-
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Homepal Mock API");
-                c.RoutePrefix = "documentation";
-            });
-
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
-
             app.UseRouting();
             app.UseCors();
             app.UseAuthorization();
