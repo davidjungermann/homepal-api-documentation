@@ -22,8 +22,9 @@ namespace HomepalMockAPI.Controllers
         /// <summary>
         /// Retrieves all Agents
         /// </summary>
-        /// <remarks>Agents are blablabla</remarks>
+        /// <remarks>An Agent is a person or entity registered in the system.!!!! MEN MAN KAN SKRIVA MASSOR MED TEXT KANSKE <b>RÖV</b></remarks>
         /// <response code="200">Retrieved Agents</response>
+        /// <response code="500">Internal Server Error</response>
         [Route("api/[controller]")]
         [HttpGet]
         public async Task<IEnumerable<Agent>> Get()

@@ -14,7 +14,6 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using HomepalMockAPI.DatabaseConfiguration;
 using HomepalMockAPI.DAL;
-using System;
 using System.IO;
 
 namespace HomepalMockAPI
