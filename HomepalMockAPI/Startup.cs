@@ -14,6 +14,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using HomepalMockAPI.DatabaseConfiguration;
 using HomepalMockAPI.DAL;
+using System;
+using System.IO;
 
 namespace HomepalMockAPI
 {
@@ -30,11 +32,12 @@ namespace HomepalMockAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddSwaggerGen();
 
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Homepal Mock API", Version = "v1" });
+                var filePath = Path.Combine(System.AppContext.BaseDirectory, "HomepalMockAPI.xml");
+                c.IncludeXmlComments(filePath);
             });
 
             services.AddSingleton(new DatabaseConfig { Name = Configuration["DatabaseName"] });

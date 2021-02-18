@@ -19,6 +19,11 @@ namespace HomepalMockAPI.Controllers
         }
 
         // GET: api/<AgentsController>
+        /// <summary>
+        /// Retrieves all Agents
+        /// </summary>
+        /// <remarks>Agents are blablabla</remarks>
+        /// <response code="200">Retrieved Agents</response>
         [Route("api/[controller]")]
         [HttpGet]
         public async Task<IEnumerable<Agent>> Get()
