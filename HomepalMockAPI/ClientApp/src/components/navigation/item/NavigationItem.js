@@ -8,13 +8,14 @@ export const NavigationItem = ({
   items,
   depthStep = 15,
   depth = 0,
+  fontSize = 18,
   ...rest
 }) => {
   return (
     <React.Fragment>
       <ListItem button dense {...rest}>
         <ListItemText style={{ paddingLeft: depth * depthStep }}>
-          <span>{label}</span>
+          <span style={{ fontSize: fontSize }}>{label}</span>
         </ListItemText>
       </ListItem>
       {Array.isArray(items) ? (
@@ -24,6 +25,7 @@ export const NavigationItem = ({
               key={subItem.label}
               depth={depth + 1}
               depthStep={depthStep}
+              fontSize={fontSize - 2}
               {...subItem}
             />
           ))}
