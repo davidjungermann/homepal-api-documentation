@@ -10,7 +10,7 @@ export const Navigation = ({ items, depthStep, depth }) => {
         <List disablePadding dense>
           {items.map((sidebarItem, index) => (
             <NavigationItem
-              key={`${sidebarItem.name}${index}`}
+              key={`${sidebarItem.label}${index}`}
               depthStep={depthStep}
               depth={depth}
               {...sidebarItem}

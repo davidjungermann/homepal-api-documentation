@@ -21,7 +21,7 @@ export const NavigationItem = ({
         <List disablePadding dense>
           {items.map((subItem) => (
             <NavigationItem
-              key={subItem.name}
+              key={subItem.label}
               depth={depth + 1}
               depthStep={depthStep}
               {...subItem}

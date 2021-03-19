@@ -64,7 +64,6 @@ export const items = [
         ],
       },
       {
-        name: "customers",
         label: "Owner",
         items: [
           { label: "Get Owners" },
@@ -84,7 +83,6 @@ export const items = [
         ],
       },
       {
-        name: "customers",
         label: "Region",
         items: [
           { label: "Get Regions" },
