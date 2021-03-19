@@ -2,7 +2,7 @@ namespace HomepalMockAPI.Models
 {
     public class Customer
     {
-        public int CustomerId { get; set; }
+        public int id { get; set; }
 
     }
 }

@@ -34,19 +34,19 @@ namespace HomepalMockAPI.DAL
         {
             using var connection = new SqliteConnection(databaseConfig.Name);
 
-            return await connection.ExecuteAsync("INSERT INTO Regions (RegionName)" +
-                "VALUES (@RegionName);", region);
+            return await connection.ExecuteAsync("INSERT INTO Regions (name)" +
+                "VALUES (@name);", region);
         }
 
-        /* Deletes a Region based on RegionName
+        /* Deletes a Region based on name
            @Returns number of row affected. */
         public async Task<int> Delete(string name)
         {
             using var connection = new SqliteConnection(databaseConfig.Name);
             var parameters = new DynamicParameters();
-            parameters.Add("@RegionName", name, DbType.Int32, ParameterDirection.Input);
+            parameters.Add("@name", name, DbType.Int32, ParameterDirection.Input);
 
-            return await connection.ExecuteAsync("DELETE FROM Regions WHERE [RegionName] = @RegionName;", parameters);
+            return await connection.ExecuteAsync("DELETE FROM Regions WHERE [name] = @name;", parameters);
         }
     }
 }

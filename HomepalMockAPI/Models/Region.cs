@@ -2,7 +2,7 @@ namespace HomepalMockAPI.Models
 {
     public class Region
     {
-        public string RegionName { get; set; }
+        public string name { get; set; }
 
     }
 }

@@ -12,79 +12,79 @@ DROP TABLE IF EXISTS Leasables;
 PRAGMA foreign_keys = ON;
 
 CREATE TABLE Regions (
-	RegionName TEXT UNIQUE NOT NULL PRIMARY KEY
+	name TEXT UNIQUE NOT NULL PRIMARY KEY
 );
 
 CREATE TABLE RealEstates (
-	RealEstateId INTEGER PRIMARY KEY AUTOINCREMENT,
-	RealEstateName TEXT,
-	RegionName TEXT NOT NULL,
-	OwnerId INTEGER NOT NULL,
-	FOREIGN KEY(RegionName) REFERENCES Regions(RegionName),
-	FOREIGN KEY(OwnerId) REFERENCES Owners(OwnerId)
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	name TEXT,
+	region_name TEXT NOT NULL,
+	owner_id INTEGER NOT NULL,
+	FOREIGN KEY(region_name) REFERENCES Regions(name),
+	FOREIGN KEY(owner_id) REFERENCES Owners(id)
 );
 
 CREATE TABLE Buildings (
-	BuildingId INTEGER PRIMARY KEY AUTOINCREMENT,
-	BuildingClass TEXT,
-	BuildingStreetName TEXT,
-	BuildingStreetNumber TEXT,
-	BuildingPostalCode TEXT,
-	RealEstateId INTEGER NOT NULL,
-	FOREIGN KEY(RealEstateId) REFERENCES RealEstates(RealEstateId)
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	class_descriptor TEXT,
+	street_name TEXT,
+	street_number TEXT,
+	postal_code TEXT,
+	real_estate_id INTEGER NOT NULL,
+	FOREIGN KEY(real_estate_id) REFERENCES RealEstates(id)
 );
 
 CREATE TABLE Agents (
-	AgentId INTEGER PRIMARY KEY AUTOINCREMENT,
-	AgentName TEXT
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	name TEXT
 );
 
 CREATE TABLE Owners (
-	OwnerId INTEGER PRIMARY KEY,
-	FOREIGN KEY(OwnerId) REFERENCES Agents(AgentId)
+	id INTEGER PRIMARY KEY,
+	FOREIGN KEY(id) REFERENCES Agents(id)
 );
 
 CREATE TABLE Customers (
-	CustomerId INTEGER PRIMARY KEY,
-	FOREIGN KEY(CustomerId) REFERENCES Agents(AgentId)
+	id INTEGER PRIMARY KEY,
+	FOREIGN KEY(id) REFERENCES Agents(id)
 );
 
 CREATE TABLE Leasables (
-	LeasableId INTEGER PRIMARY KEY AUTOINCREMENT,
-	LeasableClass TEXT,
-	LeasablePrice INTEGER,
-	LeasableDescription TEXT,
-	LeasableSize TEXT,
-	CustomerId INTEGER NOT NULL,
-	OwnerId INTEGER NOT NULL,
-	BuildingId INTEGER NOT NULL,
-	FOREIGN KEY(CustomerId) REFERENCES Customers(CustomerId),
-	FOREIGN KEY(OwnerId) REFERENCES Owners(OwnerId),
-	FOREIGN KEY(BuildingId) REFERENCES Buildings(BuildingId)
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	class_descriptor TEXT,
+	price INTEGER,
+	description TEXT,
+	size TEXT,
+	customer_id INTEGER NOT NULL,
+	owner_id INTEGER NOT NULL,
+	building_id INTEGER NOT NULL,
+	FOREIGN KEY(customer_id) REFERENCES Customers(id),
+	FOREIGN KEY(owner_id) REFERENCES Owners(id),
+	FOREIGN KEY(building_id) REFERENCES Buildings(id)
 );
 
-INSERT INTO Regions(RegionName)
+INSERT INTO Regions(name)
 VALUES ("Skåne"), ("Norrland"), ("Södermanland"), ("Dalarna");
 
-INSERT INTO Agents(AgentName)
+INSERT INTO Agents(name)
 VALUES ("Mitt Malmö"), ("Norrlandshus"), ("Kingens bostäder"), ("LKAB"), ("Stina Andersson"), ("Fia Andersson"), ("Erik Karlsson"), ("Kent Larsson");
 
-INSERT INTO Owners(OwnerId)
+INSERT INTO Owners(id)
 VALUES (1), (2), (3), (4);
 
-INSERT INTO Customers(CustomerId)
+INSERT INTO Customers(id)
 VALUES (5), (6), (7), (8);
 
-INSERT INTO RealEstates(RealEstateName, RegionName, OwnerId)
+INSERT INTO RealEstates(name, region_name, owner_id)
 VALUES ("Alfa", "Skåne", 1), ("Beta", "Norrland", 2), ("Gamma", "Södermanland", 3), ("Theta", "Dalarna", 4);
 
-INSERT INTO Buildings(BuildingClass, BuildingStreetName, BuildingStreetNumber, BuildingPostalCode, RealEstateId)
+INSERT INTO Buildings(class_descriptor, street_name, street_number, postal_code, real_estate_id)
 VALUES ("ApartmentBuilding", "Skånegatan", "20", "223 33", 1), 
        ("ApartmentBuilding", "Umeåvägen", "18", "333 44", 2), 
 	   ("LaundryBuilding", "Drottninggatan", "12", "453 11", 3), 
 	   ("EnvironmentalBuilding", "Hockeygatan", "76", "141 21", 4); 
 
-INSERT INTO Leasables(LeasableClass, LeasablePrice, LeasableDescription, LeasableSize, CustomerId, OwnerId, BuildingId)
+INSERT INTO Leasables(class_descriptor, price, description, size, customer_id, owner_id, building_id)
 VALUES ("ResidentialPremise", 3483, "Apartment in central Malmö", "73 m²", 5, 1, 1),
 	   ("ResidentialPremise", 2500, "Apartment in the outskirts of Umeå", "145 m²", 6, 2, 2),
 	   ("StoragePremise", 1500, "Storage unit in connection with Laundry in Stockholm", "10 m²", 7, 3, 3),
