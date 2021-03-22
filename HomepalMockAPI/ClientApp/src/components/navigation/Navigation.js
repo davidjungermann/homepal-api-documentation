@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 
 import "./Navigation.scss";
 
-export const Navigation = ({ items, formatUrl, urls }) => {
+export const Navigation = ({ items, formatUrl, urls, generateRoutes }) => {
   const [currentNavigationItem, setCurrentNavigationItem] = useState({});
   let history = useHistory();
 
@@ -19,7 +19,6 @@ export const Navigation = ({ items, formatUrl, urls }) => {
       <div className="navigation-container">
         <ul className="navigation-list">
           {items.map((sidebarItem) => {
-            //setRouteNames(formatUrl(sidebarItem.label));
             urls.push(formatUrl(sidebarItem.label));
             return (
               <NavigationItem
@@ -29,6 +28,7 @@ export const Navigation = ({ items, formatUrl, urls }) => {
                 handleCurrentNavigationItem={handleCurrentNavigationItem}
                 formatUrl={formatUrl}
                 urls={urls}
+                generateRoutes={generateRoutes}
                 onClick={() => handleCurrentNavigationItem(sidebarItem)}
                 {...sidebarItem}
               />

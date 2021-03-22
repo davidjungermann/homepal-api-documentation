@@ -13,6 +13,7 @@ export const NavigationItem = ({
   nextId,
   formatUrl,
   urls,
+  generateRoutes,
   ...rest
 }) => {
   const handleSelected = (label) => {
@@ -53,7 +54,9 @@ export const NavigationItem = ({
             );
           })}
         </ul>
-      ) : null}
+      ) : (
+        null
+      )}
     </React.Fragment>
   );
 };

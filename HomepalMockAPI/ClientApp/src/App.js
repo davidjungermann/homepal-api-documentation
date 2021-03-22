@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Navigation } from "./components/navigation/Navigation";
 import { items } from "./components/navigation/items";
 import { BrowserRouter as Switch, Route } from "react-router-dom";
@@ -28,15 +28,21 @@ function App() {
       .replace(/[A-Z][a-z]*/g, (str) => str.toLowerCase());
   };
 
+  const generateRoutes = () => {
+    urls.forEach((url) => {
+      console.log(url);
+    });
+  };
+
   return (
     <div className="App">
-      <h1 onClick={() => console.log(urls)}>Klicka mig!</h1>
       <div className="container">
         <Switch>
           <Navigation
             items={items}
             formatUrl={formatUrl}
             urls={urls}
+            generateRoutes={generateRoutes}
           />
           <div className="description-container">
             {routes.map((route, index) => (
