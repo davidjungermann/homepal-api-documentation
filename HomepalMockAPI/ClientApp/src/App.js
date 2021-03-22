@@ -1,7 +1,6 @@
 import { Navigation } from "./components/navigation/Navigation";
 import { items } from "./components/navigation/items";
 import { BrowserRouter as Switch, Route } from "react-router-dom";
-import { Introduction } from "./components/description/unit/Introduction";
 
 import "./App.css";
 import { Description } from "./components/description/Description";
@@ -19,12 +18,19 @@ function App() {
       main: () => <Description tag="about-the-api"></Description>,
     },
   ];
+  const urls = [];
+
+  const formatUrl = (label) => {
+    return label
+      .replace(/\s/g, "-")
+      .replace(/[A-Z][a-z]*/g, (str) => str.toLowerCase());
+  };
 
   return (
     <div className="App">
       <div className="container">
         <Switch>
-          <Navigation items={items} />
+          <Navigation items={items} formatUrl={formatUrl} urls={urls} />
           <div className="description-container">
             {routes.map((route, index) => (
               <Route

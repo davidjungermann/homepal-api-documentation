@@ -13,7 +13,6 @@ export const NavigationItem = ({
   nextId,
   ...rest
 }) => {
-
   const handleSelected = (label) => {
     if (label === currentNavigationItem.label) {
       return "list-item-label-selected";
