@@ -11,6 +11,7 @@ export const NavigationItem = ({
   currentNavigationItem,
   handleCurrentNavigationItem,
   nextId,
+  addRoute,
   ...rest
 }) => {
   const handleSelected = (label) => {

@@ -1,11 +1,14 @@
+import React, { useState } from "react";
 import { Navigation } from "./components/navigation/Navigation";
 import { items } from "./components/navigation/items";
 import { BrowserRouter as Switch, Route } from "react-router-dom";
-
-import "./App.css";
 import { Description } from "./components/description/Description";
 
+import "./App.css";
+
 function App() {
+  const [routeNames, setRouteNames] = useState([]);
+
   const routes = [
     {
       path: "/introduction",
@@ -18,7 +21,6 @@ function App() {
       main: () => <Description tag="about-the-api"></Description>,
     },
   ];
-  const urls = [];
 
   const formatUrl = (label) => {
     return label
@@ -30,7 +32,11 @@ function App() {
     <div className="App">
       <div className="container">
         <Switch>
-          <Navigation items={items} formatUrl={formatUrl} urls={urls} />
+          <Navigation
+            items={items}
+            formatUrl={formatUrl}
+            setRoutes={setRouteNames}
+          />
           <div className="description-container">
             {routes.map((route, index) => (
               <Route

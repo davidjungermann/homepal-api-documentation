@@ -5,13 +5,17 @@ import { useHistory } from "react-router-dom";
 
 import "./Navigation.scss";
 
-export const Navigation = ({ items, formatUrl, urls }) => {
+export const Navigation = ({ items, formatUrl, setRouteNames }) => {
   const [currentNavigationItem, setCurrentNavigationItem] = useState({});
   let history = useHistory();
 
   const handleCurrentNavigationItem = (value) => {
     setCurrentNavigationItem(value);
     history.push("/" + formatUrl(value.label));
+  };
+
+  const addRoute = (url) => {
+    setRouteNames(formatUrl(url));
   };
 
   return (
@@ -25,6 +29,7 @@ export const Navigation = ({ items, formatUrl, urls }) => {
               currentNavigationItem={currentNavigationItem}
               handleCurrentNavigationItem={handleCurrentNavigationItem}
               onClick={() => handleCurrentNavigationItem(sidebarItem)}
+              addRoute={addRoute}
               {...sidebarItem}
             />
           ))}
