@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import "./Navigation.scss";
 import { NavigationItem } from "./item/NavigationItem";
 import nextId from "react-id-generator";
+
+import "./Navigation.scss";
 
 export const Navigation = ({ items }) => {
   const [currentNavigationItem, setCurrentNavigationItem] = useState({});
@@ -20,6 +21,7 @@ export const Navigation = ({ items }) => {
               nextId={nextId}
               currentNavigationItem={currentNavigationItem}
               handleCurrentNavigationItem={handleCurrentNavigationItem}
+              routerLink={sidebarItem.label}
               onClick={() => handleCurrentNavigationItem(sidebarItem)}
               {...sidebarItem}
             />
