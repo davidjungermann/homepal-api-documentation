@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 
 import "./Navigation.scss";
 
-export const Navigation = ({ items, formatUrl, setRouteNames }) => {
+export const Navigation = ({ items, formatUrl, urls }) => {
   const [currentNavigationItem, setCurrentNavigationItem] = useState({});
   let history = useHistory();
 
@@ -14,25 +14,26 @@ export const Navigation = ({ items, formatUrl, setRouteNames }) => {
     history.push("/" + formatUrl(value.label));
   };
 
-  const addRoute = (url) => {
-    setRouteNames(formatUrl(url));
-  };
-
   return (
     <React.Fragment>
       <div className="navigation-container">
         <ul className="navigation-list">
-          {items.map((sidebarItem) => (
-            <NavigationItem
-              key={nextId()}
-              nextId={nextId}
-              currentNavigationItem={currentNavigationItem}
-              handleCurrentNavigationItem={handleCurrentNavigationItem}
-              onClick={() => handleCurrentNavigationItem(sidebarItem)}
-              addRoute={addRoute}
-              {...sidebarItem}
-            />
-          ))}
+          {items.map((sidebarItem) => {
+            //setRouteNames(formatUrl(sidebarItem.label));
+            urls.push(formatUrl(sidebarItem.label));
+            return (
+              <NavigationItem
+                key={nextId()}
+                nextId={nextId}
+                currentNavigationItem={currentNavigationItem}
+                handleCurrentNavigationItem={handleCurrentNavigationItem}
+                formatUrl={formatUrl}
+                urls={urls}
+                onClick={() => handleCurrentNavigationItem(sidebarItem)}
+                {...sidebarItem}
+              />
+            );
+          })}
         </ul>
       </div>
     </React.Fragment>

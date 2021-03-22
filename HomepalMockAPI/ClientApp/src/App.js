@@ -7,7 +7,7 @@ import { Description } from "./components/description/Description";
 import "./App.css";
 
 function App() {
-  const [routeNames, setRouteNames] = useState([]);
+  let urls = [];
 
   const routes = [
     {
@@ -30,12 +30,13 @@ function App() {
 
   return (
     <div className="App">
+      <h1 onClick={() => console.log(urls)}>Klicka mig!</h1>
       <div className="container">
         <Switch>
           <Navigation
             items={items}
             formatUrl={formatUrl}
-            setRoutes={setRouteNames}
+            urls={urls}
           />
           <div className="description-container">
             {routes.map((route, index) => (

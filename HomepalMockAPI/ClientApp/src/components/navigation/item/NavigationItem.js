@@ -11,7 +11,8 @@ export const NavigationItem = ({
   currentNavigationItem,
   handleCurrentNavigationItem,
   nextId,
-  addRoute,
+  formatUrl,
+  urls,
   ...rest
 }) => {
   const handleSelected = (label) => {
@@ -33,19 +34,24 @@ export const NavigationItem = ({
       </div>
       {Array.isArray(items) ? (
         <ul className="navigation-sub-list">
-          {items.map((subItem) => (
-            <NavigationItem
-              key={nextId()}
-              depth={depth + 1}
-              depthStep={depthStep}
-              fontSize={fontSize - 2}
-              currentNavigationItem={currentNavigationItem}
-              handleCurrentNavigationItem={handleCurrentNavigationItem}
-              nextId={nextId}
-              onClick={() => handleCurrentNavigationItem(subItem)}
-              {...subItem}
-            />
-          ))}
+          {items.map((subItem) => {
+            urls.push(formatUrl(subItem.label));
+            return (
+              <NavigationItem
+                key={nextId()}
+                depth={depth + 1}
+                depthStep={depthStep}
+                fontSize={fontSize - 2}
+                currentNavigationItem={currentNavigationItem}
+                handleCurrentNavigationItem={handleCurrentNavigationItem}
+                nextId={nextId}
+                formatUrl={formatUrl}
+                urls={urls}
+                onClick={() => handleCurrentNavigationItem(subItem)}
+                {...subItem}
+              />
+            );
+          })}
         </ul>
       ) : null}
     </React.Fragment>
