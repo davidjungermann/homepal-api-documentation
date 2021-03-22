@@ -4,18 +4,19 @@ import { BrowserRouter as Switch, Route } from "react-router-dom";
 import { Introduction } from "./components/description/unit/Introduction";
 
 import "./App.css";
+import { Description } from "./components/description/Description";
 
 function App() {
   const routes = [
     {
       path: "/introduction",
       exact: true,
-      main: () => <Introduction></Introduction>,
+      main: () => <Description tag="introduction"></Description>,
     },
     {
       path: "/about-the-api",
       exact: true,
-      main: () => <h2>Hej</h2>,
+      main: () => <Description tag="about-the-api"></Description>,
     },
   ];
 
