@@ -6,18 +6,33 @@ import { Introduction } from "./components/description/unit/Introduction";
 import "./App.css";
 
 function App() {
+  const routes = [
+    {
+      path: "/introduction",
+      exact: true,
+      main: () => <Introduction></Introduction>,
+    },
+    {
+      path: "/about-the-api",
+      exact: true,
+      main: () => <h2>Hej</h2>,
+    },
+  ];
+
   return (
     <div className="App">
       <div className="container">
         <Switch>
           <Navigation items={items} />
           <div className="description-container">
-            <Route path="/introduction">
-              <Introduction></Introduction>
-            </Route>
-            <Route path="/about-the-api">
-              <h1>Hej!</h1>
-            </Route>
+            {routes.map((route, index) => (
+              <Route
+                key={index}
+                path={route.path}
+                exact={route.exact}
+                children={<route.main />}
+              />
+            ))}
           </div>
         </Switch>
       </div>
