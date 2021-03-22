@@ -1,14 +1,23 @@
 import React, { useState } from "react";
 import { NavigationItem } from "./item/NavigationItem";
 import nextId from "react-id-generator";
+import { useHistory } from "react-router-dom";
 
 import "./Navigation.scss";
 
 export const Navigation = ({ items }) => {
   const [currentNavigationItem, setCurrentNavigationItem] = useState({});
+  let history = useHistory();
 
   const handleCurrentNavigationItem = (value) => {
     setCurrentNavigationItem(value);
+    history.push("/" + formatUrl(value.label));
+  };
+
+  const formatUrl = (label) => {
+    return label
+      .replace(/\s/g, "-")
+      .replace(/[A-Z][a-z]*/g, (str) => str.toLowerCase());
   };
 
   return (

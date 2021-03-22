@@ -14,21 +14,13 @@ export const NavigationItem = ({
   nextId,
   ...rest
 }) => {
-  let history = useHistory();
 
   const handleSelected = (label) => {
     if (label === currentNavigationItem.label) {
-      history.push("/" + formatUrl(currentNavigationItem.label));
       return "list-item-label-selected";
     } else {
       return "list-item-label";
     }
-  };
-
-  const formatUrl = (label) => {
-    return label
-      .replace(/\s/g, "-")
-      .replace(/[A-Z][a-z]*/g, (str) => str.toLowerCase());
   };
 
   return (
