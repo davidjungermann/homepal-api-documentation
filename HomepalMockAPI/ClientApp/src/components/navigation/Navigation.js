@@ -30,7 +30,6 @@ export const Navigation = ({ items }) => {
               nextId={nextId}
               currentNavigationItem={currentNavigationItem}
               handleCurrentNavigationItem={handleCurrentNavigationItem}
-              routerLink={sidebarItem.label}
               onClick={() => handleCurrentNavigationItem(sidebarItem)}
               {...sidebarItem}
             />

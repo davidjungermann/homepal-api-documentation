@@ -1,6 +1,6 @@
 import { Navigation } from "./components/navigation/Navigation";
 import { items } from "./components/navigation/items";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Switch, Route } from "react-router-dom";
 import { Introduction } from "./components/description/unit/Introduction";
 
 import "./App.css";
@@ -8,13 +8,19 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Switch>
-        <Route path="/Introduction">
-          <Introduction></Introduction>
-        </Route>
-      </Switch>
-
-      <Navigation items={items} />
+      <div className="container">
+        <Switch>
+          <Navigation items={items} />
+          <div className="description-container">
+            <Route path="/introduction">
+              <Introduction></Introduction>
+            </Route>
+            <Route path="/about-the-api">
+              <h1>Hej!</h1>
+            </Route>
+          </div>
+        </Switch>
+      </div>
     </div>
   );
 }
