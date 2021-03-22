@@ -1,7 +1,4 @@
 import React from "react";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
 import "./NavigationItem.scss";
 
 export const NavigationItem = ({
@@ -25,15 +22,15 @@ export const NavigationItem = ({
 
   return (
     <React.Fragment>
-      <ListItem button {...rest}>
-        <ListItemText style={{ paddingLeft: depth * depthStep }}>
-          <span className={handleSelected(label)} style={{ fontSize: fontSize }}>
+      <div className="navigation-item-container">
+        <li className={handleSelected(label)} {...rest}>
+          <span style={{ paddingLeft: depth * depthStep, fontSize: fontSize }}>
             {label}
           </span>
-        </ListItemText>
-      </ListItem>
+        </li>
+      </div>
       {Array.isArray(items) ? (
-        <List disablePadding>
+        <ul className="navigation-sub-list">
           {items.map((subItem) => (
             <NavigationItem
               key={nextId()}
@@ -47,7 +44,7 @@ export const NavigationItem = ({
               {...subItem}
             />
           ))}
-        </List>
+        </ul>
       ) : null}
     </React.Fragment>
   );

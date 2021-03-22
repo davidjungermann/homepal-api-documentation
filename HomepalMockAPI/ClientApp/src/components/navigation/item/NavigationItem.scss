@@ -3,5 +3,21 @@
 }
 
 .list-item-label-selected {
-  color: red;
+  color: black;
+}
+
+.navigation-item-container {
+  margin-bottom: 10%;
+  margin-top: 10%;
+  user-select: none;
+}
+
+.navigation-item-container:hover {
+  cursor: pointer;
+}
+
+.navigation-sub-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Navigation.scss";
-import List from "@material-ui/core/List";
 import { NavigationItem } from "./item/NavigationItem";
 import nextId from "react-id-generator";
 
@@ -14,7 +13,7 @@ export const Navigation = ({ items }) => {
   return (
     <React.Fragment>
       <div className="navigation-container">
-        <List dense>
+        <ul className="navigation-list">
           {items.map((sidebarItem) => (
             <NavigationItem
               key={nextId()}
@@ -25,7 +24,7 @@ export const Navigation = ({ items }) => {
               {...sidebarItem}
             />
           ))}
-        </List>
+        </ul>
       </div>
     </React.Fragment>
   );

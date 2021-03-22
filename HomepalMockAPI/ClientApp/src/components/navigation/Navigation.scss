@@ -1,8 +1,17 @@
 .navigation-container {
-    max-width: 240px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-  }
+  max-width: 240px;
+  display: table;
+  background-color: #e0e8f0;
+}
 
-  .sidebar-subitem-text {
-    font-size: 0.8rem;
-  }
+.sidebar-subitem-text {
+  font-size: 0.8rem;
+}
+
+.navigation-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 10px;
+  text-align: left;
+}
