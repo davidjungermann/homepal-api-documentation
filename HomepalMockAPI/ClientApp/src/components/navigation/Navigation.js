@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import "./Navigation.scss";
 import List from "@material-ui/core/List";
 import { NavigationItem } from "./item/NavigationItem";
+import nextId from "react-id-generator";
 
 export const Navigation = ({ items }) => {
-  const [currentNavigationItem, setCurrentNavigationItem] = useState("Init");
+  const [currentNavigationItem, setCurrentNavigationItem] = useState({});
 
   const handleCurrentNavigationItem = (value) => {
     setCurrentNavigationItem(value);
@@ -12,13 +13,15 @@ export const Navigation = ({ items }) => {
 
   return (
     <React.Fragment>
-      <h1>{currentNavigationItem}</h1>
+      <h1>{currentNavigationItem.label}</h1>
       <div className="navigation-container">
         <List disablePadding dense>
-          {items.map((sidebarItem, index) => (
+          {items.map((sidebarItem) => (
             <NavigationItem
+              key={nextId()}
+              nextId={nextId}
               handleCurrentNavigationItem={handleCurrentNavigationItem}
-              key={`${sidebarItem.label}${index}`}
+              onClick={() => handleCurrentNavigationItem(sidebarItem)}
               {...sidebarItem}
             />
           ))}
