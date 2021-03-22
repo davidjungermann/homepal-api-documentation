@@ -13,13 +13,13 @@ export const Navigation = ({ items }) => {
 
   return (
     <React.Fragment>
-      <h1>{currentNavigationItem.label}</h1>
       <div className="navigation-container">
-        <List disablePadding dense>
+        <List dense>
           {items.map((sidebarItem) => (
             <NavigationItem
               key={nextId()}
               nextId={nextId}
+              currentNavigationItem={currentNavigationItem}
               handleCurrentNavigationItem={handleCurrentNavigationItem}
               onClick={() => handleCurrentNavigationItem(sidebarItem)}
               {...sidebarItem}
