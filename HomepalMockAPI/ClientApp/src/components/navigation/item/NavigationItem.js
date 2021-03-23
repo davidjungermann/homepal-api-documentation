@@ -1,4 +1,5 @@
 import React from "react";
+import { HashLink as Link } from "react-router-hash-link";
 
 import "./NavigationItem.scss";
 
@@ -25,11 +26,11 @@ export const NavigationItem = ({
   return (
     <React.Fragment>
       <div className="navigation-item-container">
-        <li className={handleSelected(label)} {...rest}>
+        <Link className={handleSelected(label)} {...rest}>
           <span style={{ paddingLeft: depth * depthStep, fontSize: fontSize }}>
             {label}
           </span>
-        </li>
+        </Link>
       </div>
       {Array.isArray(items) ? (
         <ul className="navigation-sub-list">
