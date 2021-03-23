@@ -1,24 +1,12 @@
 import React from "react";
 import { Navigation } from "./components/navigation/Navigation";
 import { items } from "./components/navigation/items";
+import { routes } from "./components/description/Routes";
 import { BrowserRouter as Switch, Route } from "react-router-dom";
-import { Description } from "./components/description/Description";
 
 import "./App.css";
 
 function App() {
-  var routes = [
-    {
-      path: "/introduction",
-      exact: true,
-      main: () => <Description tag="introduction"></Description>,
-    },
-    {
-      path: "/about-the-api",
-      exact: true,
-      main: () => <Description tag="about-the-api"></Description>,
-    },
-  ];
   const formatUrl = (label) => {
     return label
       .replace(/\s/g, "-")

@@ -40,3 +40,7 @@
 .container {
   display: flex;
 }
+
+.description-container {
+  padding-left: 8%;
+}
