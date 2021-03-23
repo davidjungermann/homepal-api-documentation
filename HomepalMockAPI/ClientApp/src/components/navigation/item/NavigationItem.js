@@ -36,7 +36,9 @@ export const NavigationItem = ({
       {Array.isArray(items) ? (
         <ul className="navigation-sub-list">
           {items.map((subItem) => {
-            urls.push(formatUrl(subItem.label));
+            if (!urls.includes(subItem.label)) {
+              urls.push(formatUrl(subItem.label));
+            }
             return (
               <NavigationItem
                 key={nextId()}
@@ -55,7 +57,9 @@ export const NavigationItem = ({
             );
           })}
         </ul>
-      ) : null}
+      ) : (
+        generateRoutes()
+      )}
     </React.Fragment>
   );
 };
