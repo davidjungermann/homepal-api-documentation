@@ -19,7 +19,9 @@ export const Navigation = ({ items, formatUrl, urls, generateRoutes }) => {
       <div className="navigation-container">
         <ul className="navigation-list">
           {items.map((sidebarItem) => {
-            urls.push(formatUrl(sidebarItem.label));
+            if (!urls.includes(sidebarItem.label)) {
+              urls.push(formatUrl(sidebarItem.label));
+            }
             return (
               <NavigationItem
                 key={nextId()}
