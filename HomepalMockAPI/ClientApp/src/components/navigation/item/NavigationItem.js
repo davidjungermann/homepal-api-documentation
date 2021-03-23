@@ -12,8 +12,6 @@ export const NavigationItem = ({
   handleCurrentNavigationItem,
   nextId,
   formatUrl,
-  urls,
-  generateRoutes,
   ...rest
 }) => {
   const handleSelected = (label) => {
@@ -36,9 +34,6 @@ export const NavigationItem = ({
       {Array.isArray(items) ? (
         <ul className="navigation-sub-list">
           {items.map((subItem) => {
-            if (!urls.includes(subItem.label)) {
-              urls.push(formatUrl(subItem.label));
-            }
             return (
               <NavigationItem
                 key={nextId()}
@@ -49,17 +44,13 @@ export const NavigationItem = ({
                 handleCurrentNavigationItem={handleCurrentNavigationItem}
                 nextId={nextId}
                 formatUrl={formatUrl}
-                urls={urls}
-                generateRoutes={generateRoutes}
                 onClick={() => handleCurrentNavigationItem(subItem)}
                 {...subItem}
               />
             );
           })}
         </ul>
-      ) : (
-        generateRoutes()
-      )}
+      ) : null}
     </React.Fragment>
   );
 };

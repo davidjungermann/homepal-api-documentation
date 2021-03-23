@@ -4,7 +4,7 @@ import { Introduction } from "./unit/Introduction";
 
 export const Description = ({ tag }) => {
   const components = {
-    "introduction": Introduction,
+    introduction: Introduction,
     "about-the-api": About,
   };
   const TagName = components[tag];
