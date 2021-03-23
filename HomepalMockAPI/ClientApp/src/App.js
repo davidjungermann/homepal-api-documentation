@@ -29,13 +29,12 @@ function App() {
   };
 
   const generateRoutes = () => {
-    urls.forEach((url) => {
-      console.log(url);
-    });
+    return null;
   };
 
   return (
     <div className="App">
+      <h1 onClick={() => console.log(urls)}>Klicka mig!</h1>
       <div className="container">
         <Switch>
           <Navigation

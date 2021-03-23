@@ -48,15 +48,14 @@ export const NavigationItem = ({
                 nextId={nextId}
                 formatUrl={formatUrl}
                 urls={urls}
+                generateRoutes={generateRoutes}
                 onClick={() => handleCurrentNavigationItem(subItem)}
                 {...subItem}
               />
             );
           })}
         </ul>
-      ) : (
-        null
-      )}
+      ) : null}
     </React.Fragment>
   );
 };
