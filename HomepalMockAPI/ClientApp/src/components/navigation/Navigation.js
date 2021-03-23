@@ -25,7 +25,6 @@ export const Navigation = ({ items, formatUrl }) => {
                 nextId={nextId}
                 currentNavigationItem={currentNavigationItem}
                 handleCurrentNavigationItem={handleCurrentNavigationItem}
-                onClick={() => handleCurrentNavigationItem(sidebarItem)}
                 {...sidebarItem}
               />
             );

@@ -26,7 +26,7 @@ export const NavigationItem = ({
   return (
     <React.Fragment>
       <div className="navigation-item-container">
-        <Link className={handleSelected(label)} {...rest}>
+        <Link to="#filter" className={handleSelected(label)} {...rest}>
           <span style={{ paddingLeft: depth * depthStep, fontSize: fontSize }}>
             {label}
           </span>
@@ -45,7 +45,7 @@ export const NavigationItem = ({
                 handleCurrentNavigationItem={handleCurrentNavigationItem}
                 nextId={nextId}
                 formatUrl={formatUrl}
-                onClick={() => handleCurrentNavigationItem(subItem)}
+                
                 {...subItem}
               />
             );
