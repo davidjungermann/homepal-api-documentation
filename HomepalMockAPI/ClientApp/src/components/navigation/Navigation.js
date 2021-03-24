@@ -25,6 +25,7 @@ export const Navigation = ({ items, formatUrl }) => {
                 nextId={nextId}
                 currentNavigationItem={currentNavigationItem}
                 handleCurrentNavigationItem={handleCurrentNavigationItem}
+                formatUrl={formatUrl}
                 {...sidebarItem}
               />
             );

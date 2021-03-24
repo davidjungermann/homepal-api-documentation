@@ -26,7 +26,11 @@ export const NavigationItem = ({
   return (
     <React.Fragment>
       <div className="navigation-item-container">
-        <Link to="#filter" className={handleSelected(label)} {...rest}>
+        <Link
+          to={"#" + formatUrl(label)}
+          className={handleSelected(label)}
+          {...rest}
+        >
           <span style={{ paddingLeft: depth * depthStep, fontSize: fontSize }}>
             {label}
           </span>
