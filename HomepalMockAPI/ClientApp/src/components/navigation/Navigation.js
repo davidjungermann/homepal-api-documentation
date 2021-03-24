@@ -11,7 +11,6 @@ export const Navigation = ({ items, formatUrl }) => {
 
   const handleCurrentNavigationItem = (value) => {
     setCurrentNavigationItem(value);
-    history.push("/" + formatUrl(value.label));
   };
 
   return (
@@ -26,6 +25,7 @@ export const Navigation = ({ items, formatUrl }) => {
                 currentNavigationItem={currentNavigationItem}
                 handleCurrentNavigationItem={handleCurrentNavigationItem}
                 formatUrl={formatUrl}
+                onClick={() => handleCurrentNavigationItem(sidebarItem)}
                 {...sidebarItem}
               />
             );

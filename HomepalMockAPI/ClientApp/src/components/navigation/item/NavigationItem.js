@@ -49,6 +49,7 @@ export const NavigationItem = ({
                 handleCurrentNavigationItem={handleCurrentNavigationItem}
                 nextId={nextId}
                 formatUrl={formatUrl}
+                onClick={() => handleCurrentNavigationItem(subItem)}
                 {...subItem}
               />
             );
