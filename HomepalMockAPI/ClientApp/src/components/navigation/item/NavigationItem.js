@@ -45,7 +45,6 @@ export const NavigationItem = ({
                 handleCurrentNavigationItem={handleCurrentNavigationItem}
                 nextId={nextId}
                 formatUrl={formatUrl}
-                
                 {...subItem}
               />
             );
