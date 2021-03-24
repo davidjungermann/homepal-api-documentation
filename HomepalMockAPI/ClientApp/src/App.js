@@ -33,9 +33,11 @@ function App() {
       <Switch>
         <div className="container">
           <Header></Header>
-          <Navigation items={items} formatUrl={formatUrl} />
-          <Description renderRoutes={renderRoutes}></Description>
-          <Usage></Usage>
+          <div className="body">
+            <Navigation items={items} formatUrl={formatUrl} />
+            <Description renderRoutes={renderRoutes}></Description>
+            <Usage></Usage>
+          </div>
           <Footer></Footer>
         </div>
       </Switch>
