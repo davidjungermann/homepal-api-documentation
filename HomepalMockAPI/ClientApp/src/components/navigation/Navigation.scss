@@ -1,9 +1,8 @@
 .navigation-container {
-  max-width: 240px;
+  max-width: 220px;
   display: table;
   background-color: #e0e8f0;
   flex: 1 auto;
-  overflow: hidden;
 }
 
 .sidebar-subitem-text {
@@ -12,8 +11,6 @@
 
 .navigation-list {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
   padding-left: 10px;
   text-align: left;
 }

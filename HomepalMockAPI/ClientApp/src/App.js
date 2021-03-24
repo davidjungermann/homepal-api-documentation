@@ -3,9 +3,10 @@ import { Navigation } from "./components/navigation/Navigation";
 import { items } from "./components/navigation/items";
 import { routes } from "./components/description/Routes";
 import { BrowserRouter as Switch, Route } from "react-router-dom";
+import { Description } from "./components/description/Description";
+import { Usage } from "./components/usage/Usage";
 
 import "./App.css";
-import { Description } from "./components/description/Description";
 
 function App() {
   const formatUrl = (label) => {
@@ -26,13 +27,12 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <div className="container">
-        <Switch>
-          <Navigation items={items} formatUrl={formatUrl} />
-          <Description renderRoutes={renderRoutes}></Description>
-        </Switch>
-      </div>
+    <div className="container">
+      <Switch>
+        <Navigation items={items} formatUrl={formatUrl} />
+        <Description renderRoutes={renderRoutes}></Description>
+        <Usage></Usage>
+      </Switch>
     </div>
   );
 }
