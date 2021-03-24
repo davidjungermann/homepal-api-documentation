@@ -27,11 +27,15 @@ function App() {
   };
 
   return (
-    <div className="container">
+    <div>
       <Switch>
-        <Navigation items={items} formatUrl={formatUrl} />
-        <Description renderRoutes={renderRoutes}></Description>
-        <Usage></Usage>
+        <div className="container">
+          <div className="header"></div>
+          <Navigation items={items} formatUrl={formatUrl} />
+          <Description renderRoutes={renderRoutes}></Description>
+          <Usage></Usage>
+          <div className="footer"></div>
+        </div>
       </Switch>
     </div>
   );
