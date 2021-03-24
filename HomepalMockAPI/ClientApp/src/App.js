@@ -6,7 +6,7 @@ import { BrowserRouter as Switch, Route } from "react-router-dom";
 import { Description } from "./components/description/Description";
 import { Usage } from "./components/usage/Usage";
 
-import "./App.css";
+import "./App.scss";
 
 function App() {
   const formatUrl = (label) => {
