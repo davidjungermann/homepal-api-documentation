@@ -11,11 +11,15 @@
 
 .body {
   display: grid;
-  grid-template-areas: "nav content side";
+  grid-template-areas: "navigation content content";
   grid-template-columns: auto 1fr 600px;
-  grid-template-rows: auto 1fr auto;
 }
 
-body {
-  overflow: hidden;
+.content {
+  display: grid;
+  grid-area: content;
+  grid-template-areas: "description usage";
+  grid-template-columns: 1fr 600px;
+  grid-template-rows: 1fr auto;
+  overflow-y: scroll;
 }

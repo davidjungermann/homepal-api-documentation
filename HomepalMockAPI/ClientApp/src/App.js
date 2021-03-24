@@ -35,8 +35,10 @@ function App() {
           <Header></Header>
           <div className="body">
             <Navigation items={items} formatUrl={formatUrl} />
-            <Description renderRoutes={renderRoutes}></Description>
-            <Usage></Usage>
+            <div className="content">
+              <Description renderRoutes={renderRoutes}></Description>
+              <Usage></Usage>
+            </div>
           </div>
           <Footer></Footer>
         </div>
