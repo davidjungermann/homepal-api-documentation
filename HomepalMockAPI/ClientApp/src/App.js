@@ -5,6 +5,7 @@ import { routes } from "./components/description/Routes";
 import { BrowserRouter as Switch, Route } from "react-router-dom";
 
 import "./App.css";
+import { Description } from "./components/description/Description";
 
 function App() {
   const formatUrl = (label) => {
@@ -29,7 +30,7 @@ function App() {
       <div className="container">
         <Switch>
           <Navigation items={items} formatUrl={formatUrl} />
-          <div className="description-container">{renderRoutes()}</div>
+          <Description renderRoutes={renderRoutes}></Description>
         </Switch>
       </div>
     </div>
