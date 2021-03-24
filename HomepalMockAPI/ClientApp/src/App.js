@@ -5,6 +5,8 @@ import { routes } from "./components/description/Routes";
 import { BrowserRouter as Switch, Route } from "react-router-dom";
 import { Description } from "./components/description/Description";
 import { Usage } from "./components/usage/Usage";
+import { Header } from "./components/header/Header";
+import { Footer } from "./components/footer/Footer";
 
 import "./App.scss";
 
@@ -30,11 +32,11 @@ function App() {
     <div>
       <Switch>
         <div className="container">
-          <div className="header"></div>
+          <Header></Header>
           <Navigation items={items} formatUrl={formatUrl} />
           <Description renderRoutes={renderRoutes}></Description>
           <Usage></Usage>
-          <div className="footer"></div>
+          <Footer></Footer>
         </div>
       </Switch>
     </div>
