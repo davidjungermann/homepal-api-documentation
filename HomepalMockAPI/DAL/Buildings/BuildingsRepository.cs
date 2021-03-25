@@ -47,27 +47,59 @@ namespace HomepalMockAPI.DAL
         {
             using var connection = new SqliteConnection(databaseConfig.Name);
             var parameters = new DynamicParameters();
+            parameters.Add("@limit", limit, DbType.Int32, ParameterDirection.Input);
+            parameters.Add("@offset", offset, DbType.Int32, ParameterDirection.Input);
+            var isDesc = _IsDesc(sort);
 
-            if (limit != 0 && offset != 0)
+            if (isDesc)
             {
-                parameters.Add("@limit", limit, DbType.Int32, ParameterDirection.Input);
-                parameters.Add("@offset", offset, DbType.Int32, ParameterDirection.Input);
-                return await connection.QueryAsync<Building>("SELECT * FROM Buildings LIMIT @limit OFFSET @offset", parameters);
+                sort = _FormatSortParam(sort);
             }
-            else if (limit != 0 && offset == 0)
+
+            var tables = await connection.QueryAsync("PRAGMA table_info(Buildings);");
+
+            var isTable = _IsTable(tables, sort);
+
+            if (_IsTable(tables, sort))
             {
-                parameters.Add("@limit", limit, DbType.Int32, ParameterDirection.Input);
-                return await connection.QueryAsync<Building>("SELECT * FROM Buildings LIMIT @limit", parameters);
-            }
-            else if (offset != 0 && limit == 0)
-            {
-                parameters.Add("@offset", offset, DbType.Int32, ParameterDirection.Input);
-                return await connection.QueryAsync<Building>("SELECT * FROM Buildings LIMIT -1 OFFSET @offset", parameters);
+                if (limit != 0 && offset != 0 && isTable)
+                {
+                    if (isDesc)
+                    {
+                        return await connection.QueryAsync<Building>("SELECT * FROM Buildings ORDER BY " + sort + " DESC LIMIT @limit OFFSET @offset", parameters);
+                    }
+                    return await connection.QueryAsync<Building>("SELECT * FROM Buildings ORDER BY " + sort + " LIMIT @limit OFFSET @offset", parameters);
+                }
+                else if (limit != 0 && offset == 0 && isTable)
+                {
+                    if (isDesc)
+                    {
+                        return await connection.QueryAsync<Building>("SELECT * FROM Buildings ORDER BY " + sort + " DESC LIMIT @limit", parameters);
+                    }
+                    return await connection.QueryAsync<Building>("SELECT * FROM Buildings ORDER BY " + sort + " LIMIT @limit", parameters);
+                }
+                else if (offset != 0 && limit == 0)
+                {
+                    if (isDesc)
+                    {
+                        return await connection.QueryAsync<Building>("SELECT * FROM Buildings ORDER BY " + sort + " DESC LIMIT -1 OFFSET @offset", parameters);
+                    }
+                    return await connection.QueryAsync<Building>("SELECT * FROM Buildings ORDER BY " + sort + " LIMIT -1 OFFSET @offset", parameters);
+                }
+                else
+                {
+                    if (isDesc)
+                    {
+                        return await connection.QueryAsync<Building>("SELECT * FROM Buildings ORDER BY " + sort + " DESC LIMIT 10");
+                    }
+                    return await connection.QueryAsync<Building>("SELECT * FROM Buildings ORDER BY " + sort + " LIMIT 10");
+                }
             }
             else
             {
                 return await connection.QueryAsync<Building>("SELECT * FROM Buildings LIMIT 10");
             }
+
         }
 
         /* Returns all fields on a Building based on id */
