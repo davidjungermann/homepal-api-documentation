@@ -58,11 +58,9 @@ namespace HomepalMockAPI.DAL
 
             var tables = await connection.QueryAsync("PRAGMA table_info(Agents);");
 
-            var isTable = _IsTable(tables, sort);
-
             if (_IsTable(tables, sort))
             {
-                if (limit != 0 && offset != 0 && isTable)
+                if (limit != 0 && offset != 0)
                 {
                     if (isDesc)
                     {
@@ -70,7 +68,7 @@ namespace HomepalMockAPI.DAL
                     }
                     return await connection.QueryAsync<Agent>("SELECT * FROM Agents ORDER BY " + sort + " LIMIT @limit OFFSET @offset", parameters);
                 }
-                else if (limit != 0 && offset == 0 && isTable)
+                else if (limit != 0 && offset == 0)
                 {
                     if (isDesc)
                     {
