@@ -54,22 +54,21 @@ namespace HomepalMockAPI.DAL
             if (!String.IsNullOrEmpty(sort))
             {
                 var tables = await connection.QueryAsync("PRAGMA table_info(Agents);");
-                if (_IsTable(tables, sort))
+                // OM vi inte har minus framför, och den är en tabell. Sortera som vanligt!
+                if (!_IsDesc(sort) && _IsTable(tables, sort))
                 {
-                    if (_IsDesc(sort))
+                    sortString = " ORDER BY " + sort + " ";
+                }
+                else if (_IsDesc(sort))
+                {
+                    sort = _FormatSortParam(sort);
+                    if (_IsTable(tables, sort))
                     {
-                        sort = _FormatSortParam(sort);
                         sortString = " ORDER BY " + sort + " DESC ";
                     }
-                    else if (!_IsDesc(sort))
-                    {
-                        sortString = " ORDER BY " + sort + " ";
-                    }
+
                 }
             }
-
-
-            Console.WriteLine(sortString);
 
             if (limit != 0 && offset != 0)
             {
