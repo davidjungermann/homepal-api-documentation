@@ -27,9 +27,9 @@ namespace HomepalMockAPI.Controllers
         /// <response code="500">Internal Server Error</response>
         [Route("api/[controller]")]
         [HttpGet]
-        public async Task<IEnumerable<Agent>> Get(int offset, int limit)
+        public async Task<IEnumerable<Agent>> Get(int limit, int offset)
         {
-            return await agentsRepository.Get(offset, limit);
+            return await agentsRepository.Get(limit, offset);
         }
 
         // GET: api/<AgentsController>/id

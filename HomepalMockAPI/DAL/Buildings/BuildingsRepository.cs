@@ -21,7 +21,7 @@ namespace HomepalMockAPI.DAL
         }
 
         /* Returns all fields on all Buildings */
-        public async Task<IEnumerable<Building>> Get()
+        public async Task<IEnumerable<Building>> Get(int limit, int offset)
         {
             using var connection = new SqliteConnection(databaseConfig.Name);
 
@@ -29,7 +29,7 @@ namespace HomepalMockAPI.DAL
         }
 
         /* Returns all fields on a Building based on id */
-        public async Task<Building> Get(int id)
+        public async Task<Building> GetSingle(int id)
         {
             using var connection = new SqliteConnection(databaseConfig.Name);
             var parameters = new DynamicParameters();
