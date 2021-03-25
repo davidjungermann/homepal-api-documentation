@@ -6,8 +6,8 @@ namespace HomepalMockAPI.DAL
 {
     public interface IAgentsRepository
     {
-        Task<IEnumerable<Agent>> Get();
-        Task<Agent> Get(int id);
+        Task<IEnumerable<Agent>> Get(int offset, int limit);
+        Task<Agent> GetSingle(int id);
         Task<int> Create(Agent agent);
         Task<int> Update(Agent agent);
         Task<int> Delete(int id);
