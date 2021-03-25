@@ -6,8 +6,8 @@ namespace HomepalMockAPI.DAL
 {
     public interface IOwnersRepository
     {
-        Task<IEnumerable<Owner>> Get();
-        Task<Owner> Get(int id);
+        Task<IEnumerable<Owner>> Get(int limit, int offset);
+        Task<Owner> GetSingle(int id);
         Task<int> Create(Owner owner);
         Task<int> Delete(int id);
     }

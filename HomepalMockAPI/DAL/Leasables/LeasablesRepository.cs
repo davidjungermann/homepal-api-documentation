@@ -21,7 +21,7 @@ namespace HomepalMockAPI.DAL
         }
 
         /* Returns all fields on all Leasables */
-        public async Task<IEnumerable<Leasable>> Get()
+        public async Task<IEnumerable<Leasable>> Get(int limit, int offset)
         {
             using var connection = new SqliteConnection(databaseConfig.Name);
 
@@ -29,7 +29,7 @@ namespace HomepalMockAPI.DAL
         }
 
         /* Returns all fields on a Leasable based on id */
-        public async Task<Leasable> Get(int id)
+        public async Task<Leasable> GetSingle(int id)
         {
             using var connection = new SqliteConnection(databaseConfig.Name);
             var parameters = new DynamicParameters();

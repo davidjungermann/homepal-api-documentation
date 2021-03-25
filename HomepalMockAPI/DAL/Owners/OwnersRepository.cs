@@ -21,7 +21,7 @@ namespace HomepalMockAPI.DAL
         }
 
         /* Returns all fields on all Owners */
-        public async Task<IEnumerable<Owner>> Get()
+        public async Task<IEnumerable<Owner>> Get(int limit, int offset)
         {
             using var connection = new SqliteConnection(databaseConfig.Name);
 
@@ -29,7 +29,7 @@ namespace HomepalMockAPI.DAL
         }
 
         /* Returns all fields on a Owner based on id */
-        public async Task<Owner> Get(int id)
+        public async Task<Owner> GetSingle(int id)
         {
             using var connection = new SqliteConnection(databaseConfig.Name);
             var parameters = new DynamicParameters();

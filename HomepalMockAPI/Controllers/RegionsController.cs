@@ -21,9 +21,9 @@ namespace HomepalMockAPI.Controllers
         // GET: api/<RegionsController>
         [Route("api/[controller]")]
         [HttpGet]
-        public async Task<IEnumerable<Region>> Get()
+        public async Task<IEnumerable<Region>> Get(int limit, int offset)
         {
-            return await regionsRepository.Get();
+            return await regionsRepository.Get(limit, offset);
         }
 
         // POST api/<RegionsController>

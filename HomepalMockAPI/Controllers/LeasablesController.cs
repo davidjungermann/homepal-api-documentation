@@ -21,17 +21,17 @@ namespace HomepalMockAPI.Controllers
         // GET: api/<LeasablesController>
         [Route("api/[controller]")]
         [HttpGet]
-        public async Task<IEnumerable<Leasable>> Get()
+        public async Task<IEnumerable<Leasable>> Get(int limit, int offset)
         {
-            return await leasablesRepository.Get();
+            return await leasablesRepository.Get(limit, offset);
         }
 
         // GET: api/<LeasablesController>/id
         [Route("api/[controller]/{id}")]
         [HttpGet]
-        public async Task<Leasable> Get(int id)
+        public async Task<Leasable> GetSingle(int id)
         {
-            return await leasablesRepository.Get(id);
+            return await leasablesRepository.GetSingle(id);
         }
 
         // POST api/<LeasablesController>
