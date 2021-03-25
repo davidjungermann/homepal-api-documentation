@@ -24,8 +24,28 @@ namespace HomepalMockAPI.DAL
         public async Task<IEnumerable<Owner>> Get(int limit, int offset)
         {
             using var connection = new SqliteConnection(databaseConfig.Name);
+            var parameters = new DynamicParameters();
 
-            return await connection.QueryAsync<Owner>("SELECT * FROM Owners;");
+            if (limit != 0 && offset != 0)
+            {
+                parameters.Add("@limit", limit, DbType.Int32, ParameterDirection.Input);
+                parameters.Add("@offset", offset, DbType.Int32, ParameterDirection.Input);
+                return await connection.QueryAsync<Owner>("SELECT * FROM Owners LIMIT @limit OFFSET @offset", parameters);
+            }
+            else if (limit != 0 && offset == 0)
+            {
+                parameters.Add("@limit", limit, DbType.Int32, ParameterDirection.Input);
+                return await connection.QueryAsync<Owner>("SELECT * FROM Owners LIMIT @limit", parameters);
+            }
+            else if (offset != 0 && limit == 0)
+            {
+                parameters.Add("@offset", offset, DbType.Int32, ParameterDirection.Input);
+                return await connection.QueryAsync<Owner>("SELECT * FROM Owners LIMIT -1 OFFSET @offset", parameters);
+            }
+            else
+            {
+                return await connection.QueryAsync<Owner>("SELECT * FROM Owners LIMIT 10");
+            }
         }
 
         /* Returns all fields on a Owner based on id */
