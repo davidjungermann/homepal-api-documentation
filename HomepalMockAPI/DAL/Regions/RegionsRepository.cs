@@ -20,6 +20,28 @@ namespace HomepalMockAPI.DAL
             this.databaseConfig = databaseConfig;
         }
 
+        private Boolean _IsTable(IEnumerable<dynamic> tables, string sort)
+        {
+            foreach (var item in tables)
+            {
+                if (item.name.Equals(sort))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private Boolean _IsDesc(string sort)
+        {
+            return sort.StartsWith("-");
+        }
+
+        private string _FormatSortParam(string sort)
+        {
+            return sort.Substring(1);
+        }
+
         /* Returns all fields on all Regions */
         public async Task<IEnumerable<Region>> Get(int limit, int offset, string sort)
         {
