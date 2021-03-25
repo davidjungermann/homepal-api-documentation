@@ -20,27 +20,43 @@ namespace HomepalMockAPI.DAL
             this.databaseConfig = databaseConfig;
         }
 
+        private Boolean _isTable(IEnumerable<dynamic> tables, string sort)
+        {
+            foreach (var item in tables)
+            {
+                if (item.name.Equals(sort))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         /* Returns all fields on all Agents */
-        public async Task<IEnumerable<Agent>> Get(int limit, int offset)
+        public async Task<IEnumerable<Agent>> Get(int limit, int offset, string sort)
         {
             using var connection = new SqliteConnection(databaseConfig.Name);
             var parameters = new DynamicParameters();
+            parameters.Add("@limit", limit, DbType.Int32, ParameterDirection.Input);
+            parameters.Add("@offset", offset, DbType.Int32, ParameterDirection.Input);
 
-            if (limit != 0 && offset != 0)
+            var tables = await connection.QueryAsync("PRAGMA table_info(Agents);");
+
+            if (limit != 0 && offset != 0 && _isTable(tables, sort))
             {
-                parameters.Add("@limit", limit, DbType.Int32, ParameterDirection.Input);
-                parameters.Add("@offset", offset, DbType.Int32, ParameterDirection.Input);
-                return await connection.QueryAsync<Agent>("SELECT * FROM Agents LIMIT @limit OFFSET @offset", parameters);
+                return await connection.QueryAsync<Agent>("SELECT * FROM Agents ORDER BY " + sort + " LIMIT @limit OFFSET @offset", parameters);
             }
-            else if (limit != 0 && offset == 0)
+            else if (limit != 0 && offset == 0 && _isTable(tables, sort))
             {
-                parameters.Add("@limit", limit, DbType.Int32, ParameterDirection.Input);
-                return await connection.QueryAsync<Agent>("SELECT * FROM Agents LIMIT @limit", parameters);
+                return await connection.QueryAsync<Agent>("SELECT * FROM Agents ORDER BY " + sort + " LIMIT @limit", parameters);
             }
-            else if (offset != 0 && limit == 0)
+            else if (offset != 0 && limit == 0 && _isTable(tables, sort))
             {
-                parameters.Add("@offset", offset, DbType.Int32, ParameterDirection.Input);
-                return await connection.QueryAsync<Agent>("SELECT * FROM Agents LIMIT -1 OFFSET @offset", parameters);
+                return await connection.QueryAsync<Agent>("SELECT * FROM Agents ORDER BY " + sort + " LIMIT -1 OFFSET @offset", parameters);
+            }
+            else if (_isTable(tables, sort))
+            {
+                return await connection.QueryAsync<Agent>("SELECT * FROM Agents ORDER BY " + sort + " LIMIT 10");
             }
             else
             {
