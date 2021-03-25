@@ -6,7 +6,7 @@ namespace HomepalMockAPI.DAL
 {
     public interface ICustomersRepository
     {
-        Task<IEnumerable<Customer>> Get(int limit, int offset);
+        Task<IEnumerable<Customer>> Get(int limit, int offset, string sort);
         Task<Customer> GetSingle(int id);
         Task<int> Create(Customer customer);
         Task<int> Delete(int id);

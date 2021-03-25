@@ -6,7 +6,7 @@ namespace HomepalMockAPI.DAL
 {
     public interface IRealEstatesRepository
     {
-        Task<IEnumerable<RealEstate>> Get(int limit, int offset);
+        Task<IEnumerable<RealEstate>> Get(int limit, int offset, string sort);
         Task<RealEstate> GetSingle(int id);
         Task<int> Create(RealEstate realEstate);
         Task<int> Update(RealEstate realEstate);

@@ -6,7 +6,7 @@ namespace HomepalMockAPI.DAL
 {
     public interface ILeasablesRepository
     {
-        Task<IEnumerable<Leasable>> Get(int limit, int offset);
+        Task<IEnumerable<Leasable>> Get(int limit, int offset, string sort);
         Task<Leasable> GetSingle(int id);
         Task<int> Create(Leasable leasable);
         Task<int> Update(Leasable leasable);

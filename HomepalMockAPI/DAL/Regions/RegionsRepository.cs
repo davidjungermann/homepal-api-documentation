@@ -21,7 +21,7 @@ namespace HomepalMockAPI.DAL
         }
 
         /* Returns all fields on all Regions */
-        public async Task<IEnumerable<Region>> Get(int limit, int offset)
+        public async Task<IEnumerable<Region>> Get(int limit, int offset, string sort)
         {
             using var connection = new SqliteConnection(databaseConfig.Name);
             var parameters = new DynamicParameters();

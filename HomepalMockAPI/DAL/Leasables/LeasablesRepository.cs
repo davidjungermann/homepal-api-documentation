@@ -21,7 +21,7 @@ namespace HomepalMockAPI.DAL
         }
 
         /* Returns all fields on all Leasables */
-        public async Task<IEnumerable<Leasable>> Get(int limit, int offset)
+        public async Task<IEnumerable<Leasable>> Get(int limit, int offset, string sort)
         {
             using var connection = new SqliteConnection(databaseConfig.Name);
             var parameters = new DynamicParameters();

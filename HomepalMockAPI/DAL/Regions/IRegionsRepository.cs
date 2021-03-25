@@ -6,7 +6,7 @@ namespace HomepalMockAPI.DAL
 {
     public interface IRegionsRepository
     {
-        Task<IEnumerable<Region>> Get(int offset, int limit);
+        Task<IEnumerable<Region>> Get(int offset, int limit, string sort);
         Task<int> Create(Region region);
         Task<int> Delete(string name);
     }
