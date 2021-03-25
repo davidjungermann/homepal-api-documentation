@@ -24,11 +24,16 @@ namespace HomepalMockAPI.DAL
         public async Task<IEnumerable<Agent>> Get(int offset, int limit)
         {
             using var connection = new SqliteConnection(databaseConfig.Name);
-            var parameters = new DynamicParameters();
-            parameters.Add("@offset", offset, DbType.Int32, ParameterDirection.Input);
-            parameters.Add("@limit", limit, DbType.Int32, ParameterDirection.Input);
 
-            return await connection.QueryAsync<Agent>("SELECT * FROM Agents LIMIT @limit OFFSET @offset", parameters);
+            if (limit != 0 && offset != 0)
+            {
+                var parameters = new DynamicParameters();
+                parameters.Add("@offset", offset, DbType.Int32, ParameterDirection.Input);
+                parameters.Add("@limit", limit, DbType.Int32, ParameterDirection.Input);
+
+                return await connection.QueryAsync<Agent>("SELECT * FROM Agents LIMIT @limit OFFSET @offset", parameters);
+            }
+            return await connection.QueryAsync<Agent>("SELECT * FROM Agents LIMIT 10");
         }
 
         /* Returns all fields on a Agent based on id */
