@@ -29,33 +29,56 @@ namespace HomepalMockAPI.Controllers
         // GET: api/<RealEstatesController>/id
         [Route("api/[controller]/{id}")]
         [HttpGet]
-        public async Task<RealEstate> GetSingle(int id)
+        public async Task<ActionResult<RealEstate>> GetSingle(int id)
         {
-            return await realEstatesRepository.GetSingle(id);
+            var result = await realEstatesRepository.GetSingle(id);
+
+            if (result == null)
+            {
+                return NotFound();
+            }
+            return result;
         }
 
         // POST api/<RealEstatesController>
         [Route("api/[controller]")]
         [HttpPost]
-        public async Task<int> Create([FromBody] RealEstate realEstate)
+        public async Task<ActionResult<int>> Create([FromBody] RealEstate realEstate)
         {
-            return await realEstatesRepository.Create(realEstate);
+            var result = await realEstatesRepository.Create(realEstate);
+
+            if (result == 0)
+            {
+                return BadRequest();
+            }
+            return result;
         }
 
         // PUT api/<RealEstatesController>
         [Route("api/[controller]")]
         [HttpPut]
-        public async Task<int> Update([FromBody] RealEstate realEstate)
+        public async Task<ActionResult<int>> Update([FromBody] RealEstate realEstate)
         {
-            return await realEstatesRepository.Update(realEstate);
+            var result = await realEstatesRepository.Update(realEstate);
+            if (result == 0)
+            {
+                return BadRequest();
+            }
+            return result;
         }
 
         // DELETE: api/<RealEstatesController>/id
         [Route("api/[controller]/{id}")]
         [HttpDelete]
-        public async Task<int> Delete(int id)
+        public async Task<ActionResult<int>> Delete(int id)
         {
-            return await realEstatesRepository.Delete(id);
+            var result = await realEstatesRepository.Delete(id);
+
+            if (result == 0)
+            {
+                return NotFound();
+            }
+            return result;
         }
     }
 }
