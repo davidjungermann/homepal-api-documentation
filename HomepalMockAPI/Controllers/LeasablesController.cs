@@ -29,33 +29,57 @@ namespace HomepalMockAPI.Controllers
         // GET: api/<LeasablesController>/id
         [Route("api/[controller]/{id}")]
         [HttpGet]
-        public async Task<Leasable> GetSingle(int id)
+        public async Task<ActionResult<Leasable>> GetSingle(int id)
         {
-            return await leasablesRepository.GetSingle(id);
+            var result = await leasablesRepository.GetSingle(id);
+
+            if (result == null)
+            {
+                return NotFound();
+            }
+            return result;
         }
 
         // POST api/<LeasablesController>
         [Route("api/[controller]")]
         [HttpPost]
-        public async Task<int> Create([FromBody] Leasable building)
+        public async Task<ActionResult<int>> Create([FromBody] Leasable building)
         {
-            return await leasablesRepository.Create(building);
+            var result = await leasablesRepository.Create(building);
+
+            if (result == 0)
+            {
+                return BadRequest();
+            }
+            return result;
         }
 
         // PUT api/<LeasablesController>
         [Route("api/[controller]")]
         [HttpPut]
-        public async Task<int> Update([FromBody] Leasable building)
+        public async Task<ActionResult<int>> Update([FromBody] Leasable building)
         {
-            return await leasablesRepository.Update(building);
+            var result = await leasablesRepository.Update(building);
+
+            if (result == 0)
+            {
+                return BadRequest();
+            }
+            return result;
         }
 
         // DELETE: api/<LeasablesController>/id
         [Route("api/[controller]/{id}")]
         [HttpDelete]
-        public async Task<int> Delete(int id)
+        public async Task<ActionResult<int>> Delete(int id)
         {
-            return await leasablesRepository.Delete(id);
+            var result = await leasablesRepository.Delete(id);
+
+            if (result == 0)
+            {
+                return NotFound();
+            }
+            return result;
         }
     }
 }
