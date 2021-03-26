@@ -94,7 +94,6 @@ namespace HomepalMockAPI.DAL
         public async Task<int> Create(Region region)
         {
             using var connection = new SqliteConnection(databaseConfig.Name);
-
             return await connection.ExecuteAsync("INSERT INTO Regions (name)" +
                 "VALUES (@name);", region);
         }
@@ -105,7 +104,7 @@ namespace HomepalMockAPI.DAL
         {
             using var connection = new SqliteConnection(databaseConfig.Name);
             var parameters = new DynamicParameters();
-            parameters.Add("@name", name, DbType.Int32, ParameterDirection.Input);
+            parameters.Add("@name", name, DbType.String, ParameterDirection.Input);
 
             return await connection.ExecuteAsync("DELETE FROM Regions WHERE [name] = @name;", parameters);
         }

@@ -20,7 +20,7 @@ namespace HomepalMockAPI.Controllers
 
         [Route("api/[controller]")]
         [HttpGet]
-        public AuthToken Get()
+        public Task<AuthToken> Get()
         {
             return authTokenRepository.Get();
         }

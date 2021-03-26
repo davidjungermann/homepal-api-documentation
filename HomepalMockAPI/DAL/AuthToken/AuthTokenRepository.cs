@@ -13,6 +13,12 @@ namespace HomepalMockAPI.DAL
     public class AuthTokenRepository : IAuthTokenRepository
     {
         private static Random _random = new Random();
+        private readonly DatabaseConfig databaseConfig;
+
+        public AuthTokenRepository(DatabaseConfig databaseConfig)
+        {
+            this.databaseConfig = databaseConfig;
+        }
         private static string RandomString(int length)
         {
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
@@ -21,9 +27,21 @@ namespace HomepalMockAPI.DAL
         }
 
         /* Retrieves a random token */
-        public AuthToken Get()
+        public async Task<AuthToken> Get()
         {
-            return new AuthToken { value = RandomString(50) };
+            AuthToken authToken = new AuthToken { value = RandomString(50) };
+            await Create(authToken);
+            return authToken;
+        }
+
+        /* Adds a generated token to database
+           @Returns number of row affected. */
+        public async Task<int> Create(AuthToken authToken)
+        {
+            using var connection = new SqliteConnection(databaseConfig.Name);
+
+            return await connection.ExecuteAsync("INSERT INTO AuthTokens (value)" +
+                "VALUES (@value);", authToken);
         }
     }
 }

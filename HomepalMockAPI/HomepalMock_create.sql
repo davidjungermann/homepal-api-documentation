@@ -7,6 +7,7 @@ DROP TABLE IF EXISTS Agents;
 DROP TABLE IF EXISTS Owners;
 DROP TABLE IF EXISTS Customers;
 DROP TABLE IF EXISTS Leasables;
+DROP TABLE IF EXISTS AuthTokens;
 
 
 PRAGMA foreign_keys = ON;
@@ -61,6 +62,10 @@ CREATE TABLE Leasables (
 	FOREIGN KEY(customer_id) REFERENCES Customers(id),
 	FOREIGN KEY(owner_id) REFERENCES Owners(id),
 	FOREIGN KEY(building_id) REFERENCES Buildings(id)
+);
+
+CREATE TABLE AuthTokens (
+	value TEXT PRIMARY KEY
 );
 
 INSERT INTO Regions(name)

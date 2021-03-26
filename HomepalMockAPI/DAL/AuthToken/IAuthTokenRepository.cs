@@ -1,9 +1,10 @@
 using HomepalMockAPI.Models;
-
+using System.Threading.Tasks;
 namespace HomepalMockAPI.DAL
 {
     public interface IAuthTokenRepository
     {
-        AuthToken Get();
+        Task<AuthToken> Get();
+        Task<int> Create(AuthToken authToken);
     }
 }
