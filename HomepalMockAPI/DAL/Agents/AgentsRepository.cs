@@ -111,16 +111,8 @@ namespace HomepalMockAPI.DAL
         {
             using var connection = new SqliteConnection(databaseConfig.Name);
 
-            try
-            {
-                return await connection.ExecuteAsync("INSERT INTO Agents (name)" +
-                "VALUES (@name);", agent);
-            }
-            catch (Exception)
-            {
-                return 0;
-            }
-
+            return await connection.ExecuteAsync("INSERT INTO Agents (name)" +
+            "VALUES (@name);", agent);
         }
 
         /* Updates fields of a Agent based on ID. 
@@ -129,14 +121,7 @@ namespace HomepalMockAPI.DAL
         {
             using var connection = new SqliteConnection(databaseConfig.Name);
 
-            try
-            {
-                return await connection.ExecuteAsync("UPDATE Agents SET [name] = @name WHERE id = @id", agent);
-            }
-            catch (Exception)
-            {
-                return 0;
-            }
+            return await connection.ExecuteAsync("UPDATE Agents SET [name] = @name WHERE id = @id", agent);
         }
 
         /* Deletes a Agent based on id
@@ -147,14 +132,7 @@ namespace HomepalMockAPI.DAL
             var parameters = new DynamicParameters();
             parameters.Add("@id", id, DbType.Int32, ParameterDirection.Input);
 
-            try
-            {
-                return await connection.ExecuteAsync("DELETE FROM Agents WHERE [id] = @id;", parameters);
-            }
-            catch (Exception)
-            {
-                return 0;
-            }
+            return await connection.ExecuteAsync("DELETE FROM Agents WHERE [id] = @id;", parameters);
 
         }
     }

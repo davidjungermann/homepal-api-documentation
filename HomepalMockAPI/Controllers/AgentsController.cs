@@ -30,7 +30,6 @@ namespace HomepalMockAPI.Controllers
         [Route("api/[controller]")]
         [HttpGet]
         //[ProducesResponseType(StatusCodes.Status200OK)]
-        //[ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IEnumerable<Agent>> Get(int limit, int offset, string sort)
         {
             return await agentsRepository.Get(limit, offset, sort);
