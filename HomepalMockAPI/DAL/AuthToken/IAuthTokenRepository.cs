@@ -5,7 +5,7 @@ namespace HomepalMockAPI.DAL
     public interface IAuthTokenRepository
     {
         Task<AuthToken> Get();
-        Task<Validation> Validate(string authToken);
+        Task<Validation> Validate(string value);
         Task<int> Create(AuthToken authToken);
     }
 }

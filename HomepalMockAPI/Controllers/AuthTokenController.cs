@@ -26,11 +26,11 @@ namespace HomepalMockAPI.Controllers
         }
 
         // GET: api/<AgentsController>/id
-        [Route("api/[controller]/{id}")]
+        [Route("api/[controller]/{value}")]
         [HttpGet]
-        public async Task<Validation> Validate(string authToken)
+        public async Task<Validation> Validate(string value)
         {
-            return await authTokenRepository.Validate(authToken);
+            return await authTokenRepository.Validate(value);
         }
     }
 }

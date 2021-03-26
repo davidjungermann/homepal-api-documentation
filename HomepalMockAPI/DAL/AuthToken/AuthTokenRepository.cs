@@ -35,15 +35,13 @@ namespace HomepalMockAPI.DAL
         }
 
         /* Validates a given token */
-        public async Task<Validation> Validate(string authToken)
+        public async Task<Validation> Validate(string value)
         {
             using var connection = new SqliteConnection(databaseConfig.Name);
             var parameters = new DynamicParameters();
-            parameters.Add("@authtoken", authToken, DbType.String, ParameterDirection.Input);
-
-            //return await connection.QuerySingleAsync<bool>("SELECT * FROM AuthTokens WHERE [id] = @id;", parameters);
-
-            return new Validation { IsValid = true };
+            parameters.Add("@value", value, DbType.String, ParameterDirection.Input);
+            var exists = await connection.ExecuteScalarAsync<bool>("SELECT count(1) FROM AuthTokens WHERE [value] = @value", parameters);
+            return new Validation { IsValid = exists };
         }
 
         /* Adds a generated token to database
