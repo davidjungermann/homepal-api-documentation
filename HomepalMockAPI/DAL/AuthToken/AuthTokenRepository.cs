@@ -12,7 +12,6 @@ namespace HomepalMockAPI.DAL
 {
     public class AuthTokenRepository : IAuthTokenRepository
     {
-        private static Random _random = new Random();
         private readonly DatabaseConfig databaseConfig;
 
         public AuthTokenRepository(DatabaseConfig databaseConfig)
@@ -21,9 +20,10 @@ namespace HomepalMockAPI.DAL
         }
         private static string RandomString(int length)
         {
+            Random random = new Random();
             const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             return new string(Enumerable.Repeat(chars, length)
-              .Select(s => s[_random.Next(s.Length)]).ToArray());
+              .Select(s => s[random.Next(s.Length)]).ToArray());
         }
 
         /* Retrieves a random token */
@@ -34,9 +34,15 @@ namespace HomepalMockAPI.DAL
             return authToken;
         }
 
-        /* Retrieves a random token */
+        /* Validates a given token */
         public async Task<Validation> Validate(string authToken)
         {
+            using var connection = new SqliteConnection(databaseConfig.Name);
+            var parameters = new DynamicParameters();
+            parameters.Add("@authtoken", authToken, DbType.String, ParameterDirection.Input);
+
+            //return await connection.QuerySingleAsync<bool>("SELECT * FROM AuthTokens WHERE [id] = @id;", parameters);
+
             return new Validation { IsValid = true };
         }
 
