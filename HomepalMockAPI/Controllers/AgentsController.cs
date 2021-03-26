@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using HomepalMockAPI.DAL;
 using HomepalMockAPI.Models;
 using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Http;
+using System;
 
 namespace HomepalMockAPI.Controllers
 {
@@ -33,11 +35,20 @@ namespace HomepalMockAPI.Controllers
         }
 
         // GET: api/<AgentsController>/id
+        // Task<ActionResult<IEnumerable<Agent>>>
         [Route("api/[controller]/{id}")]
         [HttpGet]
-        public async Task<Agent> GetSingle(int id)
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<Agent>> GetSingle(int id)
         {
-            return await agentsRepository.GetSingle(id);
+            var test = await agentsRepository.GetSingle(id);
+
+            if (test == null)
+            {
+                return NotFound();
+            }
+            return test;
         }
 
         // POST api/<AgentsController>
