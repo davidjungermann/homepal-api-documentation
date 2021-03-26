@@ -17,12 +17,20 @@ namespace HomepalMockAPI.Controllers
         {
             this.authTokenRepository = authTokenRepository;
         }
-
+        // GET: api/<AuthTokenController>/id
         [Route("api/[controller]")]
         [HttpGet]
         public Task<AuthToken> Get()
         {
             return authTokenRepository.Get();
+        }
+
+        // GET: api/<AgentsController>/id
+        [Route("api/[controller]/{id}")]
+        [HttpGet]
+        public async Task<Validation> Validate(string authToken)
+        {
+            return await authTokenRepository.Validate(authToken);
         }
     }
 }

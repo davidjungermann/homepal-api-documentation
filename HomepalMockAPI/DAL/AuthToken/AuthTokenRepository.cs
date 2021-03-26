@@ -34,6 +34,12 @@ namespace HomepalMockAPI.DAL
             return authToken;
         }
 
+        /* Retrieves a random token */
+        public async Task<Validation> Validate(string authToken)
+        {
+            return new Validation { IsValid = true };
+        }
+
         /* Adds a generated token to database
            @Returns number of row affected. */
         public async Task<int> Create(AuthToken authToken)
