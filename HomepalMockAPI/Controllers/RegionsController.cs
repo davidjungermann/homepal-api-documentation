@@ -29,17 +29,29 @@ namespace HomepalMockAPI.Controllers
         // POST api/<RegionsController>
         [Route("api/[controller]")]
         [HttpPost]
-        public async Task<int> Create([FromBody] Region region)
+        public async Task<ActionResult<int>> Create([FromBody] Region region)
         {
-            return await regionsRepository.Create(region);
+            var result = await regionsRepository.Create(region);
+
+            if (result == 0)
+            {
+                return BadRequest();
+            }
+            return result;
         }
 
         // DELETE: api/<RegionsController>/id
         [Route("api/[controller]/{name}")]
         [HttpDelete]
-        public async Task<int> Delete(string name)
+        public async Task<ActionResult<int>> Delete(string name)
         {
-            return await regionsRepository.Delete(name);
+            var result = await regionsRepository.Delete(name);
+            
+            if (result == 0)
+            {
+                return NotFound();
+            }
+            return result;
         }
     }
 }
