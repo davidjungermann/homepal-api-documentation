@@ -29,25 +29,41 @@ namespace HomepalMockAPI.Controllers
         // GET: api/<CustomersController>/id
         [Route("api/[controller]/{id}")]
         [HttpGet]
-        public async Task<Customer> GetSingle(int id)
+        public async Task<ActionResult<Customer>> GetSingle(int id)
         {
-            return await customersRepository.GetSingle(id);
+            var result = await customersRepository.GetSingle(id);
+
+            if (result == null)
+            {
+                return NotFound();
+            }
+            return result;
         }
 
         // POST api/<CustomersController>
         [Route("api/[controller]")]
         [HttpPost]
-        public async Task<int> Create([FromBody] Customer customer)
+        public async Task<ActionResult<int>> Create([FromBody] Customer customer)
         {
-            return await customersRepository.Create(customer);
+            var result = await customersRepository.Create(customer);
+            if (result == 0)
+            {
+                return BadRequest();
+            }
+            return result;
         }
 
         // DELETE: api/<CustomersController>/id
         [Route("api/[controller]/{id}")]
         [HttpDelete]
-        public async Task<int> Delete(int id)
+        public async Task<ActionResult<int>> Delete(int id)
         {
-            return await customersRepository.Delete(id);
+            var result = await customersRepository.Delete(id);
+            if (result == 0)
+            {
+                return BadRequest();
+            }
+            return result;
         }
     }
 }
