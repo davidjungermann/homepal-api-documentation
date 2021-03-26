@@ -29,6 +29,8 @@ namespace HomepalMockAPI.Controllers
         /// <response code="500">Internal Server Error</response>
         [Route("api/[controller]")]
         [HttpGet]
+        //[ProducesResponseType(StatusCodes.Status200OK)]
+        //[ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IEnumerable<Agent>> Get(int limit, int offset, string sort)
         {
             return await agentsRepository.Get(limit, offset, sort);
@@ -38,41 +40,57 @@ namespace HomepalMockAPI.Controllers
         // Task<ActionResult<IEnumerable<Agent>>>
         [Route("api/[controller]/{id}")]
         [HttpGet]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<Agent>> GetSingle(int id)
         {
-            var test = await agentsRepository.GetSingle(id);
+            var result = await agentsRepository.GetSingle(id);
 
-            if (test == null)
+            if (result == null)
             {
                 return NotFound();
             }
-            return test;
+            return result;
         }
 
         // POST api/<AgentsController>
         [Route("api/[controller]")]
         [HttpPost]
-        public async Task<int> Create([FromBody] Agent agent)
+        public async Task<ActionResult<int>> Create([FromBody] Agent agent)
         {
-            return await agentsRepository.Create(agent);
+            var result = await agentsRepository.Create(agent);
+
+            if (result == 0)
+            {
+                return BadRequest();
+            }
+            return result;
         }
 
         // PUT api/<AgentsController>
         [Route("api/[controller]")]
         [HttpPut]
-        public async Task<int> Update([FromBody] Agent agent)
+        public async Task<ActionResult<int>> Update([FromBody] Agent agent)
         {
-            return await agentsRepository.Update(agent);
+            var result = await agentsRepository.Update(agent);
+
+            if (result == 0)
+            {
+                return BadRequest();
+            }
+            return result;
         }
 
         // DELETE: api/<AgentsController>/id
         [Route("api/[controller]/{id}")]
         [HttpDelete]
-        public async Task<int> Delete(int id)
+        public async Task<ActionResult<int>> Delete(int id)
         {
-            return await agentsRepository.Delete(id);
+            var result = await agentsRepository.Delete(id);
+
+            if (result == 0)
+            {
+                return NotFound();
+            }
+            return result;
         }
     }
 }

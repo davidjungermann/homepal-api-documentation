@@ -53,7 +53,6 @@ namespace HomepalMockAPI.DAL
             if (!String.IsNullOrEmpty(sort))
             {
                 var tables = await connection.QueryAsync("PRAGMA table_info(Agents);");
-                // OM vi inte har minus framför, och den är en tabell. Sortera som vanligt!
                 if (!_IsDesc(sort) && _IsTable(tables, sort))
                 {
                     sortString = " ORDER BY " + sort + " ";
@@ -100,7 +99,7 @@ namespace HomepalMockAPI.DAL
                 return await connection.QuerySingleAsync<Agent>("SELECT * FROM Agents WHERE [id] = @id;", parameters);
             }
 
-            catch (Exception e)
+            catch (Exception)
             {
                 return null;
             }
@@ -112,8 +111,16 @@ namespace HomepalMockAPI.DAL
         {
             using var connection = new SqliteConnection(databaseConfig.Name);
 
-            return await connection.ExecuteAsync("INSERT INTO Agents (name)" +
+            try
+            {
+                return await connection.ExecuteAsync("INSERT INTO Agents (name)" +
                 "VALUES (@name);", agent);
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+
         }
 
         /* Updates fields of a Agent based on ID. 
@@ -121,7 +128,15 @@ namespace HomepalMockAPI.DAL
         public async Task<int> Update(Agent agent)
         {
             using var connection = new SqliteConnection(databaseConfig.Name);
-            return await connection.ExecuteAsync("UPDATE Agents SET [name] = @name WHERE id = @id", agent);
+
+            try
+            {
+                return await connection.ExecuteAsync("UPDATE Agents SET [name] = @name WHERE id = @id", agent);
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
         }
 
         /* Deletes a Agent based on id
@@ -132,7 +147,15 @@ namespace HomepalMockAPI.DAL
             var parameters = new DynamicParameters();
             parameters.Add("@id", id, DbType.Int32, ParameterDirection.Input);
 
-            return await connection.ExecuteAsync("DELETE FROM Agents WHERE [id] = @id;", parameters);
+            try
+            {
+                return await connection.ExecuteAsync("DELETE FROM Agents WHERE [id] = @id;", parameters);
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
+
         }
     }
 }
