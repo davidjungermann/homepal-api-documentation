@@ -5,10 +5,7 @@ using System.Threading.Tasks;
 using HomepalMockAPI.Models;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
 using System;
-using System.Diagnostics;
-
 namespace HomepalMockAPI.DAL
 {
     public class OwnersRepository : IOwnersRepository

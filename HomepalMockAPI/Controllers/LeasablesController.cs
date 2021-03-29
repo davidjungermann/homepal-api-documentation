@@ -51,7 +51,7 @@ namespace HomepalMockAPI.Controllers
             {
                 return BadRequest();
             }
-            return result;
+            return Created("", result);
         }
 
         // PUT api/<LeasablesController>
