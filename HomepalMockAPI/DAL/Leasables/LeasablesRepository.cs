@@ -114,7 +114,7 @@ namespace HomepalMockAPI.DAL
             using var connection = new SqliteConnection(databaseConfig.Name);
 
             return await connection.ExecuteAsync("INSERT INTO Leasables (class_descriptor, price, description, size, customer_id, owner_id, building_id)" +
-                "VALUES (@class_descriptor, @price, @description, @size, @CustomerId, @owner_id, @building_id);", leasable);
+                "VALUES (@class_descriptor, @price, @description, @size, @customer_id, @owner_id, @building_id);", leasable);
         }
 
         /* Updates fields of a Leasable based on ID. 
@@ -122,7 +122,7 @@ namespace HomepalMockAPI.DAL
         public async Task<int> Update(Leasable leasable)
         {
             using var connection = new SqliteConnection(databaseConfig.Name);
-            return await connection.ExecuteAsync("UPDATE Leasables SET [class_descriptor] = @class_descriptor, [price] = @price, [description] = @description, [size] = @size, [CustomerId] = @CustomerId, [owner_id] = @owner_id WHERE id= @id", leasable);
+            return await connection.ExecuteAsync("UPDATE Leasables SET [class_descriptor] = @class_descriptor, [price] = @price, [description] = @description, [size] = @size, [customer_id] = @customer_id, [owner_id] = @owner_id WHERE id= @id", leasable);
         }
 
         /* Deletes a Leasable based on id
