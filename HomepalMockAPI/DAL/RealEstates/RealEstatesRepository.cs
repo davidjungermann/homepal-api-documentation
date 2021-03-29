@@ -94,11 +94,10 @@ namespace HomepalMockAPI.DAL
         {
             using var connection = new SqliteConnection(databaseConfig.Name);
             var parameters = new DynamicParameters();
-            parameters.Add("@real_estate_id", id, DbType.Int32, ParameterDirection.Input);
-
+            parameters.Add("@id", id, DbType.Int32, ParameterDirection.Input);
             try
             {
-                return await connection.QuerySingleAsync<RealEstate>("SELECT * FROM RealEstates WHERE [real_estate_id] = @real_estate_id;", parameters);
+                return await connection.QuerySingleAsync<RealEstate>("SELECT * FROM RealEstates WHERE [id] = @id;", parameters);
             }
 
             catch (Exception)

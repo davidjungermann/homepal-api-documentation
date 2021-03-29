@@ -40,7 +40,7 @@ namespace HomepalMockAPI.Controllers
             return result;
         }
 
-        // DELETE: api/<RegionsController>/id
+        // DELETE: api/<RegionsController>/name
         [Route("api/[controller]/{name}")]
         [HttpDelete]
         public async Task<ActionResult<int>> Delete(string name)

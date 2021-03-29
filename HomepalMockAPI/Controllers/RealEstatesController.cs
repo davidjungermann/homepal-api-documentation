@@ -32,7 +32,7 @@ namespace HomepalMockAPI.Controllers
         public async Task<ActionResult<RealEstate>> GetSingle(int id)
         {
             var result = await realEstatesRepository.GetSingle(id);
-
+            
             if (result == null)
             {
                 return NotFound();
