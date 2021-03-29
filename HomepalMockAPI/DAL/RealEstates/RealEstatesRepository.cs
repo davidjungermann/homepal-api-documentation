@@ -122,7 +122,7 @@ namespace HomepalMockAPI.DAL
         public async Task<int> Update(RealEstate realEstate)
         {
             using var connection = new SqliteConnection(databaseConfig.Name);
-            return await connection.ExecuteAsync("UPDATE RealEstates SET [name] = @name,  [owner_id] = @owner_id WHERE real_estate_id = @real_estate_id", realEstate);
+            return await connection.ExecuteAsync("UPDATE RealEstates SET [name] = @name,  [owner_id] = @owner_id WHERE id = @id", realEstate);
         }
 
         /* Deletes a RealEstate based on id
