@@ -1,5 +1,6 @@
 import React from "react";
-import { HashLink as Link } from "react-router-hash-link";
+import { NavHashLink as Link } from "react-router-hash-link";
+import { useLocation } from "react-router-dom";
 
 import "./NavigationItem.scss";
 
@@ -15,20 +16,18 @@ export const NavigationItem = ({
   formatUrl,
   ...rest
 }) => {
-  const handleSelected = (label) => {
-    if (label === currentNavigationItem.label) {
-      return "list-item-label-selected";
-    } else {
-      return "list-item-label";
-    }
-  };
+  const location = useLocation();
 
   return (
     <React.Fragment>
       <div className="navigation-item-container">
         <Link
           to={"#" + formatUrl(label)}
-          className={handleSelected(label)}
+          className={
+            `${location.pathname}${location.hash}` === formatUrl(label)
+              ? "active"
+              : "list-item-label"
+          }
           {...rest}
         >
           <span style={{ paddingLeft: depth * depthStep, fontSize: fontSize }}>

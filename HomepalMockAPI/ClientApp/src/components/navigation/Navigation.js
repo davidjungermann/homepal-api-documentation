@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import { NavigationItem } from "./item/NavigationItem";
 import nextId from "react-id-generator";
-import { useHistory } from "react-router-dom";
 
 import "./Navigation.scss";
 
 export const Navigation = ({ items, formatUrl }) => {
   const [currentNavigationItem, setCurrentNavigationItem] = useState({});
-  let history = useHistory();
 
   const handleCurrentNavigationItem = (value) => {
     setCurrentNavigationItem(value);
