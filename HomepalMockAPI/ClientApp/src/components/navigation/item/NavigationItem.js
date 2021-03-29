@@ -23,6 +23,7 @@ export const NavigationItem = ({
       <div className="navigation-item-container">
         <Link
           to={"#" + formatUrl(label)}
+          smooth
           className={
             `${location.pathname}${location.hash}` === formatUrl(label)
               ? "active"
