@@ -26,19 +26,6 @@ namespace HomepalMockAPI.Controllers
             return await ownersRepository.Get(limit, offset, sort);
         }
 
-        // GET: api/<OwnersController>/id
-        [Route("api/[controller]/{id}")]
-        [HttpGet]
-        public async Task<ActionResult<Owner>> GetSingle(int id)
-        {
-            var result = await ownersRepository.GetSingle(id);
-            if (result == null)
-            {
-                return NotFound();
-            }
-            return result;
-        }
-
         // POST api/<OwnersController>
         [Route("api/[controller]")]
         [HttpPost]
