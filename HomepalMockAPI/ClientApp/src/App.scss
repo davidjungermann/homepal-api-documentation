@@ -1,3 +1,7 @@
+body {
+  overflow: hidden;
+ }
+
 .container {
   display: grid;
   grid-template-areas:
@@ -13,6 +17,7 @@
   display: grid;
   grid-template-areas: "navigation content content";
   grid-template-columns: auto 1fr 600px;
+  overflow: hidden;
 }
 
 .content {
