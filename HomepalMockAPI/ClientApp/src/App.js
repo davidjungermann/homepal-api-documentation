@@ -2,7 +2,7 @@ import React from "react";
 import { Navigation } from "./components/navigation/Navigation";
 import { items } from "./components/navigation/items";
 import { routes } from "./components/description/Routes";
-import { BrowserRouter as Switch, Route } from "react-router-dom";
+import { BrowserRouter as Route } from "react-router-dom";
 import { Description } from "./components/description/Description";
 import { Usage } from "./components/usage/Usage";
 import { Header } from "./components/header/Header";
@@ -30,19 +30,17 @@ function App() {
 
   return (
     <div>
-      <Switch>
-        <div className="container">
-          <Header></Header>
-          <div className="body">
-            <Navigation items={items} formatUrl={formatUrl} />
-            <div className="content">
-              <Description renderRoutes={renderRoutes}></Description>
-              <Usage></Usage>
-            </div>
+      <div className="container">
+        <Header></Header>
+        <div className="body">
+          <Navigation items={items} formatUrl={formatUrl} />
+          <div className="content">
+            <Description renderRoutes={renderRoutes}></Description>
+            <Usage></Usage>
           </div>
-          <Footer></Footer>
         </div>
-      </Switch>
+        <Footer></Footer>
+      </div>
     </div>
   );
 }
