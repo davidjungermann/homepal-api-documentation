@@ -1,9 +1,11 @@
 import React from "react";
 import ScrollableSection from 'react-update-url-on-scroll';
+import { configureAnchors } from 'react-update-url-on-scroll'
 
 import "./TextUnit.scss";
 
 export const TextUnit = ({ header, content, id }) => {
+  configureAnchors({offset: 60});
   return (
     <div>
       <ScrollableSection hash={id} exact>
