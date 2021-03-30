@@ -8,6 +8,7 @@ export const Navigation = ({ items, formatUrl }) => {
   const [currentNavigationItem, setCurrentNavigationItem] = useState({});
 
   const handleCurrentNavigationItem = (value) => {
+    console.log(value);
     setCurrentNavigationItem(value);
   };
 

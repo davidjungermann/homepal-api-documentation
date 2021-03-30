@@ -1,6 +1,7 @@
 import React from "react";
 import { NavHashLink as Link } from "react-router-hash-link";
 import { useLocation } from "react-router-dom";
+import { configureAnchors } from "react-update-url-on-scroll";
 
 import "./NavigationItem.scss";
 
@@ -16,7 +17,20 @@ export const NavigationItem = ({
   formatUrl,
   ...rest
 }) => {
-  const location = useLocation();
+  const handleSelected = (label) => {
+    if (label === currentNavigationItem.label) {
+      return "active";
+    } else {
+      return "list-item-label";
+    }
+  };
+
+  configureAnchors({
+    offset: 100,
+    affectHistory: true,
+    debounce: 100,
+    keepLastAnchorHash: true,
+  });
 
   return (
     <React.Fragment>
@@ -24,11 +38,7 @@ export const NavigationItem = ({
         <Link
           to={"#" + formatUrl(label)}
           smooth
-          className={
-            `${location.pathname}${location.hash}` === formatUrl(label)
-              ? "active"
-              : "list-item-label"
-          }
+          className={handleSelected(label)}
           {...rest}
         >
           <span style={{ paddingLeft: depth * depthStep, fontSize: fontSize }}>
