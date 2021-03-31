@@ -15,15 +15,9 @@ export const NavigationItem = ({
   handleCurrentNavigationItem,
   nextId,
   formatUrl,
+  handleSelected,
   ...rest
 }) => {
-  const handleSelected = (label) => {
-    if (label === currentNavigationItem.label) {
-      return "active";
-    } else {
-      return "list-item-label";
-    }
-  };
 
   configureAnchors({
     offset: 100,
@@ -60,6 +54,7 @@ export const NavigationItem = ({
                 nextId={nextId}
                 formatUrl={formatUrl}
                 onClick={() => handleCurrentNavigationItem(subItem)}
+                handleSelected={handleSelected}
                 {...subItem}
               />
             );

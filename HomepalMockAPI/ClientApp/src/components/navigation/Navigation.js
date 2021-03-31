@@ -7,6 +7,14 @@ import "./Navigation.scss";
 export const Navigation = ({ items, formatUrl }) => {
   const [currentNavigationItem, setCurrentNavigationItem] = useState({});
 
+  const handleSelected = (label) => {
+    if (label === currentNavigationItem.label) {
+      return "active";
+    } else {
+      return "list-item-label";
+    }
+  };
+
   const handleCurrentNavigationItem = (value) => {
     console.log(value);
     setCurrentNavigationItem(value);
@@ -25,6 +33,7 @@ export const Navigation = ({ items, formatUrl }) => {
                 handleCurrentNavigationItem={handleCurrentNavigationItem}
                 formatUrl={formatUrl}
                 onClick={() => handleCurrentNavigationItem(sidebarItem)}
+                handleSelected={handleSelected}
                 {...sidebarItem}
               />
             );
