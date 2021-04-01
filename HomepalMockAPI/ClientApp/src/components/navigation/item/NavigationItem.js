@@ -1,6 +1,5 @@
 import React from "react";
 import { NavHashLink as Link } from "react-router-hash-link";
-import { useLocation } from "react-router-dom";
 import { configureAnchors } from "react-update-url-on-scroll";
 
 import "./NavigationItem.scss";
