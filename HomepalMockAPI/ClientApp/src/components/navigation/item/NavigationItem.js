@@ -29,6 +29,13 @@ export const NavigationItem = ({
           smooth
           className="list-item-label"
           activeClassName="active"
+          isActive={(match, location) => {
+            if (location.hash === "#" + formatUrl(label)) {
+              return true;
+            } else {
+              return false;
+            }
+          }}
           {...rest}
         >
           <span style={{ paddingLeft: depth * depthStep, fontSize: fontSize }}>
