@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavigationItem } from "./item/NavigationItem";
 import nextId from "react-id-generator";
 
 import "./Navigation.scss";
 
 export const Navigation = ({ items, formatUrl }) => {
-
   return (
     <React.Fragment>
       <div className="navigation-container">
