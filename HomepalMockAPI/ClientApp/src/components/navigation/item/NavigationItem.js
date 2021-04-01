@@ -10,14 +10,10 @@ export const NavigationItem = ({
   depthStep = 15,
   depth = 0,
   fontSize = 18,
-  currentNavigationItem,
-  handleCurrentNavigationItem,
   nextId,
   formatUrl,
-  handleSelected,
   ...rest
 }) => {
-
   configureAnchors({
     offset: 100,
     affectHistory: true,
@@ -31,7 +27,8 @@ export const NavigationItem = ({
         <Link
           to={"#" + formatUrl(label)}
           smooth
-          className={handleSelected(label)}
+          className="list-item-label"
+          activeClassName="active"
           {...rest}
         >
           <span style={{ paddingLeft: depth * depthStep, fontSize: fontSize }}>
@@ -48,12 +45,8 @@ export const NavigationItem = ({
                 depth={depth + 1}
                 depthStep={depthStep}
                 fontSize={fontSize - 2}
-                currentNavigationItem={currentNavigationItem}
-                handleCurrentNavigationItem={handleCurrentNavigationItem}
                 nextId={nextId}
                 formatUrl={formatUrl}
-                onClick={() => handleCurrentNavigationItem(subItem)}
-                handleSelected={handleSelected}
                 {...subItem}
               />
             );

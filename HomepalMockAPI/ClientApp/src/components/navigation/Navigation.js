@@ -5,20 +5,6 @@ import nextId from "react-id-generator";
 import "./Navigation.scss";
 
 export const Navigation = ({ items, formatUrl }) => {
-  const [currentNavigationItem, setCurrentNavigationItem] = useState({});
-
-  const handleSelected = (label) => {
-    if (label === currentNavigationItem.label) {
-      return "active";
-    } else {
-      return "list-item-label";
-    }
-  };
-
-  const handleCurrentNavigationItem = (value) => {
-    console.log(value);
-    setCurrentNavigationItem(value);
-  };
 
   return (
     <React.Fragment>
@@ -29,11 +15,7 @@ export const Navigation = ({ items, formatUrl }) => {
               <NavigationItem
                 key={nextId()}
                 nextId={nextId}
-                currentNavigationItem={currentNavigationItem}
-                handleCurrentNavigationItem={handleCurrentNavigationItem}
                 formatUrl={formatUrl}
-                onClick={() => handleCurrentNavigationItem(sidebarItem)}
-                handleSelected={handleSelected}
                 {...sidebarItem}
               />
             );
