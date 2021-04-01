@@ -1,6 +1,7 @@
 import React from "react";
 import { NavHashLink as Link } from "react-router-hash-link";
 import { configureAnchors } from "react-update-url-on-scroll";
+import { useLocation } from "react-router-dom";
 
 import "./NavigationItem.scss";
 
@@ -25,10 +26,19 @@ export const NavigationItem = ({
     <React.Fragment>
       <div className="navigation-item-container">
         <Link
+          id={formatUrl(label)}
           to={"#" + formatUrl(label)}
           smooth
           className="list-item-label"
           activeClassName="active"
+          isActive={(match, location) => {
+            console.log(location);
+            if (location.hash === "#" + formatUrl(label)) {
+              return true;
+            } else {
+              return false;
+            }
+          }}
           {...rest}
         >
           <span style={{ paddingLeft: depth * depthStep, fontSize: fontSize }}>
