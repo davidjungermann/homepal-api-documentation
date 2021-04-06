@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { NavHashLink as Link } from "react-router-hash-link";
-import { configureAnchors } from "react-update-url-on-scroll";
-import { useLocation } from "react-router-dom";
 
 import "./NavigationItem.scss";
 
@@ -15,15 +13,6 @@ export const NavigationItem = ({
   formatUrl,
   ...rest
 }) => {
-  configureAnchors({
-    offset: 100,
-    affectHistory: true,
-    debounce: 100,
-    keepLastAnchorHash: true,
-  });
-  const [locationState] = useState(useLocation());
-
-  //isActive kallas bara en gång när listan instantieras, det är problemet! Men den uppdateras när vi klickar.
 
   return (
     <React.Fragment>
@@ -32,9 +21,6 @@ export const NavigationItem = ({
           to={"#" + formatUrl(label)}
           smooth
           className="list-item-label"
-          // isActive={() => {
-          //   return locationState.hash === "#" + formatUrl(label);
-          // }}
           {...rest}
         >
           <span style={{ paddingLeft: depth * depthStep, fontSize: fontSize }}>
