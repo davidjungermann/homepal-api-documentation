@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import handleViewport from "react-in-viewport";
 
 import "./TextUnit.scss";
 
-const TextUnitContent = ({ props }) => {
+const TextUnitContent = (props) => {
   const { forwardedRef, inViewport, enterCount } = props;
+
+  if (inViewport) {
+    console.log("hej");
+  }
+
   return (
     <div
       id={props.id}
