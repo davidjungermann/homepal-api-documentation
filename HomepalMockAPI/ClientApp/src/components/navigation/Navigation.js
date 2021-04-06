@@ -4,9 +4,14 @@ import nextId from "react-id-generator";
 
 import "./Navigation.scss";
 
-export const Navigation = ({ items, formatUrl }) => {
+export const Navigation = ({ items, formatUrl, history }) => {
   return (
     <React.Fragment>
+      <div
+        onClick={() => console.log("Från Navigation:" + history)}
+      >
+        Click!
+      </div>
       <div className="navigation-container">
         <ul className="navigation-list">
           {items.map((sidebarItem) => {

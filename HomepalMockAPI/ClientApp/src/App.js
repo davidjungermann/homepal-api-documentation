@@ -7,10 +7,12 @@ import { Description } from "./components/description/Description";
 import { Usage } from "./components/usage/Usage";
 import { Header } from "./components/header/Header";
 import { Footer } from "./components/footer/Footer";
+import { useHistory } from "react-router";
 
 import "./App.scss";
 
 function App() {
+  let history = useHistory();
   const formatUrl = (label) => {
     return label
       .replace(/\s/g, "-")
@@ -23,7 +25,7 @@ function App() {
         key={index}
         path={route.path}
         exact={route.exact}
-        children={<route.main />}
+        children={<route.main history={history} />}
       />
     ));
   };
