@@ -5,10 +5,5 @@ import "./Description.scss";
 
 export const Description = ({ renderRoutes }) => {
   const location = useHistory();
-  return (
-    <div className="description-container">
-      {renderRoutes()}
-      <div onClick={() => console.log(location)}>Click me!</div>
-    </div>
-  );
+  return <div className="description-container">{renderRoutes()}</div>;
 };
