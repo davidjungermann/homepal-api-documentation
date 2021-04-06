@@ -1,5 +1,6 @@
 import React from "react";
 import handleViewport from "react-in-viewport";
+import { withRouter } from "react-router";
 
 import "./TextUnit.scss";
 
@@ -19,7 +20,9 @@ const TextUnitContent = (props) => {
   );
 };
 
-export const TextUnit = handleViewport(TextUnitContent, {
-  rootMargin: "400px",
-  threshold: 1,
-});
+export const TextUnit = withRouter(
+  handleViewport(TextUnitContent, {
+    rootMargin: "400px",
+    threshold: 1,
+  })
+);
