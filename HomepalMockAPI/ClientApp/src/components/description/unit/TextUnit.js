@@ -7,7 +7,6 @@ const TextUnitContent = (props) => {
   const { forwardedRef, inViewport } = props;
 
   if (inViewport) {
-    console.log("Från TextUnit: " + props.history.history.location.hash);
     props.history.history.push("/#" + props.id);
   }
 
