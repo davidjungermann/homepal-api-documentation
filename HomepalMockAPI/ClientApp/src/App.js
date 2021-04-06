@@ -35,7 +35,7 @@ function App() {
       <div className="container">
         <Header></Header>
         <div className="body">
-          <Navigation items={items} formatUrl={formatUrl} />
+          <Navigation items={items} formatUrl={formatUrl} history={history} />
           <div className="content">
             <Description renderRoutes={renderRoutes}></Description>
             <Usage></Usage>

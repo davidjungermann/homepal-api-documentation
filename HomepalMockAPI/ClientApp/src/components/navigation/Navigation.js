@@ -7,12 +7,12 @@ import "./Navigation.scss";
 export const Navigation = ({ items, formatUrl, history }) => {
   return (
     <React.Fragment>
-      <div
-        onClick={() => console.log("Från Navigation:" + history)}
-      >
-        Click!
-      </div>
       <div className="navigation-container">
+      <div
+        onClick={() => console.log(history)}
+      >
+        Click! 
+      </div>
         <ul className="navigation-list">
           {items.map((sidebarItem) => {
             return (
