@@ -1,17 +1,14 @@
 import React from "react";
 import handleViewport from "react-in-viewport";
-import { useHistory } from "react-router-dom";
 
 import "./TextUnit.scss";
 
 const TextUnitContent = (props) => {
   const { forwardedRef, inViewport } = props;
-  let history = useHistory();
 
   if (inViewport) {
-    console.log(props.id);
-    history.push("/#" + props.id);
-    console.log(history);
+    //console.log("Från TextUnit: " + history.location.hash);
+    //history.push("/#" + props.id);
   }
 
   return (

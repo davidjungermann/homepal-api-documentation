@@ -1,9 +1,7 @@
-import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import React from "react";
 
 import "./Description.scss";
 
 export const Description = ({ renderRoutes }) => {
-  const location = useHistory();
   return <div className="description-container">{renderRoutes()}</div>;
 };

@@ -11,7 +11,6 @@ import { Footer } from "./components/footer/Footer";
 import "./App.scss";
 
 function App() {
-
   const formatUrl = (label) => {
     return label
       .replace(/\s/g, "-")

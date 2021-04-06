@@ -1,6 +1,5 @@
 import React from "react";
 import { NavHashLink as Link } from "react-router-hash-link";
-
 import "./NavigationItem.scss";
 
 export const NavigationItem = ({
@@ -13,13 +12,13 @@ export const NavigationItem = ({
   formatUrl,
   ...rest
 }) => {
-
   return (
     <React.Fragment>
       <div className="navigation-item-container">
         <Link
           to={"#" + formatUrl(label)}
           smooth
+          activeClassName="active"
           className="list-item-label"
           {...rest}
         >
