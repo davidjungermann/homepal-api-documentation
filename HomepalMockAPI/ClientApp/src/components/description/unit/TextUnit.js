@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import handleViewport from "react-in-viewport";
 
 import "./TextUnit.scss";
@@ -7,13 +7,12 @@ const TextUnitContent = (props) => {
   const { forwardedRef, inViewport, enterCount } = props;
 
   if (inViewport) {
-    console.log("hej");
+    console.log(forwardedRef);
   }
 
   return (
     <div
       id={props.id}
-      //style={getStyle()}
       className="unit-container"
       ref={forwardedRef}
     >
@@ -25,5 +24,5 @@ const TextUnitContent = (props) => {
 
 export const TextUnit = handleViewport(TextUnitContent, {
   rootMargin: "400px",
-  threshold: 0.25,
+  threshold: 1,
 });
