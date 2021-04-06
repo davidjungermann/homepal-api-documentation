@@ -4,11 +4,11 @@ import handleViewport from "react-in-viewport";
 import "./TextUnit.scss";
 
 const TextUnitContent = (props) => {
-  const { forwardedRef, inViewport, history } = props;
+  const { forwardedRef, inViewport } = props;
 
   if (inViewport) {
-    console.log(history)
-    //props.history.push("/#" + props.id);
+    console.log("Från TextUnit: " + props.history.history.location.hash);
+    props.history.history.push("/#" + props.id);
   }
 
   return (
