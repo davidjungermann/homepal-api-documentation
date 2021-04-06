@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { NavHashLink as Link } from "react-router-hash-link";
 import { configureAnchors } from "react-update-url-on-scroll";
+import { useLocation } from "react-router-dom";
 
 import "./NavigationItem.scss";
 
@@ -20,6 +21,9 @@ export const NavigationItem = ({
     debounce: 100,
     keepLastAnchorHash: true,
   });
+  const [locationState] = useState(useLocation());
+
+  //isActive kallas bara en gång när listan instantieras, det är problemet!
 
   return (
     <React.Fragment>
@@ -29,12 +33,8 @@ export const NavigationItem = ({
           smooth
           className="list-item-label"
           activeClassName="active"
-          isActive={(match, location) => {
-            if (location.hash === "#" + formatUrl(label)) {
-              return true;
-            } else {
-              return false;
-            }
+          isActive={() => {
+            return locationState.hash === "#" + formatUrl(label);
           }}
           {...rest}
         >
