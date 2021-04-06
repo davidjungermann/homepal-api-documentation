@@ -23,11 +23,7 @@ export const NavigationItem = ({
   });
   const [locationState] = useState(useLocation());
 
-  window.addEventListener('hashchange', function() {
-    console.log('The hash has changed!')
-  }, false);
-
-  //isActive kallas bara en gång när listan instantieras, det är problemet! Men den uppdateras när vi klickar. 
+  //isActive kallas bara en gång när listan instantieras, det är problemet! Men den uppdateras när vi klickar.
 
   return (
     <React.Fragment>
@@ -36,11 +32,9 @@ export const NavigationItem = ({
           to={"#" + formatUrl(label)}
           smooth
           className="list-item-label"
-          activeClassName="active"
-          isActive={() => {
-            console.log(locationState.hash === "#" + formatUrl(label))
-            return locationState.hash === "#" + formatUrl(label);
-          }}
+          // isActive={() => {
+          //   return locationState.hash === "#" + formatUrl(label);
+          // }}
           {...rest}
         >
           <span style={{ paddingLeft: depth * depthStep, fontSize: fontSize }}>
