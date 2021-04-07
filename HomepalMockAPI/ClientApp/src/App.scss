@@ -1,6 +1,6 @@
 body {
   overflow-y: hidden;
- }
+}
 
 .container {
   display: grid;
@@ -15,17 +15,21 @@ body {
 
 .body {
   display: grid;
-  grid-template-areas: "navigation content content";
+  grid-template-areas:
+    "header header header"
+    "navigation content content"
+    "footer footer footer";
   grid-template-columns: auto 1fr auto;
   overflow-y: hidden;
-  height: 100vh;
-  width: 100vw;
+  margin-top: 75px;
 }
 
 .content {
   display: grid;
   grid-area: content;
-  grid-template-areas: "description usage";
+  grid-template-areas: 
+  "header header"
+  "description usage";
   grid-template-columns: 1fr 600px;
   grid-template-rows: 1fr auto;
   overflow-y: scroll;

@@ -1,4 +1,9 @@
-* Scrolla till del i description => navigations selected item uppdateras.
 * Grid ska vara responsive! 
+* Usage - body, response, request, example, authentication
+* Description - Object description
+* Styling
 
-Problemet är att vi har haft olika routers hela jävla tiden. withRouter verkar vara rätt! 
+Bugs:
+
+* Adjust height for Viewport scroll thing to be equal of height of element. 
+* Header disappears when scrolling to introduction
