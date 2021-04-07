@@ -24,6 +24,7 @@ const TextUnitContent = (props) => {
 };
 
 export const TextUnit = handleViewport(TextUnitContent, {
-  rootMargin: "400px",
+  
+  rootMargin: "-250px",
   threshold: 1,
 });

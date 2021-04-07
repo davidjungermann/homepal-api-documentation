@@ -6,4 +6,3 @@
 Bugs:
 
 * Adjust height for Viewport scroll thing to be equal of height of element. 
-* Header disappears when scrolling to introduction
