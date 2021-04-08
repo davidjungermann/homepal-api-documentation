@@ -1,18 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import handleViewport from "react-in-viewport";
 
 import "./Section.scss";
 
-export const SectionContent = ({ props }) => {
+const SectionContent = (props) => {
   const { forwardedRef, inViewport } = props;
   var [height, setHeight] = useState(0);
 
   if (inViewport) {
     props.history.history.push("/#" + props.id);
+    console.log("In!");
   }
 
+  useEffect(() => {
+    setHeight(forwardedRef.current.clientHeight);
+  }, [forwardedRef]);
+
   return (
-    <div className="section-container" ref={forwardedRef}>
+    <div id={props.id} className="section-container" ref={forwardedRef}>
       {props.children}
     </div>
   );

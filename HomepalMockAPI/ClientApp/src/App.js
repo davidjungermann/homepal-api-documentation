@@ -7,7 +7,6 @@ import { Description } from "./components/description/Description";
 import { Usage } from "./components/usage/Usage";
 import { Header } from "./components/header/Header";
 import { Footer } from "./components/footer/Footer";
-import { Section } from "./components/section/Section";
 import { ContainerBlock } from "./components/container-block/ContainerBlock";
 import { useHistory } from "react-router";
 
