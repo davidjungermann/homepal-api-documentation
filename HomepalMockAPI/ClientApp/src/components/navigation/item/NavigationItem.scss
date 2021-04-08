@@ -1,8 +1,12 @@
 @import "../../../index.scss";
 
 .list-item-label {
-  color: $gray-6;
+  color: rgba($gray-6, .75);
   text-decoration: none;
+}
+
+.list-item-label:hover {
+  color: $gray-6;
 }
 
 .navigation-item-container {
@@ -29,6 +33,10 @@
   text-decoration: none;
   padding: 2px 120% 2px 0px;
   border-radius: 5px;
+}
+
+.active:hover {
+  color: $lime-dark;
 }
 
 .list-item-header {

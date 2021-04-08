@@ -58,7 +58,7 @@ export const NavigationItem = ({
                 fontSize={fontSize}
                 nextId={nextId}
                 formatUrl={formatUrl}
-                fontWeight={fontWeight - 100}
+                fontWeight={fontWeight}
                 marginTop={0}
                 {...subItem}
               />
