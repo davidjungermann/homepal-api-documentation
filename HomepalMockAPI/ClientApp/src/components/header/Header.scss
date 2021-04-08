@@ -7,9 +7,10 @@
   box-sizing: border-box;
   background-color: $emerald;
   width: 100vw;
-  height: 120px;
+  height: 75px;
   padding: 0px 24px 0px 24px;
   color: $white;
+  position: fixed;
 }
 
 .header-text {

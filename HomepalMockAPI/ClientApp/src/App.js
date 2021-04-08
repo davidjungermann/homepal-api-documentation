@@ -38,7 +38,6 @@ function App() {
             <Content renderRoutes={renderRoutes}></Content>
         </div>
       </div>
-      <Footer>Hej</Footer>
     </div>
   );
 }
