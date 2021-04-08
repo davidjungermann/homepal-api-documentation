@@ -1,5 +1,8 @@
+@import '../../index.scss';
+
+
 .usage-container {
-  background-color: grey;
+  background-color: $gray-1;
   grid-area: usage;
   display: flex;
   justify-content: space-between;

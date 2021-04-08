@@ -1,11 +1,13 @@
 import React from "react";
 
 import "./Header.scss";
+import { ReactComponent as Logo } from '../../assets/logo_horizontal_slogan_w.svg';
 
 export const Header = () => {
   return (
     <div className="header-container">
-      <h2 className="header-text">Homebase Mock API v1</h2>
+      <Logo className="logotype" />
+      <span>Support</span>
     </div>
   );
 };
