@@ -1,16 +1,14 @@
-.navigation-container {
-  background-color: #e0e8f0;
-  grid-area: navigation;
-  padding-right: 20px;
-  overflow-y: scroll;
-}
+@import '../../index.scss';
 
-.sidebar-subitem-text {
-  font-size: 0.8rem;
+.navigation-container {
+  background-color: $gray-1;
+  grid-area: navigation;
+  padding: 24px 48px 24px 24px;
+  overflow-y: scroll;
 }
 
 .navigation-list {
   list-style-type: none;
-  padding-left: 20px;
+  padding: 0;
   text-align: left;
 }

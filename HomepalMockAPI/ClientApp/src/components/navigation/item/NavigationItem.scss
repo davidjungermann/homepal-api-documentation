@@ -1,16 +1,13 @@
-.list-item-label {
-  color: #4c5f72;
-  text-decoration: none;
-}
+@import '../../../index.scss';
 
-.list-item-label-selected {
-  color: black;
+.list-item-label {
+  color: $gray-6;
   text-decoration: none;
 }
 
 .navigation-item-container {
-  margin-bottom: 10%;
-  margin-top: 10%;
+  margin-bottom: 2%;
+  margin-top: 2%;
   user-select: none;
 }
 
@@ -25,6 +22,6 @@
 }
 
 .active {
-  color: black;
+  color: $lime;
   text-decoration: none;
 }
