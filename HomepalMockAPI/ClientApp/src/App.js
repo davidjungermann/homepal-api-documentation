@@ -30,25 +30,15 @@ function App() {
   };
 
   return (
-    <div>
-      <div className="container">
-        <Header></Header>
-        <div className="body">
-          <Navigation items={items} formatUrl={formatUrl} history={history} />
-          <div className="content">
+    <div className="container">
+      <Header></Header>
+      <div className="body">
+        <Navigation className="navigation" items={items} formatUrl={formatUrl} history={history} />
+        <div className="content">
             <Content renderRoutes={renderRoutes}></Content>
-            {/* <Usage>
-              <ContainerBlock header="Example">
-                curl http://localhost:5000/api/agents
-              </ContainerBlock>
-              <ContainerBlock header="Example">
-                curl http://localhost:5000/api/agents
-              </ContainerBlock>
-            </Usage> */}
-          </div>
         </div>
-        <Footer></Footer>
       </div>
+      <Footer>Hej</Footer>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 
-import "./Description.scss";
+import "./Content.scss";
 
 export const Content = ({ renderRoutes }) => {
-  return <div className="description-container">{renderRoutes()}</div>;
+  return <div className="content-container">{renderRoutes()}</div>;
 };
