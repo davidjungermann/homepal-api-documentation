@@ -1,30 +1,12 @@
-import React, { useState, useEffect } from "react";
-import handleViewport from "react-in-viewport";
+import React from "react";
 
 import "./TextUnit.scss";
 
-const TextUnitContent = (props) => {
-  const { forwardedRef, inViewport } = props;
-  var [height, setHeight] = useState(0);
-
-  if (inViewport) {
-    props.history.history.push("/#" + props.id);
-  }
-
-  useEffect(() => {
-    setHeight(forwardedRef.current.clientHeight);
-  }, [forwardedRef]);
-
+export const TextUnit = ({ header, content }) => {
   return (
-    <div id={props.id} className="unit-container" ref={forwardedRef}>
-      <h1>{props.header}</h1>
-      <p>{props.content}</p>
+    <div className="unit-container">
+      <h1>{header}</h1>
+      <p>{content}</p>
     </div>
   );
 };
-
-export const TextUnit = handleViewport(TextUnitContent, {
-  
-  rootMargin: "100px 0px -20% 0px",
-  threshold: 1,
-});
