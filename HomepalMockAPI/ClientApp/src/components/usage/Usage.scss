@@ -1,4 +1,8 @@
 .usage-container {
   background-color: grey;
   grid-area: usage;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
