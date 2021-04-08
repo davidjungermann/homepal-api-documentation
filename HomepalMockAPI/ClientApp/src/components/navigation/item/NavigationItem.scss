@@ -27,7 +27,8 @@
 }
 
 .list-item-header {
-  font-weight: 800;
   user-select: none;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $gray-2;
 }
 
