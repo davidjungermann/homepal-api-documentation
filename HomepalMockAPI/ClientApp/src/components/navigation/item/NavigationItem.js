@@ -1,4 +1,3 @@
-import { LocalConvenienceStoreOutlined } from "@material-ui/icons";
 import React from "react";
 import { NavHashLink as Link } from "react-router-hash-link";
 import "./NavigationItem.scss";
@@ -12,16 +11,18 @@ export const NavigationItem = ({
   nextId,
   formatUrl,
   fontWeight,
-  marginTop,
   ...rest
 }) => {
-  if (depth === 0) {
-    marginTop = 30;
-  } else {
-    marginTop = 0;
-  }
-  return (
-    <React.Fragment>
+  const renderHeaderItem = () => {
+    return (
+      <div>
+        <span className="list-item-header">{label}</span>
+      </div>
+    );
+  };
+
+  const renderLinkItem = () => {
+    return (
       <div className="navigation-item-container">
         <Link
           to={"#" + formatUrl(label)}
@@ -40,7 +41,12 @@ export const NavigationItem = ({
           </span>
         </Link>
       </div>
-      {Array.isArray(items) ? (
+    );
+  };
+
+  const renderNextItem = () => {
+    if (Array.isArray(items)) {
+      return (
         <ul className="navigation-sub-list">
           {items.map((subItem) => {
             return (
@@ -58,7 +64,25 @@ export const NavigationItem = ({
             );
           })}
         </ul>
-      ) : null}
-    </React.Fragment>
-  );
+      );
+    } else {
+      return null;
+    }
+  };
+
+  if (depth === 0) {
+    return (
+      <React.Fragment>
+        {renderHeaderItem()}
+        {renderNextItem()}
+      </React.Fragment>
+    );
+  } else {
+    return (
+      <React.Fragment>
+        {renderLinkItem()}
+        {renderNextItem()}
+      </React.Fragment>
+    );
+  }
 };
