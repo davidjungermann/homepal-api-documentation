@@ -11,11 +11,7 @@ export const Navigation = ({ items, formatUrl, history }) => {
         <ul className="navigation-list">
           {items.map((sidebarItem) => {
             return (
-              <div
-                style={{
-                  marginTop: 50,
-                }}
-              >
+              <div className="navigation-list-header">
                 <NavigationItem
                   key={nextId()}
                   nextId={nextId}
