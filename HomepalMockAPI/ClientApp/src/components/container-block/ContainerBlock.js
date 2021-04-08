@@ -18,7 +18,7 @@ export const ContainerBlock = ({ header, children }) => {
         </button>
       </div>
       <div className="container-block-content">
-        <p>{content}</p>
+        <span>{content}</span>
       </div>
     </div>
   );
