@@ -1,6 +1,7 @@
+@import '../../index.scss';
+
 .section-container {
   display: flex;
   flex-direction: row;
-  margin-top: 48px;
-  margin-bottom: 48px;
+  border-bottom: 1px solid $gray-2;
 }
