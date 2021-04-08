@@ -7,6 +7,7 @@ import { Description } from "./components/description/Description";
 import { Usage } from "./components/usage/Usage";
 import { Header } from "./components/header/Header";
 import { Footer } from "./components/footer/Footer";
+import { Section } from "./components/section/Section";
 import { ContainerBlock } from "./components/container-block/ContainerBlock";
 import { useHistory } from "react-router";
 
@@ -40,8 +41,12 @@ function App() {
           <div className="content">
             <Description renderRoutes={renderRoutes}></Description>
             <Usage>
-              <ContainerBlock header="Example">curl http://localhost:5000/api/agents</ContainerBlock>
-              <ContainerBlock header="Example">curl http://localhost:5000/api/agents</ContainerBlock>
+              <ContainerBlock header="Example">
+                curl http://localhost:5000/api/agents
+              </ContainerBlock>
+              <ContainerBlock header="Example">
+                curl http://localhost:5000/api/agents
+              </ContainerBlock>
             </Usage>
           </div>
         </div>
