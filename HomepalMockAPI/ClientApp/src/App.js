@@ -42,8 +42,6 @@ function App() {
             <Usage>
               <ContainerBlock header="Example">curl http://localhost:5000/api/agents</ContainerBlock>
               <ContainerBlock header="Example">curl http://localhost:5000/api/agents</ContainerBlock>
-              <ContainerBlock header="Example">curl http://localhost:5000/api/agents</ContainerBlock>
-              <ContainerBlock header="Example">curl http://localhost:5000/api/agents</ContainerBlock>
             </Usage>
           </div>
         </div>
