@@ -7,9 +7,10 @@ export const NavigationItem = ({
   items,
   depthStep = 15,
   depth = 0,
-  fontSize = 18,
+  fontSize = 14,
   nextId,
   formatUrl,
+  fontWeight,
   ...rest
 }) => {
   return (
@@ -22,7 +23,7 @@ export const NavigationItem = ({
           className="list-item-label"
           {...rest}
         >
-          <span style={{ paddingLeft: depth * depthStep, fontSize: fontSize }}>
+          <span style={{ paddingLeft: depth * depthStep, fontSize: fontSize, fontWeight: fontWeight }}>
             {label}
           </span>
         </Link>
@@ -35,9 +36,10 @@ export const NavigationItem = ({
                 key={nextId()}
                 depth={depth + 1}
                 depthStep={depthStep}
-                fontSize={fontSize - 2}
+                fontSize={fontSize}
                 nextId={nextId}
                 formatUrl={formatUrl}
+                fontWeight={fontWeight - 100}
                 {...subItem}
               />
             );
