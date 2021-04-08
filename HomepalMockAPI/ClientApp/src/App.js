@@ -7,6 +7,7 @@ import { Description } from "./components/description/Description";
 import { Usage } from "./components/usage/Usage";
 import { Header } from "./components/header/Header";
 import { Footer } from "./components/footer/Footer";
+import { ContainerBlock } from "./components/container-block/ContainerBlock";
 import { useHistory } from "react-router";
 
 import "./App.scss";
@@ -38,7 +39,9 @@ function App() {
           <Navigation items={items} formatUrl={formatUrl} history={history} />
           <div className="content">
             <Description renderRoutes={renderRoutes}></Description>
-            <Usage></Usage>
+            <Usage>
+              <ContainerBlock header="Header">Content!!!!!!!</ContainerBlock>
+            </Usage>
           </div>
         </div>
         <Footer></Footer>
