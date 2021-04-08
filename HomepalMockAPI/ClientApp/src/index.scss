@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+//Primary colors
+$midnight: #0c273b;
+$white: #ffffff;
+
+$lime: #b5e48c;
+$lime-light: #d9ed92;
+$lime-dark: #99d98c;
+
+$emerald: #52b69a;
+$emerald-light: #76c893;
+$emerald-dark: #34a0a4;
+
+//Secondary colors
+$honey: #ede293;
+$honey-light: #e9ed93;
+$honey-dark: #edd293;
+
+$coral: #edb393;
+$coral-light: #edc393;
+$coral-dark: #eda493;
+
+$navy: #1a759f;
+$navy-light: #168aad;
+$navy-dark: #1e6091;
+
+//Gray scale
+$gray-1: #f6f9fc;
+$gray-2: #e0e8f0;
+$gray-3: #cdd6e0;
+$gray-4: #a5b5c4;
+$gray-5: #97a7ba;
+$gray-6: #4c5f72;
+
+//Midnight scale
+$midnight-1: #184e77;
+$midnight-2: #17486e;
+$midnight-3: #154366;
+$midnight-4: #133d5d;
+$midnight-5: #113755;
+$midnight-6: #10324c;
+$midnight-7: #0e2c44;
+
+//Alternative colors
+$red: #ed9593;
+
+
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $midnight;
+}
