@@ -6,11 +6,9 @@ import "./Section.scss";
 const SectionContent = (props) => {
   const { forwardedRef, inViewport } = props;
   var [height, setHeight] = useState(0);
-  console.log(forwardedRef)
 
   if (inViewport) {
     props.history.history.push("/#" + props.id);
-    console.log("In!");
   }
 
   useEffect(() => {

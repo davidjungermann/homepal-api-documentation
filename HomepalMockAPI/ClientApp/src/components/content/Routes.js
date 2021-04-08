@@ -1,5 +1,5 @@
 import React from "react";
-import { TextUnit } from "./unit/TextUnit";
+import { TextUnit } from "./text-unit/TextUnit";
 import { Section } from "../section/Section";
 import { ContainerBlock } from "../container-block/ContainerBlock";
 import { Description } from "../description/Description";

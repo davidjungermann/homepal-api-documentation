@@ -7,17 +7,24 @@ import "./Navigation.scss";
 export const Navigation = ({ items, formatUrl, history }) => {
   return (
     <React.Fragment>
-      <div className="navigation-container">  
+      <div className="navigation-container">
         <ul className="navigation-list">
           {items.map((sidebarItem) => {
             return (
-              <NavigationItem
-                key={nextId()}
-                nextId={nextId}
-                formatUrl={formatUrl}
-                fontWeight={700}
-                {...sidebarItem}
-              />
+              <div
+                style={{
+                  marginTop: 50,
+                }}
+              >
+                <NavigationItem
+                  key={nextId()}
+                  nextId={nextId}
+                  formatUrl={formatUrl}
+                  fontWeight={700}
+                  marginTop={30}
+                  {...sidebarItem}
+                />
+              </div>
             );
           })}
         </ul>

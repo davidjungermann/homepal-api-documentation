@@ -33,10 +33,16 @@ function App() {
     <div className="container">
       <Header></Header>
       <div className="body">
-        <Navigation className="navigation" items={items} formatUrl={formatUrl} history={history} />
+        <Navigation
+          className="navigation"
+          items={items}
+          formatUrl={formatUrl}
+          history={history}
+        />
         <div className="content">
-            <Content renderRoutes={renderRoutes}></Content>
+          <Content renderRoutes={renderRoutes}></Content>
         </div>
+        {/* <Footer></Footer> */}
       </div>
     </div>
   );

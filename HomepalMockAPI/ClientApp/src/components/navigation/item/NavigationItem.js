@@ -1,3 +1,4 @@
+import { LocalConvenienceStoreOutlined } from "@material-ui/icons";
 import React from "react";
 import { NavHashLink as Link } from "react-router-hash-link";
 import "./NavigationItem.scss";
@@ -11,19 +12,30 @@ export const NavigationItem = ({
   nextId,
   formatUrl,
   fontWeight,
+  marginTop,
   ...rest
 }) => {
+  if (depth === 0) {
+    marginTop = 30;
+  } else {
+    marginTop = 0;
+  }
   return (
     <React.Fragment>
       <div className="navigation-item-container">
         <Link
           to={"#" + formatUrl(label)}
-          smooth
           activeClassName="active"
           className="list-item-label"
           {...rest}
         >
-          <span style={{ paddingLeft: depth * depthStep, fontSize: fontSize, fontWeight: fontWeight }}>
+          <span
+            style={{
+              paddingLeft: depth * depthStep,
+              fontSize: fontSize,
+              fontWeight: fontWeight,
+            }}
+          >
             {label}
           </span>
         </Link>
@@ -40,6 +52,7 @@ export const NavigationItem = ({
                 nextId={nextId}
                 formatUrl={formatUrl}
                 fontWeight={fontWeight - 100}
+                marginTop={0}
                 {...subItem}
               />
             );
