@@ -1,6 +1,6 @@
 .description-container {
   width: 60%;
-  padding: 48px 96px 48px 96px;
+  padding: calc(60% * 0.1) calc(60% * 0.1) calc(60% * 0.1) calc(60% * 0.2);
   box-sizing: border-box;
   //border: 1px solid red;
 }

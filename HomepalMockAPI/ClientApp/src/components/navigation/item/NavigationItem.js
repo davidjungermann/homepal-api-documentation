@@ -15,8 +15,8 @@ export const NavigationItem = ({
 }) => {
   const renderHeaderItem = () => {
     return (
-      <div>
-        <h3 className="list-item-header title-8">{label}</h3>
+      <div className="list-item-header">
+        <h3 className="title-8">{label}</h3>
       </div>
     );
   };

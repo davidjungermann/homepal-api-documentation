@@ -1,4 +1,5 @@
 @import '../../index.scss';
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
 .container-block-header-container {
   padding: 0px 12px 0px 24px;
@@ -6,18 +7,52 @@
   justify-content: space-between;
   align-items: center;
   background-color: $gray-3;
+  border-radius: 12px 12px 0px 0px;
+  box-sizing: border-box;
 }
 
 .container-block {
-  width: 500px;
+  //width: 500px;
   margin: 10px 10px 10px 10px;
   background-color: $gray-2;
+  border-radius: 12px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .container-block-content {
+  font-size: 10.5pt;
+  font-family: 'Source Code Pro', monospace;
   padding: 24px 24px 24px 24px;
   white-space: nowrap;
   overflow-x: scroll;
+  box-sizing: border-box;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: none;
+    margin-left: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+	  border-radius: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: none;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track:hover {
+    background: $gray-3; 
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: $gray-4; 
+  }
 }
 
 .container-block-header {
@@ -25,6 +60,15 @@
 }
 
 .container-block-header-button {
-  margin-right: 5px;
-  height: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    color: $midnight-7;
+  }
 }

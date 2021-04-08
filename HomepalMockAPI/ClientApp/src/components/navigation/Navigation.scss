@@ -4,10 +4,36 @@
   background-color: $gray-1;
   overflow-y: scroll;
   overflow-x: hidden;
-  width: fit-content;
-  box-sizing: border-box;
+  min-width: fit-content;
   padding-left: 24px;
-  padding-right: 24px;
+  padding-right: 72px;
+  border-right: 1px solid $gray-2;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: none;
+    margin-left: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+	  border-radius: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $gray-2;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track:hover {
+    background: $gray-3; 
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: $gray-4; 
+  }
 }
 
 .navigation-title {
@@ -17,11 +43,11 @@
 
 .navigation-list {
   list-style-type: none;
-  padding-left: 0;
+  padding: 0;
   text-align: left;
-  width: 250px;
+  width: fit-content;
 }
 
 .navigation-list-header {
- margin-top: 50px; 
+ margin-top: 50px;
 }
