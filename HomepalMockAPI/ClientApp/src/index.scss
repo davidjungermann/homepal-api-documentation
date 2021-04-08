@@ -45,11 +45,85 @@ $midnight-7: #0e2c44;
 //Alternative colors
 $red: #ed9593;
 
+.title-1 {
+  font-size: 64pt;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 64pt;
+  margin-top: 64pt;
+}
+
+.title-2 {
+  font-size: 48pt;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 48pt;
+  margin-top: 48pt;
+}
+
+.title-3 {
+  font-size: 36pt;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 36pt;
+  margin-top: 36pt;
+}
+
+.title-4 {
+  font-size: 24pt;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 24pt;
+  margin-top: 24pt;
+}
+
+.title-5 {
+  font-size: 18pt;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 18pt;
+  margin-top: 18pt;
+}
+
+.title-6 {
+  font-size: 14pt;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 14pt;
+  margin-top: 14pt;
+}
+
+.title-7 {
+  font-size: 12pt;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 12pt;
+  margin-top: 12pt;
+}
+
+.title-8 {
+  font-size: 10.5pt;
+  font-weight: 600;
+  line-height: 1.1;
+  margin-bottom: 10.5pt;
+  margin-top: 10.5pt;
+}
 
 body {
   margin: 0;
   font-family: 'Poppins', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
   color: $midnight;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  color: $gray-6;
+  line-height: 1.6;
+  font-weight: 400;
 }

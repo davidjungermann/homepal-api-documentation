@@ -12,7 +12,7 @@ export const ContainerBlock = ({ header, children }) => {
   return (
     <div className="container-block">
       <div className="container-block-header-container">
-        <h4 className="container-block-header">{header}</h4>
+        <h4 className="container-block-header title-8">{header}</h4>
         <button className="container-block-header-button" onClick={handleCopy}>
           Copy
         </button>
