@@ -8,6 +8,10 @@ export const Navigation = ({ items, formatUrl, history }) => {
   return (
     <React.Fragment>
       <div className="navigation-container">
+        <div className="navigation-header">
+            <span><h1 className="title-7">Homebase API v1</h1></span>
+            <span id="docs-text" className="title-7">Docs</span>
+        </div>
         <ul className="navigation-list">
           {items.map((sidebarItem) => {
             return (

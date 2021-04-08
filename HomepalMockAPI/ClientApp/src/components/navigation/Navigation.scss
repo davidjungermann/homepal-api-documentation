@@ -5,8 +5,7 @@
   overflow-y: scroll;
   overflow-x: hidden;
   min-width: fit-content;
-  padding-left: 24px;
-  padding-right: 72px;
+  padding: 24px 72px 0px 24px;
   border-right: 1px solid $gray-2;
 
   &::-webkit-scrollbar {
@@ -49,5 +48,19 @@
 }
 
 .navigation-list-header {
- margin-top: 50px;
+ margin-top: 24px;
+}
+
+.navigation-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+
+  color: $lime-dark!important;
+  font-weight: 600;
+}
+
+#docs-text {
+  margin-left: 6px;
 }

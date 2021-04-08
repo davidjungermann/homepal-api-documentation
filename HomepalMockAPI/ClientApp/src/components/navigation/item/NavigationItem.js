@@ -16,7 +16,7 @@ export const NavigationItem = ({
   const renderHeaderItem = () => {
     return (
       <div className="list-item-header">
-        <h3 className="title-8">{label}</h3>
+        <h3 className="title-8 faded">{label}</h3>
       </div>
     );
   };

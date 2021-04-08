@@ -25,9 +25,9 @@
 
 .active {
   color: $lime-dark;
-  background: rgba($gray-2, .2);
+  background: rgba($emerald, .2);
   text-decoration: none;
-  padding-right: 120%;
+  padding: 2px 120% 2px 0px;
   border-radius: 5px;
 }
 
@@ -35,5 +35,9 @@
   user-select: none;
   margin-bottom: 12px;
   border-bottom: 1px solid $gray-2;
+}
+
+.faded {
+  color: $gray-5;
 }
 
