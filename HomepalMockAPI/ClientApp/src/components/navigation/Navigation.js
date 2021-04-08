@@ -7,10 +7,7 @@ import "./Navigation.scss";
 export const Navigation = ({ items, formatUrl, history }) => {
   return (
     <React.Fragment>
-      <div className="navigation-container">
-        <h1 className = "navigation-title">
-          Homebase Mock API v1
-        </h1>
+      <div className="navigation-container">  
         <ul className="navigation-list">
           {items.map((sidebarItem) => {
             return (
