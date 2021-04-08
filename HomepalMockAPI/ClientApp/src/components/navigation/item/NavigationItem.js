@@ -14,11 +14,7 @@ export const NavigationItem = ({
   ...rest
 }) => {
   const renderHeaderItem = () => {
-    return (
-      <div>
-        <span className="list-item-header">{label}</span>
-      </div>
-    );
+    return <span className="list-item-header">{label}</span>;
   };
 
   const renderLinkItem = () => {
@@ -28,6 +24,7 @@ export const NavigationItem = ({
           to={"#" + formatUrl(label)}
           activeClassName="active"
           className="list-item-label"
+          smooth
           {...rest}
         >
           <span
