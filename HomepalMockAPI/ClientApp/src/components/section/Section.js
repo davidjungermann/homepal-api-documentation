@@ -6,6 +6,7 @@ import "./Section.scss";
 const SectionContent = (props) => {
   const { forwardedRef, inViewport } = props;
   var [height, setHeight] = useState(0);
+  console.log(forwardedRef)
 
   if (inViewport) {
     props.history.history.push("/#" + props.id);
@@ -24,6 +25,6 @@ const SectionContent = (props) => {
 };
 
 export const Section = handleViewport(SectionContent, {
-  rootMargin: "100px 0px -20% 0px",
+  rootMargin: "100px 0px -30% 0px",
   threshold: 1,
 });
