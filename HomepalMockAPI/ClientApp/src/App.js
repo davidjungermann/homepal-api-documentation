@@ -1,9 +1,9 @@
 import React from "react";
 import { Navigation } from "./components/navigation/Navigation";
 import { items } from "./components/navigation/items";
-import { routes } from "./components/description/Routes";
+import { routes } from "./components/content/Routes";
 import { BrowserRouter as Route } from "react-router-dom";
-import { Description } from "./components/description/Description";
+import { Content } from "./components/content/Description";
 import { Usage } from "./components/usage/Usage";
 import { Header } from "./components/header/Header";
 import { Footer } from "./components/footer/Footer";
@@ -38,15 +38,15 @@ function App() {
         <div className="body">
           <Navigation items={items} formatUrl={formatUrl} history={history} />
           <div className="content">
-            <Description renderRoutes={renderRoutes}></Description>
-            <Usage>
+            <Content renderRoutes={renderRoutes}></Content>
+            {/* <Usage>
               <ContainerBlock header="Example">
                 curl http://localhost:5000/api/agents
               </ContainerBlock>
               <ContainerBlock header="Example">
                 curl http://localhost:5000/api/agents
               </ContainerBlock>
-            </Usage>
+            </Usage> */}
           </div>
         </div>
         <Footer></Footer>
