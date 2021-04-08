@@ -3,11 +3,9 @@ import { Navigation } from "./components/navigation/Navigation";
 import { items } from "./components/navigation/items";
 import { routes } from "./components/content/Routes";
 import { BrowserRouter as Route } from "react-router-dom";
-import { Content } from "./components/content/Description";
-import { Usage } from "./components/usage/Usage";
+import { Content } from "./components/content/Content";
 import { Header } from "./components/header/Header";
 import { Footer } from "./components/footer/Footer";
-import { ContainerBlock } from "./components/container-block/ContainerBlock";
 import { useHistory } from "react-router";
 
 import "./App.scss";
