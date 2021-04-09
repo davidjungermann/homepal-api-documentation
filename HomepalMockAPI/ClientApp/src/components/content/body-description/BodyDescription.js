@@ -5,8 +5,12 @@ import "./BodyDescription.scss";
 
 export const BodyDescription = ({ body, copy }) => {
   const renderBody = () => {
-    Object.entries(body).map(([key, value]) => {
-      return <div>{key}</div>;
+    return Object.entries(body).map(([key, value]) => {
+      return (
+        <div>
+          Key: {key} and Value: {value}
+        </div>
+      );
     });
   };
   return (

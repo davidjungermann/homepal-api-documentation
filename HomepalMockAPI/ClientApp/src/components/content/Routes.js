@@ -46,7 +46,7 @@ export const routes = [
               parameter="/{id}"
             ></Endpoint>
           </EndpointList>
-          <BodyDescription copy body={{ id: 1337 }}></BodyDescription>
+          <BodyDescription copy body={{ id: 1337, ass: "Rumpa" }}></BodyDescription>
         </Usage>
       </Section>
     ),
