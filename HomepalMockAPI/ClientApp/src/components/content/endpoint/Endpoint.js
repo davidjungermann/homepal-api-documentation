@@ -3,12 +3,17 @@ import React from "react";
 import "./Endpoint.scss";
 
 export const Endpoint = ({ request, baseUrl, parameter }) => {
+  
+  const requestName = request.toLowerCase() + "-request";
+  
   if (parameter === undefined) {
       parameter = "";
   }
+
     return (
       <div className="endpoint-container">
-        <span>{request + " " + baseUrl + parameter}</span>
+        <span className={requestName + " request"}>{request}</span>
+        <span className="request-url">{baseUrl + parameter}</span> 
       </div>
     );
 };

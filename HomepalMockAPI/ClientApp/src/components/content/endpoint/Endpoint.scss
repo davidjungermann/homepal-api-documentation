@@ -1,0 +1,35 @@
+@import '../../../index.scss';
+
+.endpoint-container {
+    height: 24px;
+}
+
+.request {
+    padding: 0px 8px 0px 8px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.get-request {
+    background: rgba($honey, 0.4);
+    color: $coral;
+}
+
+.post-request {
+    background: rgba($lime-dark, 0.4);
+    color: $emerald-dark;
+}
+
+.put-request {
+    background: rgba($emerald-dark, 0.4);
+    color: $navy-light;
+}
+
+.delete-request {
+    background: rgba($red, 0.4);
+    color: $red;
+}
+
+.request-url {
+
+}
