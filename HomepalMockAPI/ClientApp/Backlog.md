@@ -6,3 +6,4 @@
 Bugs:
 
 * Adjust height for Viewport scroll thing to be equal of height of element. 
+* Copy funkar inte lol
