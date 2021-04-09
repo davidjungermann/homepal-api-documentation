@@ -48,6 +48,32 @@ export const routes = [
           </EndpointList>
           <BodyDescription
             copy
+            // body={[
+            //   {
+            //     id: 1,
+            //     class_descriptor: "ApartmentBuilding",
+            //     street_name: "Skånegatan",
+            //     street_number: "20",
+            //     postal_code: "223 33",
+            //     real_estate_id: 1,
+            //   },
+            //   {
+            //     id: 2,
+            //     class_descriptor: "ApartmentBuilding",
+            //     street_name: "Umeåvägen",
+            //     street_number: "18",
+            //     postal_code: "333 44",
+            //     real_estate_id: 2,
+            //   },
+            //   {
+            //     id: 3,
+            //     class_descriptor: "LaundryBuilding",
+            //     street_name: "Drottninggatan",
+            //     street_number: "12",
+            //     postal_code: "453 11",
+            //     real_estate_id: 3,
+            //   },
+            // ]}
             body={{
               id: 1,
               class_descriptor: "ApartmentBuilding",
