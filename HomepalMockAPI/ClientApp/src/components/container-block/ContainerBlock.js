@@ -16,7 +16,7 @@ export const ContainerBlock = ({ header, children, copy }) => {
       <div className="container-block-header-container">
         <h4 className="container-block-header title-8">{header}</h4>
         <button className="container-block-header-button" onClick={handleCopy}>
-          {copy ? <FontAwesomeIcon icon={faCopy} /> : null}
+          {copy && <FontAwesomeIcon icon={faCopy} />}
         </button>
       </div>
       <div className="container-block-content">{content}</div>
