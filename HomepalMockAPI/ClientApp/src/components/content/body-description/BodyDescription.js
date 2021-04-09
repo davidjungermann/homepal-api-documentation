@@ -7,12 +7,27 @@ export const BodyDescription = ({ body, copy }) => {
   const [isArray] = useState(Array.isArray(body));
 
   const renderBody = () => {
-    return Object.entries(body).map(([key, value]) => {
-      return (
-        <div>
-          "{key}": {value}
-        </div>
-      );
+    return Object.entries(body).map(([key, value], index) => {
+      if (index === 0) {
+        return (
+          <React.Fragment>
+            {openingBrace()}"{key}": {value}
+          </React.Fragment>
+        );
+      } else if (index === Object.keys(body).length - 1) {
+        return (
+          <React.Fragment>
+            "{key}": {value}
+            {closingBrace()}
+          </React.Fragment>
+        );
+      } else {
+        return (
+          <React.Fragment>
+            "{key}": {value}
+          </React.Fragment>
+        );
+      }
     });
   };
 
@@ -29,11 +44,17 @@ export const BodyDescription = ({ body, copy }) => {
     });
   };
 
+  const openingBrace = () => {
+    return <p className="opening-brace">{"{ "}</p>;
+  };
+
+  const closingBrace = () => {
+    return <p className="closing-brace">{" }"}</p>;
+  };
+
   return (
       <ContainerBlock copy={copy} header="Building">
-        {"{"}
         {isArray ? renderArrayBody() : renderBody()}
-        {"}"}
       </ContainerBlock>
   );
 };
