@@ -9,6 +9,7 @@ import { Endpoint } from "../content/endpoint/Endpoint";
 import { BodyDescription } from "../content/body-description/BodyDescription";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy, faExclamationTriangle, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+import { ReactComponent as ArchitecturalOverview } from '../../assets/architectural_overview.svg';
 
 export const routes = [
   {
@@ -130,10 +131,7 @@ export const routes = [
           </TextUnit>
         </Description>
         <Usage>
-          <ContainerBlock header="Example">
-            <b>$ curl </b>
-            http://localhost:5000/api/agents
-          </ContainerBlock>
+          <ArchitecturalOverview />
         </Usage>
       </Section>
     ),

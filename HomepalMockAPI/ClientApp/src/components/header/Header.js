@@ -2,8 +2,6 @@ import React from "react";
 
 import "./Header.scss";
 import { ReactComponent as Logo } from '../../assets/logo_horizontal_slogan_w.svg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronRight, faCopy } from '@fortawesome/free-solid-svg-icons'
 
 export const Header = () => {
   return (
