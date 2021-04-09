@@ -53,10 +53,8 @@ export const BodyDescription = ({ body, copy }) => {
   };
 
   return (
-    <div className="body-description-container">
       <ContainerBlock copy={copy} header="Building">
         {isArray ? renderArrayBody() : renderBody()}
       </ContainerBlock>
-    </div>
   );
 };
