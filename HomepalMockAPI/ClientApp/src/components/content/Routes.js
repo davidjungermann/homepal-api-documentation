@@ -4,6 +4,7 @@ import { Section } from "../section/Section";
 import { ContainerBlock } from "../container-block/ContainerBlock";
 import { Description } from "../description/Description";
 import { Usage } from "../usage/Usage";
+import { EndpointList } from "../content/endpoint-list/EndpointList";
 
 export const routes = [
   {
@@ -32,8 +33,10 @@ export const routes = [
         </Description>
         <Usage>
           <ContainerBlock header="Example" copy>
+            <b>$ curl </b>
             http://localhost:5000/api/just/some/random/words/for/making/a/long/path
           </ContainerBlock>
+          <EndpointList endpoints={["1", "2", "3"]}></EndpointList>
         </Usage>
       </Section>
     ),
@@ -64,6 +67,7 @@ export const routes = [
         </Description>
         <Usage>
           <ContainerBlock header="Example">
+            <b>$ curl </b>
             http://localhost:5000/api/agents
           </ContainerBlock>
         </Usage>

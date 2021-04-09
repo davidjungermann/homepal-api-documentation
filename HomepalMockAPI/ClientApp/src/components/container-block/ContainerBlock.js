@@ -19,9 +19,7 @@ export const ContainerBlock = ({ header, children, copy }) => {
           {copy ? <FontAwesomeIcon icon={faCopy} /> : null}
         </button>
       </div>
-      <div className="container-block-content">
-        <span>{content}</span>
-      </div>
+      <div className="container-block-content">{content}</div>
     </div>
   );
 };
