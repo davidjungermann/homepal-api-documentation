@@ -38,16 +38,14 @@ export const routes = [
             <b>$ curl </b>
             http://localhost:5000/api/just/some/random/words/for/making/a/long/path
           </ContainerBlock>
-          <EndpointList
-            endpoints={[
-              <Endpoint request="GET" baseUrl="v1/buildings"></Endpoint>,
-              <Endpoint
-                request="DELETE"
-                baseUrl="v1/buildings"
-                parameter="/{id}"
-              ></Endpoint>,
-            ]}
-          ></EndpointList>
+          <EndpointList>
+            <Endpoint request="GET" baseUrl="v1/buildings"></Endpoint>
+            <Endpoint
+              request="DELETE"
+              baseUrl="v1/buildings"
+              parameter="/{id}"
+            ></Endpoint>
+          </EndpointList>
           <BodyDescription copy body={{ id: 1337 }}></BodyDescription>
         </Usage>
       </Section>
