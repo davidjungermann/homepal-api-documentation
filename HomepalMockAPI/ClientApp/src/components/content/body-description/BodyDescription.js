@@ -14,12 +14,10 @@ export const BodyDescription = ({ body, copy }) => {
     });
   };
   return (
-    <div className="body-description-container">
       <ContainerBlock copy={copy} header="Building">
         {"{"}
         {renderBody()}
         {"}"}
       </ContainerBlock>
-    </div>
   );
 };
