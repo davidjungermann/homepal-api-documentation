@@ -13,6 +13,7 @@ import {
   faExclamationTriangle,
   faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
+import { Example } from "./example/Example";
 
 export const routes = [
   {
@@ -69,14 +70,14 @@ export const routes = [
           </ContainerBlock>
           <TextUnit header="Usage examples" headerSize="7">
             <p>
-              By default, the Homebase API Docs demonstrate using cURL to interact with the API over HTTP.
+              By default, the Homebase API Docs demonstrate using cURL to
+              interact with the API over HTTP.
             </p>
           </TextUnit>
-          <ContainerBlock header="Usage" copy>
-            <b>$ curl </b>
+          <Example header="Usage">
             http://localhost:5000/api/just/some/random/words/for/making/a/long/path
-          </ContainerBlock>
-          <EndpointList copy>
+          </Example>
+          <EndpointList header="Endpoints">
             <Endpoint request="GET" baseUrl="v1/buildings"></Endpoint>
             <Endpoint
               request="DELETE"
@@ -154,12 +155,7 @@ export const routes = [
             </p>
           </TextUnit>
         </Description>
-        <Usage>
-          <ContainerBlock header="Example">
-            <b>$ curl </b>
-            http://localhost:5000/api/agents
-          </ContainerBlock>
-        </Usage>
+        <Usage></Usage>
       </Section>
     ),
   },
