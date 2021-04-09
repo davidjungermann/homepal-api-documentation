@@ -13,7 +13,6 @@
 }
 
 .container-block {
-  //width: 500px;
   margin: 10px 10px 10px 10px;
   background-color: $gray-2;
   border-radius: 12px;
@@ -24,6 +23,7 @@
 .container-block-content {
   font-size: 10.5pt;
   font-family: 'Source Code Pro', monospace;
+  color: $gray-6;
   padding: 24px 24px 24px 24px;
   white-space: nowrap;
   overflow-x: scroll;

@@ -39,12 +39,11 @@ export const routes = [
             http://localhost:5000/api/just/some/random/words/for/making/a/long/path
           </ContainerBlock>
           <EndpointList>
-            <Endpoint request="GET" baseUrl="v1/buildings"></Endpoint>
-            <Endpoint
-              request="DELETE"
-              baseUrl="v1/buildings"
-              parameter="/{id}"
-            ></Endpoint>
+            <Endpoint request="GET" baseUrl="v1/buildings"/>
+            <Endpoint request="GET" baseUrl="v1/buildings" parameter="/{id}"/>
+            <Endpoint request="POST" baseUrl="v1/buildings"/>
+            <Endpoint request="PUT" baseUrl="v1/buildings" parameter="/{id}"/>
+            <Endpoint request="DELETE" baseUrl="v1/buildings" parameter="/{id}" />
           </EndpointList>
           <BodyDescription copy body={{ id: 1337 }}></BodyDescription>
         </Usage>
