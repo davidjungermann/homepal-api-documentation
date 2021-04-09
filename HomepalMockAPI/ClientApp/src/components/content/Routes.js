@@ -19,7 +19,7 @@ export const routes = [
     main: (history) => (
       <Section id="about-the-api" history={history}>
         <Description>
-          <TextUnit header="About the API">
+          <TextUnit header="Homebase API" headerSize="3">
             <p>
               Homebase API connects you to all the data you need within the
               property and real estate business to build innovative applications
@@ -64,7 +64,15 @@ export const routes = [
           </TextUnit>
         </Description>
         <Usage>
-          <ContainerBlock header="Example" copy>
+          <ContainerBlock header="Base URL" copy>
+            https://homebase-api.homepal.se/v1/
+          </ContainerBlock>
+          <TextUnit header="Usage examples" headerSize="7">
+            <p>
+              By default, the Homebase API Docs demonstrate using cURL to interact with the API over HTTP.
+            </p>
+          </TextUnit>
+          <ContainerBlock header="Usage" copy>
             <b>$ curl </b>
             http://localhost:5000/api/just/some/random/words/for/making/a/long/path
           </ContainerBlock>
