@@ -23,6 +23,6 @@ const SectionContent = (props) => {
 };
 
 export const Section = handleViewport(SectionContent, {
-  rootMargin: "100px 0px -30% 0px",
-  threshold: 1,
+  rootMargin: "400px 0px -30% 0px",
+  threshold: 0.95,
 });
