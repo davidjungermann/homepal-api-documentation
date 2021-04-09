@@ -16,7 +16,7 @@ export const routes = [
           ></TextUnit>
         </Description>
         <Usage>
-          <ContainerBlock header="Example">
+          <ContainerBlock header="Example" copy>
             http://localhost:5000/api/just/some/random/words/for/making/a/long/path
           </ContainerBlock>
         </Usage>
