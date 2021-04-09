@@ -39,40 +39,44 @@ export const routes = [
             http://localhost:5000/api/just/some/random/words/for/making/a/long/path
           </ContainerBlock>
           <EndpointList copy>
-            <Endpoint request="GET" baseUrl="v1/buildings" />
-            <Endpoint request="GET" baseUrl="v1/buildings" parameter="/{id}" />
-            <Endpoint request="POST" baseUrl="v1/buildings" />
-            <Endpoint request="PUT" baseUrl="v1/buildings" parameter="/{id}" />
-            <Endpoint request="DELETE" baseUrl="v1/buildings" parameter="/{id}" />
+            <Endpoint request="GET" baseUrl="v1/buildings"></Endpoint>
+            <Endpoint
+              request="DELETE"
+              baseUrl="v1/buildings"
+              parameter="/{id}"
+            ></Endpoint>
           </EndpointList>
           <BodyDescription
             copy
-            // body={[
-            //   {
-            //     id: 1,
-            //     class_descriptor: "ApartmentBuilding",
-            //     street_name: "Skånegatan",
-            //     street_number: "20",
-            //     postal_code: "223 33",
-            //     real_estate_id: 1,
-            //   },
-            //   {
-            //     id: 2,
-            //     class_descriptor: "ApartmentBuilding",
-            //     street_name: "Umeåvägen",
-            //     street_number: "18",
-            //     postal_code: "333 44",
-            //     real_estate_id: 2,
-            //   },
-            //   {
-            //     id: 3,
-            //     class_descriptor: "LaundryBuilding",
-            //     street_name: "Drottninggatan",
-            //     street_number: "12",
-            //     postal_code: "453 11",
-            //     real_estate_id: 3,
-            //   },
-            // ]}
+            body={[
+              {
+                id: 1,
+                class_descriptor: "ApartmentBuilding",
+                street_name: "Skånegatan",
+                street_number: "20",
+                postal_code: "223 33",
+                real_estate_id: 1,
+              },
+              {
+                id: 2,
+                class_descriptor: "ApartmentBuilding",
+                street_name: "Umeåvägen",
+                street_number: "18",
+                postal_code: "333 44",
+                real_estate_id: 2,
+              },
+              {
+                id: 3,
+                class_descriptor: "LaundryBuilding",
+                street_name: "Drottninggatan",
+                street_number: "12",
+                postal_code: "453 11",
+                real_estate_id: 3,
+              },
+            ]}
+          ></BodyDescription>
+          <BodyDescription
+            copy
             body={{
               id: 1,
               class_descriptor: "ApartmentBuilding",
