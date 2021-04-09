@@ -5,6 +5,7 @@ import { ContainerBlock } from "../container-block/ContainerBlock";
 import { Description } from "../description/Description";
 import { Usage } from "../usage/Usage";
 import { EndpointList } from "../content/endpoint-list/EndpointList";
+import { Endpoint } from "../content/endpoint/Endpoint";
 
 export const routes = [
   {
@@ -36,7 +37,16 @@ export const routes = [
             <b>$ curl </b>
             http://localhost:5000/api/just/some/random/words/for/making/a/long/path
           </ContainerBlock>
-          <EndpointList endpoints={["1", "2", "3"]}></EndpointList>
+          <EndpointList
+            endpoints={[
+              <Endpoint request="GET" baseUrl="v1/buildings"></Endpoint>,
+              <Endpoint
+                request="DELETE"
+                baseUrl="v1/buildings"
+                parameter="/{id}"
+              ></Endpoint>,
+            ]}
+          ></EndpointList>
         </Usage>
       </Section>
     ),
