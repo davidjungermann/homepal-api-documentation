@@ -6,6 +6,7 @@ import { Description } from "../description/Description";
 import { Usage } from "../usage/Usage";
 import { EndpointList } from "../content/endpoint-list/EndpointList";
 import { Endpoint } from "../content/endpoint/Endpoint";
+import { BodyDescription } from "../content/body-description/BodyDescription";
 
 export const routes = [
   {
@@ -47,6 +48,7 @@ export const routes = [
               ></Endpoint>,
             ]}
           ></EndpointList>
+          <BodyDescription copy body={{ id: 1337 }}></BodyDescription>
         </Usage>
       </Section>
     ),
