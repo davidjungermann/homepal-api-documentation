@@ -8,7 +8,7 @@ export const BodyDescription = ({ body, copy }) => {
     return Object.entries(body).map(([key, value]) => {
       return (
         <div>
-          Key: {key} and Value: {value}
+          "{key}": {value}
         </div>
       );
     });
@@ -16,7 +16,9 @@ export const BodyDescription = ({ body, copy }) => {
   return (
     <div className="body-description-container">
       <ContainerBlock copy={copy} header="Building">
+        {"{"}
         {renderBody()}
+        {"}"}
       </ContainerBlock>
     </div>
   );

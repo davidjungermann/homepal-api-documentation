@@ -8,7 +8,7 @@ export const ContainerBlock = ({ header, children, copy }) => {
   const [content] = useState(children);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(content);
+    navigator.clipboard.writeText(content.toString());
   };
 
   return (
