@@ -8,26 +8,24 @@ export const BodyDescription = ({ body, copy }) => {
 
   const renderBody = () => {
     return Object.entries(body).map(([key, value], index) => {
-      console.log(index);
-      console.log(Object.keys(body).length);
       if (index === 0) {
         return (
-          <div>
-            {"{ "}"{key}": {value}
-          </div>
+          <React.Fragment>
+            {openingBrace()}"{key}": {value}
+          </React.Fragment>
         );
       } else if (index === Object.keys(body).length - 1) {
         return (
-          <div>
+          <React.Fragment>
             "{key}": {value}
-            {" }"}
-          </div>
+            {closingBrace()}
+          </React.Fragment>
         );
       } else {
         return (
-          <div>
+          <React.Fragment>
             "{key}": {value}
-          </div>
+          </React.Fragment>
         );
       }
     });
@@ -44,6 +42,14 @@ export const BodyDescription = ({ body, copy }) => {
         );
       });
     });
+  };
+
+  const openingBrace = () => {
+    return <p className="opening-brace">{"{ "}</p>;
+  };
+
+  const closingBrace = () => {
+    return <p className="closing-brace">{" }"}</p>;
   };
 
   return (
