@@ -74,7 +74,7 @@ export const routes = [
               interact with the API over HTTP.
             </p>
           </TextUnit>
-          <Example header="Usage">
+          <Example header="Usage" copy>
             http://localhost:5000/api/just/some/random/words/for/making/a/long/path
           </Example>
           <EndpointList header="Endpoints">
