@@ -17,20 +17,20 @@ export const BodyDescription = ({ header, body, copy }) => {
     return Object.entries(body).map(([key, value], index) => {
       if (index === 0) {
         return (
-          <div>
+          <div className="first-row">
             {openingBrace()}"{key}": {value}
           </div>
         );
       } else if (index === Object.keys(body).length - 1) {
         return (
-          <div>
+          <div className="last-row">
             "{key}": {value}
             {closingBrace()}
           </div>
         );
       } else {
         return (
-          <div>
+          <div className="middle-row">
             "{key}": {value}
           </div>
         );
@@ -43,7 +43,7 @@ export const BodyDescription = ({ header, body, copy }) => {
       return Object.entries(obj).map(([key, value], objIndex) => {
         if (objIndex === 0 && arrayIndex === 0) {
           return (
-            <div>
+            <div className="first-object-row">
               {openingBracket()}
               {openingBrace()}"{key}": {value}
             </div>
@@ -53,7 +53,7 @@ export const BodyDescription = ({ header, body, copy }) => {
           arrayIndex === body.length - 1
         ) {
           return (
-            <div>
+            <div className="last-object-row">
               "{key}": {value}
               {closingBrace()}
               {closingBracket()}
@@ -61,20 +61,20 @@ export const BodyDescription = ({ header, body, copy }) => {
           );
         } else if (objIndex === 0) {
           return (
-            <div>
+            <div className="first-row">
               {openingBrace()}"{key}": {value}
             </div>
           );
         } else if (objIndex === Object.keys(obj).length - 1) {
           return (
-            <div>
+            <div className="last-row">
               "{key}": {value}
               {continuingBrace()}
             </div>
           );
         } else {
           return (
-            <div>
+            <div className="middle-row">
               "{key}": {value}
             </div>
           );
