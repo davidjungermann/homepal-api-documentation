@@ -23,7 +23,7 @@ export const Example = ({ children, header, copy }) => {
       copied={copied}
       handleLeave={handleLeave}
     >
-      <b>$ </b>
+      <span className="dollar-sign">$ </span>
       {children}
     </ContainerBlock>
   );
