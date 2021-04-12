@@ -13,6 +13,10 @@ export const BodyDescription = ({ header, body, copy }) => {
     setCopied(true);
   };
 
+  const handleLeave = () => {
+    setCopied(false);
+  };
+
   const renderBody = () => {
     return Object.entries(body).map(([key, value], index) => {
       if (index === 0) {
@@ -109,6 +113,7 @@ export const BodyDescription = ({ header, body, copy }) => {
       header={header}
       handleCopy={handleCopy}
       copied={copied}
+      handleLeave={handleLeave}
     >
       {isArray ? renderArrayBody : renderBody}
     </ContainerBlock>
