@@ -5,6 +5,11 @@ import "./BodyDescription.scss";
 
 export const BodyDescription = ({ header, body, copy }) => {
   const [isArray] = useState(Array.isArray(body));
+  const [content] = useState(body);
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(JSON.stringify(content, null, " "));
+  };
 
   const renderBody = () => {
     return Object.entries(body).map(([key, value], index) => {
@@ -97,7 +102,7 @@ export const BodyDescription = ({ header, body, copy }) => {
   };
 
   return (
-    <ContainerBlock copy={copy} header={header}>
+    <ContainerBlock copy={copy} header={header} handleCopy={handleCopy}>
       {isArray ? renderArrayBody : renderBody}
     </ContainerBlock>
   );

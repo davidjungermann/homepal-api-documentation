@@ -9,12 +9,11 @@ import { Endpoint } from "../content/endpoint/Endpoint";
 import { BodyDescription } from "../content/body-description/BodyDescription";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faCopy,
   faExclamationTriangle,
   faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { Example } from "./example/Example";
-import { ReactComponent as ArchitecturalOverview } from '../../assets/architectural_overview.svg';
+import { ReactComponent as ArchitecturalOverview } from "../../assets/architectural_overview.svg";
 
 export const routes = [
   {
@@ -76,7 +75,8 @@ export const routes = [
             </p>
           </TextUnit>
           <Example header="Usage" copy>
-            curl http://localhost:5000/api/just/some/random/words/for/making/a/long/path
+            curl
+            http://localhost:5000/api/just/some/random/words/for/making/a/long/path
           </Example>
           <EndpointList header="Endpoints">
             <Endpoint request="GET" baseUrl="v1/buildings"></Endpoint>
