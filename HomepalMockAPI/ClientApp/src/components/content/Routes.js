@@ -83,12 +83,14 @@ export const routes = [
               request="GET"
               baseUrl="v1/buildings"
               link="get-buildings"
+              history={history}
             ></Endpoint>
             <Endpoint
               request="DELETE"
               baseUrl="v1/buildings"
               parameter="/{id}"
               link="delete-building"
+              history={history}
             ></Endpoint>
           </EndpointList>
           <BodyDescription
