@@ -14,7 +14,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Example } from "./example/Example";
 import { ReactComponent as ArchitecturalOverview } from "../../assets/architectural_overview.svg";
-import { EndpointExample } from "./endpoint-example/EndpointExample";
 
 export const routes = [
   {
@@ -80,11 +79,16 @@ export const routes = [
             http://localhost:5000/api/just/some/random/words/for/making/a/long/path
           </Example>
           <EndpointList header="Endpoints">
-            <Endpoint request="GET" baseUrl="v1/buildings"></Endpoint>
+            <Endpoint
+              request="GET"
+              baseUrl="v1/buildings"
+              link="get-buildings"
+            ></Endpoint>
             <Endpoint
               request="DELETE"
               baseUrl="v1/buildings"
               parameter="/{id}"
+              link="delete-building"
             ></Endpoint>
           </EndpointList>
           <BodyDescription
@@ -129,9 +133,6 @@ export const routes = [
               real_estate_id: 1,
             }}
           ></BodyDescription>
-          <EndpointExample method="GET" copy>
-            /v1/buildings
-          </EndpointExample>
         </Usage>
       </Section>
     ),
