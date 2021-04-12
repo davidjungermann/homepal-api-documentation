@@ -1,35 +1,38 @@
-@import '../../../index.scss';
+@import "../../../index.scss";
 
 .endpoint-container {
-    height: 24px;
+  height: 24px;
 }
 
 .request {
-    padding: 0px 8px 0px 8px;
-    margin-right: 5px;
-    border-radius: 5px;
+  padding: 0px 8px 0px 8px;
+  margin-right: 5px;
+  border-radius: 5px;
 }
 
 .get-request {
-    background: rgba($honey, 0.4);
-    color: $coral;
+  background: rgba($honey, 0.4);
+  color: $coral;
 }
 
 .post-request {
-    background: rgba($lime-dark, 0.4);
-    color: $emerald-dark;
+  background: rgba($lime-dark, 0.4);
+  color: $emerald-dark;
 }
 
 .put-request {
-    background: rgba($emerald-dark, 0.4);
-    color: $navy-light;
+  background: rgba($emerald-dark, 0.4);
+  color: $navy-light;
 }
 
 .delete-request {
-    background: rgba($red, 0.4);
-    color: $red;
+  background: rgba($red, 0.4);
+  color: $red;
 }
 
 .request-url {
+}
 
+.endpoint-container:hover {
+  cursor: pointer;
 }
