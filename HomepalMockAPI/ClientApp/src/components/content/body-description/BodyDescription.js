@@ -88,23 +88,23 @@ export const BodyDescription = ({ header, body, copy }) => {
   };
 
   const openingBrace = () => {
-    return <p className="opening-brace">{"{"}</p>;
+    return <div className="opening-brace">{"{"}</div>;
   };
 
   const closingBrace = () => {
-    return <p className="closing-brace">{"}"}</p>;
+    return <div className="closing-brace">{"}"}</div>;
   };
 
   const continuingBrace = () => {
-    return <p className="closing-brace">{"},"}</p>;
+    return <div className="closing-brace">{"},"}</div>;
   };
 
   const openingBracket = () => {
-    return <p className="opening-bracket">{"["}</p>;
+    return <div className="opening-bracket">{"["}</div>;
   };
 
   const closingBracket = () => {
-    return <p className="closing-bracket">{"]"}</p>;
+    return <div className="closing-bracket">{"]"}</div>;
   };
 
   return (
