@@ -14,6 +14,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Example } from "./example/Example";
 import { ReactComponent as ArchitecturalOverview } from "../../assets/architectural_overview.svg";
+import { EndpointExample } from "./endpoint-example/EndpointExample";
 
 export const routes = [
   {
@@ -58,8 +59,8 @@ export const routes = [
             </p>
             <p className="small">
               <FontAwesomeIcon icon={faExclamationTriangle} /> The API changes
-              every now and then, and endpoints are depricated. If you are using
-              the API make sure to check in on Deprication from time to time. We
+              every now and then, and endpoints are deprecated. If you are using
+              the API make sure to check in on Deprecation from time to time. We
               will of course notice you in advance!
             </p>
           </TextUnit>
@@ -128,6 +129,9 @@ export const routes = [
               real_estate_id: 1,
             }}
           ></BodyDescription>
+          <EndpointExample method="GET" copy>
+            /v1/buildings
+          </EndpointExample>
         </Usage>
       </Section>
     ),

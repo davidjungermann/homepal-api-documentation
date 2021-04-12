@@ -1,0 +1,113 @@
+@import '../../../index.scss';
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+.endpoint-example-header-container {
+  padding: 0px 12px 0px 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $gray-3;
+  border-radius: 12px 12px 0px 0px;
+  box-sizing: border-box;
+}
+
+.endpoint-example {
+  margin: 10px 10px 10px 10px;
+  background-color: $gray-2;
+  border-radius: 12px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.endpoint-example-content {
+  font-size: 10.5pt;
+  font-family: 'Source Code Pro', monospace;
+  color: $gray-6;
+  padding: 24px 24px 24px 24px;
+  white-space: nowrap;
+  overflow-x: scroll;
+  box-sizing: border-box;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: none;
+    margin-left: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+	  border-radius: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: none;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-track:hover {
+    background: $gray-3; 
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: $gray-4; 
+  }
+}
+
+.endpoint-example-header {
+  
+}
+
+.endpoint-example-header-button {
+  position: relative;
+  z-index:1;
+
+  background: none;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background: $gray-2;
+    color: $midnight-7;
+  }
+
+  &:active {
+    background: none;
+    color: $midnight;
+  }
+
+  &::before {
+    content: "Click to copy";
+    position:absolute;
+    z-index:100;
+    
+    top:-200%;
+    transform:translateX(-50%);
+    
+    width: fit-content;
+    white-space: nowrap;
+    padding:10px;
+    border-radius:10px;
+    background: $midnight;
+    color: $white;
+    text-align:center;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: visibility 0s, opacity 0.5s linear;
+  }
+
+  &:hover::before {
+    visibility: visible;
+    opacity: 1;
+  }
+}
