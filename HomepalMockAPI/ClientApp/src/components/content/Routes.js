@@ -14,6 +14,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Example } from "./example/Example";
 import { ReactComponent as ArchitecturalOverview } from "../../assets/architectural_overview.svg";
+import { Table } from "./table/Table";
+import { TableItem } from "./table/TableItem";
 
 export const routes = [
   {
@@ -63,6 +65,55 @@ export const routes = [
               will of course notice you in advance!
             </p>
           </TextUnit>
+          <Table
+            //values och cols här kan flyttas ut i en separat fil för att det ska bli lättare att läsa!
+            cols={[
+              {
+                Header: "Body Schema",
+                accessor: "col1", // accessor is the "key" in the data
+              },
+              {
+                Header: "Type",
+                accessor: "col2",
+              },
+              {
+                Header: "Required",
+                accessor: "col3",
+              },
+            ]}
+            values={[
+              {
+                col1: <TableItem description="Blabla">Test</TableItem>,
+                col2: "String",
+                col3: "required",
+              },
+              {
+                col1: "class",
+                col2: "String",
+                col3: "required",
+              },
+              {
+                col1: "street_name",
+                col2: "String",
+                col3: "required",
+              },
+              {
+                col1: "street_number",
+                col2: "String",
+                col3: "required",
+              },
+              {
+                col1: "postal_code",
+                col2: "String",
+                col3: "required",
+              },
+              {
+                col1: "real_estate_id",
+                col2: "String",
+                col3: "required",
+              },
+            ]}
+          ></Table>
         </Description>
         <Usage>
           <ContainerBlock header="Base URL" copy>
