@@ -4,12 +4,8 @@ import "./ContainerBlock.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy } from "@fortawesome/free-solid-svg-icons";
 
-export const ContainerBlock = ({ header, children, copy }) => {
+export const ContainerBlock = ({ header, children, copy, handleCopy }) => {
   const [content] = useState(children);
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(content.toString());
-  };
 
   return (
     <div className="container-block">

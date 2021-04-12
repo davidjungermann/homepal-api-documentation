@@ -76,7 +76,7 @@ export const routes = [
             </p>
           </TextUnit>
           <Example header="Usage" copy>
-            http://localhost:5000/api/just/some/random/words/for/making/a/long/path
+            curl http://localhost:5000/api/just/some/random/words/for/making/a/long/path
           </Example>
           <EndpointList header="Endpoints">
             <Endpoint request="GET" baseUrl="v1/buildings"></Endpoint>
