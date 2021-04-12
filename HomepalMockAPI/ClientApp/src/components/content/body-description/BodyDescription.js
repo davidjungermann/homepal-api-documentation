@@ -6,9 +6,11 @@ import "./BodyDescription.scss";
 export const BodyDescription = ({ header, body, copy }) => {
   const [isArray] = useState(Array.isArray(body));
   const [content] = useState(body);
+  const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(JSON.stringify(content, null, " "));
+    setCopied(true);
   };
 
   const renderBody = () => {
@@ -102,7 +104,12 @@ export const BodyDescription = ({ header, body, copy }) => {
   };
 
   return (
-    <ContainerBlock copy={copy} header={header} handleCopy={handleCopy}>
+    <ContainerBlock
+      copy={copy}
+      header={header}
+      handleCopy={handleCopy}
+      copied={copied}
+    >
       {isArray ? renderArrayBody : renderBody}
     </ContainerBlock>
   );

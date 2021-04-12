@@ -4,7 +4,13 @@ import "./ContainerBlock.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopy } from "@fortawesome/free-solid-svg-icons";
 
-export const ContainerBlock = ({ header, children, copy, handleCopy }) => {
+export const ContainerBlock = ({
+  header,
+  children,
+  copy,
+  handleCopy,
+  copied,
+}) => {
   const [content] = useState(children);
 
   return (
@@ -16,6 +22,7 @@ export const ContainerBlock = ({ header, children, copy, handleCopy }) => {
         </button>
       </div>
       <div className="container-block-content">{content}</div>
+      {copied && "Copied!"}
     </div>
   );
 };
