@@ -1,6 +1,8 @@
 import React, { useMemo } from "react";
 import { useTable } from "react-table";
 
+import "./Table.scss";
+
 export const Table = ({ cols, values }) => {
   const data = useMemo(() => values, [values]);
   const columns = useMemo(() => cols, [cols]);
@@ -14,19 +16,14 @@ export const Table = ({ cols, values }) => {
   } = useTable({ columns, data });
 
   return (
-    <table {...getTableProps()} style={{ border: "solid 1px blue" }}>
+    <table {...getTableProps()} className="table">
       <thead>
         {headerGroups.map((headerGroup) => (
           <tr {...headerGroup.getHeaderGroupProps()}>
             {headerGroup.headers.map((column) => (
               <th
                 {...column.getHeaderProps()}
-                style={{
-                  borderBottom: "solid 3px red",
-                  background: "aliceblue",
-                  color: "black",
-                  fontWeight: "bold",
-                }}
+                className="table-header title-8"
               >
                 {column.render("Header")}
               </th>
@@ -43,11 +40,7 @@ export const Table = ({ cols, values }) => {
                 return (
                   <td
                     {...cell.getCellProps()}
-                    style={{
-                      padding: "10px",
-                      border: "solid 1px gray",
-                      background: "papayawhip",
-                    }}
+                    className="table-cell"
                   >
                     {cell.render("Cell")}
                   </td>

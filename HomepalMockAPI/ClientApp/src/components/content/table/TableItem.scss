@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import '../../../index.scss';
+
+.table-item-container {
+    //border: 1px solid red;
+}
+
+.table-item-description {
+    margin-top: 0;
+}
+
+.table-item {
+    margin-bottom: 0!important;
+    font-family: 'Source Code Pro', monospace;
+}

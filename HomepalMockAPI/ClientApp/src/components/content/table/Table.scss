@@ -1,0 +1,23 @@
+@import '../../../index.scss';
+
+.table {
+    //border: 1px solid $gray-3;
+    color: $midnight;
+    background: $gray-1;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 8pt;
+}
+
+.table-header {
+    text-align: left;
+    padding: 12px 0 12px 0px;
+    border-bottom: 1px solid $gray-2;
+    //border: 1px solid red;
+}
+
+.table-cell {
+    padding: 12px;
+    border-bottom: 1px solid $gray-2;
+    //border: 1px solid cyan;
+}

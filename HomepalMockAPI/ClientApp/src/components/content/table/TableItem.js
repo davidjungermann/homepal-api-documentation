@@ -8,10 +8,8 @@ export const TableItem = ({ children, description }) => {
 
   return (
     <div className="table-item-container">
-      <p>
-        {children}
-        <b>{description}</b>
-      </p>
+      <h3 className="title-8 table-item">{children}</h3>
+      <p className="small table-item-description">{description}</p>
     </div>
   );
 };

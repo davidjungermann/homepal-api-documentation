@@ -69,54 +69,54 @@ export const routes = [
             //values och cols här kan flyttas ut i en separat fil för att det ska bli lättare att läsa!
             cols={[
               {
-                Header: "Body Schema",
+                Header: "BODY SCHEMA",
                 accessor: "col1", // accessor is the "key" in the data
               },
               {
-                Header: "Type",
+                Header: "TYPE",
                 accessor: "col2",
               },
               {
-                Header: "Required",
+                Header: "REQUIRED",
                 accessor: "col3",
               },
             ]}
             values={[
               {
-                col1: <TableItem description="Blabla">Test</TableItem>,
+                col1: <TableItem description="Unique UUID of the Buildings.">id</TableItem>,
                 col2: "String",
-                col3: "required",
+                col3: "Required",
               },
               {
-                col1: "class",
+                col1: <TableItem description="The entity class. See enumerated values for further information.">class</TableItem>,
                 col2: "String",
-                col3: "required",
+                col3: "Required",
               },
               {
-                col1: "street_name",
+                col1: <TableItem description="Description goes here.">street_name</TableItem>,
                 col2: "String",
-                col3: "required",
+                col3: "Required",
               },
               {
-                col1: "street_number",
+                col1: <TableItem description="Description goes here.">street_number</TableItem>,
                 col2: "String",
-                col3: "required",
+                col3: "Required",
               },
               {
-                col1: "postal_code",
+                col1: <TableItem description="Description goes here.">postal_code</TableItem>,
                 col2: "String",
-                col3: "required",
+                col3: "Required",
               },
               {
-                col1: "real_estate_id",
+                col1: <TableItem description="Description goes here.">real_estate_id</TableItem>,
                 col2: "String",
-                col3: "required",
+                col3: "Required",
               },
             ]}
           ></Table>
         </Description>
         <Usage>
-          <ContainerBlock header="Base URL" copy>
+          <ContainerBlock header="BASE URL" copy>
             https://homebase-api.homepal.se/v1/
           </ContainerBlock>
           <TextUnit header="Usage examples" headerSize="7">
@@ -125,11 +125,11 @@ export const routes = [
               interact with the API over HTTP.
             </p>
           </TextUnit>
-          <Example header="Usage" copy>
+          <Example header="USAGE" copy>
             curl
             http://localhost:5000/api/just/some/random/words/for/making/a/long/path
           </Example>
-          <EndpointList header="Endpoints">
+          <EndpointList header="ENDPOINTS">
             <Endpoint
               request="GET"
               baseUrl="v1/buildings"
@@ -145,7 +145,7 @@ export const routes = [
             ></Endpoint>
           </EndpointList>
           <BodyDescription
-            header={"Array object example"}
+            header={"ARRAY OBJECT EXAMPLE"}
             copy
             body={[
               {
@@ -175,7 +175,7 @@ export const routes = [
             ]}
           ></BodyDescription>
           <BodyDescription
-            header={"Single object example"}
+            header={"OBJECT EXAMPLE"}
             copy
             body={{
               id: 1,
