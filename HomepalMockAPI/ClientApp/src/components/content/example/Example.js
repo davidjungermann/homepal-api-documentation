@@ -11,12 +11,17 @@ export const Example = ({ children, header, copy }) => {
     setCopied(true);
   };
 
+  const handleLeave = () => {
+    setCopied(false);
+  };
+
   return (
     <ContainerBlock
       header={header}
       copy={copy}
       handleCopy={handleCopy}
       copied={copied}
+      handleLeave={handleLeave}
     >
       <b>$ </b>
       {children}
