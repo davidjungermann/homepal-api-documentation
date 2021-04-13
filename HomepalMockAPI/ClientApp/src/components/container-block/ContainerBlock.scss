@@ -6,15 +6,16 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: $gray-3;
+  background-color: $gray-2;
   border-radius: 6px 6px 0px 0px;
   box-sizing: border-box;
 }
 
 .container-block {
   margin: 10px 10px 10px 10px;
-  background-color: $gray-2;
+  background-color: $gray-1;
   border-radius: 6px;
+  border: 1px solid $gray-2;
   box-sizing: border-box;
   width: 100%;
 }
@@ -47,11 +48,11 @@
   }
 
   &::-webkit-scrollbar-track:hover {
-    background: $gray-3; 
+    background: $gray-2; 
   }
 
   &::-webkit-scrollbar-thumb:hover {
-    background: $gray-4; 
+    background: $gray-3; 
   }
 }
 

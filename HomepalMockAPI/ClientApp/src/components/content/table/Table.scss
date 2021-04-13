@@ -3,13 +3,24 @@
 $border-radius: 6px;
 $padding: 12px;
 
-table {
+.table-wrapper {
     width: 100%;
     margin-top: 48px;
+    padding: 0;
+    border-radius: $border-radius;
+    border: 1px solid $gray-2;
+    overflow: hidden;
+}
+
+table {
+    margin-right: -2px;
+    padding-right: -2px;
+    width: 100%;
     border-collapse: collapse;
     border-spacing: 0;
     color: $midnight;
-    font-size: 8pt; 
+    font-size: 8pt;
+    border-radius: $border-radius;
 }
 
 thead {
