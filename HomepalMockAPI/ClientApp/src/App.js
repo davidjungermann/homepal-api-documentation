@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navigation } from "./components/navigation/Navigation";
 import { items } from "./components/navigation/items";
 import { routes } from "./components/content/Routes";
@@ -12,6 +12,10 @@ import "./App.scss";
 
 function App() {
   let history = useHistory();
+
+  const [token, setToken] = useState("");
+  const [valid, setValid] = useState(false);
+
   const formatUrl = (label) => {
     return label
       .replace(/\s/g, "-")
@@ -24,7 +28,15 @@ function App() {
         key={index}
         path={route.path}
         exact={route.exact}
-        children={<route.main history={history} />}
+        children={
+          <route.main
+            history={history}
+            token={token}
+            setToken={setToken}
+            valid={valid}
+            setValid={setValid}
+          />
+        }
       />
     ));
   };

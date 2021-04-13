@@ -265,11 +265,16 @@ export const routes = [
     ),
   },
   {
-    main: ({ history }) => (
+    main: ({ history, token, setToken, valid, setValid }) => (
       <Section id="authorization" history={history}>
         <Description>
           <TextUnit header="Authorization"></TextUnit>
-          <Authorization>Hej!</Authorization>
+          <Authorization
+            token={token}
+            setToken={setToken}
+            valid={valid}
+            setValid={setValid}
+          ></Authorization>
         </Description>
         <Usage>{/* Usage */}</Usage>
       </Section>
