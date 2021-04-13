@@ -1,0 +1,93 @@
+@import "../../../index.scss";
+
+.architectural-object {
+    position: relative;
+    z-index: 0;
+}
+
+.architectural-overview-badge {
+    position: relative;
+    white-space: nowrap;
+    z-index: 0;
+    width: fit-content;
+    border: 1px solid $gray-2;
+    border-radius: 24px;
+    padding: 4px 18px;
+    background: $white;
+    //border: none;
+    //box-shadow: 0 2px 5px 0 rgba($gray-6, 0.2), 0 1px 1px 0 rgba($midnight, 0.1);
+    cursor: pointer;
+
+    font-family: $primary-font;
+    font-weight: 600;
+    color: $lime-dark;
+    text-transform: uppercase;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        color: $emerald-light;
+    }
+
+    &:active {
+        background: $gray-1;
+    }
+}
+
+.cardinality-top-left {
+    position: absolute;
+    z-index: 100;
+    top: -18px;
+    left: 42%;
+}
+
+.cardinality-top-right {
+    position: absolute;
+    z-index: 100;
+    top: -18px;
+    left: 56%;
+}
+
+.cardinality-right-top {
+    position: absolute;
+    z-index: 100;
+    top: 0%;
+    left: 104%;
+}
+
+.cardinality-right-bottom {
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 104%;
+}
+
+.cardinality-bottom-right {
+    position: absolute;
+    z-index: 100;
+    top: 100%;
+    left: 56%;
+}
+
+.cardinality-bottom-left {
+    position: absolute;
+    z-index: 100;
+    top: 100%;
+    left: 42%;
+}
+
+.cardinality-left-bottom {
+    position: absolute;
+    z-index: 100;
+    top: 0%;
+    left: -6%;
+}
+
+.cardinality-left-top {
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: -6%;
+}

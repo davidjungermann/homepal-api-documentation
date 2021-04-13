@@ -1,6 +1,7 @@
 import React from "react";
 import "./ArchitecturalOverview.scss";
 
+import { ArchitecturalObject } from './ArchitecturalObject';
 import { ArcherContainer, ArcherElement } from 'react-archer';
 
 export const ArchitecturalOverview = ({ history }) => {
@@ -14,7 +15,8 @@ export const ArchitecturalOverview = ({ history }) => {
         <div className="arch-column">
           <div className="arch-row">
             <ArcherElement id="region">
-              <div className="architectural-overview-badge">Region</div>
+              <div className="architectural-overview-badge"
+                onClick={() => history.push("#region")}>Region</div>
             </ArcherElement>
           </div>
           <div className="arch-row">
@@ -31,7 +33,23 @@ export const ArchitecturalOverview = ({ history }) => {
                 sourceAnchor: 'right',
                 style: { endShape: {"circle":{"radius":0,"fillColor":"#b5e48c","strokeColor":"#e0e8f0","strokeWidth":0}} },
               }]}>
-              <div className="architectural-overview-badge">Real Estate</div>
+              <div>
+                <ArchitecturalObject 
+                  history={history}
+                  link="#realestate"
+                  cardinalities={[
+                    ["top-left", "1"],
+                    ["top-right", "*"],
+                    ["right-top", "1"],
+                    ["right-bottom", "*"],
+                    ["bottom-right", "1"],
+                    ["bottom-left", "*"],
+                    ["left-bottom", "1"],
+                    ["left-top", "*"],
+                ]}>
+                  Real Estate
+                </ArchitecturalObject>
+              </div>
             </ArcherElement>
           </div>
           <div className="arch-row">
@@ -44,7 +62,8 @@ export const ArchitecturalOverview = ({ history }) => {
                 style: { endShape: {"circle":{"radius":0,"fillColor":"#b5e48c","strokeColor":"#e0e8f0","strokeWidth":0}} },
               }]}
             >
-              <div className="architectural-overview-badge">Building</div>
+              <div className="architectural-overview-badge"
+                onClick={() => history.push("#building")}>Building</div>
             </ArcherElement>
           </div>
         </div>
@@ -60,7 +79,8 @@ export const ArchitecturalOverview = ({ history }) => {
                 targetAnchor: 'bottom',
                 sourceAnchor: 'top',
               }]}>
-              <div className="architectural-overview-badge">Owner</div>
+              <div className="architectural-overview-badge"
+                onClick={() => history.push("#owner")}>Owner</div>
             </ArcherElement>
           </div>
           <div className="arch-row">
@@ -70,7 +90,8 @@ export const ArchitecturalOverview = ({ history }) => {
         <div className="arch-column">
           <div className="arch-row">
             <ArcherElement id="agent">
-              <div className="architectural-overview-badge">Agent</div>
+              <div className="architectural-overview-badge"
+                onClick={() => history.push("#agent")}>Agent</div>
             </ArcherElement>
           </div>
           <div className="arch-row">
@@ -96,7 +117,8 @@ export const ArchitecturalOverview = ({ history }) => {
                 style: { endShape: {"circle":{"radius":0,"fillColor":"#b5e48c","strokeColor":"#e0e8f0","strokeWidth":0}} },
               }]}
             >
-              <div className="architectural-overview-badge">Leasable</div>
+              <div className="architectural-overview-badge"
+                onClick={() => history.push("#leasable")}>Leasable</div>
             </ArcherElement>
           </div>
         </div>
@@ -112,7 +134,8 @@ export const ArchitecturalOverview = ({ history }) => {
                 targetAnchor: 'bottom',
                 sourceAnchor: 'top',
               }]}>
-              <div className="architectural-overview-badge">Customer</div>
+              <div className="architectural-overview-badge"
+                onClick={() => history.push("#customer")}>Customer</div>
             </ArcherElement>
           </div>
           <div className="arch-row">
