@@ -13,7 +13,11 @@ export const Example = ({ children, header, copy, token }) => {
 
   const handleCopy = () => {
     navigator.clipboard.writeText(content);
-    console.log(authToken);
+    setCopied(true);
+  };
+
+  const handleAuthCopy = () => {
+    navigator.clipboard.writeText(content + " -u " + authToken + ":");
     setCopied(true);
   };
 
@@ -28,7 +32,7 @@ export const Example = ({ children, header, copy, token }) => {
           <ContainerBlock
             header={header}
             copy={copy}
-            handleCopy={handleCopy}
+            handleCopy={handleAuthCopy}
             copied={copied}
             handleLeave={handleLeave}
             token={authToken}
