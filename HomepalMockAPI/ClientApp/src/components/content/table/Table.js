@@ -23,7 +23,7 @@ export const Table = ({ cols, values }) => {
             {headerGroup.headers.map((column) => (
               <th
                 {...column.getHeaderProps()}
-                className="table-header title-8"
+                className="title-8"
               >
                 {column.render("Header")}
               </th>
@@ -40,7 +40,6 @@ export const Table = ({ cols, values }) => {
                 return (
                   <td
                     {...cell.getCellProps()}
-                    className="table-cell"
                   >
                     {cell.render("Cell")}
                   </td>
