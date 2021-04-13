@@ -16,18 +16,12 @@ export const Authorization = ({ token, setToken, valid, setValid }) => {
   };
   return (
     <div className="authorization-container">
-      <p className="token">{token}</p>
       {!token && (
         <button className="primary-button" onClick={fetchToken}>
           Generate authorization token
         </button>
       )}
-      {token && (
-        <button className="primary-button" onClick={validateToken}>
-          Validate authorization token
-        </button>
-      )}
-      <p className="is-valid">Validity: {valid}</p>
+      <p className="token">{token}</p>
     </div>
   );
 };
