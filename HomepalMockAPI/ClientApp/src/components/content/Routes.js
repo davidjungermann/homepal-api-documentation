@@ -137,6 +137,26 @@ export const routes = [
               history={history}
             ></Endpoint>
             <Endpoint
+              request="GET"
+              baseUrl="v1/buildings"
+              parameter="/{id}"
+              link="get-building"
+              history={history}
+            ></Endpoint>
+            <Endpoint
+              request="POST"
+              baseUrl="v1/buildings"
+              link="create-building"
+              history={history}
+            ></Endpoint>
+            <Endpoint
+              request="PUT"
+              baseUrl="v1/buildings"
+              parameter="/{id}"
+              link="update-building"
+              history={history}
+            ></Endpoint>
+            <Endpoint
               request="DELETE"
               baseUrl="v1/buildings"
               parameter="/{id}"
