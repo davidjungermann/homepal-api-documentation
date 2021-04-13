@@ -13,10 +13,10 @@ import {
   faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
 import { Example } from "./example/Example";
-import { ReactComponent as ArchitecturalOverview } from "../../assets/architectural_overview.svg";
 import { Table } from "./table/Table";
 import { TableItem } from "./table/TableItem";
 import { Authorization } from "../authorization/Authorization";
+import { ArchitecturalOverview } from "../content/architectural-overview/ArchitecturalOverview";
 
 export const routes = [
   {
@@ -258,9 +258,9 @@ export const routes = [
               Ipsum Dolor
             </p>
           </TextUnit>
+          <ArchitecturalOverview history={history}/>
         </Description>
         <Usage>
-          <ArchitecturalOverview />
         </Usage>
       </Section>
     ),
