@@ -15,7 +15,7 @@ export const Endpoint = ({ request, baseUrl, parameter, link, history }) => {
   return (
     <div
       className="endpoint-container"
-      onClick={() => history.history.push("#" + link)}
+      onClick={() => history.push("#" + link)}
     >
       <span className={requestName + " request"}>{request}</span>
       <span className="request-url">{baseUrl + parameter}</span>

@@ -20,7 +20,7 @@ import { ArchitecturalOverview } from "../content/architectural-overview/Archite
 
 export const routes = [
   {
-    main: (history) => (
+    main: ({ history, token }) => (
       <Section id="about-the-api" history={history}>
         <Description>
           <TextUnit header="Homebase API" headerSize="3">
@@ -150,9 +150,12 @@ export const routes = [
               interact with the API over HTTP.
             </p>
           </TextUnit>
-          <Example header="USAGE" copy>
+          <Example header="USAGE" token={token} copy>
             curl
-            http://localhost:5000/api/just/some/random/words/for/making/a/long/path
+            https://localhost:6001/api/just/some/random/words/for/making/a/long/path
+          </Example>
+          <Example header="USAGE2" token={token} copy>
+            curl https://localhost:6001/api/agents
           </Example>
           <EndpointList header="ENDPOINTS">
             <Endpoint
@@ -236,7 +239,7 @@ export const routes = [
     ),
   },
   {
-    main: (history) => (
+    main: ({ history }) => (
       <Section id="conceptual-information" history={history}>
         <Description>
           <TextUnit header="Conceptual information">
@@ -258,26 +261,30 @@ export const routes = [
               Ipsum Dolor
             </p>
           </TextUnit>
-          <ArchitecturalOverview history={history}/>
+          <ArchitecturalOverview history={history} />
         </Description>
-        <Usage>
-        </Usage>
+        <Usage></Usage>
       </Section>
     ),
   },
   {
-    main: (history) => (
+    main: ({ history, token, setToken, valid, setValid }) => (
       <Section id="authorization" history={history}>
         <Description>
           <TextUnit header="Authorization"></TextUnit>
-          <Authorization>Hej!</Authorization>
+          <Authorization
+            token={token}
+            setToken={setToken}
+            valid={valid}
+            setValid={setValid}
+          ></Authorization>
         </Description>
         <Usage>{/* Usage */}</Usage>
       </Section>
     ),
   },
   {
-    main: (history) => (
+    main: ({ history }) => (
       <Section id="validations" history={history}>
         <Description>
           <TextUnit header="Validations">
@@ -305,7 +312,7 @@ export const routes = [
     ),
   },
   {
-    main: (history) => (
+    main: ({ history }) => (
       <Section id="errors" history={history}>
         <Description>
           <TextUnit header="Errors">
@@ -333,7 +340,7 @@ export const routes = [
     ),
   },
   {
-    main: (history) => (
+    main: ({ history }) => (
       <Section id="query-parameters" history={history}>
         <Description>
           <TextUnit header="Query parameters">
@@ -361,7 +368,7 @@ export const routes = [
     ),
   },
   {
-    main: (history) => (
+    main: ({ history }) => (
       <Section id="pagination" history={history}>
         <Description>
           <TextUnit header="Pagination">
@@ -389,7 +396,7 @@ export const routes = [
     ),
   },
   {
-    main: (history) => (
+    main: ({ history }) => (
       <Section id="sorting" history={history}>
         <Description>
           <TextUnit header="Sorting">
@@ -417,7 +424,7 @@ export const routes = [
     ),
   },
   {
-    main: (history) => (
+    main: ({ history }) => (
       <Section id="inclusion" history={history}>
         <Description>
           <TextUnit header="Inclusion">
@@ -445,7 +452,7 @@ export const routes = [
     ),
   },
   {
-    main: (history) => (
+    main: ({ history }) => (
       <Section id="filter" history={history}>
         <Description>
           <TextUnit header="Filter">
@@ -473,7 +480,7 @@ export const routes = [
     ),
   },
   {
-    main: (history) => (
+    main: ({ history }) => (
       <Section id="versioning" history={history}>
         <Description>
           <TextUnit header="Versioning">

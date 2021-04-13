@@ -11,6 +11,7 @@ Returns
 **Generellt**
 * Grid ska vara responsive! 
 * Styling
+* Fixa auth exempel. Fult! 
 
 
 Bugs:

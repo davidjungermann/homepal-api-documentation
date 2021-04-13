@@ -11,6 +11,7 @@ export const ContainerBlock = ({
   handleCopy,
   copied,
   handleLeave,
+  token,
 }) => {
   const [content] = useState(children);
 
@@ -19,13 +20,24 @@ export const ContainerBlock = ({
       <div className="container-block-header-container">
         <h4 className="container-block-header title-8">{header}</h4>
         <div className="container-block-header-button-wrapper">
-          <button className="container-block-header-button" onClick={handleCopy} onMouseLeave={handleLeave}>
+          <button
+            className="container-block-header-button"
+            onClick={handleCopy}
+            onMouseLeave={handleLeave}
+          >
             {copy && <FontAwesomeIcon icon={faCopy} />}
           </button>
           {copied && <div className="copied-message">Copied!</div>}
         </div>
       </div>
-      <div className="container-block-content">{content}</div>
+      {token ? (
+        <div className="container-block-content">
+          {content}
+          {" -u " + token + ":"}
+        </div>
+      ) : (
+        <div className="container-block-content">{content}</div>
+      )}
     </div>
   );
 };
