@@ -12,7 +12,7 @@ export const Authorization = () => {
   return (
     <div className="authorization-container">
       <p className="token">{token}</p>
-      <button onClick={fetchToken}>Generate authorization token</button>
+      <button className="primary-button" onClick={fetchToken}>Generate authorization token</button>
     </div>
   );
 };
