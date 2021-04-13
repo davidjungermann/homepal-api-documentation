@@ -24,7 +24,19 @@ export const Example = ({ children, header, copy, token }) => {
   return (
     <React.Fragment>
       {authToken ? (
-        <div>{authToken}</div>
+        <React.Fragment>
+          <ContainerBlock
+            header={header}
+            copy={copy}
+            handleCopy={handleCopy}
+            copied={copied}
+            handleLeave={handleLeave}
+            token={authToken}
+          >
+            <span className="dollar-sign">$ </span>
+            {content}
+          </ContainerBlock>
+        </React.Fragment>
       ) : (
         <ContainerBlock
           header={header}
