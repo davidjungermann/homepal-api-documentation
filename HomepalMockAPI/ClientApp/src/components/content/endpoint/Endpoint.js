@@ -4,7 +4,6 @@ import "./Endpoint.scss";
 export const Endpoint = ({ request, baseUrl, parameter, link, history }) => {
   const requestName = request.toLowerCase() + "-request";
 
-  console.log(history);
   if (parameter === undefined) {
     parameter = "";
   }

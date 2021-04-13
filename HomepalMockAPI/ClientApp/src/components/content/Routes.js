@@ -20,7 +20,7 @@ import { ArchitecturalOverview } from "../content/architectural-overview/Archite
 
 export const routes = [
   {
-    main: ({ history }) => (
+    main: ({ history, token }) => (
       <Section id="about-the-api" history={history}>
         <Description>
           <TextUnit header="Homebase API" headerSize="3">
@@ -150,7 +150,7 @@ export const routes = [
               interact with the API over HTTP.
             </p>
           </TextUnit>
-          <Example header="USAGE" copy>
+          <Example header="USAGE" token={token} copy>
             curl
             http://localhost:5000/api/just/some/random/words/for/making/a/long/path
           </Example>
