@@ -20,7 +20,7 @@ import { ArchitecturalOverview } from "../content/architectural-overview/Archite
 
 export const routes = [
   {
-    main: (history) => (
+    main: ({ history }) => (
       <Section id="about-the-api" history={history}>
         <Description>
           <TextUnit header="Homebase API" headerSize="3">
@@ -236,7 +236,7 @@ export const routes = [
     ),
   },
   {
-    main: (history) => (
+    main: ({ history }) => (
       <Section id="conceptual-information" history={history}>
         <Description>
           <TextUnit header="Conceptual information">
@@ -258,15 +258,14 @@ export const routes = [
               Ipsum Dolor
             </p>
           </TextUnit>
-          <ArchitecturalOverview history={history}/>
+          <ArchitecturalOverview history={history} />
         </Description>
-        <Usage>
-        </Usage>
+        <Usage></Usage>
       </Section>
     ),
   },
   {
-    main: (history) => (
+    main: ({ history }) => (
       <Section id="authorization" history={history}>
         <Description>
           <TextUnit header="Authorization"></TextUnit>
@@ -277,7 +276,7 @@ export const routes = [
     ),
   },
   {
-    main: (history) => (
+    main: ({ history }) => (
       <Section id="validations" history={history}>
         <Description>
           <TextUnit header="Validations">
@@ -305,7 +304,7 @@ export const routes = [
     ),
   },
   {
-    main: (history) => (
+    main: ({ history }) => (
       <Section id="errors" history={history}>
         <Description>
           <TextUnit header="Errors">
@@ -333,7 +332,7 @@ export const routes = [
     ),
   },
   {
-    main: (history) => (
+    main: ({ history }) => (
       <Section id="query-parameters" history={history}>
         <Description>
           <TextUnit header="Query parameters">
@@ -361,7 +360,7 @@ export const routes = [
     ),
   },
   {
-    main: (history) => (
+    main: ({ history }) => (
       <Section id="pagination" history={history}>
         <Description>
           <TextUnit header="Pagination">
@@ -389,7 +388,7 @@ export const routes = [
     ),
   },
   {
-    main: (history) => (
+    main: ({ history }) => (
       <Section id="sorting" history={history}>
         <Description>
           <TextUnit header="Sorting">
@@ -417,7 +416,7 @@ export const routes = [
     ),
   },
   {
-    main: (history) => (
+    main: ({ history }) => (
       <Section id="inclusion" history={history}>
         <Description>
           <TextUnit header="Inclusion">
@@ -445,7 +444,7 @@ export const routes = [
     ),
   },
   {
-    main: (history) => (
+    main: ({ history }) => (
       <Section id="filter" history={history}>
         <Description>
           <TextUnit header="Filter">
@@ -473,7 +472,7 @@ export const routes = [
     ),
   },
   {
-    main: (history) => (
+    main: ({ history }) => (
       <Section id="versioning" history={history}>
         <Description>
           <TextUnit header="Versioning">
