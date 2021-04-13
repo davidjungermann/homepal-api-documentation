@@ -1,6 +1,7 @@
 @import "../../index.scss";
 
 .primary-button {
+    width: fit-content;
     border: 1px solid $gray-2;
     border-radius: 24px;
     padding: 4px 18px;
