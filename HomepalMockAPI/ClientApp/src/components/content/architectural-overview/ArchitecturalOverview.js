@@ -15,8 +15,16 @@ export const ArchitecturalOverview = ({ history }) => {
         <div className="arch-column">
           <div className="arch-row">
             <ArcherElement id="region">
-              <div className="architectural-overview-badge"
-                onClick={() => history.push("#region")}>Region</div>
+            <div>
+                <ArchitecturalObject 
+                  history={history}
+                  link="#region"
+                  cardinalities={[
+                    ["bottom-right", "1"],
+                ]}>
+                  Region
+                </ArchitecturalObject>
+              </div>
             </ArcherElement>
           </div>
           <div className="arch-row">
@@ -38,14 +46,9 @@ export const ArchitecturalOverview = ({ history }) => {
                   history={history}
                   link="#realestate"
                   cardinalities={[
-                    ["top-left", "1"],
                     ["top-right", "*"],
-                    ["right-top", "1"],
-                    ["right-bottom", "*"],
+                    ["right-top", "*"],
                     ["bottom-right", "1"],
-                    ["bottom-left", "*"],
-                    ["left-bottom", "1"],
-                    ["left-top", "*"],
                 ]}>
                   Real Estate
                 </ArchitecturalObject>
@@ -62,8 +65,17 @@ export const ArchitecturalOverview = ({ history }) => {
                 style: { endShape: {"circle":{"radius":0,"fillColor":"#b5e48c","strokeColor":"#e0e8f0","strokeWidth":0}} },
               }]}
             >
-              <div className="architectural-overview-badge"
-                onClick={() => history.push("#building")}>Building</div>
+              <div>
+                <ArchitecturalObject 
+                    history={history}
+                    link="#building"
+                    cardinalities={[
+                      ["top-right", "*"],
+                      ["right-top", "1"],
+                  ]}>
+                    Building
+                  </ArchitecturalObject>
+                </div>
             </ArcherElement>
           </div>
         </div>
@@ -79,8 +91,17 @@ export const ArchitecturalOverview = ({ history }) => {
                 targetAnchor: 'bottom',
                 sourceAnchor: 'top',
               }]}>
-              <div className="architectural-overview-badge"
-                onClick={() => history.push("#owner")}>Owner</div>
+              <div>
+                <ArchitecturalObject 
+                  history={history}
+                  link="#owner"
+                  cardinalities={[
+                    ["left-top", "1"],
+                    ["bottom-left", "1"],
+                ]}>
+                  Owner
+                </ArchitecturalObject>
+              </div>
             </ArcherElement>
           </div>
           <div className="arch-row">
@@ -90,8 +111,13 @@ export const ArchitecturalOverview = ({ history }) => {
         <div className="arch-column">
           <div className="arch-row">
             <ArcherElement id="agent">
-              <div className="architectural-overview-badge"
-                onClick={() => history.push("#agent")}>Agent</div>
+              <div>
+                <ArchitecturalObject 
+                  history={history}
+                  link="#agent">
+                  Agent
+                </ArchitecturalObject>
+              </div>
             </ArcherElement>
           </div>
           <div className="arch-row">
@@ -117,8 +143,18 @@ export const ArchitecturalOverview = ({ history }) => {
                 style: { endShape: {"circle":{"radius":0,"fillColor":"#b5e48c","strokeColor":"#e0e8f0","strokeWidth":0}} },
               }]}
             >
-              <div className="architectural-overview-badge"
-                onClick={() => history.push("#leasable")}>Leasable</div>
+              <div>
+                <ArchitecturalObject 
+                  history={history}
+                  link="#leasable"
+                  cardinalities={[
+                    ["top-right", "*"],
+                    ["top-left", "*"],
+                    ["left-top", "*"],
+                ]}>
+                  Leasable
+                </ArchitecturalObject>
+              </div>
             </ArcherElement>
           </div>
         </div>
@@ -134,8 +170,16 @@ export const ArchitecturalOverview = ({ history }) => {
                 targetAnchor: 'bottom',
                 sourceAnchor: 'top',
               }]}>
-              <div className="architectural-overview-badge"
-                onClick={() => history.push("#customer")}>Customer</div>
+              <div>
+                <ArchitecturalObject 
+                  history={history}
+                  link="#leasable"
+                  cardinalities={[
+                    ["bottom-right", "1"],
+                ]}>
+                  Leasable
+                </ArchitecturalObject>
+              </div>
             </ArcherElement>
           </div>
           <div className="arch-row">
