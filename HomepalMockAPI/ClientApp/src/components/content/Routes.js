@@ -14,6 +14,7 @@ import { Sorting } from "../../documentation/Introduction/Sorting";
 import { Inclusion } from "../../documentation/Introduction/Inclusion";
 import { Filter } from "../../documentation/Introduction/Filter";
 import { Versioning } from "../../documentation/Introduction/Versioning";
+import { Agent } from "../../documentation/Resources/Agent/Agent";
 
 export const routes = [
   {
@@ -62,5 +63,8 @@ export const routes = [
   },
   {
     main: ({ history }) => <Versioning history={history}></Versioning>,
+  },
+  {
+    main: ({ history }) => <Agent history={history}></Agent>,
   },
 ];
