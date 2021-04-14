@@ -116,6 +116,105 @@ export const routes = [
     main: ({ history }) => <DeleteAgent history={history}></DeleteAgent>,
   },
   {
-    main: ({ history }) => <DeleteAgent history={history}></DeleteAgent>,
+    main: ({ history }) => <Building history={history}></Building>,
+  },
+  {
+    main: ({ history }) => <GetBuildings history={history}></GetBuildings>,
+  },
+  {
+    main: ({ history }) => <GetBuilding history={history}></GetBuilding>,
+  },
+  {
+    main: ({ history }) => <CreateBuilding history={history}></CreateBuilding>,
+  },
+  {
+    main: ({ history }) => <UpdateBuilding history={history}></UpdateBuilding>,
+  },
+  {
+    main: ({ history }) => <DeleteBuilding history={history}></DeleteBuilding>,
+  },
+  {
+    main: ({ history }) => <Customer history={history}></Customer>,
+  },
+  {
+    main: ({ history }) => <GetCustomers history={history}></GetCustomers>,
+  },
+  {
+    main: ({ history }) => <GetCustomer history={history}></GetCustomer>,
+  },
+  {
+    main: ({ history }) => <CreateCustomer history={history}></CreateCustomer>,
+  },
+  {
+    main: ({ history }) => <DeleteCustomer history={history}></DeleteCustomer>,
+  },
+  {
+    main: ({ history }) => <Leasable history={history}></Leasable>,
+  },
+  {
+    main: ({ history }) => <GetLeasables history={history}></GetLeasables>,
+  },
+  {
+    main: ({ history }) => <GetLeasable history={history}></GetLeasable>,
+  },
+  {
+    main: ({ history }) => <CreateLeasable history={history}></CreateLeasable>,
+  },
+  {
+    main: ({ history }) => <UpdateLeasable history={history}></UpdateLeasable>,
+  },
+  {
+    main: ({ history }) => <DeleteLeasable history={history}></DeleteLeasable>,
+  },
+  {
+    main: ({ history }) => <Owner history={history}></Owner>,
+  },
+  {
+    main: ({ history }) => <GetOwners history={history}></GetOwners>,
+  },
+  {
+    main: ({ history }) => <GetOwner history={history}></GetOwner>,
+  },
+  {
+    main: ({ history }) => <CreateOwner history={history}></CreateOwner>,
+  },
+  {
+    main: ({ history }) => <DeleteOwner history={history}></DeleteOwner>,
+  },
+  {
+    main: ({ history }) => <RealEstate history={history}></RealEstate>,
+  },
+  {
+    main: ({ history }) => <GetRealEstates history={history}></GetRealEstates>,
+  },
+  {
+    main: ({ history }) => <GetRealEstate history={history}></GetRealEstate>,
+  },
+  {
+    main: ({ history }) => (
+      <CreateRealEstate history={history}></CreateRealEstate>
+    ),
+  },
+  {
+    main: ({ history }) => (
+      <UpdateRealEstate history={history}></UpdateRealEstate>
+    ),
+  },
+  {
+    main: ({ history }) => (
+      <DeleteRealEstate history={history}></DeleteRealEstate>
+    ),
+  },
+  {
+    main: ({ history }) => <Region history={history}></Region>,
+  },
+  {
+    main: ({ history }) => <GetRegions history={history}></GetRegions>,
+  },
+  {
+    main: ({ history }) => <CreateRegion history={history}></CreateRegion>,
+  },
+  {
+    main: ({ history }) => <DeleteRegion history={history}></DeleteRegion>,
   },
 ];

@@ -8,7 +8,7 @@ export const GetAgents = ({ history }) => {
   return (
     <Section id="get-agents" history={history}>
       <Description>
-        <TextUnit header="Get Agent"></TextUnit>
+        <TextUnit header="Get Agents"></TextUnit>
       </Description>
       <Usage>{/* Usage */}</Usage>
     </Section>
