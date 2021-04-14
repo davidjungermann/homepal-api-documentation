@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { ContainerBlock } from "../../container-block/ContainerBlock";
-import "./AuthContainer.scss";
+import "./TokenContainer.scss";
 
-export const AuthContainer = ({ children, header, copy }) => {
+export const TokenContainer = ({ children, header, copy }) => {
   const [content, setContent] = useState(children);
   const [copied, setCopied] = useState(false);
 

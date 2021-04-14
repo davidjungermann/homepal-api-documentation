@@ -17,6 +17,8 @@ import { Table } from "./table/Table";
 import { TableItem } from "./table/TableItem";
 import { Authorization } from "../authorization/Authorization";
 import { ArchitecturalOverview } from "../content/architectural-overview/ArchitecturalOverview";
+import { Returns } from "./returns/Returns";
+import { ReturnsItem } from "./returns/ReturnsItem";
 
 export const routes = [
   {
@@ -139,6 +141,16 @@ export const routes = [
               },
             ]}
           ></Table>
+          <Returns>
+            <ReturnsItem icon="">
+              On success, the HTTP status code in the response header is 201
+              CREATED and the response body is empty
+            </ReturnsItem>
+            <ReturnsItem icon="">
+              On error, the header status code is an <b>error code</b>, and the
+              response body contains an error object
+            </ReturnsItem>
+          </Returns>
         </Description>
         <Usage>
           <ContainerBlock header="BASE URL" copy>
@@ -247,13 +259,12 @@ export const routes = [
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
               mollis augue nec augue vestibulum, eu sodales nisl maximus. Nam ut
               fermentum augue. Vivamus diam tortor, ultrices sit amet bibendum
-              ut, gravida vel tortor.   
+              ut, gravida vel tortor.
             </p>
             <p>
-              Vivamus a mollis est. Maecenas varius
-              tempus nisi, at mattis sapien rutrum ut. Cras sed sem egestas,
-              vehicula augue a, ullamcorper nulla. Praesent lacinia risus quis
-              urna tristique.
+              Vivamus a mollis est. Maecenas varius tempus nisi, at mattis
+              sapien rutrum ut. Cras sed sem egestas, vehicula augue a,
+              ullamcorper nulla. Praesent lacinia risus quis urna tristique.
             </p>
           </TextUnit>
           <ArchitecturalOverview history={history} />
