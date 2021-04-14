@@ -5,17 +5,7 @@ import { ArchitecturalObject } from './ArchitecturalObject';
 import { ArcherContainer, ArcherElement } from 'react-archer';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBuilding,
-  faCity,
-  faCube,
-  faExclamationTriangle,
-  faInfoCircle,
-  faMapMarkedAlt,
-  faUser,
-  faUserCircle,
-  faUserTie,
-} from "@fortawesome/free-solid-svg-icons";
+import {faBuilding, faCity, faCube, faMapMarkedAlt, faUser, faUserCircle, faUserTie,} from "@fortawesome/free-solid-svg-icons";
 
 export const ArchitecturalOverview = ({ history }) => {
   

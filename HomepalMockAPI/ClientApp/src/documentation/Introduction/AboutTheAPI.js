@@ -139,13 +139,13 @@ export const AboutTheApi = ({ history, token }) => {
           ]}
         ></Table>
         <Returns>
-          <ReturnsItem icon="">
+          <ReturnsItem icon="success">
             On success, the HTTP status code in the response header is 201
             CREATED and the response body is empty
           </ReturnsItem>
 
-          <ReturnsItem icon="">
-            On error, the header status code is an <b>error code</b>, and the
+          <ReturnsItem icon="error">
+            On error, the header status code is an <a href="#errors">error code</a>, and the
             response body contains an error object
           </ReturnsItem>
         </Returns>
