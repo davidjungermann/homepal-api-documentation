@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./ArchitecturalOverview.scss";
 
 import { ArchitecturalObject } from './ArchitecturalObject';
@@ -23,17 +23,19 @@ export const ArchitecturalOverview = ({ history }) => {
   //const lime_light = "#d9ed92";
   const lime_dark = "#99d98c";
 
-  const primaryStyle = { strokeWidth:"2", strokeColor:lime_dark, strokeDasharray:"4,4", endShape: {"circle":{"radius":-1,"fillColor":"#99d98c","strokeColor":"#99d98c","strokeWidth":-1}} };
-  const secondaryStyle = { strokeWidth:"1", strokeColor:gray_3, endShape: {"arrow":{"arrowLength":10,"arrowThickness":6}} };
+  const primaryStyle = { noCurves:"true", strokeWidth:"2", strokeColor:lime_dark, strokeDasharray:"4,4", endShape: {"circle":{"radius":-1,"fillColor":"#99d98c","strokeColor":"#99d98c","strokeWidth":-1}} };
+  const secondaryStyle = { noCurves:"true", strokeWidth:"1", strokeColor:gray_3, endShape: {"arrow":{"arrowLength":10,"arrowThickness":6}} };
+
+  const archerContainerRef = useRef(null);
 
   return (
     <div className="architectural-overview-container">
-      <ArcherContainer noCurves="true">
+      <ArcherContainer ref={archerContainerRef}>
       <div className="arch-container">
         <div className="arch-column">
           <div className="arch-row">
             <ArcherElement id="region">
-            <div>
+            <div id={"test-id"}>
                 <ArchitecturalObject 
                   history={history}
                   title="Region"
