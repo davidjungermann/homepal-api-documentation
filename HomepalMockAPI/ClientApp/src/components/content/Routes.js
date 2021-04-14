@@ -4,9 +4,9 @@ import { Section } from "../section/Section";
 import { ContainerBlock } from "../container-block/ContainerBlock";
 import { Description } from "../description/Description";
 import { Usage } from "../usage/Usage";
-import { EndpointList } from "../content/endpoint-list/EndpointList";
-import { Endpoint } from "../content/endpoint/Endpoint";
-import { BodyDescription } from "../content/body-description/BodyDescription";
+import { EndpointList } from "./endpoint-list/EndpointList";
+import { Endpoint } from "./endpoint/Endpoint";
+import { BodyDescription } from "./body-description/BodyDescription";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faExclamationTriangle,
@@ -16,7 +16,7 @@ import { Example } from "./example/Example";
 import { Table } from "./table/Table";
 import { TableItem } from "./table/TableItem";
 import { Authorization } from "../authorization/Authorization";
-import { ArchitecturalOverview } from "../content/architectural-overview/ArchitecturalOverview";
+import { ArchitecturalOverview } from "./architectural-overview/ArchitecturalOverview";
 import { Returns } from "./returns/Returns";
 import { ReturnsItem } from "./returns/ReturnsItem";
 

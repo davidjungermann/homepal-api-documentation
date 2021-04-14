@@ -15,6 +15,7 @@ export const Authorization = ({ token, setToken, valid, setValid }) => {
     );
     setValid(response.data.isValid.toString());
   };
+
   return (
     <div className="authorization-container">
       {!token ? (
