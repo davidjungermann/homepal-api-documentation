@@ -1,9 +1,9 @@
 import React from "react";
 import axios from "axios";
-import "./Authorization.scss";
+import "./Auth.scss";
 import { TokenContainer } from "../content/token-container/TokenContainer";
 
-export const Authorization = ({ token, setToken, valid, setValid }) => {
+export const Auth = ({ token, setToken, valid, setValid }) => {
   const fetchToken = async () => {
     const response = await axios.get("https://localhost:6001/api/authtoken");
     setToken(response.data.value);
