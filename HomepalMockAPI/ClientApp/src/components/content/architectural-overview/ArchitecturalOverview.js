@@ -5,12 +5,27 @@ import { ArchitecturalObject } from './ArchitecturalObject';
 import { ArcherContainer, ArcherElement } from 'react-archer';
 
 export const ArchitecturalOverview = ({ history }) => {
+  
+  //const gray_1 = "#f6f9fc";
+  //const gray_2 = "#e0e8f0";
+  const gray_3 = "#cdd6e0";
+  //const gray_4 = "#a5b5c4";
+  //const gray_5 = "#97a7ba";
+  //const gray_6 = "#4c5f72";
 
-  const link = "get-buildings";
+  //const midnight = "#0c273b";
+  //const white = "#ffffff";
+
+  //const lime = "#b5e48c";
+  //const lime_light = "#d9ed92";
+  const lime_dark = "#99d98c";
+
+  const primaryStyle = { strokeWidth:"2", strokeColor:lime_dark, strokeDasharray:"4,4", endShape: {"circle":{"radius":-1,"fillColor":"#99d98c","strokeColor":"#99d98c","strokeWidth":-1}} };
+  const secondaryStyle = { strokeWidth:"1", strokeColor:gray_3, endShape: {"arrow":{"arrowLength":10,"arrowThickness":6}} };
 
   return (
     <div className="architectural-overview-container">
-      <ArcherContainer strokeColor='#e0e8f0' strokeWidth={1}>
+      <ArcherContainer noCurves="true">
       <div className="arch-container">
         <div className="arch-column">
           <div className="arch-row">
@@ -34,12 +49,12 @@ export const ArchitecturalOverview = ({ history }) => {
                 targetId: 'region',
                 targetAnchor: 'bottom',
                 sourceAnchor: 'top',
-                style: { endShape: {"circle":{"radius":0,"fillColor":"#b5e48c","strokeColor":"#e0e8f0","strokeWidth":0}} },
+                style: primaryStyle,
               },{
                 targetId: 'owner',
                 targetAnchor: 'left',
                 sourceAnchor: 'right',
-                style: { endShape: {"circle":{"radius":0,"fillColor":"#b5e48c","strokeColor":"#e0e8f0","strokeWidth":0}} },
+                style: primaryStyle,
               }]}>
               <div>
                 <ArchitecturalObject 
@@ -62,7 +77,7 @@ export const ArchitecturalOverview = ({ history }) => {
                 targetId: 'real-estate',
                 targetAnchor: 'bottom',
                 sourceAnchor: 'top',
-                style: { endShape: {"circle":{"radius":0,"fillColor":"#b5e48c","strokeColor":"#e0e8f0","strokeWidth":0}} },
+                style: primaryStyle,
               }]}
             >
               <div>
@@ -90,6 +105,7 @@ export const ArchitecturalOverview = ({ history }) => {
                 targetId: 'agent',
                 targetAnchor: 'bottom',
                 sourceAnchor: 'top',
+                style: secondaryStyle,
               }]}>
               <div>
                 <ArchitecturalObject 
@@ -114,7 +130,8 @@ export const ArchitecturalOverview = ({ history }) => {
               <div>
                 <ArchitecturalObject 
                   history={history}
-                  link="#agent">
+                  link="#agent"
+                  additionalClass="abstract">
                   Agent
                 </ArchitecturalObject>
               </div>
@@ -130,17 +147,17 @@ export const ArchitecturalOverview = ({ history }) => {
                 targetId: 'building',
                 targetAnchor: 'right',
                 sourceAnchor: 'left',
-                style: { endShape: {"circle":{"radius":0,"fillColor":"#b5e48c","strokeColor":"#e0e8f0","strokeWidth":0}} },
+                style: primaryStyle,
               },{
                 targetId: 'owner',
                 targetAnchor: 'bottom',
                 sourceAnchor: 'top',
-                style: { endShape: {"circle":{"radius":0,"fillColor":"#b5e48c","strokeColor":"#e0e8f0","strokeWidth":0}} },
+                style: primaryStyle,
               },{
                 targetId: 'customer',
                 targetAnchor: 'bottom',
                 sourceAnchor: 'top',
-                style: { endShape: {"circle":{"radius":0,"fillColor":"#b5e48c","strokeColor":"#e0e8f0","strokeWidth":0}} },
+                style: primaryStyle,
               }]}
             >
               <div>
@@ -165,19 +182,21 @@ export const ArchitecturalOverview = ({ history }) => {
           <div className="arch-row">
             <ArcherElement 
               id="customer"
+              strokeColor="blue"
               relations={[{
                 targetId: 'agent',
                 targetAnchor: 'bottom',
                 sourceAnchor: 'top',
+                style: secondaryStyle,
               }]}>
               <div>
                 <ArchitecturalObject 
                   history={history}
-                  link="#leasable"
+                  link="#customer"
                   cardinalities={[
                     ["bottom-right", "1"],
                 ]}>
-                  Leasable
+                  Customer
                 </ArchitecturalObject>
               </div>
             </ArcherElement>

@@ -10,16 +10,17 @@
     white-space: nowrap;
     z-index: 0;
     width: fit-content;
-    border: 1px solid $gray-2;
+    //border: 1px solid $gray-2;
     border-radius: 24px;
     padding: 4px 18px;
     background: $white;
-    //border: none;
-    //box-shadow: 0 2px 5px 0 rgba($gray-6, 0.2), 0 1px 1px 0 rgba($midnight, 0.1);
+    border: none;
+    box-shadow: 0 2px 5px 0 rgba($gray-6, 0.2), 0 1px 1px 0 rgba($midnight, 0.1);
     cursor: pointer;
 
     font-family: $primary-font;
     font-weight: 600;
+    font-size: 10.5pt;
     color: $lime-dark;
     text-transform: uppercase;
 
@@ -36,58 +37,58 @@
     }
 }
 
-.cardinality-top-left {
+.abstract {
+    color: $gray-3!important;
+    
+    &:hover {
+        color: $gray-4!important;
+    }
+}
+
+.cardinality {
     position: absolute;
-    z-index: 100;
+    z-index: 100; 
+    color: $lime-dark;
+    font-size: 8pt;
+    font-weight: 700;
+}
+
+.cardinality-top-left {
     top: -18px;
-    left: 42%;
+    left: 40%;
 }
 
 .cardinality-top-right {
-    position: absolute;
-    z-index: 100;
     top: -18px;
     left: 56%;
 }
 
 .cardinality-right-top {
-    position: absolute;
-    z-index: 100;
-    top: 0%;
+    top: -4%;
     left: 104%;
 }
 
 .cardinality-right-bottom {
-    position: absolute;
-    z-index: 100;
     top: 50%;
     left: 104%;
 }
 
 .cardinality-bottom-right {
-    position: absolute;
-    z-index: 100;
-    top: 100%;
+    top: 104%;
     left: 56%;
 }
 
 .cardinality-bottom-left {
-    position: absolute;
-    z-index: 100;
-    top: 100%;
-    left: 42%;
+    top: 104%;
+    left: 40%;
 }
 
 .cardinality-left-bottom {
-    position: absolute;
-    z-index: 100;
     top: 50%;
     left: -6%;
 }
 
 .cardinality-left-top {
-    position: absolute;
-    z-index: 100;
-    top: 0%;
+    top: -4%;
     left: -6%;
 }
