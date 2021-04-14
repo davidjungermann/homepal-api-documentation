@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 import "./Authorization.scss";
+import { ContainerBlock } from "../container-block/ContainerBlock";
+import { AuthContainer } from "../content/auth-container/AuthContainer";
 
 export const Authorization = ({ token, setToken, valid, setValid }) => {
   const fetchToken = async () => {
@@ -16,12 +18,15 @@ export const Authorization = ({ token, setToken, valid, setValid }) => {
   };
   return (
     <div className="authorization-container">
-      {!token && (
+      {!token ? (
         <button className="primary-button" onClick={fetchToken}>
           Generate authorization token
         </button>
+      ) : (
+        <AuthContainer className="token" header="TOKEN" copy>
+          {token}
+        </AuthContainer>
       )}
-      <p className="token">{token}</p>
     </div>
   );
 };

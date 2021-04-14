@@ -272,14 +272,16 @@ export const routes = [
       <Section id="authorization" history={history}>
         <Description>
           <TextUnit header="Authorization"></TextUnit>
+        </Description>
+        <Usage>
+          {" "}
           <Authorization
             token={token}
             setToken={setToken}
             valid={valid}
             setValid={setValid}
           ></Authorization>
-        </Description>
-        <Usage>{/* Usage */}</Usage>
+        </Usage>
       </Section>
     ),
   },
