@@ -4,6 +4,19 @@ import "./ArchitecturalOverview.scss";
 import { ArchitecturalObject } from './ArchitecturalObject';
 import { ArcherContainer, ArcherElement } from 'react-archer';
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBuilding,
+  faCity,
+  faCube,
+  faExclamationTriangle,
+  faInfoCircle,
+  faMapMarkedAlt,
+  faUser,
+  faUserCircle,
+  faUserTie,
+} from "@fortawesome/free-solid-svg-icons";
+
 export const ArchitecturalOverview = ({ history }) => {
   
   //const gray_1 = "#f6f9fc";
@@ -33,11 +46,12 @@ export const ArchitecturalOverview = ({ history }) => {
             <div>
                 <ArchitecturalObject 
                   history={history}
+                  title="Region"
                   link="#region"
                   cardinalities={[
                     ["bottom-right", "1"],
                 ]}>
-                  Region
+                  <FontAwesomeIcon icon={faMapMarkedAlt} />
                 </ArchitecturalObject>
               </div>
             </ArcherElement>
@@ -59,13 +73,14 @@ export const ArchitecturalOverview = ({ history }) => {
               <div>
                 <ArchitecturalObject 
                   history={history}
+                  title="Real Estate"
                   link="#realestate"
                   cardinalities={[
                     ["top-right", "*"],
                     ["right-top", "*"],
                     ["bottom-right", "1"],
                 ]}>
-                  Real Estate
+                  <FontAwesomeIcon icon={faCity} />
                 </ArchitecturalObject>
               </div>
             </ArcherElement>
@@ -83,12 +98,13 @@ export const ArchitecturalOverview = ({ history }) => {
               <div>
                 <ArchitecturalObject 
                     history={history}
+                    title="Building"
                     link="#building"
                     cardinalities={[
                       ["top-right", "*"],
                       ["right-top", "1"],
                   ]}>
-                    Building
+                    <FontAwesomeIcon icon={faBuilding} />
                   </ArchitecturalObject>
                 </div>
             </ArcherElement>
@@ -110,12 +126,13 @@ export const ArchitecturalOverview = ({ history }) => {
               <div>
                 <ArchitecturalObject 
                   history={history}
+                  title="Owner"
                   link="#owner"
                   cardinalities={[
                     ["left-top", "1"],
                     ["bottom-left", "1"],
                 ]}>
-                  Owner
+                  <FontAwesomeIcon icon={faUserTie} />
                 </ArchitecturalObject>
               </div>
             </ArcherElement>
@@ -130,9 +147,10 @@ export const ArchitecturalOverview = ({ history }) => {
               <div>
                 <ArchitecturalObject 
                   history={history}
+                  title="Agent"
                   link="#agent"
                   additionalClass="abstract">
-                  Agent
+                  <FontAwesomeIcon icon={faUserCircle} />
                 </ArchitecturalObject>
               </div>
             </ArcherElement>
@@ -163,13 +181,14 @@ export const ArchitecturalOverview = ({ history }) => {
               <div>
                 <ArchitecturalObject 
                   history={history}
+                  title="Leasable"
                   link="#leasable"
                   cardinalities={[
                     ["top-right", "*"],
                     ["top-left", "*"],
                     ["left-top", "*"],
                 ]}>
-                  Leasable
+                  <FontAwesomeIcon icon={faCube} />
                 </ArchitecturalObject>
               </div>
             </ArcherElement>
@@ -192,11 +211,12 @@ export const ArchitecturalOverview = ({ history }) => {
               <div>
                 <ArchitecturalObject 
                   history={history}
+                  title="Customer"
                   link="#customer"
                   cardinalities={[
                     ["bottom-right", "1"],
                 ]}>
-                  Customer
+                  <FontAwesomeIcon icon={faUser} />
                 </ArchitecturalObject>
               </div>
             </ArcherElement>

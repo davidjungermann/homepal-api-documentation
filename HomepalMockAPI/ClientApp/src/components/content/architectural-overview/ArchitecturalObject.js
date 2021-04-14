@@ -1,7 +1,7 @@
 import React from "react";
 import "./ArchitecturalObject.scss";
 
-export const ArchitecturalObject = ({ history, children, link, cardinalities, additionalClass }) => {
+export const ArchitecturalObject = ({ history, children, title, link, cardinalities, additionalClass }) => {
   if (link === undefined) {
     link = "#";
   }
@@ -17,7 +17,8 @@ export const ArchitecturalObject = ({ history, children, link, cardinalities, ad
           })}
           <div className={"architectural-overview-badge " + additionalClass}
             onClick={() => history.push(link)}>
-                {children}
+              <div>{children}</div>
+              <div>{title}</div>
           </div>
       </div>
   );
