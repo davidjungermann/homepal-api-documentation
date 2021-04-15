@@ -8,7 +8,7 @@ const SectionContent = (props) => {
   var [height, setHeight] = useState(0);
 
   if (inViewport) {
-    props.history.push("/#" + props.id);
+    //props.history.push("/#" + props.id);
   }
 
   useEffect(() => {
