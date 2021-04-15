@@ -4,7 +4,7 @@ import { Description } from "../../../components/description/Description";
 import { Section } from "../../../components/section/Section";
 import { Usage } from "../../../components/usage/Usage";
 
-export const GetCustomers = ({ history }) => {
+export const GetCustomers = (  ) => {
   return (
     <Section id="get-customers"  >
       <Description>

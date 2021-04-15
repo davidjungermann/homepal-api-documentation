@@ -5,7 +5,7 @@ import { Section } from "../../../components/section/Section";
 import { Usage } from "../../../components/usage/Usage";
 import { SectionWrapper } from "../../../components/content/section-wrapper/SectionWrapper";
 
-export const Customer = ({ history }) => {
+export const Customer = (  ) => {
   return (
     <SectionWrapper>
       <Section id="customer"  >

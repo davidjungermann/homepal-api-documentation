@@ -4,7 +4,7 @@ import { Description } from "../../../components/description/Description";
 import { Section } from "../../../components/section/Section";
 import { Usage } from "../../../components/usage/Usage";
 
-export const CreateRealEstate = ({ history }) => {
+export const CreateRealEstate = (  ) => {
   return (
     <Section id="create-realestate"  >
       <Description>

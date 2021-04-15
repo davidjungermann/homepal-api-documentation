@@ -4,7 +4,7 @@ import { Description } from "../../../components/description/Description";
 import { Section } from "../../../components/section/Section";
 import { Usage } from "../../../components/usage/Usage";
 
-export const GetLeasables = ({ history }) => {
+export const GetLeasables = (  ) => {
   return (
     <Section id="get-leasables"  >
       <Description>

@@ -78,7 +78,7 @@ export const Errors = () => {
         </Usage>
       </Section>
 
-      <Section id="error-codes" history={history}>
+      <Section id="error-codes">
         <Description>
           <TextUnit header="Error codes" isSubsection>
             <p>

@@ -4,7 +4,7 @@ import { Description } from "../../../components/description/Description";
 import { Section } from "../../../components/section/Section";
 import { Usage } from "../../../components/usage/Usage";
 
-export const DeleteOwner = ({ history }) => {
+export const DeleteOwner = (  ) => {
   return (
     <Section id="delete-owner"  >
       <Description>
