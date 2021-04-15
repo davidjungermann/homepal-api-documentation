@@ -1,6 +1,7 @@
 import React from "react";
 import { NavHashLink as Link } from "react-router-hash-link";
 import "./ArchitecturalObject.scss";
+import nextId from "react-id-generator";
 
 export const ArchitecturalObject = ({
   history,
@@ -20,13 +21,18 @@ export const ArchitecturalObject = ({
         {cardinalities &&
           cardinalities.map((cardinality) => {
             return (
-              <div className={"cardinality cardinality-" + cardinality[0]}>
+              <div
+                key={nextId()}
+                className={"cardinality cardinality-" + cardinality[0]}
+              >
                 {cardinality[1]}
               </div>
             );
           })}
         <Link smooth to={"#" + link}>
-          <div className={"architectural-overview-badge-link " + additionalClass}>
+          <div
+            className={"architectural-overview-badge-link " + additionalClass}
+          >
             <div>{children}</div>
             <div>{title}</div>
           </div>
@@ -41,7 +47,10 @@ export const ArchitecturalObject = ({
         {cardinalities &&
           cardinalities.map((cardinality) => {
             return (
-              <div className={"cardinality cardinality-" + cardinality[0]}>
+              <div
+                key={nextId()}
+                className={"cardinality cardinality-" + cardinality[0]}
+              >
                 {cardinality[1]}
               </div>
             );

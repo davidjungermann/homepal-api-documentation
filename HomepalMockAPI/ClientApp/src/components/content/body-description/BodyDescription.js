@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ContainerBlock } from "../../container-block/ContainerBlock";
+import nextId from "react-id-generator";
 
 import "./BodyDescription.scss";
 
@@ -21,20 +22,20 @@ export const BodyDescription = ({ header, body, copy }) => {
     return Object.entries(body).map(([key, value], index) => {
       if (index === 0) {
         return (
-          <div className="first-row">
+          <div key={nextId()} className="first-row">
             {openingBrace()}"{key}": {value}
           </div>
         );
       } else if (index === Object.keys(body).length - 1) {
         return (
-          <div className="last-row">
+          <div key={nextId()} className="last-row">
             "{key}": {value}
             {closingBrace()}
           </div>
         );
       } else {
         return (
-          <div className="middle-row">
+          <div key={nextId()} className="middle-row">
             "{key}": {value}
           </div>
         );
@@ -47,7 +48,7 @@ export const BodyDescription = ({ header, body, copy }) => {
       return Object.entries(obj).map(([key, value], objIndex) => {
         if (objIndex === 0 && arrayIndex === 0) {
           return (
-            <div className="first-object-row">
+            <div key={nextId()} className="first-object-row">
               {openingBracket()}
               {openingBrace()}"{key}": {value}
             </div>
@@ -57,7 +58,7 @@ export const BodyDescription = ({ header, body, copy }) => {
           arrayIndex === body.length - 1
         ) {
           return (
-            <div className="last-object-row">
+            <div key={nextId()} className="last-object-row">
               "{key}": {value}
               {closingBrace()}
               {closingBracket()}
@@ -65,20 +66,20 @@ export const BodyDescription = ({ header, body, copy }) => {
           );
         } else if (objIndex === 0) {
           return (
-            <div className="first-row">
+            <div key={nextId()} className="first-row">
               {openingBrace()}"{key}": {value}
             </div>
           );
         } else if (objIndex === Object.keys(obj).length - 1) {
           return (
-            <div className="last-row">
+            <div key={nextId()} className="last-row">
               "{key}": {value}
               {continuingBrace()}
             </div>
           );
         } else {
           return (
-            <div className="middle-row">
+            <div key={nextId()} className="middle-row">
               "{key}": {value}
             </div>
           );
