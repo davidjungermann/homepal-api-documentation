@@ -5,13 +5,6 @@ import nextId from "react-id-generator";
 import "./Navigation.scss";
 
 export const Navigation = ({ items, formatUrl, history }) => {
-  const [open, setOpen] = useState(false);
-
-  const handleOpen = (label) => {
-    setOpen(true);
-    console.log("Open!")
-  };
-
   return (
     <React.Fragment>
       <div className="navigation-container">
@@ -32,7 +25,6 @@ export const Navigation = ({ items, formatUrl, history }) => {
                   nextId={nextId}
                   formatUrl={formatUrl}
                   fontWeight={600}
-                  handleOpen={handleOpen}
                   {...sidebarItem}
                 />
               </div>

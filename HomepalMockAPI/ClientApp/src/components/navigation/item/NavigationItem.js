@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavHashLink as Link } from "react-router-hash-link";
 import "./NavigationItem.scss";
 
@@ -11,9 +11,18 @@ export const NavigationItem = ({
   nextId,
   formatUrl,
   fontWeight,
-  handleOpen,
   ...rest
 }) => {
+  const [open, setOpen] = useState("navigation-sub-list");
+
+  const handleOpen = () => {
+    if (open === "navigation-sub-list") {
+      setOpen("some-different-thing");
+    } else {
+      setOpen("navigation-sub-list");
+    }
+  };
+
   const renderHeaderItem = () => {
     return (
       <div className="list-item-header">
@@ -26,7 +35,7 @@ export const NavigationItem = ({
     return (
       <div
         className="navigation-item-container"
-        onClick={() => handleOpen(depth)}
+        onClick={() => (depth === 1 ? handleOpen(label) : () => {})}
       >
         <Link
           to={"#" + formatUrl(label)}
@@ -52,7 +61,7 @@ export const NavigationItem = ({
   const renderNextItem = () => {
     if (Array.isArray(items)) {
       return (
-        <ul className="navigation-sub-list">
+        <ul className={open}>
           {items.map((subItem) => {
             return (
               <NavigationItem
@@ -64,7 +73,6 @@ export const NavigationItem = ({
                 formatUrl={formatUrl}
                 fontWeight={fontWeight}
                 marginTop={0}
-                handleOpen={depth === 0 ? handleOpen : () => {}}
                 {...subItem}
               />
             );
