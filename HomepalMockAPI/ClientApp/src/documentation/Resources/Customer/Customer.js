@@ -8,7 +8,7 @@ import { SectionWrapper } from "../../../components/content/section-wrapper/Sect
 export const Customer = ({ history }) => {
   return (
     <SectionWrapper>
-      <Section id="customer" history={history}>
+      <Section id="customer"  >
         <Description>
           <TextUnit header="Customer"></TextUnit>
         </Description>

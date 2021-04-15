@@ -47,19 +47,14 @@ import { DeleteRegion } from "../../documentation/Resources/Region/DeleteRegion"
 
 export const routes = [
   {
-    main: ({ history, token }) => (
-      <AboutTheApi history={history} token={token}></AboutTheApi>
-    ),
+    main: ({ token }) => <AboutTheApi token={token}></AboutTheApi>,
   },
   {
-    main: ({ history }) => (
-      <ConceptualInformation history={history}></ConceptualInformation>
-    ),
+    main: () => <ConceptualInformation></ConceptualInformation>,
   },
   {
-    main: ({ history, token, setToken, valid, setValid }) => (
+    main: ({ token, setToken, valid, setValid }) => (
       <Authorization
-        history={history}
         token={token}
         setToken={setToken}
         valid={valid}
@@ -68,137 +63,129 @@ export const routes = [
     ),
   },
   {
-    main: ({ history }) => <Validations history={history}></Validations>,
+    main: () => <Validations></Validations>,
   },
   {
-    main: ({ history }) => <Errors history={history}></Errors>,
+    main: () => <Errors></Errors>,
   },
   {
-    main: ({ history }) => (
-      <QueryParameters history={history}></QueryParameters>
-    ),
+    main: () => <QueryParameters></QueryParameters>,
   },
   {
-    main: ({ history }) => <Versioning history={history}></Versioning>,
+    main: () => <Versioning></Versioning>,
   },
   {
-    main: ({ history }) => <Agent history={history}></Agent>,
+    main: () => <Agent></Agent>,
   },
   {
-    main: ({ history }) => <GetAgents history={history}></GetAgents>,
+    main: () => <GetAgents></GetAgents>,
   },
   {
-    main: ({ history }) => <GetAgent history={history}></GetAgent>,
+    main: () => <GetAgent></GetAgent>,
   },
   {
-    main: ({ history }) => <CreateAgent history={history}></CreateAgent>,
+    main: () => <CreateAgent></CreateAgent>,
   },
   {
-    main: ({ history }) => <UpdateAgent history={history}></UpdateAgent>,
+    main: () => <UpdateAgent></UpdateAgent>,
   },
   {
-    main: ({ history }) => <DeleteAgent history={history}></DeleteAgent>,
+    main: () => <DeleteAgent></DeleteAgent>,
   },
   {
-    main: ({ history }) => <Building history={history}></Building>,
+    main: () => <Building></Building>,
   },
   {
-    main: ({ history }) => <GetBuildings history={history}></GetBuildings>,
+    main: () => <GetBuildings></GetBuildings>,
   },
   {
-    main: ({ history }) => <GetBuilding history={history}></GetBuilding>,
+    main: () => <GetBuilding></GetBuilding>,
   },
   {
-    main: ({ history }) => <CreateBuilding history={history}></CreateBuilding>,
+    main: () => <CreateBuilding></CreateBuilding>,
   },
   {
-    main: ({ history }) => <UpdateBuilding history={history}></UpdateBuilding>,
+    main: () => <UpdateBuilding></UpdateBuilding>,
   },
   {
-    main: ({ history }) => <DeleteBuilding history={history}></DeleteBuilding>,
+    main: () => <DeleteBuilding></DeleteBuilding>,
   },
   {
-    main: ({ history }) => <Customer history={history}></Customer>,
+    main: () => <Customer></Customer>,
   },
   {
-    main: ({ history }) => <GetCustomers history={history}></GetCustomers>,
+    main: () => <GetCustomers></GetCustomers>,
   },
   {
-    main: ({ history }) => <GetCustomer history={history}></GetCustomer>,
+    main: () => <GetCustomer></GetCustomer>,
   },
   {
-    main: ({ history }) => <CreateCustomer history={history}></CreateCustomer>,
+    main: () => <CreateCustomer></CreateCustomer>,
   },
   {
-    main: ({ history }) => <DeleteCustomer history={history}></DeleteCustomer>,
+    main: () => <DeleteCustomer></DeleteCustomer>,
   },
   {
-    main: ({ history }) => <Leasable history={history}></Leasable>,
+    main: () => <Leasable></Leasable>,
   },
   {
-    main: ({ history }) => <GetLeasables history={history}></GetLeasables>,
+    main: () => <GetLeasables></GetLeasables>,
   },
   {
-    main: ({ history }) => <GetLeasable history={history}></GetLeasable>,
+    main: () => <GetLeasable></GetLeasable>,
   },
   {
-    main: ({ history }) => <CreateLeasable history={history}></CreateLeasable>,
+    main: () => <CreateLeasable></CreateLeasable>,
   },
   {
-    main: ({ history }) => <UpdateLeasable history={history}></UpdateLeasable>,
+    main: () => <UpdateLeasable></UpdateLeasable>,
   },
   {
-    main: ({ history }) => <DeleteLeasable history={history}></DeleteLeasable>,
+    main: () => <DeleteLeasable></DeleteLeasable>,
   },
   {
-    main: ({ history }) => <Owner history={history}></Owner>,
+    main: () => <Owner></Owner>,
   },
   {
-    main: ({ history }) => <GetOwners history={history}></GetOwners>,
+    main: () => <GetOwners></GetOwners>,
   },
   {
-    main: ({ history }) => <GetOwner history={history}></GetOwner>,
+    main: () => <GetOwner></GetOwner>,
   },
   {
-    main: ({ history }) => <CreateOwner history={history}></CreateOwner>,
+    main: () => <CreateOwner></CreateOwner>,
   },
   {
-    main: ({ history }) => <DeleteOwner history={history}></DeleteOwner>,
+    main: () => <DeleteOwner></DeleteOwner>,
   },
   {
-    main: ({ history }) => <RealEstate history={history}></RealEstate>,
+    main: () => <RealEstate></RealEstate>,
   },
   {
-    main: ({ history }) => <GetRealEstates history={history}></GetRealEstates>,
+    main: () => <GetRealEstates></GetRealEstates>,
   },
   {
-    main: ({ history }) => <GetRealEstate history={history}></GetRealEstate>,
+    main: () => <GetRealEstate></GetRealEstate>,
   },
   {
-    main: ({ history }) => (
-      <CreateRealEstate history={history}></CreateRealEstate>
-    ),
+    main: () => <CreateRealEstate></CreateRealEstate>,
   },
   {
-    main: ({ history }) => (
-      <UpdateRealEstate history={history}></UpdateRealEstate>
-    ),
+    main: () => <UpdateRealEstate></UpdateRealEstate>,
   },
   {
-    main: ({ history }) => (
-      <DeleteRealEstate history={history}></DeleteRealEstate>
-    ),
+    main: () => <DeleteRealEstate></DeleteRealEstate>,
   },
   {
-    main: ({ history }) => <Region history={history}></Region>,
+    main: () => <Region></Region>,
   },
   {
-    main: ({ history }) => <GetRegions history={history}></GetRegions>,
+    main: () => <GetRegions></GetRegions>,
   },
   {
-    main: ({ history }) => <CreateRegion history={history}></CreateRegion>,
+    main: () => <CreateRegion></CreateRegion>,
   },
   {
-    main: ({ history }) => <DeleteRegion history={history}></DeleteRegion>,
+    main: () => <DeleteRegion></DeleteRegion>,
   },
 ];

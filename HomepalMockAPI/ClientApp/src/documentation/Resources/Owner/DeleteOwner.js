@@ -6,7 +6,7 @@ import { Usage } from "../../../components/usage/Usage";
 
 export const DeleteOwner = ({ history }) => {
   return (
-    <Section id="delete-owner" history={history}>
+    <Section id="delete-owner"  >
       <Description>
         <TextUnit header="Delete Owner"></TextUnit>
       </Description>

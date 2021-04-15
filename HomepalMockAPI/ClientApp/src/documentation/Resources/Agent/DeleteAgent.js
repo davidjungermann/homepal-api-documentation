@@ -4,9 +4,9 @@ import { Description } from "../../../components/description/Description";
 import { Section } from "../../../components/section/Section";
 import { Usage } from "../../../components/usage/Usage";
 
-export const DeleteAgent = ({ history }) => {
+export const DeleteAgent = () => {
   return (
-    <Section id="delete-agent" history={history}>
+    <Section id="delete-agent">
       <Description>
         <TextUnit header="Delete Agent"></TextUnit>
       </Description>

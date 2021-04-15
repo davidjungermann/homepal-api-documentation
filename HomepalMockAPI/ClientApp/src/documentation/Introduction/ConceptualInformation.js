@@ -6,10 +6,10 @@ import { Section } from "../../components/section/Section";
 import { Usage } from "../../components/usage/Usage";
 import { SectionWrapper } from "../../components/content/section-wrapper/SectionWrapper";
 
-export const ConceptualInformation = ({ history }) => {
+export const ConceptualInformation = () => {
   return (
     <SectionWrapper>
-      <Section id="conceptual-information" history={history}>
+      <Section id="conceptual-information">
         <Description>
           <TextUnit header="Conceptual information">
             <p>
@@ -24,7 +24,7 @@ export const ConceptualInformation = ({ history }) => {
               nulla. Praesent lacinia risus quis urna tristique.
             </p>
           </TextUnit>
-          <ArchitecturalOverview history={history} />
+          <ArchitecturalOverview />
         </Description>
         <Usage></Usage>
       </Section>

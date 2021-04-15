@@ -6,13 +6,10 @@ import { BrowserRouter as Route } from "react-router-dom";
 import { Content } from "./components/content/Content";
 import { Header } from "./components/header/Header";
 //import { Footer } from "./components/footer/Footer";
-import { useHistory } from "react-router";
 
 import "./App.scss";
 
 function App() {
-  let history = useHistory();
-
   const [token, setToken] = useState("");
   const [valid, setValid] = useState(false);
 
@@ -30,7 +27,6 @@ function App() {
         exact={route.exact}
         children={
           <route.main
-            history={history}
             token={token}
             setToken={setToken}
             valid={valid}
@@ -49,7 +45,6 @@ function App() {
           className="navigation"
           items={items}
           formatUrl={formatUrl}
-          history={history}
         />
         <div className="content">
           <Content renderRoutes={renderRoutes}></Content>

@@ -6,16 +6,10 @@ import { Usage } from "../../components/usage/Usage";
 import { Auth } from "../../components/auth/Auth";
 import { SectionWrapper } from "../../components/content/section-wrapper/SectionWrapper";
 
-export const Authorization = ({
-  history,
-  token,
-  setToken,
-  valid,
-  setValid,
-}) => {
+export const Authorization = ({ token, setToken, valid, setValid }) => {
   return (
     <SectionWrapper>
-      <Section id="authorization" history={history}>
+      <Section id="authorization">
         <Description>
           <TextUnit header="Authorization">
             <p>
@@ -45,7 +39,7 @@ export const Authorization = ({
         </Description>
         <Usage></Usage>
       </Section>
-      <Section id="authorization" history={history}>
+      <Section id="authorization">
         <Description>
           <TextUnit header="Test mode access token" isSubsection>
             <p>

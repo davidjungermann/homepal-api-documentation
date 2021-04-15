@@ -6,7 +6,7 @@ import { Usage } from "../../../components/usage/Usage";
 
 export const UpdateBuilding = ({ history }) => {
   return (
-    <Section id="update-building" history={history}>
+    <Section id="update-building"  >
       <Description>
         <TextUnit header="Update Building"></TextUnit>
       </Description>

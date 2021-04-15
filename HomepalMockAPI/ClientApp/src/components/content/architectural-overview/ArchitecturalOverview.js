@@ -15,7 +15,7 @@ import {
   faUserTie,
 } from "@fortawesome/free-solid-svg-icons";
 
-export const ArchitecturalOverview = ({ history }) => {
+export const ArchitecturalOverview = () => {
   //const gray_1 = "#f6f9fc";
   //const gray_2 = "#e0e8f0";
   const gray_3 = "#cdd6e0";
@@ -63,7 +63,6 @@ export const ArchitecturalOverview = ({ history }) => {
               <ArcherElement id="region">
                 <div id={"test-id"}>
                   <ArchitecturalObject
-                    history={history}
                     title="Region"
                     link="region"
                     cardinalities={[["bottom-right", "1"]]}
@@ -93,7 +92,6 @@ export const ArchitecturalOverview = ({ history }) => {
               >
                 <div>
                   <ArchitecturalObject
-                    history={history}
                     title="Real Estate"
                     link="realestate"
                     cardinalities={[
@@ -121,7 +119,6 @@ export const ArchitecturalOverview = ({ history }) => {
               >
                 <div>
                   <ArchitecturalObject
-                    history={history}
                     title="Building"
                     link="building"
                     cardinalities={[
@@ -151,7 +148,6 @@ export const ArchitecturalOverview = ({ history }) => {
               >
                 <div>
                   <ArchitecturalObject
-                    history={history}
                     title="Owner"
                     link="owner"
                     cardinalities={[
@@ -171,7 +167,6 @@ export const ArchitecturalOverview = ({ history }) => {
               <ArcherElement id="agent">
                 <div>
                   <ArchitecturalObject
-                    history={history}
                     title="Agent"
                     link="agent"
                     additionalClass="abstract"
@@ -208,7 +203,6 @@ export const ArchitecturalOverview = ({ history }) => {
               >
                 <div>
                   <ArchitecturalObject
-                    history={history}
                     title="Leasable"
                     link="leasable"
                     cardinalities={[
@@ -240,9 +234,7 @@ export const ArchitecturalOverview = ({ history }) => {
               >
                 <div>
                   <ArchitecturalObject
-                    history={history}
                     title="Customer"
-                    
                     cardinalities={[["bottom-right", "1"]]}
                   >
                     <FontAwesomeIcon icon={faUser} />
