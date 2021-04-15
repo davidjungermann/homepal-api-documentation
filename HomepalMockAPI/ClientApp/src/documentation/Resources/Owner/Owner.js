@@ -5,10 +5,10 @@ import { Section } from "../../../components/section/Section";
 import { Usage } from "../../../components/usage/Usage";
 import { SectionWrapper } from "../../../components/content/section-wrapper/SectionWrapper";
 
-export const Owner = (  ) => {
+export const Owner = () => {
   return (
     <SectionWrapper>
-      <Section id="owner"  >
+      <Section id="owner">
         <Description>
           <TextUnit header="Owner"></TextUnit>
         </Description>

@@ -3,7 +3,6 @@ import React from "react";
 import "./TextUnit.scss";
 
 export const TextUnit = ({ header, headerSize, isSubsection, children }) => {
-
   if (isSubsection) {
     headerSize = "title-6";
   }

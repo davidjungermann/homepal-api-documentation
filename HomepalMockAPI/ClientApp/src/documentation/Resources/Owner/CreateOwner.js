@@ -4,9 +4,9 @@ import { Description } from "../../../components/description/Description";
 import { Section } from "../../../components/section/Section";
 import { Usage } from "../../../components/usage/Usage";
 
-export const CreateOwner = (  ) => {
+export const CreateOwner = () => {
   return (
-    <Section id="create-owner"  >
+    <Section id="create-owner">
       <Description>
         <TextUnit header="Create Owner"></TextUnit>
       </Description>

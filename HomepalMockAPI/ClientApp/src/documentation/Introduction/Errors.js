@@ -15,13 +15,17 @@ export const Errors = () => {
         <Description>
           <TextUnit header="Errors">
             <p>
-              Hombase uses conventional HTTP response codes to indicate the success or failure of an API request. 
-              In general: Codes in the <span className="code-badge">2xx</span> range indicate success. 
-              Codes in the <span className="code-badge">4xx</span> range indicate an error that failed given the information provided. 
-              Codes in the <span className="code-badge">5xx</span> range indicate an error with Hompal's servers.
+              Hombase uses conventional HTTP response codes to indicate the
+              success or failure of an API request. In general: Codes in the{" "}
+              <span className="code-badge">2xx</span> range indicate success.
+              Codes in the <span className="code-badge">4xx</span> range
+              indicate an error that failed given the information provided.
+              Codes in the <span className="code-badge">5xx</span> range
+              indicate an error with Hompal's servers.
             </p>
             <p>
-              Apart from the response code, unsuccessful responses return a JSON object containing the following information:
+              Apart from the response code, unsuccessful responses return a JSON
+              object containing the following information:
             </p>
           </TextUnit>
           <Table
@@ -67,23 +71,21 @@ export const Errors = () => {
         </Description>
         <Usage>
           <BodyDescription
-              header={"OBJECT EXAMPLE"}
-              copy
-              body={{
-                status: "401",
-                title: "Unauthorized",
-                detail: "",
-              }}
-            ></BodyDescription>
+            header={"OBJECT EXAMPLE"}
+            copy
+            body={{
+              status: "401",
+              title: "Unauthorized",
+              detail: "",
+            }}
+          ></BodyDescription>
         </Usage>
       </Section>
 
       <Section id="error-codes">
         <Description>
           <TextUnit header="Error codes" isSubsection>
-            <p>
-              Hombase API uses the following response status codes:
-            </p>
+            <p>Hombase API uses the following response status codes:</p>
           </TextUnit>
           <Table
             //values och cols här kan flyttas ut i en separat fil för att det ska bli lättare att läsa!
@@ -107,11 +109,7 @@ export const Errors = () => {
                 col2: "BadRequest",
               },
               {
-                col1: (
-                  <TableItem description="null">
-                    401
-                  </TableItem>
-                ),
+                col1: <TableItem description="null">401</TableItem>,
                 col2: "Unauthorized",
               },
               {
@@ -148,18 +146,21 @@ export const Errors = () => {
               },
             ]}
           ></Table>
-          <p>We recommend writing code that gracefully handles all possible errors..</p>
+          <p>
+            We recommend writing code that gracefully handles all possible
+            errors..
+          </p>
         </Description>
         <Usage>
           <BodyDescription
-              header={"OBJECT EXAMPLE"}
-              copy
-              body={{
-                status: "401",
-                title: "Unauthorized",
-                detail: "",
-              }}
-            ></BodyDescription>
+            header={"OBJECT EXAMPLE"}
+            copy
+            body={{
+              status: "401",
+              title: "Unauthorized",
+              detail: "",
+            }}
+          ></BodyDescription>
         </Usage>
       </Section>
     </SectionWrapper>

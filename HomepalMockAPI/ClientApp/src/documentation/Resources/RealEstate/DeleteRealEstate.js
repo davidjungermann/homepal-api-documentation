@@ -4,9 +4,9 @@ import { Description } from "../../../components/description/Description";
 import { Section } from "../../../components/section/Section";
 import { Usage } from "../../../components/usage/Usage";
 
-export const DeleteRealEstate = (  ) => {
+export const DeleteRealEstate = () => {
   return (
-    <Section id="delete-realestate"  >
+    <Section id="delete-realestate">
       <Description>
         <TextUnit header="Delete RealEstate"></TextUnit>
       </Description>

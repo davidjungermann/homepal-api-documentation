@@ -5,10 +5,10 @@ import { Section } from "../../../components/section/Section";
 import { Usage } from "../../../components/usage/Usage";
 import { SectionWrapper } from "../../../components/content/section-wrapper/SectionWrapper";
 
-export const Customer = (  ) => {
+export const Customer = () => {
   return (
     <SectionWrapper>
-      <Section id="customer"  >
+      <Section id="customer">
         <Description>
           <TextUnit header="Customer"></TextUnit>
         </Description>
