@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavigationItem } from "./item/NavigationItem";
 import nextId from "react-id-generator";
 
@@ -19,7 +19,7 @@ export const Navigation = ({ items, formatUrl, history }) => {
         <ul className="navigation-list">
           {items.map((sidebarItem) => {
             return (
-              <div className="navigation-list-header">
+              <div key={nextId()} className="navigation-list-header">
                 <NavigationItem
                   key={nextId()}
                   nextId={nextId}

@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { ContainerBlock } from "../../container-block/ContainerBlock";
 import "./TokenContainer.scss";
 
 export const TokenContainer = ({ children, header, copy }) => {
-  const [content, setContent] = useState(children);
+  const [content] = useState(children);
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {

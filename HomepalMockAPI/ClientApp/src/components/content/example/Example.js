@@ -3,7 +3,7 @@ import { ContainerBlock } from "../../container-block/ContainerBlock";
 import "./Example.scss";
 
 export const Example = ({ children, header, copy, token }) => {
-  const [content, setContent] = useState(children);
+  const [content] = useState(children);
   const [copied, setCopied] = useState(false);
   const [authToken, setAuthToken] = useState(token);
 

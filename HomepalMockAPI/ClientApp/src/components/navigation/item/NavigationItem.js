@@ -72,7 +72,6 @@ export const NavigationItem = ({
                 nextId={nextId}
                 formatUrl={formatUrl}
                 fontWeight={fontWeight}
-                marginTop={0}
                 {...subItem}
               />
             );
