@@ -6,7 +6,12 @@ import "./Section.scss";
 const SectionContent = (props) => {
   const { forwardedRef, inViewport } = props;
   var [height, setHeight] = useState(0);
+  let className = "section-container";
 
+  if (props.isSubsection) {
+    className = "subsection-container";
+  }
+  
   if (inViewport) {
     //props.history.push("/#" + props.id);
   }
@@ -16,7 +21,7 @@ const SectionContent = (props) => {
   }, [forwardedRef]);
 
   return (
-    <div id={props.id} className="section-container" ref={forwardedRef}>
+    <div id={props.id} className={className} ref={forwardedRef}>
       {props.children}
     </div>
   );

@@ -6,7 +6,7 @@ import { Usage } from "../../components/usage/Usage";
 
 export const Pagination = ({ history }) => {
   return (
-    <Section id="pagination" history={history}>
+    <Section id="pagination" history={history} isSubsection>
       <Description>
         <TextUnit header="Pagination">
           <p>
