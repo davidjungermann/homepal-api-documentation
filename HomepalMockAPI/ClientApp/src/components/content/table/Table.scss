@@ -21,6 +21,7 @@ table {
     color: $midnight;
     font-size: 8pt;
     border-radius: $border-radius;
+    overflow-x: scroll;
 }
 
 thead {
