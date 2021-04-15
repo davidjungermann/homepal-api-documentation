@@ -6,12 +6,44 @@
   user-select: none;
 }
 
-architectural-object-link {
+.architectural-overview-badge {
   position: relative;
+  white-space: nowrap;
   z-index: 0;
+  width: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: default;
+
+  //border: 1px solid $gray-2;
+  border-radius: 24px;
+  padding: 4px 18px;
+  background: $white;
+  border: none;
+  box-shadow: 0 2px 5px 0 rgba($gray-6, 0.2), 0 1px 1px 0 rgba($midnight, 0.1);
+
+  font-family: $primary-font;
+  font-weight: 600;
+  font-size: 10.5pt;
+  color: $lime-dark;
+  text-transform: uppercase;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    color: $emerald-light;
+  }
+
+  &:active {
+    background: $gray-1;
+  }
 }
 
-.architectural-overview-badge {
+.architectural-overview-badge-link {
   position: relative;
   white-space: nowrap;
   z-index: 0;
