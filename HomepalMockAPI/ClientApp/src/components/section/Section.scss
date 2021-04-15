@@ -8,10 +8,10 @@
   &:not(:last-child):before {
     content : "";
     position: absolute;
-    left    : 10%;
+    left    : 12%;
     bottom  : 0;
     height  : 1px;
-    width   : 80%;
+    width   : 76%;
     border-bottom:1px solid $gray-2;
   }
 }
