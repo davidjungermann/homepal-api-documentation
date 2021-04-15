@@ -11,9 +11,9 @@ const SectionContent = (props) => {
   if (props.isSubsection) {
     className = "subsection-container";
   }
-  
+
   if (inViewport) {
-    //props.history.push("/#" + props.id);
+    props.history.push("/#" + props.id);
   }
 
   useEffect(() => {
@@ -23,8 +23,11 @@ const SectionContent = (props) => {
   return (
     <div id={props.id} className={className} ref={forwardedRef}>
       {props.children}
+      <h1>{height}</h1>
     </div>
   );
 };
 
-export const Section = handleViewport(SectionContent, {});
+export const Section = handleViewport(SectionContent, {
+  rootMargin: "-400px -300px -400px -300px",
+});
