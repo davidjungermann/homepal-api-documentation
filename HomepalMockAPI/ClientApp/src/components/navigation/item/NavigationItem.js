@@ -17,7 +17,7 @@ export const NavigationItem = ({
 
   const handleOpen = () => {
     if (open === "navigation-sub-list") {
-      setOpen("some-different-thing");
+      setOpen("navigation-sub-list-closed");
     } else {
       setOpen("navigation-sub-list");
     }
