@@ -37,13 +37,14 @@ export const ArchitecturalOverview = ({ history }) => {
     strokeDasharray: "4,4",
     endShape: {
       circle: {
-        radius: -1,
-        fillColor: "#99d98c",
-        strokeColor: "#99d98c",
-        strokeWidth: -1,
+        radius: 0,
+        fillColor: "rgba(0,0,0,0)",
+        strokeColor: "rgba(0,0,0,0)",
+        strokeWidth: 0,
       },
     },
   };
+
   const secondaryStyle = {
     noCurves: "true",
     strokeWidth: "1",
