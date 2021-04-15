@@ -23,7 +23,6 @@ const SectionContent = (props) => {
   return (
     <div id={props.id} className={className} ref={forwardedRef}>
       {props.children}
-      <h1>{height}</h1>
     </div>
   );
 };
