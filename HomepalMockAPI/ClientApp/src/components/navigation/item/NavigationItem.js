@@ -11,6 +11,7 @@ export const NavigationItem = ({
   nextId,
   formatUrl,
   fontWeight,
+  handleOpen,
   ...rest
 }) => {
   const renderHeaderItem = () => {
@@ -23,7 +24,10 @@ export const NavigationItem = ({
 
   const renderLinkItem = () => {
     return (
-      <div className="navigation-item-container">
+      <div
+        className="navigation-item-container"
+        onClick={() => handleOpen(depth)}
+      >
         <Link
           to={"#" + formatUrl(label)}
           activeClassName="active"
@@ -60,6 +64,7 @@ export const NavigationItem = ({
                 formatUrl={formatUrl}
                 fontWeight={fontWeight}
                 marginTop={0}
+                handleOpen={depth === 0 ? handleOpen : () => {}}
                 {...subItem}
               />
             );
