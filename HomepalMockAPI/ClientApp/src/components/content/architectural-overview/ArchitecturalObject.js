@@ -1,7 +1,7 @@
 import React from "react";
 import "./ArchitecturalObject.scss";
 
-export const ArchitecturalObject = ({ history, children, title, link, cardinalities, additionalClass }) => {
+export const ArchitecturalObject = ({ history, children, title, link, cardinalities, additionalClass,}) => {
   if (link === undefined) {
     link = "#";
   }
