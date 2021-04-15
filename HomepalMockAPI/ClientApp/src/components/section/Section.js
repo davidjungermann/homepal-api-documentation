@@ -8,8 +8,8 @@ const SectionContent = (props) => {
   var [height, setHeight] = useState(0);
   let className = "section-container";
 
-  if (props.isSubsection) {
-    className = "subsection-container";
+  if (props.isLastChild) {
+    className = "section-container";
   }
   
   if (inViewport) {

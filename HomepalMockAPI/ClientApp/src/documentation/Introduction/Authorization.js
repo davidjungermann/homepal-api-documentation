@@ -16,7 +16,7 @@ export const Authorization = ({
 }) => {
   return (
     <SectionWrapper>
-      <Section id="authorization" history={history}>
+      <Section id="authorization" history={history} isLastChild>
         <Description>
           <TextUnit header="Authorization">
           <p>

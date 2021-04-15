@@ -3,6 +3,9 @@
 .section-container {
   display: flex;
   flex-direction: row;
-  border-bottom: 1px solid $gray-2;
-  //border: 1px solid chartreuse;
+  position:relative;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid red;
+  }
 }
