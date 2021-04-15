@@ -14,8 +14,6 @@ export const items = [
         items: [
           { label: "Pagination" },
           { label: "Sorting" },
-          { label: "Inclusion" },
-          { label: "Filter" },
         ],
       },
       { label: "Versioning" },

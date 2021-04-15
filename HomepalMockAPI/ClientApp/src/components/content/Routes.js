@@ -5,10 +5,6 @@ import { Authorization } from "../../documentation/Introduction/Authorization";
 import { Validations } from "../../documentation/Introduction/Validations";
 import { Errors } from "../../documentation/Introduction/Errors";
 import { QueryParameters } from "../../documentation/Introduction/QueryParameters";
-import { Pagination } from "../../documentation/Introduction/Pagination";
-import { Sorting } from "../../documentation/Introduction/Sorting";
-import { Inclusion } from "../../documentation/Introduction/Inclusion";
-import { Filter } from "../../documentation/Introduction/Filter";
 import { Versioning } from "../../documentation/Introduction/Versioning";
 import { Agent } from "../../documentation/Resources/Agent/Agent";
 import { Building } from "../../documentation/Resources/Building/Building";
@@ -81,18 +77,6 @@ export const routes = [
     main: ({ history }) => (
       <QueryParameters history={history}></QueryParameters>
     ),
-  },
-  {
-    main: ({ history }) => <Pagination history={history}></Pagination>,
-  },
-  {
-    main: ({ history }) => <Sorting history={history}></Sorting>,
-  },
-  {
-    main: ({ history }) => <Inclusion history={history}></Inclusion>,
-  },
-  {
-    main: ({ history }) => <Filter history={history}></Filter>,
   },
   {
     main: ({ history }) => <Versioning history={history}></Versioning>,
