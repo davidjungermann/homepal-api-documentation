@@ -1,7 +1,7 @@
 @import "../../../index.scss";
 
 .list-item-label {
-  color: rgba($gray-6, .75);
+  color: rgba($gray-6, 0.75);
   text-decoration: none;
 }
 
@@ -27,9 +27,13 @@
   padding: 0;
 }
 
+.navigation-sub-list-closed {
+  display: none;
+}
+
 .active {
   color: $lime-dark;
-  background: rgba($emerald, .2);
+  background: rgba($emerald, 0.2);
   text-decoration: none;
   padding: 2px 120% 2px 0px;
   border-radius: 5px;
@@ -48,4 +52,3 @@
 .faded {
   color: $gray-5;
 }
-
