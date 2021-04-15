@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavigationItem } from "./item/NavigationItem";
 import nextId from "react-id-generator";
 

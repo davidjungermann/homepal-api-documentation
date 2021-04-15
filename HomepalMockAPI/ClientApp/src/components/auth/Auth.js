@@ -9,12 +9,12 @@ export const Auth = ({ token, setToken, valid, setValid }) => {
     setToken(response.data.value);
   };
 
-  const validateToken = async () => {
-    const response = await axios.get(
-      "https://localhost:6001/api/authtoken/" + token
-    );
-    setValid(response.data.isValid.toString());
-  };
+  // const validateToken = async () => {
+  //   const response = await axios.get(
+  //     "https://localhost:6001/api/authtoken/" + token
+  //   );
+  //   setValid(response.data.isValid.toString());
+  // };
 
   return (
     <div className="authorization-container">

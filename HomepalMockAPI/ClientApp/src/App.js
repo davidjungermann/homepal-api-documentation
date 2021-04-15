@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Navigation } from "./components/navigation/Navigation";
 import { items } from "./components/navigation/items";
 import { routes } from "./components/content/Routes";
 import { BrowserRouter as Route } from "react-router-dom";
 import { Content } from "./components/content/Content";
 import { Header } from "./components/header/Header";
-import { Footer } from "./components/footer/Footer";
+//import { Footer } from "./components/footer/Footer";
 import { useHistory } from "react-router";
 
 import "./App.scss";
