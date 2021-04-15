@@ -148,7 +148,7 @@ export const Errors = () => {
           ></Table>
           <p>
             We recommend writing code that gracefully handles all possible
-            errors..
+            errors.
           </p>
         </Description>
         <Usage>

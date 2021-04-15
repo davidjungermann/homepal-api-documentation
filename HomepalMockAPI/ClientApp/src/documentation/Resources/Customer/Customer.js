@@ -5,6 +5,11 @@ import { Section } from "../../../components/section/Section";
 import { Usage } from "../../../components/usage/Usage";
 import { SectionWrapper } from "../../../components/content/section-wrapper/SectionWrapper";
 
+import { CreateCustomer } from "./CreateCustomer";
+import { DeleteCustomer } from "./DeleteCustomer";
+import { GetCustomer } from "./GetCustomer";
+import { GetCustomers } from "./GetCustomers";
+
 export const Customer = () => {
   return (
     <SectionWrapper>
@@ -14,6 +19,12 @@ export const Customer = () => {
         </Description>
         <Usage>{/* Usage */}</Usage>
       </Section>
+
+      <CreateCustomer/>
+      <DeleteCustomer/>
+      <GetCustomer/>
+      <GetCustomers/>
+
     </SectionWrapper>
   );
 };

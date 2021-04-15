@@ -5,6 +5,12 @@ import { Section } from "../../../components/section/Section";
 import { Usage } from "../../../components/usage/Usage";
 import { SectionWrapper } from "../../../components/content/section-wrapper/SectionWrapper";
 
+import { CreateBuilding } from "./CreateBuilding";
+import { DeleteBuilding } from "./DeleteBuilding";
+import { GetBuilding } from "./GetBuilding";
+import { GetBuildings } from "./GetBuildings";
+import { UpdateBuilding } from "./UpdateBuilding";
+
 export const Building = () => {
   return (
     <SectionWrapper>
@@ -14,6 +20,13 @@ export const Building = () => {
         </Description>
         <Usage>{/* Usage */}</Usage>
       </Section>
+
+      <CreateBuilding/>
+      <DeleteBuilding/>
+      <GetBuilding/>
+      <GetBuildings/>
+      <UpdateBuilding/>
+      
     </SectionWrapper>
   );
 };

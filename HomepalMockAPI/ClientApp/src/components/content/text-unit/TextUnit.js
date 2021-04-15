@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./TextUnit.scss";
+import "./SubTextUnit.scss";
 
 export const TextUnit = ({ header, headerSize, isSubsection, children }) => {
   if (isSubsection) {

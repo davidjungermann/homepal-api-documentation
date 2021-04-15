@@ -1,0 +1,11 @@
+@import "../../../index.scss";
+
+.sub-unit-container {
+  margin-top: 48px;
+  box-sizing: border-box;
+}
+
+.border-bottom {
+  padding-bottom: 12px;
+  border-bottom: 1px solid $gray-2;
+}
