@@ -16,7 +16,7 @@ export const Authorization = ({
 }) => {
   return (
     <SectionWrapper>
-      <Section id="authorization" history={history} isLastChild>
+      <Section id="authorization" history={history}>
         <Description>
           <TextUnit header="Authorization">
           <p>
@@ -30,6 +30,23 @@ export const Authorization = ({
           </p>
           <p>
           You can make requests within the documentation, in the sandbox, or on your own, by using test tokens to test our API before you go live. Read more about it below in <a>Test mode access tokens</a>.
+          </p>
+          </TextUnit>
+        </Description>
+        <Usage>
+        </Usage>
+      </Section>
+      <Section id="authorization" history={history}>
+        <Description>
+          <TextUnit header="Test mode access token" isSubsection>
+          <p>
+            In order to try out endpoints within the documentation you can acquire an access token for the sandbox.
+          </p>
+          <p>
+            If you would like to access your sandbox data, then you can find the "company_id" of the sandbox at "my sandbox" page.
+          </p>
+          <p>
+            Your test mode API token is included in all the usage examples in the reference documentation once generated, so you can test any example right away. Only you can see this value. 
           </p>
           </TextUnit>
         </Description>

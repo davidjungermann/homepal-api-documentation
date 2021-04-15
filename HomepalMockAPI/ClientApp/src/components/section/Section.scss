@@ -5,7 +5,13 @@
   flex-direction: row;
   position:relative;
 
-  &:not(:last-child) {
-    border-bottom: 1px solid red;
+  &:not(:last-child):before {
+    content : "";
+    position: absolute;
+    left    : 10%;
+    bottom  : 0;
+    height  : 1px;
+    width   : 80%;
+    border-bottom:1px solid $gray-2;
   }
 }

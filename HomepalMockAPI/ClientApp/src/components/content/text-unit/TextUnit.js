@@ -2,7 +2,12 @@ import React from "react";
 
 import "./TextUnit.scss";
 
-export const TextUnit = ({ header, headerSize, children }) => {
+export const TextUnit = ({ header, headerSize, isSubsection, children }) => {
+
+  if (isSubsection) {
+    headerSize = "title-6";
+  }
+
   return (
     <div className="unit-container">
       <h3 className={headerSize ? "title-" + headerSize : "title-5"}>
