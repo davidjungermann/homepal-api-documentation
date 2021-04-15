@@ -9,10 +9,6 @@ export const Endpoint = ({ request, baseUrl, parameter, link }) => {
     parameter = "";
   }
 
-  if (link === undefined) {
-    link = "";
-  }
-
   const renderEndpoint = () => {
     return (
       <div className="endpoint-container">

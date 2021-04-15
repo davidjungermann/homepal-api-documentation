@@ -1,7 +1,15 @@
 import React from "react";
+import { NavHashLink as Link } from "react-router-hash-link";
 import "./ArchitecturalObject.scss";
 
-export const ArchitecturalObject = ({ history, children, title, link, cardinalities, additionalClass,}) => {
+export const ArchitecturalObject = ({
+  history,
+  children,
+  title,
+  link,
+  cardinalities,
+  additionalClass,
+}) => {
   if (link === undefined) {
     link = "#";
   }
@@ -11,15 +19,21 @@ export const ArchitecturalObject = ({ history, children, title, link, cardinalit
   }
 
   return (
-      <div className="architectural-object">
-          {cardinalities && cardinalities.map((cardinality) => {
-            return <div className={"cardinality cardinality-" + cardinality[0]}>{cardinality[1]}</div>;
-          })}
-          <div className={"architectural-overview-badge " + additionalClass}
-            onClick={() => history.push(link)}>
-              <div>{children}</div>
-              <div>{title}</div>
-          </div>
-      </div>
+    <div className="architectural-object">
+      {cardinalities &&
+        cardinalities.map((cardinality) => {
+          return (
+            <div className={"cardinality cardinality-" + cardinality[0]}>
+              {cardinality[1]}
+            </div>
+          );
+        })}
+      <Link activeClassName="not-active" smooth to={"#" + link}>
+        <div className={"architectural-overview-badge " + additionalClass}>
+          <div>{children}</div>
+          <div>{title}</div>
+        </div>
+      </Link>
+    </div>
   );
 };

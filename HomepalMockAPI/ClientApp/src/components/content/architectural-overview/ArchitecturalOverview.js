@@ -39,7 +39,7 @@ export const ArchitecturalOverview = ({ history }) => {
                 <ArchitecturalObject 
                   history={history}
                   title="Region"
-                  link="#region"
+                  link="region"
                   cardinalities={[
                     ["bottom-right", "1"],
                 ]}>
@@ -66,7 +66,7 @@ export const ArchitecturalOverview = ({ history }) => {
                 <ArchitecturalObject 
                   history={history}
                   title="Real Estate"
-                  link="#realestate"
+                  link="realestate"
                   cardinalities={[
                     ["top-right", "*"],
                     ["right-top", "*"],
@@ -91,7 +91,7 @@ export const ArchitecturalOverview = ({ history }) => {
                 <ArchitecturalObject 
                     history={history}
                     title="Building"
-                    link="#building"
+                    link="building"
                     cardinalities={[
                       ["top-right", "*"],
                       ["right-top", "1"],
@@ -119,7 +119,7 @@ export const ArchitecturalOverview = ({ history }) => {
                 <ArchitecturalObject 
                   history={history}
                   title="Owner"
-                  link="#owner"
+                  link="owner"
                   cardinalities={[
                     ["left-top", "1"],
                     ["bottom-left", "1"],
@@ -140,7 +140,7 @@ export const ArchitecturalOverview = ({ history }) => {
                 <ArchitecturalObject 
                   history={history}
                   title="Agent"
-                  link="#agent"
+                  link="agent"
                   additionalClass="abstract">
                   <FontAwesomeIcon icon={faUserCircle} />
                 </ArchitecturalObject>
@@ -174,7 +174,7 @@ export const ArchitecturalOverview = ({ history }) => {
                 <ArchitecturalObject 
                   history={history}
                   title="Leasable"
-                  link="#leasable"
+                  link="leasable"
                   cardinalities={[
                     ["top-right", "*"],
                     ["top-left", "*"],
@@ -204,7 +204,7 @@ export const ArchitecturalOverview = ({ history }) => {
                 <ArchitecturalObject 
                   history={history}
                   title="Customer"
-                  link="#customer"
+                  link="customer"
                   cardinalities={[
                     ["bottom-right", "1"],
                 ]}>
