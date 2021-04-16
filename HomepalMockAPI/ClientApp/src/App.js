@@ -6,10 +6,11 @@ import { BrowserRouter as Route } from "react-router-dom";
 import { Content } from "./components/content/Content";
 import { Header } from "./components/header/Header";
 //import { Footer } from "./components/footer/Footer";
+import { withRouter } from "react-router";
 
 import "./App.scss";
 
-function App() {
+const AppContent = () => {
   const [token, setToken] = useState("");
   const [valid, setValid] = useState(false);
 
@@ -53,6 +54,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
-export default App;
+export const App = AppContent;

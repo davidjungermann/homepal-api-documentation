@@ -6,6 +6,7 @@ import "./Section.scss";
 
 const SectionContent = (props) => {
   const { forwardedRef, inViewport, match, location, history } = props;
+  console.log("Från Section: " + JSON.stringify(location));
   //var [height, setHeight] = useState(0);
   let className = "section-container";
 

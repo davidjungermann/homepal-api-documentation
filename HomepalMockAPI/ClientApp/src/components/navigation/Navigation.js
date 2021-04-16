@@ -1,10 +1,12 @@
 import React from "react";
 import { NavigationItem } from "./item/NavigationItem";
 import nextId from "react-id-generator";
+import { withRouter } from "react-router";
 
 import "./Navigation.scss";
 
-export const Navigation = ({ items, formatUrl }) => {
+const NavigationContent = ({ items, formatUrl, match, location, history }) => {
+  console.log("Från Navigation: " + JSON.stringify(location));
   return (
     <React.Fragment>
       <div className="navigation-container">
@@ -35,3 +37,5 @@ export const Navigation = ({ items, formatUrl }) => {
     </React.Fragment>
   );
 };
+
+export const Navigation = withRouter(NavigationContent);
