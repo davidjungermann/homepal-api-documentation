@@ -9,7 +9,7 @@ const SectionContent = (props) => {
   let className = "section-container";
 
   if (inViewport) {
-    //props.history.push("/#" + props.id);
+    props.history.push("/#" + props.id);
   }
 
   // useEffect(() => {
