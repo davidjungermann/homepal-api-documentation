@@ -35,7 +35,7 @@ export const NavigationItem = ({
     return (
       <div
         className="navigation-item-container"
-        onClick={() => (depth === 1 ? handleOpen(label) : () => {})}
+        onClick={() => (depth === 1 ? handleOpen() : () => {})}
       >
         <Link
           to={"#" + formatUrl(label)}

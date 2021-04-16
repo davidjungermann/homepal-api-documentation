@@ -11,7 +11,6 @@ const SectionContent = (props) => {
 
   if (inViewport) {
     //history.push("/#" + props.id);
-    console.log(history);
   }
 
   // useEffect(() => {
