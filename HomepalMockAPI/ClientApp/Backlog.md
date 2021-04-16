@@ -1,11 +1,12 @@
 **Komponenter**
 
-
 **Generellt**
-* Fixa auth exempel. Fult! 
 
+- Fixa auth exempel. Fult!
 
 Bugs:
-* Scoll-uppdatering måste anpassas bättre. 
-* History.push funkar inte för att scrolla... Måste antagligen göra om lite på Conceptual Overview och EndpointList. Ingen biggie!
-* När man scrollar content scrollar inte sidebar med, borde vara relativt lätt att fixa också. 
+
+- I App har vi currentSection. Skicka ner currentSection till Navigation och NavigationItem. I handleOpen() lyssna efter klick.
+  Klick sätter classname, som ändrar stylingen.
+
+Skicka ner setCurrentSection till Section via Routes. I if-satsen med viewport, setCurrentSection(props.id)
