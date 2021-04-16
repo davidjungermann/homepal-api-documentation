@@ -56,4 +56,4 @@ const AppContent = () => {
   );
 };
 
-export const App = AppContent;
+export const App = withRouter(AppContent);

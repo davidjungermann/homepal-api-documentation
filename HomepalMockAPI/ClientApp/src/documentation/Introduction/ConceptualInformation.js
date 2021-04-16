@@ -49,10 +49,13 @@ export const ConceptualInformation = () => {
         <Description>
           <TextUnit header="Super classes" isSubsection>
             <p>
-              Homebase uses inheritance to reflect the behaviour of some entities.
+              Homebase uses inheritance to reflect the behaviour of some
+              entities.
             </p>
             <p>
-              For instance a Residential Premise is a sub class of a Leasable. This means that an entity with a relation to a Leasable can be any entity which have Leasable as a super class.
+              For instance a Residential Premise is a sub class of a Leasable.
+              This means that an entity with a relation to a Leasable can be any
+              entity which have Leasable as a super class.
             </p>
             <p>
               Below we go into more details about the different super classes.
@@ -60,8 +63,9 @@ export const ConceptualInformation = () => {
           </TextUnit>
           <SubTextUnit header="Agent">
             <p>
-              An Agent is a physical or legal person.
-              A Customer or an Owener inherits of Agent and specifies that the Agent is a Customer or Owner.
+              An Agent is a physical or legal person. A Customer or an Owener
+              inherits of Agent and specifies that the Agent is a Customer or
+              Owner.
             </p>
           </SubTextUnit>
           <Table
@@ -74,18 +78,11 @@ export const ConceptualInformation = () => {
             ]}
             values={[
               {
-                col1: (
-                  <TableItem description="Description.">
-                    Owner
-                  </TableItem>
-                ),
-
+                col1: <TableItem description="Description.">Owner</TableItem>,
               },
               {
                 col1: (
-                  <TableItem description="Description.">
-                    Customer
-                  </TableItem>
+                  <TableItem description="Description.">Customer</TableItem>
                 ),
               },
             ]}
