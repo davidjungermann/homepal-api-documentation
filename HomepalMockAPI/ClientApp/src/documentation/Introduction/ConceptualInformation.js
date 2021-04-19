@@ -13,7 +13,7 @@ export const ConceptualInformation = ({ history }) => {
         <Description>
           <TextUnit header="Conceptual information">
             <p>
-              The API is also based on Real Estate Core, which is an open ontology for real estate standards.
+              The API is based on Real Estate Core, which is an open ontology for real estate standards.
             </p>
           </TextUnit>
         </Description>

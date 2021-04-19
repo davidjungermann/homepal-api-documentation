@@ -15,6 +15,18 @@
   user-select: none;
   white-space: nowrap;
   width: 100%;
+
+  .active {
+    color: $lime-dark;
+    background: rgba($emerald, 0.2);
+    text-decoration: none;
+    padding: 2px 120% 2px 0px;
+    border-radius: 5px;
+  }
+  
+  .active:hover {
+    color: $lime-dark;
+  }
 }
 
 .navigation-item-container:hover {
@@ -29,18 +41,6 @@
 
 .navigation-sub-list-closed {
   display: none;
-}
-
-.active {
-  color: $lime-dark;
-  background: rgba($emerald, 0.2);
-  text-decoration: none;
-  padding: 2px 120% 2px 0px;
-  border-radius: 5px;
-}
-
-.active:hover {
-  color: $lime-dark;
 }
 
 .list-item-header {
