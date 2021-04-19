@@ -1,7 +1,7 @@
 import React from "react";
 import "./TableItem.scss";
 
-export const TableItem = ({ children, description }) => {
+export const TableItem = ({ children, description, notApplicable }) => {
   if (description === undefined) {
     description = "";
   }

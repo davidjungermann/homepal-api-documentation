@@ -3,7 +3,7 @@ import { useTable } from "react-table";
 
 import "./Table.scss";
 
-export const Table = ({ cols, values }) => {
+export const Table = ({ cols, values, inactiveTable }) => {
   const data = useMemo(() => values, [values]);
   const columns = useMemo(() => cols, [cols]);
 
@@ -14,6 +14,11 @@ export const Table = ({ cols, values }) => {
     rows,
     prepareRow,
   } = useTable({ columns, data });
+
+  var tableClass = "active-table";
+  if (inactiveTable) {
+    tableClass = "inactive-table";
+  }
 
   return (
     <div className="table-wrapper">
@@ -32,7 +37,7 @@ export const Table = ({ cols, values }) => {
             </tr>
           ))}
         </thead>
-        <tbody {...getTableBodyProps()}>
+        <tbody {...getTableBodyProps()} className={tableClass}>
           {rows.map((row) => {
             prepareRow(row);
             return (
