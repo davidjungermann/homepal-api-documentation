@@ -19,7 +19,7 @@ export const GetAgents = ({ history }) => {
             <span className="code-badge">Agents</span>.
           </p>
         </TextUnit>
-        <h5 className="schema-title">Body Schema</h5>
+        <h3 className="schema-title title-7">Body Schema</h3>
         <Table
           cols={[
             {
@@ -56,7 +56,7 @@ export const GetAgents = ({ history }) => {
             error object.
           </ReturnsItem>
         </Returns>
-        <h5 className="schema-title">Path Schema</h5>
+        <h3 className="schema-title title-7">Path Schema</h3>
         <Table
           cols={[
             {
