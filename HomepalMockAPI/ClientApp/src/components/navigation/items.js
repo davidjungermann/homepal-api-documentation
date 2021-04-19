@@ -8,7 +8,12 @@ export const items = [
       { label: "Conceptual information" },
       { label: "Authorization" },
       { label: "Validations" },
-      { label: "Errors" },
+      { 
+        label: "Errors",
+        items: [
+          { label: "Error codes" },
+        ],
+      },
       {
         label: "Query Parameters",
         items: [

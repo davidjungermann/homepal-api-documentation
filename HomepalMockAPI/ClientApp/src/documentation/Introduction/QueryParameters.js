@@ -6,8 +6,9 @@ import { Usage } from "../../components/usage/Usage";
 import { SectionWrapper } from "../../components/content/section-wrapper/SectionWrapper";
 import { Table } from "../../components/content/table/Table";
 import { TableItem } from "../../components/content/table/TableItem";
+import { Example } from "../../components/content/example/Example";
 
-export const QueryParameters = ({ history }) => {
+export const QueryParameters = ({ history, token }) => {
   return (
     <SectionWrapper>
       <Section id="query-parameters" history={history}>
@@ -71,31 +72,62 @@ export const QueryParameters = ({ history }) => {
             ]}
           ></Table>
         </Description>
-        <Usage>{/* Usage */}</Usage>
+        <Usage>
+          <Example header="USAGE" token={token} copy>
+            curl
+            https://homebase-api.homepal.se/v1/buildings?offset=1&limit=100
+          </Example>
+        </Usage>
       </Section>
 
       <Section id="sorting" history={history}>
         <Description>
           <TextUnit header="Sorting" isSubsection>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis
-              augue nec augue vestibulum, eu sodales nisl maximus. Nam ut
-              fermentum augue. Vivamus diam tortor, ultrices sit amet bibendum ut,
-              gravida vel tortor. Vivamus a mollis est. Maecenas varius tempus
-              nisi, at mattis sapien rutrum ut. Cras sed sem egestas, vehicula
-              augue a, ullamcorper nulla. Praesent lacinia risus quis urna
-              tristique, eu gravida leo consectetur. Orci varius natoque penatibus
-              et magnis dis parturient montes, nascetur ridiculus mus. Orci varius
-              natoque penatibus et magnis dis parturient montes, nascetur
-              ridiculus mus. Cras imperdiet ultricies metus. Sed vel velit eget
-              arcu hendrerit sollicitudin congue quis ex. Curabitur ullamcorper
-              vulputate facilisis. Aliquam porttitor nunc nec urna accumsan, sit
-              amet congue ipsum viverra. Ut semper vitae felis nec porta.
-              Suspendisse potenti. Vestibulum mattis tristique dolor. Ipsum Dolor
+            Sorting is the process of arranging records in a certain order. 
+            In order to sort a collection according to a certain field, <span className="code-badge">sort</span> is used as a query parameter.
             </p>
           </TextUnit>
+          <Table
+            cols={[
+              {
+                Header: "QUERY PARAMETER",
+                accessor: "col1",
+              },
+              {
+                Header: "TYPE",
+                accessor: "col2",
+              },
+              {
+                Header: "REQUIRED",
+                accessor: "col3",
+              },
+            ]}
+            values={[
+              {
+                col1: (
+                  <TableItem description="Sets the key to sort after.
+                  By default the collection will be arranged in ascending order, in order to sort in descending order add a minus (U+002D HYPHEN-MINUS, “-“) before the sorting field.
+                  In order to sort a collection on multiple fields use comma-separation (U+002C COMMA, “,”) between the sorting fields.">
+                    sort
+                  </TableItem>
+                ),
+                col2: "Integer",
+                col3: "Optional",
+              },
+            ]}
+          ></Table>
+          <p>
+            The supported keys to sort after are listed within every documented resource. 
+            If the server does not support sorting as specified in the query parameter sort, it returns error <span className="code-badge">400 Bad Request</span>.
+          </p>
         </Description>
-        <Usage>{/* Usage */}</Usage>
+        <Usage>
+          <Example header="USAGE" token={token} copy>
+            curl
+            https://homebase-api.homepal.se/v1/buildings?sort=created_at
+          </Example>
+        </Usage>
       </Section>
     </SectionWrapper>
   );
