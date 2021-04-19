@@ -4,6 +4,9 @@ import { TextUnit } from "../../components/content/text-unit/TextUnit";
 import { Description } from "../../components/description/Description";
 import { Section } from "../../components/section/Section";
 import { Usage } from "../../components/usage/Usage";
+import { Table } from "../../components/content/table/Table";
+import { TableItem } from "../../components/content/table/TableItem";
+import { NavHashLink as Link } from "react-router-hash-link";
 
 export const Versioning = ({ history }) => {
   return (
@@ -12,22 +15,64 @@ export const Versioning = ({ history }) => {
         <Description>
           <TextUnit header="Versioning">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis
-              augue nec augue vestibulum, eu sodales nisl maximus. Nam ut
-              fermentum augue. Vivamus diam tortor, ultrices sit amet bibendum ut,
-              gravida vel tortor. Vivamus a mollis est. Maecenas varius tempus
-              nisi, at mattis sapien rutrum ut. Cras sed sem egestas, vehicula
-              augue a, ullamcorper nulla. Praesent lacinia risus quis urna
-              tristique, eu gravida leo consectetur. Orci varius natoque penatibus
-              et magnis dis parturient montes, nascetur ridiculus mus. Orci varius
-              natoque penatibus et magnis dis parturient montes, nascetur
-              ridiculus mus. Cras imperdiet ultricies metus. Sed vel velit eget
-              arcu hendrerit sollicitudin congue quis ex. Curabitur ullamcorper
-              vulputate facilisis. Aliquam porttitor nunc nec urna accumsan, sit
-              amet congue ipsum viverra. Ut semper vitae felis nec porta.
-              Suspendisse potenti. Vestibulum mattis tristique dolor. Ipsum Dolor
+              The current version is <span className="code-badge">v1</span>.
+            </p>
+            <p>
+              Homepal will implement changes into current API versions, without a new version release, 
+              as long as the changes being introduced will not interfere on a greater scale with your integration. 
+            </p>
+            <p>
+              In come cases, endpoints and functionalities can be replaced by others and thus deprecetad. 
+              This will always be announced <b>6 months in advance</b> via:
+              <ul>
+                <li>recurring email reminders.</li>
+                <li>in {" "}
+                  <Link to="#customer">
+                    Upcoming deprecations
+                  </Link>
+                .
+                </li>
+                <li>information message in your Dashboard.</li>
+              </ul>
             </p>
           </TextUnit>
+        </Description>
+        <Usage>{/* Usage */}</Usage>
+      </Section>
+
+      <Section id="upcoming-deprecations" history={history}>
+        <Description>
+          <TextUnit header="Upcoming deprecations" isSubsection>
+            <p>
+              Planned upcoming deprecations of the Homebase API are listed below:
+            </p>
+          </TextUnit>
+          <Table
+            cols={[
+              {
+                Header: "DEPRECATION",
+                accessor: "col1",
+              },
+              {
+                Header: "VERSION",
+                accessor: "col2",
+              },
+              {
+                Header: "WHEN",
+                accessor: "col3",
+              },
+            ]}
+            values={[
+              {
+                col1: (
+                  <TableItem description="There are no planned upcoming changes.">
+                  </TableItem>
+                ),
+                col2: "",
+                col3: "",
+              },
+            ]}
+          ></Table>
         </Description>
         <Usage>{/* Usage */}</Usage>
       </Section>

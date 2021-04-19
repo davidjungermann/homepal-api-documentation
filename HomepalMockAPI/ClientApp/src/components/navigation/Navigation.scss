@@ -64,3 +64,15 @@
 #docs-text {
   margin-left: 6px;
 }
+
+select {
+  border: 1px solid $gray-2;
+  border-radius: 5px;
+  color: $gray-5;
+  padding: 4px 8px;
+  font-weight: 600;
+
+  &:focus {
+    outline: none;
+  }
+}
