@@ -11,8 +11,6 @@
 - Kommatecken i object description.
 - Linebreak i exempel.
 
-Foreign key constraint om man tar bort en Agent som är Customer/Owner. 
-
 Bugs:
 
 - I App har vi currentSection. Skicka ner currentSection till Navigation och NavigationItem. I handleOpen() lyssna efter klick.
