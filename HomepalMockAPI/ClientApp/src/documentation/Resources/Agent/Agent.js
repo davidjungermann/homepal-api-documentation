@@ -21,10 +21,14 @@ export const Agent = ({ history }) => {
             <p>
               An <span className="code-badge">Agent</span> describes a person or
               legal person in the Homebase API. Agent is a <b>superclass</b> of{" "}
-              <Link className="" to="#customer">
-                Customer
+              <Link to="#customer">
+                <span className="code-badge">Customer</span>
               </Link>{" "}
-              and <Link to="#owner">Owner</Link>
+              and{" "}
+              <Link to="#owner">
+                <span className="code-badge">Owner</span>
+              </Link>
+              .
             </p>
           </TextUnit>
           <Table
@@ -52,7 +56,7 @@ export const Agent = ({ history }) => {
               },
               {
                 col1: (
-                  <TableItem description="The provided name for an Agent.">
+                  <TableItem description="The name of an Agent.">
                     name
                   </TableItem>
                 ),
