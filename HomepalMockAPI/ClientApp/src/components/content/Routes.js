@@ -85,19 +85,29 @@ export const routes = [
     main: ({ history }) => <Agent history={history}></Agent>,
   },
   {
-    main: ({ history }) => <GetAgents history={history}></GetAgents>,
+    main: ({ history, token }) => (
+      <GetAgents history={history} token={token}></GetAgents>
+    ),
   },
   {
-    main: ({ history }) => <GetAgent history={history}></GetAgent>,
+    main: ({ history, token }) => (
+      <GetAgent history={history} token={token}></GetAgent>
+    ),
   },
   {
-    main: ({ history }) => <CreateAgent history={history}></CreateAgent>,
+    main: ({ history, token }) => (
+      <CreateAgent history={history} token={token}></CreateAgent>
+    ),
   },
   {
-    main: ({ history }) => <UpdateAgent history={history}></UpdateAgent>,
+    main: ({ history, token }) => (
+      <UpdateAgent history={history} token={token}></UpdateAgent>
+    ),
   },
   {
-    main: ({ history }) => <DeleteAgent history={history}></DeleteAgent>,
+    main: ({ history, token }) => (
+      <DeleteAgent history={history} token={token}></DeleteAgent>
+    ),
   },
   {
     main: ({ history }) => <Building history={history}></Building>,
