@@ -5,10 +5,21 @@ export const items = [
     label: "Introduction",
     items: [
       { label: "About the API" },
-      { label: "Conceptual information" },
+      { 
+        label: "Conceptual information",
+        items: [
+          { label: "Conceptual Overview" },
+          { label: "Super classes" },
+        ],
+      },
       { label: "Authorization" },
       { label: "Validations" },
-      { label: "Errors" },
+      { 
+        label: "Errors",
+        items: [
+          { label: "Error codes" },
+        ],
+      },
       {
         label: "Query Parameters",
         items: [

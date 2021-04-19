@@ -74,8 +74,8 @@ export const routes = [
     main: ({ history }) => <Errors history={history}></Errors>,
   },
   {
-    main: ({ history }) => (
-      <QueryParameters history={history}></QueryParameters>
+    main: ({ history, token }) => (
+      <QueryParameters history={history} token={token}></QueryParameters>
     ),
   },
   {

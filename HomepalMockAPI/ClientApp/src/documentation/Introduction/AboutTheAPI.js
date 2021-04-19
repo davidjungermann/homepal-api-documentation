@@ -162,13 +162,6 @@ export const AboutTheApi = ({ history, token }) => {
               with the API over HTTP.
             </p>
           </TextUnit>
-          <Example header="USAGE" token={token} copy>
-            curl
-            https://localhost:6001/api/just/some/random/words/for/making/a/long/path
-          </Example>
-          <Example header="USAGE2" token={token} copy>
-            curl https://localhost:6001/api/agents
-          </Example>
           <EndpointList header="ENDPOINTS">
             <Endpoint
               request="GET"

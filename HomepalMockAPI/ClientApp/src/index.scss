@@ -114,6 +114,12 @@ $code-font: 'Source Code Pro', monospace;
   margin-top: 10.5pt;
 }
 
+.schema-title {
+  margin-top: 36px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid $gray-2;
+}
+
 body {
   margin: 0;
   font-family: $primary-font;
