@@ -39,6 +39,9 @@ export const ConceptualInformation = () => {
               sapien rutrum ut. Cras sed sem egestas, vehicula augue a,
               ullamcorper nulla. Praesent lacinia risus quis urna tristique.
             </p>
+            <p>
+              Click on the different resources to read more about them.
+            </p>
           </TextUnit>
           <ArchitecturalOverview />
         </Description>
@@ -61,7 +64,7 @@ export const ConceptualInformation = () => {
           <SubTextUnit header="Agent">
             <p>
               An Agent is a physical or legal person.
-              A Customer or an Owener inherits of Agent and specifies that the Agent is a Customer or Owner.
+              A Customer or an Owner inherits of Agent and specifies that the Agent is a Customer or Owner.
             </p>
           </SubTextUnit>
           <Table

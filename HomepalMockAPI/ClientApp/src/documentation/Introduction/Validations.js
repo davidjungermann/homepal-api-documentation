@@ -12,15 +12,11 @@ export const Validations = () => {
         <Description>
           <TextUnit header="Validations">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-              mollis augue nec augue vestibulum, eu sodales nisl maximus. Nam ut
-              fermentum augue. Vivamus diam tortor, ultrices sit amet bibendum
-              ut, gravida vel tortor.
+              Homepal validates input data to the Homebase API in every possible way and ensures 
+              safe and formatted data. There is no need worrying about this.
             </p>
             <p>
-              Vivamus a mollis est. Maecenas varius tempus nisi, at mattis
-              sapien rutrum ut. Cras sed sem egestas, vehicula augue a,
-              ullamcorper nulla. Praesent lacinia risus quis urna tristique.
+              However, we do encourage running your own validations.
             </p>
           </TextUnit>
         </Description>
