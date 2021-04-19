@@ -18,50 +18,50 @@ CREATE TABLE Regions (
 
 CREATE TABLE RealEstates (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
-	name TEXT,
+	name TEXT NOT NULL,
 	region_name TEXT NOT NULL,
 	owner_id INTEGER NOT NULL,
-	FOREIGN KEY(region_name) REFERENCES Regions(name),
-	FOREIGN KEY(owner_id) REFERENCES Owners(id)
+	FOREIGN KEY(region_name) REFERENCES Regions(name) ON DELETE CASCADE,
+	FOREIGN KEY(owner_id) REFERENCES Owners(id) ON DELETE CASCADE
 );
 
 CREATE TABLE Buildings (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
-	class_descriptor TEXT,
-	street_name TEXT,
-	street_number TEXT,
-	postal_code TEXT,
+	class_descriptor TEXT NOT NULL,
+	street_name TEXT NOT NULL,
+	street_number TEXT NOT NULL,
+	postal_code TEXT NOT NULL,
 	real_estate_id INTEGER NOT NULL,
-	FOREIGN KEY(real_estate_id) REFERENCES RealEstates(id)
+	FOREIGN KEY(real_estate_id) REFERENCES RealEstates(id) ON DELETE CASCADE
 );
 
 CREATE TABLE Agents (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
-	name TEXT
+	name TEXT NOT NULL
 );
 
 CREATE TABLE Owners (
 	id INTEGER PRIMARY KEY,
-	FOREIGN KEY(id) REFERENCES Agents(id)
+	FOREIGN KEY(id) REFERENCES Agents(id) ON DELETE CASCADE
 );
 
 CREATE TABLE Customers (
 	id INTEGER PRIMARY KEY,
-	FOREIGN KEY(id) REFERENCES Agents(id)
+	FOREIGN KEY(id) REFERENCES Agents(id) ON DELETE CASCADE
 );
 
 CREATE TABLE Leasables (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
-	class_descriptor TEXT,
-	price INTEGER,
-	description TEXT,
-	size TEXT,
+	class_descriptor TEXT NOT NULL,
+	price INTEGER NOT NULL,
+	description TEXT NOT NULL,
+	size TEXT NOT NULL,
 	customer_id INTEGER NOT NULL,
 	owner_id INTEGER NOT NULL,
 	building_id INTEGER NOT NULL,
-	FOREIGN KEY(customer_id) REFERENCES Customers(id),
-	FOREIGN KEY(owner_id) REFERENCES Owners(id),
-	FOREIGN KEY(building_id) REFERENCES Buildings(id)
+	FOREIGN KEY(customer_id) REFERENCES Customers(id) ON DELETE CASCADE,
+	FOREIGN KEY(owner_id) REFERENCES Owners(id) ON DELETE CASCADE,
+	FOREIGN KEY(building_id) REFERENCES Buildings(id) ON DELETE CASCADE
 );
 
 CREATE TABLE AuthTokens (
