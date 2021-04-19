@@ -21,7 +21,7 @@ export const GetAgents = ({ history, token }) => {
       <Description>
         <TextUnit header="Get Agents">
           <p>
-            From this endpoint, you can retrieve several
+            From this endpoint, you can retrieve information on several
             <span className="code-badge">Agents</span>.
           </p>
         </TextUnit>
@@ -107,29 +107,20 @@ export const GetAgents = ({ history, token }) => {
           <Endpoint request="GET" baseUrl="api/agents"></Endpoint>
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>
-          curl https://localhost:6001/api/agents
+          curl https://localhost:6001/api/agents?limit=3&offset=1&sort=name
         </Example>
 
-        <ContainerBlock header="REQUEST BODY">
+        <ContainerBlock header="REQUEST BODY EXAMPLE">
           <p>There is no request body for this endpoint.</p>
         </ContainerBlock>
 
         <BodyDescription
-          header={"RESPONSE EXAMPLE"}
+          header={"RESPONSE BODY EXAMPLE"}
           copy
           body={[
-            {
-              id: 1,
-              name: "Mitt Malmö",
-            },
-            {
-              id: 2,
-              name: "Norrlandshus",
-            },
-            {
-              id: 3,
-              name: "Kingens bostäder",
-            },
+            { id: 6, name: "Fia Andersson" },
+            { id: 8, name: "Kent Larsson" },
+            { id: 3, name: "Kingens bostäder" },
           ]}
         ></BodyDescription>
       </Usage>

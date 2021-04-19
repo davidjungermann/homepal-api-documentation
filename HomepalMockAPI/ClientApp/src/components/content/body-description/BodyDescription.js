@@ -20,16 +20,26 @@ export const BodyDescription = ({ header, body, copy }) => {
 
   const renderBody = () => {
     return Object.entries(body).map(([key, value], index) => {
-      if (index === 0) {
+      if (index === 0 && Object.keys(body).length !== 1) {
         return (
           <div key={nextId()} className="first-row">
             {openingBrace()}"{key}": {value}
           </div>
         );
-      } else if (index === Object.keys(body).length - 1) {
+      } else if (
+        index === Object.keys(body).length - 1 &&
+        Object.keys(body).length !== 1
+      ) {
         return (
           <div key={nextId()} className="last-row">
             "{key}": {value}
+            {closingBrace()}
+          </div>
+        );
+      } else if (index === 0 && Object.keys(body).length === 1) {
+        return (
+          <div key={nextId()} className="first-and-last-row">
+            {openingBrace()}"{key}": {value}
             {closingBrace()}
           </div>
         );
