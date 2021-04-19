@@ -11,7 +11,10 @@ export const items = [
       { label: "Errors" },
       {
         label: "Query Parameters",
-        items: [{ label: "Pagination" }, { label: "Sorting" }],
+        items: [
+          { label: "Pagination" },
+          { label: "Sorting" },
+        ],
       },
       { label: "Versioning" },
     ],

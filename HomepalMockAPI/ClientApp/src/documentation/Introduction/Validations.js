@@ -5,10 +5,10 @@ import { Section } from "../../components/section/Section";
 import { Usage } from "../../components/usage/Usage";
 import { SectionWrapper } from "../../components/content/section-wrapper/SectionWrapper";
 
-export const Validations = () => {
+export const Validations = ({ history }) => {
   return (
     <SectionWrapper>
-      <Section id="validations">
+      <Section id="validations" history={history}>
         <Description>
           <TextUnit header="Validations">
             <p>

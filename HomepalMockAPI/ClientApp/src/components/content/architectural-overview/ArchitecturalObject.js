@@ -4,6 +4,7 @@ import "./ArchitecturalObject.scss";
 import nextId from "react-id-generator";
 
 export const ArchitecturalObject = ({
+  history,
   children,
   title,
   link,

@@ -4,7 +4,7 @@ import nextId from "react-id-generator";
 
 import "./Navigation.scss";
 
-export const Navigation = ({ items, formatUrl }) => {
+export const Navigation = ({ items, formatUrl, history }) => {
   return (
     <React.Fragment>
       <div className="navigation-container">

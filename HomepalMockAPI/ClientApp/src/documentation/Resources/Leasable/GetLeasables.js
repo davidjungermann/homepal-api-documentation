@@ -4,9 +4,9 @@ import { Description } from "../../../components/description/Description";
 import { Section } from "../../../components/section/Section";
 import { Usage } from "../../../components/usage/Usage";
 
-export const GetLeasables = () => {
+export const GetLeasables = ({ history }) => {
   return (
-    <Section id="get-leasables">
+    <Section id="get-leasables" history={history}>
       <Description>
         <TextUnit header="Get Leasables"></TextUnit>
       </Description>

@@ -4,9 +4,9 @@ import { Description } from "../../../components/description/Description";
 import { Section } from "../../../components/section/Section";
 import { Usage } from "../../../components/usage/Usage";
 
-export const GetCustomer = () => {
+export const GetCustomer = ({ history }) => {
   return (
-    <Section id="get-customer">
+    <Section id="get-customer" history={history}>
       <Description>
         <TextUnit header="Get Customer"></TextUnit>
       </Description>

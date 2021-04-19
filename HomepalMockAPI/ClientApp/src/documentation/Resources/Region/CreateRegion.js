@@ -4,9 +4,9 @@ import { Description } from "../../../components/description/Description";
 import { Section } from "../../../components/section/Section";
 import { Usage } from "../../../components/usage/Usage";
 
-export const CreateRegion = () => {
+export const CreateRegion = ({ history }) => {
   return (
-    <Section id="create-region">
+    <Section id="create-region" history={history}>
       <Description>
         <TextUnit header="Create Region"></TextUnit>
       </Description>

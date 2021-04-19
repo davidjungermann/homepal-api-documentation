@@ -1,17 +1,15 @@
 import React from "react";
 import handleViewport from "react-in-viewport";
-import { withRouter } from "react-router";
 
 import "./Section.scss";
 
 const SectionContent = (props) => {
-  const { forwardedRef, inViewport, match, location, history } = props;
+  const { forwardedRef, inViewport } = props;
   //var [height, setHeight] = useState(0);
   let className = "section-container";
 
   if (inViewport) {
-    //history.push("/#" + props.id);
-    console.log(history);
+    props.history.push("/#" + props.id);
   }
 
   // useEffect(() => {
@@ -25,6 +23,6 @@ const SectionContent = (props) => {
   );
 };
 
-export const Section = handleViewport(withRouter(SectionContent), {
+export const Section = handleViewport(SectionContent, {
   rootMargin: "-400px -300px -400px -300px",
 });

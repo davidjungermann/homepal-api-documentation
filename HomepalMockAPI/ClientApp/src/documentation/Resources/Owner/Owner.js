@@ -5,26 +5,15 @@ import { Section } from "../../../components/section/Section";
 import { Usage } from "../../../components/usage/Usage";
 import { SectionWrapper } from "../../../components/content/section-wrapper/SectionWrapper";
 
-import { CreateOwner } from "./CreateOwner";
-import { DeleteOwner } from "./DeleteOwner";
-import { GetOwner } from "./GetOwner";
-import { GetOwners } from "./GetOwners";
-
-export const Owner = () => {
+export const Owner = ({ history }) => {
   return (
     <SectionWrapper>
-      <Section id="owner">
+      <Section id="owner" history={history}>
         <Description>
           <TextUnit header="Owner"></TextUnit>
         </Description>
         <Usage>{/* Usage */}</Usage>
       </Section>
-
-      <CreateOwner/>
-      <DeleteOwner/>
-      <GetOwner/>
-      <GetOwners/>
-      
     </SectionWrapper>
   );
 };

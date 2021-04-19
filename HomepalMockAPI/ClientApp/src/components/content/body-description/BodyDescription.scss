@@ -1,42 +1,44 @@
-@import "../../../index.scss";
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+@import '../../../index.scss';
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+
 
 .first-row {
-  transform: translateX(12px);
+    transform:translateX(12px);
 }
 
 .middle-row {
-  transform: translateX(12px);
+    transform:translateX(12px);
 }
 
 .last-row {
-  transform: translateX(12px);
+    transform:translateX(12px);
 }
 
 .first-object-row {
-  transform: translateX(12px);
+    transform:translateX(12px);
 }
 
 .last-object-row {
-  transform: translateX(12px);
+    transform:translateX(12px);
 }
 
 .opening-brace {
-  transform: translateX(-12px);
-  color: $gray-4;
+    transform:translateX(-12px);
+    color: $gray-4;
 }
 
 .closing-brace {
-  transform: translateX(-12px);
-  color: $gray-4;
+    transform:translateX(-12px);
+    color: $gray-4;
 }
 
 .opening-bracket {
-  transform: translateX(-12px);
-  color: $gray-4;
+    transform:translateX(-12px);
+    color: $gray-4;
 }
 
 .closing-bracket {
-  transform: translateX(-12px);
-  color: $gray-4;
+    transform:translateX(-12px);
+    color: $gray-4;
 }

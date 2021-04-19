@@ -1,19 +1,19 @@
-@import "../../../index.scss";
+@import '../../../index.scss';
 
 .returns-item-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .returns-item-icon {
-  margin: 18px;
+    margin: 18px;
 }
 
 .success-icon {
-  color: $lime-dark;
+    color: $lime-dark;
 }
 
 .error-icon {
-  color: $red;
+    color: $red;
 }

@@ -1,17 +1,17 @@
-@import "../../index.scss";
+@import '../../index.scss';
 
 .section-container {
   display: flex;
   flex-direction: row;
-  position: relative;
+  position:relative;
 
   &:not(:last-child):before {
-    content: "";
+    content : "";
     position: absolute;
-    left: 12%;
-    bottom: 0;
-    height: 1px;
-    width: 76%;
-    border-bottom: 1px solid $gray-2;
+    left    : 10%;
+    bottom  : 0;
+    height  : 1px;
+    width   : 80%;
+    border-bottom:1px solid $gray-2;
   }
 }
