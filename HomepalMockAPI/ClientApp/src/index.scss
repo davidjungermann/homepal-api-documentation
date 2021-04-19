@@ -134,6 +134,17 @@ p {
   font-weight: 400;
 }
 
+.code {
+  font-family: $code-font;
+}
+
+.code-badge {
+  font-family: $code-font;
+  border: 1px solid $gray-2;
+  padding: 1px 4px;
+  border-radius: 4px;
+}
+
 .small {
   color: $gray-6;
   line-height: 1.6;
@@ -141,7 +152,7 @@ p {
   font-weight: 400;
 }
 
-a {
+link {
   text-decoration: none;
   color: $lime-dark;
   line-height: 1.6;
