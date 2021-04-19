@@ -146,9 +146,16 @@ p {
 
 .code-badge {
   font-family: $code-font;
+  color: $midnight;
   border: 1px solid $gray-2;
   padding: 1px 4px;
   border-radius: 4px;
+}
+
+a {
+  .code-badge {
+    color: inherit!important;
+  }
 }
 
 .small {
@@ -158,7 +165,7 @@ p {
   font-weight: 400;
 }
 
-link {
+a {
   text-decoration: none;
   color: $lime-dark;
   line-height: 1.6;

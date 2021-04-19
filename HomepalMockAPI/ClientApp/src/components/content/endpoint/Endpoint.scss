@@ -30,9 +30,17 @@
   color: $red;
 }
 
-.request-url {
-}
-
 .endpoint-container:hover {
   cursor: pointer;
+}
+
+a {
+  .request-url {
+    color: $gray-6;
+    font-weight: 400;
+
+    &:hover {
+      color: $midnight;
+    }
+  }
 }
