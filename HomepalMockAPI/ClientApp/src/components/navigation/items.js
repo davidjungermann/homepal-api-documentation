@@ -12,7 +12,11 @@ export const items = [
           { label: "Super classes" },
         ],
       },
-      { label: "Authorization" },
+      { label: "Authorization",
+        items: [
+          { label: "Access key" },
+        ],
+      },
       { label: "Validations" },
       { 
         label: "Errors",

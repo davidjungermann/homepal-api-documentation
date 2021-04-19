@@ -27,7 +27,7 @@ export const Versioning = ({ history }) => {
               <ul>
                 <li>recurring email reminders.</li>
                 <li>in {" "}
-                  <Link to="#customer">
+                  <Link to="#upcoming-deprecations">
                     Upcoming deprecations
                   </Link>
                 .

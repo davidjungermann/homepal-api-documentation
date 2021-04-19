@@ -20,10 +20,10 @@ export const Auth = ({ token, setToken, valid, setValid }) => {
     <div className="authorization-container">
       {!token ? (
         <button className="primary-button" onClick={fetchToken}>
-          Generate authorization token
+          Generate access key
         </button>
       ) : (
-        <TokenContainer className="token" header="TOKEN" copy>
+        <TokenContainer className="token" header="YOUR API KEY" copy>
           {token}
         </TokenContainer>
       )}
