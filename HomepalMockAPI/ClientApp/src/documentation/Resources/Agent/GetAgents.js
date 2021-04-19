@@ -1,4 +1,9 @@
 import React from "react";
+import { ContainerBlock } from "../../../components/container-block/ContainerBlock";
+import { EndpointExample } from "../../../components/content/endpoint-example/EndpointExample";
+import { EndpointList } from "../../../components/content/endpoint-list/EndpointList";
+import { Endpoint } from "../../../components/content/endpoint/Endpoint";
+import { Example } from "../../../components/content/example/Example";
 import { Returns } from "../../../components/content/returns/Returns";
 import { ReturnsItem } from "../../../components/content/returns/ReturnsItem";
 import { Table } from "../../../components/content/table/Table";
@@ -9,7 +14,7 @@ import { Section } from "../../../components/section/Section";
 import { Usage } from "../../../components/usage/Usage";
 import "../../../index.scss";
 
-export const GetAgents = ({ history }) => {
+export const GetAgents = ({ history, token }) => {
   return (
     <Section id="get-agents" history={history}>
       <Description>
@@ -96,7 +101,14 @@ export const GetAgents = ({ history }) => {
           ]}
         ></Table>
       </Description>
-      <Usage>{/* Usage */}</Usage>
+      <Usage>
+        <EndpointExample header="Endpoint" copy baseUrl="api/agents">
+          <Endpoint request="GET" baseUrl="api/agents"></Endpoint>
+        </EndpointExample>
+        <Example header="USAGE2" token={token} copy>
+          curl https://localhost:6001/api/agents
+        </Example>
+      </Usage>
     </Section>
   );
 };
