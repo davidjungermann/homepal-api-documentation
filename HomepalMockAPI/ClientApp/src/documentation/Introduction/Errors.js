@@ -91,7 +91,7 @@ export const Errors = ({ history }) => {
       
       <Section id="error-codes" history={history}>
         <Description>
-          <TextUnit header="Error codes">
+          <TextUnit header="Error codes" isSubsection>
             <p>
               Hombase API uses the following response status codes:
             </p>

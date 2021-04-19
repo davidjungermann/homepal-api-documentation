@@ -13,15 +13,7 @@ export const ConceptualInformation = ({ history }) => {
         <Description>
           <TextUnit header="Conceptual information">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis
-              augue nec augue vestibulum, eu sodales nisl maximus. Nam ut
-              fermentum augue. Vivamus diam tortor, ultrices sit amet bibendum ut,
-              gravida vel tortor.
-            </p>
-            <p>
-              Vivamus a mollis est. Maecenas varius tempus nisi, at mattis sapien
-              rutrum ut. Cras sed sem egestas, vehicula augue a, ullamcorper
-              nulla. Praesent lacinia risus quis urna tristique.
+              The API is also based on Real Estate Core, which is an open ontology for real estate standards.
             </p>
           </TextUnit>
         </Description>
@@ -32,8 +24,8 @@ export const ConceptualInformation = ({ history }) => {
         <Description>
           <TextUnit header="Conceptual Overview" isSubsection>
             <p>
-              Nam ut fermentum augue. Vivamus diam tortor, ultrices sit amet bibendum ut,
-              gravida vel tortor.
+              Resources of the domain are described within every resource. 
+              Their relationship are however illustrated below:
             </p>
           </TextUnit>
           <ArchitecturalOverview history={history} />

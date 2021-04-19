@@ -27,7 +27,12 @@ export const items = [
           { label: "Sorting" },
         ],
       },
-      { label: "Versioning" },
+      { 
+        label: "Versioning",
+        items: [
+          { label: "Upcoming deprecations" },
+        ],
+      },
     ],
   },
   {
