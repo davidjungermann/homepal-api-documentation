@@ -8,8 +8,8 @@
 - Lägg in alla som subsections! 
 - Mer spacing i sidebar. 
 - Antingen fixa dropdown eller scroll som följer med! 
-- Kommatecken i object description 
-- Linebreak i exempel
+- Kommatecken i object description.
+- Linebreak i exempel.
 
 Bugs:
 
