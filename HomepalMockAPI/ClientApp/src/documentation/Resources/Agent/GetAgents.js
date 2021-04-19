@@ -1,5 +1,6 @@
 import React from "react";
 import { ContainerBlock } from "../../../components/container-block/ContainerBlock";
+import { BodyDescription } from "../../../components/content/body-description/BodyDescription";
 import { EndpointExample } from "../../../components/content/endpoint-example/EndpointExample";
 import { EndpointList } from "../../../components/content/endpoint-list/EndpointList";
 import { Endpoint } from "../../../components/content/endpoint/Endpoint";
@@ -43,7 +44,7 @@ export const GetAgents = ({ history, token }) => {
           values={[
             {
               col1: (
-                <TableItem description="There is no body for this request"></TableItem>
+                <TableItem description="There is no request body for this endpoint."></TableItem>
               ),
             },
           ]}
@@ -105,9 +106,32 @@ export const GetAgents = ({ history, token }) => {
         <EndpointExample header="Endpoint" copy baseUrl="api/agents">
           <Endpoint request="GET" baseUrl="api/agents"></Endpoint>
         </EndpointExample>
-        <Example header="USAGE2" token={token} copy>
+        <Example header="USAGE EXAMPLE" token={token} copy>
           curl https://localhost:6001/api/agents
         </Example>
+
+        <ContainerBlock header="REQUEST BODY">
+          <p>There is no request body for this endpoint.</p>
+        </ContainerBlock>
+
+        <BodyDescription
+          header={"RESPONSE EXAMPLE"}
+          copy
+          body={[
+            {
+              id: 1,
+              name: "Mitt Malmö",
+            },
+            {
+              id: 2,
+              name: "Norrlandshus",
+            },
+            {
+              id: 3,
+              name: "Kingens bostäder",
+            },
+          ]}
+        ></BodyDescription>
       </Usage>
     </Section>
   );
