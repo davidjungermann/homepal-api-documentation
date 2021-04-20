@@ -102,12 +102,12 @@ export const GetRegions = ({ history, token }) => {
         ></Table>
       </Description>
       <Usage>
-        <EndpointExample header="Endpoint" copy baseUrl="api/regions">
+        <EndpointExample header="ENDPOINT" copy baseUrl="api/regions">
           <Endpoint request="GET" baseUrl="api/regions"></Endpoint>
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>
           curl --request GET
-          https://localhost:6001/api/regions?limit=3&offset=1&sort=street_number
+          https://localhost:6001/api/regions?limit=3&offset=1&sort=name
         </Example>
 
         <ContainerBlock header="REQUEST BODY EXAMPLE" inactiveContainerBlock>
@@ -119,28 +119,13 @@ export const GetRegions = ({ history, token }) => {
           copy
           body={[
             {
-              id: 2,
-              class_descriptor: "ApartmentBuilding",
-              street_name: "Umeåvägen",
-              street_number: "18",
-              postal_code: "333 44",
-              real_estate_id: 2,
+              name: "Halland",
             },
             {
-              id: 1,
-              class_descriptor: "ApartmentBuilding",
-              street_name: "Skånegatan",
-              street_number: "20",
-              postal_code: "223 33",
-              real_estate_id: 1,
+              name: "Skåne",
             },
             {
-              id: 4,
-              class_descriptor: "EnvironmentalBuilding",
-              street_name: "Hockeygatan",
-              street_number: "76",
-              postal_code: "141 21",
-              real_estate_id: 4,
+              name: "Småland",
             },
           ]}
         ></BodyDescription>

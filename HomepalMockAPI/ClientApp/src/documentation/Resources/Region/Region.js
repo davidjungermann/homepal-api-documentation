@@ -41,54 +41,9 @@ export const Region = ({ history }) => {
             values={[
               {
                 col1: (
-                  <TableItem description="Unique ID of Region.">id</TableItem>
-                ),
-                col2: "Integer",
-                col3: "Required",
-              },
-              {
-                col1: (
-                  <TableItem description="Class that describes the type of Region.">
-                    class_descriptor
-                  </TableItem>
+                  <TableItem description="Unique name of Region.">name</TableItem>
                 ),
                 col2: "String",
-                col3: "Required",
-              },
-              {
-                col1: (
-                  <TableItem description="Name of the street that Region is situated on.">
-                    street_name
-                  </TableItem>
-                ),
-                col2: "String",
-                col3: "Required",
-              },
-              {
-                col1: (
-                  <TableItem description="Number that Region is situated on.">
-                    street_number
-                  </TableItem>
-                ),
-                col2: "String",
-                col3: "Required",
-              },
-              {
-                col1: (
-                  <TableItem description="Postal code of Region.">
-                    postal_code
-                  </TableItem>
-                ),
-                col2: "String",
-                col3: "Required",
-              },
-              {
-                col1: (
-                  <TableItem description="ID of the Region that Region is part of.">
-                    real_estate_id
-                  </TableItem>
-                ),
-                col2: "Integer",
                 col3: "Required",
               },
             ]}
@@ -117,12 +72,7 @@ export const Region = ({ history }) => {
             header={"REGION OBJECT EXAMPLE"}
             copy
             body={{
-              id: 1,
-              class_descriptor: "ApartmentRegion",
-              street_name: "Skånegatan",
-              street_number: "20",
-              postal_code: "223 33",
-              real_estate_id: 1,
+              name: "Skåne",
             }}
           ></BodyDescription>
         </Usage>
