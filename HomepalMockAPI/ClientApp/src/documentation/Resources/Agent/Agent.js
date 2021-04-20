@@ -34,7 +34,7 @@ export const Agent = ({ history }) => {
           <Table
             cols={[
               {
-                Header: "Attribute",
+                Header: "ATTRIBUTE",
                 accessor: "col1", // accessor is the "key" in the data
               },
               {
