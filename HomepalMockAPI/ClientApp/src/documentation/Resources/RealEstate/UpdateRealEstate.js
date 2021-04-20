@@ -54,8 +54,15 @@ export const UpdateRealEstate = ({ history, token }) => {
             },
             {
               col1: (
-                <TableItem description="Class that describes the type of RealEstate.">
-                  class_descriptor
+                <TableItem description="Name of RealEstate.">name</TableItem>
+              ),
+              col2: "String",
+              col3: "Required",
+            },
+            {
+              col1: (
+                <TableItem description="Name of Region that RealEstate is situated in.">
+                  region_name
                 </TableItem>
               ),
               col2: "String",
@@ -63,38 +70,11 @@ export const UpdateRealEstate = ({ history, token }) => {
             },
             {
               col1: (
-                <TableItem description="Name of the street that RealEstate is situated on.">
-                  street_name
+                <TableItem description="ID of Owner of RealEstate">
+                  owner_id
                 </TableItem>
               ),
               col2: "String",
-              col3: "Required",
-            },
-            {
-              col1: (
-                <TableItem description="Number that RealEstate is situated on.">
-                  street_number
-                </TableItem>
-              ),
-              col2: "String",
-              col3: "Required",
-            },
-            {
-              col1: (
-                <TableItem description="Postal code of RealEstate.">
-                  postal_code
-                </TableItem>
-              ),
-              col2: "String",
-              col3: "Required",
-            },
-            {
-              col1: (
-                <TableItem description="ID of the RealEstate that RealEstate is part of.">
-                  real_estate_id
-                </TableItem>
-              ),
-              col2: "Integer",
               col3: "Required",
             },
           ]}
@@ -113,7 +93,8 @@ export const UpdateRealEstate = ({ history, token }) => {
           </ReturnsItem>
         </Returns>
         <h3 className="schema-title title-7">Path Schema</h3>
-        <Table inactiveTable
+        <Table
+          inactiveTable
           cols={[
             {
               Header: "PARAMETER",
@@ -140,9 +121,8 @@ export const UpdateRealEstate = ({ history, token }) => {
 
         <Example header="USAGE EXAMPLE" token={token} copy>
           curl --header "Content-Type: application/json" --request PUT --data
-          '&#123;"id":"1", "class_descriptor":"ApartmentRealEstate",
-          "street_name":"New Street", "street_number":"20", "postal_code":"223
-          33", "real_estate_id":"1"&#125;' https://localhost:6001/api/realestates
+          '&#123;"id":"1", "name":"Updated RealEstate", "region_name":"Skåne",
+          "owner_id":"1"&#125;' https://localhost:6001/api/realestates
         </Example>
 
         <BodyDescription
@@ -150,11 +130,9 @@ export const UpdateRealEstate = ({ history, token }) => {
           copy
           body={{
             id: 1,
-            class_descriptor: "ApartmentRealEstate",
-            street_name: "New Street",
-            street_number: "20",
-            postal_code: "223 33",
-            real_estate_id: 1,
+            name: "Updated RealEstate",
+            region_name: "Skåne",
+            owner_id: "1",
           }}
         ></BodyDescription>
 

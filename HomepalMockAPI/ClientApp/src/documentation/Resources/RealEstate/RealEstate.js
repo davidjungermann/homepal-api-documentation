@@ -41,54 +41,36 @@ export const RealEstate = ({ history }) => {
             values={[
               {
                 col1: (
-                  <TableItem description="Unique ID of RealEstate.">id</TableItem>
-                ),
-                col2: "Integer",
-                col3: "Required",
-              },
-              {
-                col1: (
-                  <TableItem description="Class that describes the type of RealEstate.">
-                    class_descriptor
-                  </TableItem>
-                ),
-                col2: "String",
-                col3: "Required",
-              },
-              {
-                col1: (
-                  <TableItem description="Name of the street that RealEstate is situated on.">
-                    street_name
-                  </TableItem>
-                ),
-                col2: "String",
-                col3: "Required",
-              },
-              {
-                col1: (
-                  <TableItem description="Number that RealEstate is situated on.">
-                    street_number
-                  </TableItem>
-                ),
-                col2: "String",
-                col3: "Required",
-              },
-              {
-                col1: (
-                  <TableItem description="Postal code of RealEstate.">
-                    postal_code
-                  </TableItem>
-                ),
-                col2: "String",
-                col3: "Required",
-              },
-              {
-                col1: (
-                  <TableItem description="ID of the RealEstate that RealEstate is part of.">
-                    real_estate_id
+                  <TableItem description="Unique ID of RealEstate.">
+                    id
                   </TableItem>
                 ),
                 col2: "Integer",
+                col3: "Required",
+              },
+              {
+                col1: (
+                  <TableItem description="Name of RealEstate.">name</TableItem>
+                ),
+                col2: "String",
+                col3: "Required",
+              },
+              {
+                col1: (
+                  <TableItem description="Name of Region that RealEstate is situated in.">
+                    region_name
+                  </TableItem>
+                ),
+                col2: "String",
+                col3: "Required",
+              },
+              {
+                col1: (
+                  <TableItem description="ID of Owner of RealEstate">
+                    owner_id
+                  </TableItem>
+                ),
+                col2: "String",
                 col3: "Required",
               },
             ]}
@@ -129,11 +111,9 @@ export const RealEstate = ({ history }) => {
             copy
             body={{
               id: 1,
-              class_descriptor: "ApartmentRealEstate",
-              street_name: "Skånegatan",
-              street_number: "20",
-              postal_code: "223 33",
-              real_estate_id: 1,
+              name: "Alfa",
+              region_name: "Skåne",
+              owner_id: "1",
             }}
           ></BodyDescription>
         </Usage>

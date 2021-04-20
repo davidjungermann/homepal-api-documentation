@@ -25,7 +25,8 @@ export const GetRealEstate = ({ history, token }) => {
           </p>
         </TextUnit>
         <h3 className="schema-title title-7">Body Schema</h3>
-        <Table inactiveTable
+        <Table
+          inactiveTable
           cols={[
             {
               Header: "ATTRIBUTE",
@@ -102,11 +103,9 @@ export const GetRealEstate = ({ history, token }) => {
           copy
           body={{
             id: 1,
-            class_descriptor: "ApartmentRealEstate",
-            street_name: "Skånegatan",
-            street_number: "20",
-            postal_code: "223 33",
-            real_estate_id: 1,
+            name: "Alfa",
+            region_name: "Skåne",
+            owner_id: "1",
           }}
         ></BodyDescription>
       </Usage>
