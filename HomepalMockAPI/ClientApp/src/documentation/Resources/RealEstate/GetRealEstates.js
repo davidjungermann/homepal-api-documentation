@@ -25,7 +25,8 @@ export const GetRealEstates = ({ history, token }) => {
           </p>
         </TextUnit>
         <h3 className="schema-title title-7">Body Schema</h3>
-        <Table inactiveTable
+        <Table
+          inactiveTable
           cols={[
             {
               Header: "ATTRIBUTE",
@@ -120,27 +121,21 @@ export const GetRealEstates = ({ history, token }) => {
           body={[
             {
               id: 2,
-              class_descriptor: "ApartmentBuilding",
-              street_name: "Umeåvägen",
-              street_number: "18",
-              postal_code: "333 44",
-              real_estate_id: 2,
+              name: "Beta",
+              region_name: "Norrland",
+              owner_id: "2",
             },
             {
-              id: 1,
-              class_descriptor: "ApartmentBuilding",
-              street_name: "Skånegatan",
-              street_number: "20",
-              postal_code: "223 33",
-              real_estate_id: 1,
+              id: 3,
+              name: "Gamma",
+              region_name: "Södermanland",
+              owner_id: "3",
             },
             {
               id: 4,
-              class_descriptor: "EnvironmentalBuilding",
-              street_name: "Hockeygatan",
-              street_number: "76",
-              postal_code: "141 21",
-              real_estate_id: 4,
+              name: "Theta",
+              region_name: "Dalarna",
+              owner_id: "4",
             },
           ]}
         ></BodyDescription>
