@@ -25,8 +25,8 @@ export const UpdateAgent = ({ history, token }) => {
             <span className="code-badge">Agent</span>.
           </p>
           <p>
-            The <span className="code-badge">id</span> is a unique identifier,
-            and can therefore, not be changed.
+            The <span className="code-badge">id</span> attribute is a unique
+            identifier, and can therefore, not be changed.
           </p>
         </TextUnit>
         <h3 className="schema-title title-7">Body Schema</h3>

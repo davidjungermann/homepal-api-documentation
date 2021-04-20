@@ -5,37 +5,23 @@ export const items = [
     label: "Introduction",
     items: [
       { label: "About the API" },
-      { 
+      {
         label: "Conceptual information",
-        items: [
-          { label: "Conceptual Overview" },
-          { label: "Super classes" },
-        ],
+        items: [{ label: "Conceptual Overview" }, { label: "Super classes" }],
       },
-      { label: "Authorization",
-        items: [
-          { label: "Access key" },
-        ],
-      },
+      { label: "Authorization", items: [{ label: "Access key" }] },
       { label: "Validations" },
-      { 
+      {
         label: "Errors",
-        items: [
-          { label: "Error codes" },
-        ],
+        items: [{ label: "Error codes" }],
       },
       {
         label: "Query Parameters",
-        items: [
-          { label: "Pagination" },
-          { label: "Sorting" },
-        ],
+        items: [{ label: "Pagination" }, { label: "Sorting" }],
       },
-      { 
+      {
         label: "Versioning",
-        items: [
-          { label: "Upcoming deprecations" },
-        ],
+        items: [{ label: "Upcoming deprecations" }],
       },
     ],
   },
@@ -66,7 +52,6 @@ export const items = [
         label: "Customer",
         items: [
           { label: "Get Customers" },
-          { label: "Get Customer" },
           { label: "Create Customer" },
           { label: "Delete Customer" },
         ],
@@ -85,7 +70,6 @@ export const items = [
         label: "Owner",
         items: [
           { label: "Get Owners" },
-          { label: "Get Owner" },
           { label: "Create Owner" },
           { label: "Delete Owner" },
         ],

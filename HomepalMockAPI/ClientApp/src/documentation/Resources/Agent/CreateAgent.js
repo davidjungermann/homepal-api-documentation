@@ -88,7 +88,7 @@ export const CreateAgent = ({ history, token }) => {
         ></Table>
       </Description>
       <Usage>
-        <EndpointExample header="Endpoint" copy baseUrl="api/agents/{id}">
+        <EndpointExample header="Endpoint" copy baseUrl="api/agents">
           <Endpoint request="POST" baseUrl="api/agents"></Endpoint>
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>

@@ -23,7 +23,6 @@ import { GetBuildings } from "../../documentation/Resources/Building/GetBuilding
 import { CreateBuilding } from "../../documentation/Resources/Building/CreateBuilding";
 import { UpdateBuilding } from "../../documentation/Resources/Building/UpdateBuilding";
 import { DeleteBuilding } from "../../documentation/Resources/Building/DeleteBuilding";
-import { GetCustomer } from "../../documentation/Resources/Customer/GetCustomer";
 import { GetCustomers } from "../../documentation/Resources/Customer/GetCustomers";
 import { CreateCustomer } from "../../documentation/Resources/Customer/CreateCustomer";
 import { DeleteCustomer } from "../../documentation/Resources/Customer/DeleteCustomer";
@@ -32,7 +31,6 @@ import { GetLeasables } from "../../documentation/Resources/Leasable/GetLeasable
 import { CreateLeasable } from "../../documentation/Resources/Leasable/CreateLeasable";
 import { UpdateLeasable } from "../../documentation/Resources/Leasable/UpdateLeasable";
 import { DeleteLeasable } from "../../documentation/Resources/Leasable/DeleteLeasable";
-import { GetOwner } from "../../documentation/Resources/Owner/GetOwner";
 import { GetOwners } from "../../documentation/Resources/Owner/GetOwners";
 import { CreateOwner } from "../../documentation/Resources/Owner/CreateOwner";
 import { DeleteOwner } from "../../documentation/Resources/Owner/DeleteOwner";
@@ -147,11 +145,6 @@ export const routes = [
   },
   {
     main: ({ history, token }) => (
-      <GetCustomer history={history} token={token}></GetCustomer>
-    ),
-  },
-  {
-    main: ({ history, token }) => (
       <CreateCustomer history={history} token={token}></CreateCustomer>
     ),
   },
@@ -196,11 +189,7 @@ export const routes = [
       <GetOwners history={history} token={token}></GetOwners>
     ),
   },
-  {
-    main: ({ history, token }) => (
-      <GetOwner history={history} token={token}></GetOwner>
-    ),
-  },
+
   {
     main: ({ history, token }) => (
       <CreateOwner history={history} token={token}></CreateOwner>

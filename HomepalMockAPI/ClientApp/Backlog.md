@@ -10,6 +10,7 @@
 - Antingen fixa dropdown eller scroll som följer med!
 - Kommatecken i object description.
 - Linebreak i exempel.
+- Konstigt med return på GetCustomers! 
 
 Bugs:
 
@@ -18,4 +19,3 @@ Bugs:
 
 Skicka ner setCurrentSection till Section via Routes. I if-satsen med viewport, setCurrentSection(props.id)
 
-enumerated values på building
