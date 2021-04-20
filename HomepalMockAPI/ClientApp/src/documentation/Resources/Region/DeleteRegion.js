@@ -75,8 +75,8 @@ export const DeleteRegion = ({ history, token }) => {
           values={[
             {
               col1: (
-                <TableItem description="The ID of the requested Region.">
-                  id
+                <TableItem description="The name of the requested Region.">
+                  name
                 </TableItem>
               ),
               col2: "Required",
@@ -85,11 +85,11 @@ export const DeleteRegion = ({ history, token }) => {
         ></Table>
       </Description>
       <Usage>
-        <EndpointExample header="Endpoint" copy baseUrl="api/regions/{id}">
-          <Endpoint request="DELETE" baseUrl="api/regions/{id}"></Endpoint>
+        <EndpointExample header="Endpoint" copy baseUrl="api/regions/{name}">
+          <Endpoint request="DELETE" baseUrl="api/regions/{name}"></Endpoint>
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>
-          curl --request DELETE https://localhost:6001/api/regions/1
+          curl --request DELETE https://localhost:6001/api/regions/Skåne
         </Example>
 
         <ContainerBlock header="REQUEST BODY EXAMPLE" inactiveContainerBlock>

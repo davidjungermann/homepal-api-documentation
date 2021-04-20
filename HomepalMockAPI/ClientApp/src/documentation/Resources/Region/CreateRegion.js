@@ -23,14 +23,6 @@ export const CreateRegion = ({ history, token }) => {
             From this endpoint, you can create a new
             <span className="code-badge">Region</span>.
           </p>
-          <p>
-            Since a <span className="code-badge">Region</span> is part of a{" "}
-            <span className="code-badge">Region</span>, the{" "}
-            <span className="code-badge">region_id</span> attribute must be
-            defined, and needs to refer to a{" "}
-            <span className="code-badge">Region</span> in the Homebase API,
-            when creating a new <span className="code-badge">Region</span>.
-          </p>
         </TextUnit>
         <h3 className="schema-title title-7">Body Schema</h3>
         <Table
@@ -51,11 +43,11 @@ export const CreateRegion = ({ history, token }) => {
           values={[
             {
               col1: (
-                <TableItem description="ID of the Region.">
-                  real_estate_id
+                <TableItem description="Name of the Region.">
+                  name
                 </TableItem>
               ),
-              col2: "Integer",
+              col2: "String",
               col3: "Required",
             },
           ]}
@@ -100,20 +92,14 @@ export const CreateRegion = ({ history, token }) => {
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>
           curl --header "Content-Type: application/json" --request POST --data
-          '&#123;"class_descriptor":"ApartmentRegion",
-          "street_name":"Skånegatan", "street_number":"20", "postal_code":"223
-          33", "real_estate_id":"1"&#125;' https://localhost:6001/api/regions
+          '&#123;"name":"Skåne"&#125;' https://localhost:6001/api/regions
         </Example>
 
         <BodyDescription
           header={"REQUEST BODY EXAMPLE"}
           copy
           body={{
-            class_descriptor: "ApartmentRegion",
-            street_name: "Skånegatan",
-            street_number: "20",
-            postal_code: "223 33",
-            real_estate_id: 1,
+            name: "Skåne",
           }}
         ></BodyDescription>
 
