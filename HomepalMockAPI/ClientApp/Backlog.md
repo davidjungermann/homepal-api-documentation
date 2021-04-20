@@ -17,5 +17,3 @@ Bugs:
   Klick sätter classname, som ändrar stylingen.
 
 Skicka ner setCurrentSection till Section via Routes. I if-satsen med viewport, setCurrentSection(props.id)
-
-enumerated values på building
