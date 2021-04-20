@@ -69,8 +69,8 @@ export const Leasable = ({ history }) => {
               },
               {
                 col1: (
-                  <TableItem description="Price per month of Leasable">
-                    rpice
+                  <TableItem description="Price per month of Leasable in SEK.">
+                    price
                   </TableItem>
                 ),
                 col2: "Integer",
@@ -78,7 +78,7 @@ export const Leasable = ({ history }) => {
               },
               {
                 col1: (
-                  <TableItem description="Description of Leasable">
+                  <TableItem description="Description of Leasable.">
                     description
                   </TableItem>
                 ),
@@ -87,12 +87,99 @@ export const Leasable = ({ history }) => {
               },
               {
                 col1: (
-                  <TableItem description="Size of leasable in m²">
+                  <TableItem description="Size of leasable in m².">
                     size
                   </TableItem>
                 ),
                 col2: "Integer",
                 col3: "Required",
+              },
+              {
+                col1: (
+                  <TableItem description="ID of Customer on Leasable.">
+                    customer_id
+                  </TableItem>
+                ),
+                col2: "Integer",
+                col3: "Required",
+              },
+              {
+                col1: (
+                  <TableItem description="ID of Owner on Leasable.">
+                    owner_id
+                  </TableItem>
+                ),
+                col2: "Integer",
+                col3: "Required",
+              },
+              {
+                col1: (
+                  <TableItem description="ID of Building that Leasable belongs to.">
+                    building_id
+                  </TableItem>
+                ),
+                col2: "Integer",
+                col3: "Required",
+              },
+            ]}
+          ></Table>
+
+          <h3 className="schema-title title-7">Enumerated Values</h3>
+          <Table
+            cols={[
+              {
+                Header: "ENUMERATED VALUE",
+                accessor: "col1", // accessor is the "key" in the data
+              },
+              {
+                Header: "TYPE",
+                accessor: "col2",
+              },
+            ]}
+            values={[
+              {
+                col1: <TableItem>Leasable</TableItem>,
+                col2: "String",
+              },
+              {
+                col1: <TableItem>GaragePremise</TableItem>,
+                col2: "String",
+              },
+              {
+                col1: <TableItem>StoragePremise</TableItem>,
+                col2: "String",
+              },
+              {
+                col1: <TableItem>OfficePremise</TableItem>,
+                col2: "String",
+              },
+              {
+                col1: <TableItem>CoffeePremise</TableItem>,
+                col2: "String",
+              },
+              {
+                col1: <TableItem>EducationalPremise</TableItem>,
+                col2: "String",
+              },
+              {
+                col1: <TableItem>HotelPremise</TableItem>,
+                col2: "String",
+              },
+              {
+                col1: <TableItem>LaboratoryPremise</TableItem>,
+                col2: "String",
+              },
+              {
+                col1: <TableItem>LightIndustryPremise</TableItem>,
+                col2: "String",
+              },
+              {
+                col1: <TableItem>RestaurantPremise</TableItem>,
+                col2: "String",
+              },
+              {
+                col1: <TableItem>RetailPremise</TableItem>,
+                col2: "String",
               },
             ]}
           ></Table>

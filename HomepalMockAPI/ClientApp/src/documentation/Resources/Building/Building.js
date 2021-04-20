@@ -113,35 +113,19 @@ export const Building = ({ history }) => {
             ]}
             values={[
               {
-                col1: (
-                  <TableItem description="Unique ID of Building.">
-                    Building
-                  </TableItem>
-                ),
+                col1: <TableItem>Building</TableItem>,
                 col2: "String",
               },
               {
-                col1: (
-                  <TableItem description="Class that describes the type of Building.">
-                    ApartmentBuilding
-                  </TableItem>
-                ),
+                col1: <TableItem>ApartmentBuilding</TableItem>,
                 col2: "String",
               },
               {
-                col1: (
-                  <TableItem description="Name of the street that Building is situated on.">
-                    EnvironmentalBuilding
-                  </TableItem>
-                ),
+                col1: <TableItem>EnvironmentalBuilding</TableItem>,
                 col2: "String",
               },
               {
-                col1: (
-                  <TableItem description="Number that Building is situated on.">
-                    LaundryBuilding
-                  </TableItem>
-                ),
+                col1: <TableItem>LaundryBuilding</TableItem>,
                 col2: "String",
               },
             ]}
