@@ -15,14 +15,17 @@ export const Errors = ({ history }) => {
         <Description>
           <TextUnit header="Errors">
             <p>
-              Hombase uses conventional HTTP response codes to indicate the success or failure of an API request. 
-              In general: 
-              Codes in the <span className="code-badge">2xx</span> range indicate success. 
-              Codes in the <span className="code-badge">4xx</span> range indicate an error that failed given the information provided. 
-              Codes in the <span className="code-badge">5xx</span> range indicate an error with Hompal's servers.
+              Hombase uses conventional HTTP response codes to indicate the
+              success or failure of an API request. In general: Codes in the{" "}
+              <span className="code-badge">2xx</span> range indicate success.
+              Codes in the <span className="code-badge">4xx</span> range
+              indicate an error that failed given the information provided.
+              Codes in the <span className="code-badge">5xx</span> range
+              indicate an error with Hompal's servers.
             </p>
             <p>
-              Apart from the response code, unsuccessful responses return a JSON object containing the following information:
+              Apart from the response code, unsuccessful responses return a JSON
+              object containing the following information:
             </p>
           </TextUnit>
           <Table
@@ -39,7 +42,7 @@ export const Errors = ({ history }) => {
             values={[
               {
                 col1: (
-                  <TableItem description="Link to the RFC section.">
+                  <TableItem description="Link to status code in the HTTP documentation.">
                     type
                   </TableItem>
                 ),
@@ -63,7 +66,7 @@ export const Errors = ({ history }) => {
               },
               {
                 col1: (
-                  <TableItem description="No idea.">
+                  <TableItem description="ID to trace the error.">
                     traceId
                   </TableItem>
                 ),
@@ -71,9 +74,7 @@ export const Errors = ({ history }) => {
               },
             ]}
           ></Table>
-          <p>
-            All errors are returned with the same structure.
-          </p>
+          <p>All errors are returned with the same structure.</p>
         </Description>
         <Usage>
           <BodyDescription
@@ -83,18 +84,17 @@ export const Errors = ({ history }) => {
               type: "https://tools.ietf.org/html/rfc7231#section-6.5.1",
               title: "Bad Request",
               status: 400,
-              traceId: "00-4ee4dffc43e1a144bc4b10a069870bde-21a097bd7fe84f4e-00",
+              traceId:
+                "00-4ee4dffc43e1a144bc4b10a069870bde-21a097bd7fe84f4e-00",
             }}
           ></BodyDescription>
         </Usage>
       </Section>
-      
+
       <Section id="error-codes" history={history}>
         <Description>
           <TextUnit header="Error codes" isSubsection>
-            <p>
-              Hombase API uses the following response status codes:
-            </p>
+            <p>Hombase API uses the following response status codes:</p>
           </TextUnit>
           <Table
             cols={[
@@ -118,9 +118,6 @@ export const Errors = ({ history }) => {
               },
             ]}
           ></Table>
-          <p>
-            We recommend writing code that gracefully handles all possible errors.
-          </p>
         </Description>
         <Usage>{/* Usage */}</Usage>
       </Section>

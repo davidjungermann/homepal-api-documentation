@@ -56,7 +56,7 @@ export const ConceptualInformation = ({ history }) => {
               Homebase uses inheritance to reflect the behaviour of some entities.
             </p>
             <p>
-              For instance a Residential Premise is a sub class of a Leasable. This means that an entity with a relation to a Leasable can be any entity which have Leasable as a super class.
+              For instance a ResidentialPremise is a sub class of a Leasable. This means that an entity with a relation to a Leasable can be any entity which have Leasable as a super class.
             </p>
             <p>
               Below we go into more details about the different super classes.

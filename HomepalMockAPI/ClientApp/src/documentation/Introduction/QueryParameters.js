@@ -125,7 +125,7 @@ export const QueryParameters = ({ history, token }) => {
         <Usage>
           <Example header="USAGE" token={token} copy>
             curl
-            https://homebase-api.homepal.se/v1/buildings?sort=created_at
+            https://homebase-api.homepal.se/v1/buildings?sort=class_descriptor
           </Example>
         </Usage>
       </Section>
