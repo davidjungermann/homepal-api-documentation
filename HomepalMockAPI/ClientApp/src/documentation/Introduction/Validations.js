@@ -12,11 +12,7 @@ export const Validations = ({ history }) => {
         <Description>
           <TextUnit header="Validations">
             <p>
-              Homepal validates input data to the Homebase API in every possible way and ensures 
-              safe and formatted data. There is no need worrying about this.
-            </p>
-            <p>
-              However, we do encourage running your own validations.
+              Currently there are no validations of data inputs to the Homebase API.
             </p>
           </TextUnit>
         </Description>
