@@ -47,8 +47,24 @@ export const UpdateLeasable = ({ history, token }) => {
           values={[
             {
               col1: (
-                <TableItem description="The ID of Leasable subject for editing.">
-                  id
+                <TableItem description="Unique ID of Leasable.">id</TableItem>
+              ),
+              col2: "Integer",
+              col3: "Required",
+            },
+            {
+              col1: (
+                <TableItem description="Class that describes the type of Leasable.">
+                  class_descriptor
+                </TableItem>
+              ),
+              col2: "String",
+              col3: "Required",
+            },
+            {
+              col1: (
+                <TableItem description="Price per month of Leasable in SEK.">
+                  price
                 </TableItem>
               ),
               col2: "Integer",
@@ -56,11 +72,47 @@ export const UpdateLeasable = ({ history, token }) => {
             },
             {
               col1: (
-                <TableItem description="The name of Leasable subject for editing.">
-                  name
+                <TableItem description="Description of Leasable.">
+                  description
                 </TableItem>
               ),
               col2: "String",
+              col3: "Required",
+            },
+            {
+              col1: (
+                <TableItem description="Size of leasable in m².">
+                  size
+                </TableItem>
+              ),
+              col2: "Integer",
+              col3: "Required",
+            },
+            {
+              col1: (
+                <TableItem description="ID of Customer on Leasable.">
+                  customer_id
+                </TableItem>
+              ),
+              col2: "Integer",
+              col3: "Required",
+            },
+            {
+              col1: (
+                <TableItem description="ID of Owner on Leasable.">
+                  owner_id
+                </TableItem>
+              ),
+              col2: "Integer",
+              col3: "Required",
+            },
+            {
+              col1: (
+                <TableItem description="ID of Building that Leasable belongs to.">
+                  building_id
+                </TableItem>
+              ),
+              col2: "Integer",
               col3: "Required",
             },
           ]}
@@ -79,7 +131,8 @@ export const UpdateLeasable = ({ history, token }) => {
           </ReturnsItem>
         </Returns>
         <h3 className="schema-title title-7">Path Schema</h3>
-        <Table inactiveTable
+        <Table
+          inactiveTable
           cols={[
             {
               Header: "PARAMETER",
@@ -103,18 +156,27 @@ export const UpdateLeasable = ({ history, token }) => {
         <EndpointExample header="Endpoint" copy baseUrl="api/leasables">
           <Endpoint request="PUT" baseUrl="api/leasables"></Endpoint>
         </EndpointExample>
+
         <Example header="USAGE EXAMPLE" token={token} copy>
           curl --header "Content-Type: application/json" --request PUT --data
-          '&#123;"id":"1","name":"NewLeasable"&#125;'
-          https://localhost:6001/api/leasables
+          '&#123;"id":"1", "class_descriptor":"ResidentialPremise",
+          "price":"3483", "description":"Updated apartment in central Malmö",
+          "size":"73", "customer_id":"5", "owner_id":"1",
+          "building_id":"1"&#125;' https://localhost:6001/api/leasables
         </Example>
 
         <BodyDescription
           header={"REQUEST BODY EXAMPLE"}
           copy
           body={{
-            id: "1",
-            name: "Mitt Malmö",
+            id: 1,
+            class_descriptor: "ResidentialPremise",
+            price: 3483,
+            description: "Updated apartment in central Malmö",
+            size: 73,
+            customer_id: 5,
+            owner_id: 1,
+            building_id: 1,
           }}
         ></BodyDescription>
 

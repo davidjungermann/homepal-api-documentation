@@ -43,11 +43,65 @@ export const CreateLeasable = ({ history, token }) => {
           values={[
             {
               col1: (
-                <TableItem description="The name of Leasable subject for creation.">
-                  name
+                <TableItem description="Class that describes the type of Leasable.">
+                  class_descriptor
                 </TableItem>
               ),
               col2: "String",
+              col3: "Required",
+            },
+            {
+              col1: (
+                <TableItem description="Price per month of Leasable in SEK.">
+                  price
+                </TableItem>
+              ),
+              col2: "Integer",
+              col3: "Required",
+            },
+            {
+              col1: (
+                <TableItem description="Description of Leasable.">
+                  description
+                </TableItem>
+              ),
+              col2: "String",
+              col3: "Required",
+            },
+            {
+              col1: (
+                <TableItem description="Size of leasable in m².">
+                  size
+                </TableItem>
+              ),
+              col2: "Integer",
+              col3: "Required",
+            },
+            {
+              col1: (
+                <TableItem description="ID of Customer on Leasable.">
+                  customer_id
+                </TableItem>
+              ),
+              col2: "Integer",
+              col3: "Required",
+            },
+            {
+              col1: (
+                <TableItem description="ID of Owner on Leasable.">
+                  owner_id
+                </TableItem>
+              ),
+              col2: "Integer",
+              col3: "Required",
+            },
+            {
+              col1: (
+                <TableItem description="ID of Building that Leasable belongs to.">
+                  building_id
+                </TableItem>
+              ),
+              col2: "Integer",
               col3: "Required",
             },
           ]}
@@ -66,7 +120,8 @@ export const CreateLeasable = ({ history, token }) => {
           </ReturnsItem>
         </Returns>
         <h3 className="schema-title title-7">Path Schema</h3>
-        <Table inactiveTable
+        <Table
+          inactiveTable
           cols={[
             {
               Header: "PARAMETER",
@@ -92,14 +147,23 @@ export const CreateLeasable = ({ history, token }) => {
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>
           curl --header "Content-Type: application/json" --request POST --data
-          '&#123;"name":"New Leasable"&#125;' https://localhost:6001/api/leasables
+          '&#123;"class_descriptor":"ResidentialPremise", "price":"3483",
+          "description":"New apartment in central Malmö", "size":"73",
+          "customer_id":"5", "owner_id":"1", "building_id":"1"&#125;'
+          https://localhost:6001/api/leasables
         </Example>
 
         <BodyDescription
           header={"REQUEST BODY EXAMPLE"}
           copy
           body={{
-            name: "New Leasable",
+            class_descriptor: "ResidentialPremise",
+            price: 3483,
+            description: "New apartment in central Malmö",
+            size: 73,
+            customer_id: 5,
+            owner_id: 1,
+            building_id: 1,
           }}
         ></BodyDescription>
 

@@ -3,14 +3,13 @@
 **Generellt**
 
 - Fixa auth exempel. Fult!
-- Styla länkar i Endpoint och i texten.
-- Styla schema-title
 - Lägg in alla som subsections!
 - Mer spacing i sidebar.
 - Antingen fixa dropdown eller scroll som följer med!
 - Kommatecken i object description.
 - Linebreak i exempel.
 - Konstigt med return på GetCustomers! 
+- Kanske skriva ut enums på conc over för att göra det tydligare
 
 Bugs:
 

@@ -25,7 +25,8 @@ export const GetLeasable = ({ history, token }) => {
           </p>
         </TextUnit>
         <h3 className="schema-title title-7">Body Schema</h3>
-        <Table inactiveTable
+        <Table
+          inactiveTable
           cols={[
             {
               Header: "ATTRIBUTE",
@@ -102,7 +103,13 @@ export const GetLeasable = ({ history, token }) => {
           copy
           body={{
             id: 1,
-            name: "Mitt Malmö",
+            class_descriptor: "ResidentialPremise",
+            price: 3483,
+            description: "Apartment in central Malmö",
+            size: 73,
+            customer_id: 5,
+            owner_id: 1,
+            building_id: 1,
           }}
         ></BodyDescription>
       </Usage>
