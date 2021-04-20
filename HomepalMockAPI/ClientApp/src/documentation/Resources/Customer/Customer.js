@@ -71,12 +71,6 @@ export const Customer = ({ history }) => {
               link="get-customers"
             ></Endpoint>
             <Endpoint
-              request="GET"
-              baseUrl="api/customers"
-              parameter="/{id}"
-              link="get-customer"
-            ></Endpoint>
-            <Endpoint
               request="POST"
               baseUrl="api/customers"
               link="create-customer"
