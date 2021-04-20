@@ -228,7 +228,6 @@ export const ArchitecturalOverview = ({ history }) => {
             <div className="arch-row">
               <ArcherElement
                 id="customer"
-                strokeColor="blue"
                 relations={[
                   {
                     targetId: "agent",
@@ -242,7 +241,7 @@ export const ArchitecturalOverview = ({ history }) => {
                   <ArchitecturalObject
                     history={history}
                     title="Customer"
-                    
+                    link="customer"
                     cardinalities={[["bottom-right", "1"]]}
                   >
                     <FontAwesomeIcon icon={faUser} />
