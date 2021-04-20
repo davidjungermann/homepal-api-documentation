@@ -10,6 +10,7 @@
 - Linebreak i exempel.
 - Konstigt med return på GetCustomers! 
 - Kanske skriva ut enums på conc over för att göra det tydligare
+- Lägg till kapitel om cascading changes! 
 
 Bugs:
 
