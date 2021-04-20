@@ -85,6 +85,12 @@ tbody {
 }
 
 .inactive-table {
+    color: $gray-3;
+
+    p {
+        color: inherit;
+    }
+
     tr {
         background: $gray-1;
     }

@@ -22,7 +22,7 @@ export const Table = ({ cols, values, inactiveTable }) => {
 
   return (
     <div className="table-wrapper">
-      <table {...getTableProps()} className="table">
+      <table {...getTableProps()} className={tableClass}>
         <thead>
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
@@ -37,7 +37,7 @@ export const Table = ({ cols, values, inactiveTable }) => {
             </tr>
           ))}
         </thead>
-        <tbody {...getTableBodyProps()} className={tableClass}>
+        <tbody {...getTableBodyProps()}>
           {rows.map((row) => {
             prepareRow(row);
             return (
