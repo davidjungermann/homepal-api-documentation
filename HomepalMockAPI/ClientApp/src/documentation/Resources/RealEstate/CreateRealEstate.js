@@ -26,10 +26,10 @@ export const CreateRealEstate = ({ history, token }) => {
           <p>
             Since a <span className="code-badge">RealEstate</span> is part of a{" "}
             <span className="code-badge">Region</span>, the{" "}
-            <span className="code-badge">region_id</span> attribute must be
+            <span className="code-badge">region_name</span> attribute must be
             defined, and needs to refer to a{" "}
-            <span className="code-badge">Region</span> in the Homebase API,
-            when creating a new <span className="code-badge">RealEstate</span>.
+            <span className="code-badge">Region</span> in the Homebase API, when
+            creating a new <span className="code-badge">RealEstate</span>.
           </p>
         </TextUnit>
         <h3 className="schema-title title-7">Body Schema</h3>
@@ -51,11 +51,27 @@ export const CreateRealEstate = ({ history, token }) => {
           values={[
             {
               col1: (
-                <TableItem description="ID of the RealEstate.">
-                  real_estate_id
+                <TableItem description="Name of RealEstate.">name</TableItem>
+              ),
+              col2: "String",
+              col3: "Required",
+            },
+            {
+              col1: (
+                <TableItem description="Name of Region that RealEstate is situated in.">
+                  region_name
                 </TableItem>
               ),
-              col2: "Integer",
+              col2: "String",
+              col3: "Required",
+            },
+            {
+              col1: (
+                <TableItem description="ID of Owner of RealEstate">
+                  owner_id
+                </TableItem>
+              ),
+              col2: "String",
               col3: "Required",
             },
           ]}
@@ -74,7 +90,8 @@ export const CreateRealEstate = ({ history, token }) => {
           </ReturnsItem>
         </Returns>
         <h3 className="schema-title title-7">Path Schema</h3>
-        <Table inactiveTable
+        <Table
+          inactiveTable
           cols={[
             {
               Header: "PARAMETER",
@@ -100,20 +117,17 @@ export const CreateRealEstate = ({ history, token }) => {
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>
           curl --header "Content-Type: application/json" --request POST --data
-          '&#123;"class_descriptor":"ApartmentRealEstate",
-          "street_name":"Skånegatan", "street_number":"20", "postal_code":"223
-          33", "real_estate_id":"1"&#125;' https://localhost:6001/api/realestates
+          '&#123;"name":"New RealEstate", "region_name":"Skåne",
+          "owner_id":"1"&#125;' https://localhost:6001/api/realestates
         </Example>
 
         <BodyDescription
           header={"REQUEST BODY EXAMPLE"}
           copy
           body={{
-            class_descriptor: "ApartmentRealEstate",
-            street_name: "Skånegatan",
-            street_number: "20",
-            postal_code: "223 33",
-            real_estate_id: 1,
+            name: "New RealEstate",
+            region_name: "Skåne",
+            owner_id: "1",
           }}
         ></BodyDescription>
 
