@@ -48,7 +48,7 @@ export const UpdateAgent = ({ history, token }) => {
           values={[
             {
               col1: (
-                <TableItem description="The id of the Agent subject for editing.">
+                <TableItem description="The ID of Agent subject for editing.">
                   id
                 </TableItem>
               ),
@@ -57,7 +57,7 @@ export const UpdateAgent = ({ history, token }) => {
             },
             {
               col1: (
-                <TableItem description="The name of the Agent subject for editing.">
+                <TableItem description="The name of Agent subject for editing.">
                   name
                 </TableItem>
               ),

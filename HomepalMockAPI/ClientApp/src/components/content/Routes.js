@@ -113,102 +113,148 @@ export const routes = [
     main: ({ history }) => <Building history={history}></Building>,
   },
   {
-    main: ({ history }) => <GetBuildings history={history}></GetBuildings>,
+    main: ({ history, token }) => (
+      <GetBuildings history={history} token={token}></GetBuildings>
+    ),
   },
   {
-    main: ({ history }) => <GetBuilding history={history}></GetBuilding>,
+    main: ({ history, token }) => (
+      <GetBuilding history={history} token={token}></GetBuilding>
+    ),
   },
   {
-    main: ({ history }) => <CreateBuilding history={history}></CreateBuilding>,
+    main: ({ history, token }) => (
+      <CreateBuilding history={history} token={token}></CreateBuilding>
+    ),
   },
   {
-    main: ({ history }) => <UpdateBuilding history={history}></UpdateBuilding>,
+    main: ({ history, token }) => (
+      <UpdateBuilding history={history} token={token}></UpdateBuilding>
+    ),
   },
   {
-    main: ({ history }) => <DeleteBuilding history={history}></DeleteBuilding>,
+    main: ({ history, token }) => (
+      <DeleteBuilding history={history} token={token}></DeleteBuilding>
+    ),
   },
   {
-    main: ({ history }) => <Customer history={history}></Customer>,
+    main: ({ history }) => <Customer history={history} t></Customer>,
   },
   {
-    main: ({ history }) => <GetCustomers history={history}></GetCustomers>,
+    main: ({ history, token }) => (
+      <GetCustomers history={history} token={token}></GetCustomers>
+    ),
   },
   {
-    main: ({ history }) => <GetCustomer history={history}></GetCustomer>,
+    main: ({ history, token }) => (
+      <GetCustomer history={history} token={token}></GetCustomer>
+    ),
   },
   {
-    main: ({ history }) => <CreateCustomer history={history}></CreateCustomer>,
+    main: ({ history, token }) => (
+      <CreateCustomer history={history} token={token}></CreateCustomer>
+    ),
   },
   {
-    main: ({ history }) => <DeleteCustomer history={history}></DeleteCustomer>,
+    main: ({ history, token }) => (
+      <DeleteCustomer history={history} token={token}></DeleteCustomer>
+    ),
   },
   {
     main: ({ history }) => <Leasable history={history}></Leasable>,
   },
   {
-    main: ({ history }) => <GetLeasables history={history}></GetLeasables>,
+    main: ({ history, token }) => (
+      <GetLeasables history={history} token={token}></GetLeasables>
+    ),
   },
   {
-    main: ({ history }) => <GetLeasable history={history}></GetLeasable>,
+    main: ({ history, token }) => (
+      <GetLeasable history={history} token={token}></GetLeasable>
+    ),
   },
   {
-    main: ({ history }) => <CreateLeasable history={history}></CreateLeasable>,
+    main: ({ history, token }) => (
+      <CreateLeasable history={history} token={token}></CreateLeasable>
+    ),
   },
   {
-    main: ({ history }) => <UpdateLeasable history={history}></UpdateLeasable>,
+    main: ({ history, token }) => (
+      <UpdateLeasable history={history} token={token}></UpdateLeasable>
+    ),
   },
   {
-    main: ({ history }) => <DeleteLeasable history={history}></DeleteLeasable>,
+    main: ({ history, token }) => (
+      <DeleteLeasable history={history} token={token}></DeleteLeasable>
+    ),
   },
   {
     main: ({ history }) => <Owner history={history}></Owner>,
   },
   {
-    main: ({ history }) => <GetOwners history={history}></GetOwners>,
+    main: ({ history, token }) => (
+      <GetOwners history={history} token={token}></GetOwners>
+    ),
   },
   {
-    main: ({ history }) => <GetOwner history={history}></GetOwner>,
+    main: ({ history, token }) => (
+      <GetOwner history={history} token={token}></GetOwner>
+    ),
   },
   {
-    main: ({ history }) => <CreateOwner history={history}></CreateOwner>,
+    main: ({ history, token }) => (
+      <CreateOwner history={history} token={token}></CreateOwner>
+    ),
   },
   {
-    main: ({ history }) => <DeleteOwner history={history}></DeleteOwner>,
+    main: ({ history, token }) => (
+      <DeleteOwner history={history} token={token}></DeleteOwner>
+    ),
   },
   {
     main: ({ history }) => <RealEstate history={history}></RealEstate>,
   },
   {
-    main: ({ history }) => <GetRealEstates history={history}></GetRealEstates>,
-  },
-  {
-    main: ({ history }) => <GetRealEstate history={history}></GetRealEstate>,
-  },
-  {
-    main: ({ history }) => (
-      <CreateRealEstate history={history}></CreateRealEstate>
+    main: ({ history, token }) => (
+      <GetRealEstates history={history} token={token}></GetRealEstates>
     ),
   },
   {
-    main: ({ history }) => (
-      <UpdateRealEstate history={history}></UpdateRealEstate>
+    main: ({ history, token }) => (
+      <GetRealEstate history={history} token={token}></GetRealEstate>
     ),
   },
   {
-    main: ({ history }) => (
-      <DeleteRealEstate history={history}></DeleteRealEstate>
+    main: ({ history, token }) => (
+      <CreateRealEstate history={history} token={token}></CreateRealEstate>
+    ),
+  },
+  {
+    main: ({ history, token }) => (
+      <UpdateRealEstate history={history} token={token}></UpdateRealEstate>
+    ),
+  },
+  {
+    main: ({ history, token }) => (
+      <DeleteRealEstate history={history} token={token}></DeleteRealEstate>
     ),
   },
   {
     main: ({ history }) => <Region history={history}></Region>,
   },
   {
-    main: ({ history }) => <GetRegions history={history}></GetRegions>,
+    main: ({ history, token }) => (
+      <GetRegions history={history} token={token}></GetRegions>
+    ),
   },
   {
-    main: ({ history }) => <CreateRegion history={history}></CreateRegion>,
+    main: ({ history, token }) => (
+      <CreateRegion history={history} token={token}></CreateRegion>
+    ),
   },
   {
-    main: ({ history }) => <DeleteRegion history={history}></DeleteRegion>,
+    main: ({ history, token }) => (
+      <DeleteRegion history={history} token={token}></DeleteRegion>
+    ),
   },
 ];

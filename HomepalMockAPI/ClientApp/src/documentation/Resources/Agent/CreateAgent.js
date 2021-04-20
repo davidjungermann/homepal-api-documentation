@@ -44,7 +44,7 @@ export const CreateAgent = ({ history, token }) => {
           values={[
             {
               col1: (
-                <TableItem description="The name of the Agent subject for creation.">
+                <TableItem description="The name of Agent subject for creation.">
                   name
                 </TableItem>
               ),
@@ -89,18 +89,18 @@ export const CreateAgent = ({ history, token }) => {
       </Description>
       <Usage>
         <EndpointExample header="Endpoint" copy baseUrl="api/agents/{id}">
-          <Endpoint request="POST" baseUrl="api/agents/{id}"></Endpoint>
+          <Endpoint request="POST" baseUrl="api/agents"></Endpoint>
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>
           curl --header "Content-Type: application/json" --request POST --data
-          '&#123;"name":"NewAgent"&#125;' https://localhost:6001/api/agents
+          '&#123;"name":"New Agent"&#125;' https://localhost:6001/api/agents
         </Example>
 
         <BodyDescription
           header={"REQUEST BODY EXAMPLE"}
           copy
           body={{
-            name: "Mitt Malmö",
+            name: "New Agent",
           }}
         ></BodyDescription>
 

@@ -49,17 +49,13 @@ export const Agent = ({ history }) => {
             values={[
               {
                 col1: (
-                  <TableItem description="Unique ID of an Agent.">id</TableItem>
+                  <TableItem description="Unique ID of Agent.">id</TableItem>
                 ),
                 col2: "Integer",
                 col3: "Required",
               },
               {
-                col1: (
-                  <TableItem description="The name of an Agent.">
-                    name
-                  </TableItem>
-                ),
+                col1: <TableItem description="Name of Agent.">name</TableItem>,
                 col2: "String",
                 col3: "Required",
               },
@@ -87,7 +83,6 @@ export const Agent = ({ history }) => {
             <Endpoint
               request="PUT"
               baseUrl="api/agents"
-              parameter="/{id}"
               link="update-agent"
             ></Endpoint>
             <Endpoint
@@ -98,7 +93,7 @@ export const Agent = ({ history }) => {
             ></Endpoint>
           </EndpointList>
           <BodyDescription
-            header={"AGENT OBJECT"}
+            header={"AGENT OBJECT EXAMPLE"}
             copy
             body={{
               id: 1,

@@ -77,7 +77,7 @@ export const GetAgent = ({ history, token }) => {
           values={[
             {
               col1: (
-                <TableItem description="The id of the requested Agent.">
+                <TableItem description="The ID of the requested Agent.">
                   id
                 </TableItem>
               ),
