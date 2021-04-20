@@ -2,7 +2,6 @@ import React from "react";
 import { ContainerBlock } from "../../../components/container-block/ContainerBlock";
 import { BodyDescription } from "../../../components/content/body-description/BodyDescription";
 import { EndpointExample } from "../../../components/content/endpoint-example/EndpointExample";
-import { EndpointList } from "../../../components/content/endpoint-list/EndpointList";
 import { Endpoint } from "../../../components/content/endpoint/Endpoint";
 import { Example } from "../../../components/content/example/Example";
 import { Returns } from "../../../components/content/returns/Returns";
@@ -25,7 +24,7 @@ export const CreateCustomer = ({ history, token }) => {
             <span className="code-badge">Customer</span>.
           </p>
           <p>
-            The <span className="code-badge">id</span> attribute must refer to
+            The <span className="code-badge">id</span> attribute <b>must</b> refer to
             an already existing <span className="code-badge">id</span> attribute
             in <span className="code-badge">Agent</span>.
           </p>
@@ -111,7 +110,7 @@ export const CreateCustomer = ({ history, token }) => {
         ></BodyDescription>
 
         <ContainerBlock header="RESPONSE BODY EXAMPLE" inactiveContainerBlock>
-          <p>There is no response body for this endpoint.</p>
+          <p>{"// "}There is no response body for this endpoint.</p>
         </ContainerBlock>
       </Usage>
     </Section>
