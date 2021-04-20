@@ -12,11 +12,17 @@ export const ContainerBlock = ({
   copied,
   handleLeave,
   token,
+  inactiveContainerBlock,
 }) => {
   const [content] = useState(children);
 
+  var containerBlockClass = "container-block";
+  if (inactiveContainerBlock) {
+    containerBlockClass = "container-block inactive-container-block";
+  }
+
   return (
-    <div className="container-block">
+    <div className={containerBlockClass}>
       <div className="container-block-header-container">
         <h4 className="container-block-header title-8">{header}</h4>
         <div className="container-block-header-button-wrapper">

@@ -115,3 +115,27 @@
   25% {opacity: 1;}
   100% {opacity:0; visibility: hidden;}
 }
+
+.inactive-container-block {
+  background-color: $gray-1;
+  color: $gray-3;
+
+  .container-block-header-container {
+    padding: 0px 12px 0px 24px;
+    background-color: inherit;
+    border-bottom: 1px solid $gray-2;
+  }
+
+  .container-block-header {
+    color: inherit;
+  }
+  
+  .container-block-content {
+    color: inherit;
+    p {
+      color: inherit;
+      margin: 0px;
+      padding: 0px;
+    }
+  }
+}

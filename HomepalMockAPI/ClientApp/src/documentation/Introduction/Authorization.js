@@ -30,7 +30,7 @@ export const Authorization = ({
               Calls made over plain HTTP will fail. API requests without authentication will also fail.
             </p>
             <p>
-              You can generate tokens in{" "}
+              You can generate keys in{" "}
               <Link to="#access-key">
                 Access key
               </Link>

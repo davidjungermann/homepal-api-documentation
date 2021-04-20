@@ -110,7 +110,7 @@ export const GetAgents = ({ history, token }) => {
           curl --request GET https://localhost:6001/api/agents?limit=3&offset=1&sort=name
         </Example>
 
-        <ContainerBlock header="REQUEST BODY EXAMPLE">
+        <ContainerBlock header="REQUEST BODY EXAMPLE" inactiveContainerBlock>
           <p>There is no request body for this endpoint.</p>
         </ContainerBlock>
 
