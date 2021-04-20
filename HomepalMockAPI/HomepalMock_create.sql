@@ -55,7 +55,7 @@ CREATE TABLE Leasables (
 	class_descriptor TEXT NOT NULL,
 	price INTEGER NOT NULL,
 	description TEXT NOT NULL,
-	size TEXT NOT NULL,
+	size INTEGER NOT NULL,
 	customer_id INTEGER NOT NULL,
 	owner_id INTEGER NOT NULL,
 	building_id INTEGER NOT NULL,
@@ -90,7 +90,7 @@ VALUES ("ApartmentBuilding", "Skånegatan", "20", "223 33", 1),
 	   ("EnvironmentalBuilding", "Hockeygatan", "76", "141 21", 4); 
 
 INSERT INTO Leasables(class_descriptor, price, description, size, customer_id, owner_id, building_id)
-VALUES ("ResidentialPremise", 3483, "Apartment in central Malmö", "73 m²", 5, 1, 1),
-	   ("ResidentialPremise", 2500, "Apartment in the outskirts of Umeå", "145 m²", 6, 2, 2),
-	   ("StoragePremise", 1500, "Storage unit in connection with Laundry in Stockholm", "10 m²", 7, 3, 3),
-	   ("GaragePremise", 100, "Storage unit in connection with Environmental in Mora", "5 m²", 8, 4, 4);
+VALUES ("ResidentialPremise", 3483, "Apartment in central Malmö", 73, 5, 1, 1),
+	   ("ResidentialPremise", 2500, "Apartment in the outskirts of Umeå", 145, 6, 2, 2),
+	   ("StoragePremise", 1500, "Storage unit in connection with Laundry in Stockholm", 10, 7, 3, 3),
+	   ("GaragePremise", 100, "Storage unit in connection with Environmental in Mora", 5, 8, 4, 4);

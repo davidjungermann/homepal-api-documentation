@@ -19,16 +19,16 @@ export const Leasable = ({ history }) => {
         <Description>
           <TextUnit header="Leasable">
             <p>
-              A <span className="code-badge">leasable</span> describes a leasable space in the Homebase API. 
-              Leasable is part of{" "}
+              A <span className="code-badge">Leasable</span> describes a
+              leasable space in the Homebase API. Leasable is part of{" "}
               <Link to="#building">
                 <span className="code-badge">Building</span>
               </Link>{" "}
-              and has an {" "}
+              and has an{" "}
               <Link to="#owner">
                 <span className="code-badge">Owner</span>
               </Link>
-              . It can have a {" "}
+              , as well as a
               <Link to="#customer">
                 <span className="code-badge">Customer</span>
               </Link>
@@ -59,9 +59,127 @@ export const Leasable = ({ history }) => {
                 col3: "Required",
               },
               {
-                col1: <TableItem description="Name of Leasable.">name</TableItem>,
+                col1: (
+                  <TableItem description="Class that describes the type of Leasable.">
+                    class_descriptor
+                  </TableItem>
+                ),
                 col2: "String",
                 col3: "Required",
+              },
+              {
+                col1: (
+                  <TableItem description="Price per month of Leasable in SEK.">
+                    price
+                  </TableItem>
+                ),
+                col2: "Integer",
+                col3: "Required",
+              },
+              {
+                col1: (
+                  <TableItem description="Description of Leasable.">
+                    description
+                  </TableItem>
+                ),
+                col2: "String",
+                col3: "Required",
+              },
+              {
+                col1: (
+                  <TableItem description="Size of leasable in m².">
+                    size
+                  </TableItem>
+                ),
+                col2: "Integer",
+                col3: "Required",
+              },
+              {
+                col1: (
+                  <TableItem description="ID of Customer on Leasable.">
+                    customer_id
+                  </TableItem>
+                ),
+                col2: "Integer",
+                col3: "Required",
+              },
+              {
+                col1: (
+                  <TableItem description="ID of Owner on Leasable.">
+                    owner_id
+                  </TableItem>
+                ),
+                col2: "Integer",
+                col3: "Required",
+              },
+              {
+                col1: (
+                  <TableItem description="ID of Building that Leasable belongs to.">
+                    building_id
+                  </TableItem>
+                ),
+                col2: "Integer",
+                col3: "Required",
+              },
+            ]}
+          ></Table>
+
+          <h3 className="schema-title title-7">Enumerated Values</h3>
+          <Table
+            cols={[
+              {
+                Header: "ENUMERATED VALUE",
+                accessor: "col1", // accessor is the "key" in the data
+              },
+              {
+                Header: "TYPE",
+                accessor: "col2",
+              },
+            ]}
+            values={[
+              {
+                col1: <TableItem>Leasable</TableItem>,
+                col2: "String",
+              },
+              {
+                col1: <TableItem>GaragePremise</TableItem>,
+                col2: "String",
+              },
+              {
+                col1: <TableItem>StoragePremise</TableItem>,
+                col2: "String",
+              },
+              {
+                col1: <TableItem>OfficePremise</TableItem>,
+                col2: "String",
+              },
+              {
+                col1: <TableItem>CoffeePremise</TableItem>,
+                col2: "String",
+              },
+              {
+                col1: <TableItem>EducationalPremise</TableItem>,
+                col2: "String",
+              },
+              {
+                col1: <TableItem>HotelPremise</TableItem>,
+                col2: "String",
+              },
+              {
+                col1: <TableItem>LaboratoryPremise</TableItem>,
+                col2: "String",
+              },
+              {
+                col1: <TableItem>LightIndustryPremise</TableItem>,
+                col2: "String",
+              },
+              {
+                col1: <TableItem>RestaurantPremise</TableItem>,
+                col2: "String",
+              },
+              {
+                col1: <TableItem>RetailPremise</TableItem>,
+                col2: "String",
               },
             ]}
           ></Table>
@@ -101,7 +219,13 @@ export const Leasable = ({ history }) => {
             copy
             body={{
               id: 1,
-              name: "Mitt Malmö",
+              class_descriptor: "ResidentialPremise",
+              price: 3483,
+              description: "Apartment in central Malmö",
+              size: "73 m²",
+              customer_id: 5,
+              owner_id: 1,
+              building_id: 1,
             }}
           ></BodyDescription>
         </Usage>
