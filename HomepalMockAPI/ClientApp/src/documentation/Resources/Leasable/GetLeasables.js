@@ -25,7 +25,8 @@ export const GetLeasables = ({ history, token }) => {
           </p>
         </TextUnit>
         <h3 className="schema-title title-7">Body Schema</h3>
-        <Table inactiveTable
+        <Table
+          inactiveTable
           cols={[
             {
               Header: "ATTRIBUTE",
@@ -106,7 +107,8 @@ export const GetLeasables = ({ history, token }) => {
           <Endpoint request="GET" baseUrl="api/leasables"></Endpoint>
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>
-          curl --request GET https://localhost:6001/api/leasables?limit=3&offset=1&sort=name
+          curl --request GET
+          https://localhost:6001/api/leasables?limit=3&offset=1&sort=price
         </Example>
 
         <ContainerBlock header="REQUEST BODY EXAMPLE" inactiveContainerBlock>
@@ -117,9 +119,37 @@ export const GetLeasables = ({ history, token }) => {
           header={"RESPONSE BODY EXAMPLE"}
           copy
           body={[
-            { id: 6, name: "Fia Andersson" },
-            { id: 8, name: "Kent Larsson" },
-            { id: 3, name: "Kingens bostäder" },
+            {
+              id: 3,
+              class_descriptor: "StoragePremise",
+              price: 1500,
+              description:
+                "Storage unit in connection with Laundry in Stockholm",
+              size: 10,
+              customer_id: 7,
+              owner_id: 3,
+              building_id: 3,
+            },
+            {
+              id: 2,
+              class_descriptor: "ResidentialPremise",
+              price: 2500,
+              description: "Apartment in the outskirts of Umeå",
+              size: 145,
+              customer_id: 6,
+              owner_id: 2,
+              building_id: 2,
+            },
+            {
+              id: 1,
+              class_descriptor: "ResidentialPremise",
+              price: 3483,
+              description: "Apartment in central Malmö",
+              size: 73,
+              customer_id: 5,
+              owner_id: 1,
+              building_id: 1,
+            },
           ]}
         ></BodyDescription>
       </Usage>
