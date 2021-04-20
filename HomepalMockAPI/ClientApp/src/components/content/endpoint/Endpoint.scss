@@ -8,6 +8,7 @@
   padding: 0px 8px 0px 8px;
   margin-right: 5px;
   border-radius: 5px;
+  user-select: none;
 }
 
 .get-request {
@@ -28,10 +29,6 @@
 .delete-request {
   background: rgba($red, 0.4);
   color: $red;
-}
-
-.endpoint-container:hover {
-  cursor: pointer;
 }
 
 a {

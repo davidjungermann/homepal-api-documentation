@@ -96,11 +96,11 @@ export const DeleteCustomer = ({ history, token }) => {
         </Example>
 
         <ContainerBlock inactiveContainerBlock header="REQUEST BODY EXAMPLE">
-          <p>There is no request body for this endpoint.</p>
+          <p>{"// "}There is no request body for this endpoint.</p>
         </ContainerBlock>
 
         <ContainerBlock inactiveContainerBlock header="RESPONSE BODY EXAMPLE">
-          <p>There is no response body for this endpoint.</p>
+          <p>{"// "}There is no response body for this endpoint.</p>
         </ContainerBlock>
       </Usage>
     </Section>
