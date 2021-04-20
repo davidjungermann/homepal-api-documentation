@@ -19,16 +19,16 @@ export const Leasable = ({ history }) => {
         <Description>
           <TextUnit header="Leasable">
             <p>
-              A <span className="code-badge">leasable</span> describes a leasable space in the Homebase API. 
-              Leasable is part of{" "}
+              A <span className="code-badge">Leasable</span> describes a
+              leasable space in the Homebase API. Leasable is part of{" "}
               <Link to="#building">
                 <span className="code-badge">Building</span>
               </Link>{" "}
-              and has an {" "}
+              and has an{" "}
               <Link to="#owner">
                 <span className="code-badge">Owner</span>
               </Link>
-              . It can have a {" "}
+              , as well as a
               <Link to="#customer">
                 <span className="code-badge">Customer</span>
               </Link>
@@ -59,8 +59,39 @@ export const Leasable = ({ history }) => {
                 col3: "Required",
               },
               {
-                col1: <TableItem description="Name of Leasable.">name</TableItem>,
+                col1: (
+                  <TableItem description="Class that describes the type of Leasable.">
+                    class_descriptor
+                  </TableItem>
+                ),
                 col2: "String",
+                col3: "Required",
+              },
+              {
+                col1: (
+                  <TableItem description="Price per month of Leasable">
+                    rpice
+                  </TableItem>
+                ),
+                col2: "Integer",
+                col3: "Required",
+              },
+              {
+                col1: (
+                  <TableItem description="Description of Leasable">
+                    description
+                  </TableItem>
+                ),
+                col2: "String",
+                col3: "Required",
+              },
+              {
+                col1: (
+                  <TableItem description="Size of leasable in m²">
+                    size
+                  </TableItem>
+                ),
+                col2: "Integer",
                 col3: "Required",
               },
             ]}
@@ -101,7 +132,13 @@ export const Leasable = ({ history }) => {
             copy
             body={{
               id: 1,
-              name: "Mitt Malmö",
+              class_descriptor: "ResidentialPremise",
+              price: 3483,
+              description: "Apartment in central Malmö",
+              size: "73 m²",
+              customer_id: 5,
+              owner_id: 1,
+              building_id: 1,
             }}
           ></BodyDescription>
         </Usage>
