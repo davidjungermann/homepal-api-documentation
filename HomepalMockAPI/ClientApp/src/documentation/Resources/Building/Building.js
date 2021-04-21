@@ -29,7 +29,7 @@ export const Building = ({ history, token }) => {
             </p>
             <p>
               A <span className="code-badge">Building</span> is part of a{" "}
-              <Link to="#realestate" smooth>
+              <Link to="#realestate">
                 <span className="code-badge">RealEstate</span>.
               </Link>
             </p>

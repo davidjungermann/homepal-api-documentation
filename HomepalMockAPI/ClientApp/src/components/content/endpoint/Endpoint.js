@@ -20,7 +20,7 @@ export const Endpoint = ({ request, baseUrl, parameter, link }) => {
 
   const renderEndpointLink = () => {
     return (
-      <Link activeClassName="not-active" smooth to={"#" + link}>
+      <Link activeClassName="not-active" to={"#" + link}>
         <div className="endpoint-container">
           <span className={requestName + " request"}>{request}</span>
           <span className="request-url">{baseUrl + parameter}</span>

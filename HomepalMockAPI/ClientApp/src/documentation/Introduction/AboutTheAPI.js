@@ -73,7 +73,7 @@ export const AboutTheApi = ({ history, token }) => {
               <FontAwesomeIcon icon={faExclamationTriangle} /> The API changes
               every now and then, and endpoints are deprecated. If you are using
               the API make sure to check in on{" "}
-              <Link to="#upcoming-deprecations" smooth>Upcoming deprecations</Link>{" "}
+              <Link to="#upcoming-deprecations">Upcoming deprecations</Link>{" "}
               from time to time. Note that we will always notice you in advance!
             </p>
           </TextUnit>

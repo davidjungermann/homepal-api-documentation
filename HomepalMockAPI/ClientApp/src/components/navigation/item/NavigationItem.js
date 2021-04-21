@@ -41,7 +41,6 @@ export const NavigationItem = ({
           to={"#" + formatUrl(label)}
           activeClassName="active"
           className="list-item-label"
-          smooth
           {...rest}
         >
           <span
