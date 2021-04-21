@@ -27,7 +27,7 @@ export const ConceptualInformation = ({ history }) => {
               </a>
               , which is an open ontology for real estate standards. The
               ontology describes the data model of a building and its
-              components. For the purpose of this prototype, the ontology has
+              components. <b>Note:</b> For the purpose of this prototype, the ontology has
               been simplified.
             </p>
             <p>
@@ -120,6 +120,23 @@ export const ConceptualInformation = ({ history }) => {
             }}
           ></BodyDescription>
         </Usage>
+      </Section>
+
+      <Section id="enumerated-values" history={history}>
+        <Description>
+          <TextUnit header="Enumerated Values" isSubsection>
+            <p>
+              Some resources have <b>enumerated values</b>. Essentially, this
+              means that an attribute for an object can be one of several
+              options.
+            </p>
+            <p>
+              Where applicable, these enumerated values will be listed along
+              with the resource.
+            </p>
+          </TextUnit>
+        </Description>
+        <Usage>{/* Usage */}</Usage>
       </Section>
     </SectionWrapper>
   );

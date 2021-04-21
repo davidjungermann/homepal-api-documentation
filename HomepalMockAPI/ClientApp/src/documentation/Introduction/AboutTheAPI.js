@@ -66,7 +66,7 @@ export const AboutTheApi = ({ history, token }) => {
               <li>the available endpoints,</li>
               <li>one or more data representations,</li>
               <li>JSON objects,</li>
-              <li>the supported methods (GET, POST, PATCH, DELETE),</li>
+              <li>the supported methods (GET, POST, PUT, DELETE),</li>
               <li>at least one usage example.</li>
             </ul>
             <p className="small">

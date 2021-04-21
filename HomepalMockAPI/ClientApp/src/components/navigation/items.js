@@ -10,10 +10,10 @@ export const items = [
         items: [
           { label: "Conceptual Overview" },
           { label: "Database Properties" },
+          { label: "Enumerated Values" },
         ],
       },
       { label: "Authorization", items: [{ label: "Access key" }] },
-      { label: "Enumerated Values" },
       { label: "Validations" },
       {
         label: "Errors",
