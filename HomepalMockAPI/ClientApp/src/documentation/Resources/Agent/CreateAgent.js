@@ -92,9 +92,8 @@ export const CreateAgent = ({ history, token }) => {
           <Endpoint request="POST" baseUrl="api/agents"></Endpoint>
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>
-          curl --request POST https://localhost:6001/api/agents/ \ {"\n"}
-          --header "Content-Type: application/json" \ {"\n"}
-          --data '&#123;"name":"New Agent"&#125;' \ {"\n"}
+          curl --header "Content-Type: application/json" --request POST --data
+          '&#123;"name":"New Agent"&#125;' https://localhost:6001/api/agents
         </Example>
 
         <BodyDescription
