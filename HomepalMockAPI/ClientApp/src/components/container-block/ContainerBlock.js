@@ -42,7 +42,7 @@ export const ContainerBlock = ({
           {" -u " + token + ":"}
         </div>
       ) : (
-        <div className="container-block-content">{content}</div>
+        <div className="container-block-content"><pre>{content}</pre></div>
       )}
     </div>
   );

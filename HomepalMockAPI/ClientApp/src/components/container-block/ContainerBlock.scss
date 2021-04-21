@@ -23,9 +23,10 @@
 .container-block-content {
   font-size: 10.5pt;
   font-family: $code-font;
+  line-height: 1.6;
   color: $gray-6;
   padding: 24px 24px 24px 24px;
-  white-space: nowrap;
+  //white-space: nowrap;
   overflow-x: scroll;
   box-sizing: border-box;
 
