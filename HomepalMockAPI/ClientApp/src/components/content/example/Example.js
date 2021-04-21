@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { ContainerBlock } from "../../container-block/ContainerBlock";
 import "./Example.scss";
 
-export const Example = ({ children, header, copy, token }) => {
+export const Example = ({ children, header, copy, token}) => {
   const [content] = useState(children);
   const [copied, setCopied] = useState(false);
   const [authToken, setAuthToken] = useState(token);
@@ -12,12 +12,12 @@ export const Example = ({ children, header, copy, token }) => {
   }, [token]);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(content);
+    navigator.clipboard.writeText(content.join(''));
     setCopied(true);
   };
 
   const handleAuthCopy = () => {
-    navigator.clipboard.writeText(content + " -u " + authToken + ":");
+    navigator.clipboard.writeText(content + "\n-u " + authToken + ":");
     setCopied(true);
   };
 
@@ -37,7 +37,7 @@ export const Example = ({ children, header, copy, token }) => {
             handleLeave={handleLeave}
             token={authToken}
           >
-            {/* <span className="dollar-sign">$ </span> */}
+            <span className="dollar-sign">$ </span>
             <pre>{content}</pre>
           </ContainerBlock>
         </React.Fragment>
