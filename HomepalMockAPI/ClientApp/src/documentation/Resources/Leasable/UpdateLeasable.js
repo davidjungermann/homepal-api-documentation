@@ -181,7 +181,7 @@ export const UpdateLeasable = ({ history, token }) => {
         ></BodyDescription>
 
         <ContainerBlock header="RESPONSE BODY EXAMPLE" inactiveContainerBlock>
-          <p>There is no response body for this endpoint.</p>
+          <p>{"// "}There is no response body for this endpoint.</p>
         </ContainerBlock>
       </Usage>
     </Section>

@@ -111,7 +111,7 @@ export const GetAgents = ({ history, token }) => {
         </Example>
 
         <ContainerBlock header="REQUEST BODY EXAMPLE" inactiveContainerBlock>
-          <p>There is no request body for this endpoint.</p>
+          <p>{"// "}There is no request body for this endpoint.</p>
         </ContainerBlock>
 
         <BodyDescription

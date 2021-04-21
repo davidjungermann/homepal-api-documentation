@@ -111,7 +111,7 @@ export const CreateBuilding = ({ history, token }) => {
           </ReturnsItem>
         </Returns>
         <h3 className="schema-title title-7">Path Schema</h3>
-        <Table
+        <Table inactiveTable
           cols={[
             {
               Header: "PARAMETER",
@@ -154,8 +154,8 @@ export const CreateBuilding = ({ history, token }) => {
           }}
         ></BodyDescription>
 
-        <ContainerBlock header="RESPONSE BODY EXAMPLE">
-          <p>There is no response body for this endpoint.</p>
+        <ContainerBlock header="RESPONSE BODY EXAMPLE" inactiveContainerBlock>
+          <p>{"// "}There is no response body for this endpoint.</p>
         </ContainerBlock>
       </Usage>
     </Section>

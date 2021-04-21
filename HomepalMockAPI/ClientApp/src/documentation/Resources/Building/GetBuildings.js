@@ -26,7 +26,7 @@ export const GetBuildings = ({ history, token }) => {
           </p>
         </TextUnit>
         <h3 className="schema-title title-7">Body Schema</h3>
-        <Table
+        <Table inactiveTable
           cols={[
             {
               Header: "ATTRIBUTE",
@@ -111,8 +111,8 @@ export const GetBuildings = ({ history, token }) => {
           https://localhost:6001/api/buildings?limit=3&offset=1&sort=street_number
         </Example>
 
-        <ContainerBlock header="REQUEST BODY EXAMPLE">
-          <p>There is no request body for this endpoint.</p>
+        <ContainerBlock header="REQUEST BODY EXAMPLE" inactiveContainerBlock>
+          <p>{"// "}There is no request body for this endpoint.</p>
         </ContainerBlock>
 
         <BodyDescription

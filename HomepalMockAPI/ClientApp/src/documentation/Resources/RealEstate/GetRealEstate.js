@@ -95,7 +95,7 @@ export const GetRealEstate = ({ history, token }) => {
         </Example>
 
         <ContainerBlock header="REQUEST BODY EXAMPLE" inactiveContainerBlock>
-          <p>There is no request body for this endpoint.</p>
+          <p>{"// "}There is no request body for this endpoint.</p>
         </ContainerBlock>
 
         <BodyDescription
