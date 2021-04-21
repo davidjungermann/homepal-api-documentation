@@ -123,7 +123,7 @@ export const Leasable = ({ history, token }) => {
               {
                 col1: (
                   <TableItem description="ID of Leasable that Leasable belongs to.">
-                    Leasable_id
+                    leasable_id
                   </TableItem>
                 ),
                 col2: "Integer",
@@ -233,7 +233,7 @@ export const Leasable = ({ history, token }) => {
               size: 73,
               customer_id: 5,
               owner_id: 1,
-              Leasable_id: 1,
+              leasable_id: 1,
             }}
           ></BodyDescription>
         </Usage>

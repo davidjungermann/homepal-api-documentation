@@ -24,9 +24,9 @@ export const CreateOwner = ({ history, token }) => {
             <span className="code-badge">Owner</span>.
           </p>
           <p>
-            The <span className="code-badge">id</span> attribute <b>must</b> refer to
-            an already existing <span className="code-badge">id</span> attribute
-            in <span className="code-badge">Agent</span>.
+            The <span className="code-badge">id</span> attribute <b>must</b>{" "}
+            refer to an already existing <span className="code-badge">id</span>{" "}
+            attribute in <span className="code-badge">Agent</span>.
           </p>
         </TextUnit>
         <h3 className="schema-title title-7">Body Schema</h3>
@@ -98,14 +98,14 @@ export const CreateOwner = ({ history, token }) => {
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>
           curl --header "Content-Type: application/json" --request POST --data
-          '&#123;"id":"1"&#125;' https://localhost:6001/api/owners
+          '&#123;"id":"8"&#125;' https://localhost:6001/api/owners
         </Example>
 
         <BodyDescription
           header={"REQUEST BODY EXAMPLE"}
           copy
           body={{
-            id: 1,
+            id: 8,
           }}
         ></BodyDescription>
 

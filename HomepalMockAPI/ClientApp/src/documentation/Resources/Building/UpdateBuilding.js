@@ -114,7 +114,8 @@ export const UpdateBuilding = ({ history, token }) => {
           </ReturnsItem>
         </Returns>
         <h3 className="schema-title title-7">Path Schema</h3>
-        <Table inactiveTable
+        <Table
+          inactiveTable
           cols={[
             {
               Header: "PARAMETER",
@@ -142,17 +143,18 @@ export const UpdateBuilding = ({ history, token }) => {
         <Example header="USAGE EXAMPLE" token={token} copy>
           curl --header "Content-Type: application/json" --request PUT --data
           '&#123;"id":"1", "class_descriptor":"ApartmentBuilding",
-          "street_name":"New Street", "street_number":"20", "postal_code":"223
-          33", "real_estate_id":"1"&#125;' https://localhost:6001/api/buildings
+          "street_name":"Updated Street", "street_number":"20",
+          "postal_code":"223 33", "real_estate_id":"1"&#125;'
+          https://localhost:6001/api/buildings
         </Example>
 
         <BodyDescription
-          header={"REQUEST BODY EXAMPLE"}
+          header={"REQUEST BODY EXAMPLE"}c
           copy
           body={{
             id: 1,
             class_descriptor: "ApartmentBuilding",
-            street_name: "New Street",
+            street_name: "Updated Street",
             street_number: "20",
             postal_code: "223 33",
             real_estate_id: 1,
