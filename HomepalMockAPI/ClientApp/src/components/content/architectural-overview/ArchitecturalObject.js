@@ -29,7 +29,7 @@ export const ArchitecturalObject = ({
               </div>
             );
           })}
-        <Link smooth to={"#" + link}>
+        <Link to={"#" + link}>
           <div
             className={"architectural-overview-badge-link " + additionalClass}
           >

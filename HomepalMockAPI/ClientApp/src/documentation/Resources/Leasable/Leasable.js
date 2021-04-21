@@ -29,15 +29,15 @@ export const Leasable = ({ history, token }) => {
             </p>
             <p>
               Leasable is part of{" "}
-              <Link to="#building" smooth>
+              <Link to="#building">
                 <span className="code-badge">Building</span>
               </Link>{" "}
               and has an{" "}
-              <Link to="#owner" smooth>
+              <Link to="#owner">
                 <span className="code-badge">Owner</span>
               </Link>
               , as well as a
-              <Link to="#customer" smooth>
+              <Link to="#customer">
                 <span className="code-badge">Customer</span>
               </Link>
               .

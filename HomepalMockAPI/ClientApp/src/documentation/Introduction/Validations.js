@@ -17,7 +17,7 @@ export const Validations = ({ history }) => {
               validations of data inputs to the Homebase API, other than the
               basic typing constraints placed on attributes for objects, as well
               as the key constraints described in{" "}
-              <Link to="#database-properties" smooth>
+              <Link to="#database-properties">
                 Database Properties
               </Link>
               .

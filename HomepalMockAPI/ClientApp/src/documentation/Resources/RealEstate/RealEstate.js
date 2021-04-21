@@ -30,7 +30,7 @@ export const RealEstate = ({ history, token }) => {
             <p>
               A RealEstate is a part of a{" "}
               <span className="code-badge">
-                <Link to="#region" smooth>
+                <Link to="#region">
                   Region
                 </Link>
               </span>
