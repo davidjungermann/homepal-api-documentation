@@ -26,9 +26,11 @@
   line-height: 1.6;
   color: $gray-6;
   padding: 24px 24px 24px 24px;
-  //white-space: nowrap;
+  white-space: pre;
   overflow-x: scroll;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
 
   &::-webkit-scrollbar {
     width: 8px;

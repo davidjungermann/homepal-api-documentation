@@ -37,8 +37,8 @@ export const Example = ({ children, header, copy, token }) => {
             handleLeave={handleLeave}
             token={authToken}
           >
-            <span className="dollar-sign">$ </span>
-            {content}
+            {/* <span className="dollar-sign">$ </span> */}
+            <pre>{content}</pre>
           </ContainerBlock>
         </React.Fragment>
       ) : (
@@ -50,7 +50,7 @@ export const Example = ({ children, header, copy, token }) => {
           handleLeave={handleLeave}
         >
           <span className="dollar-sign">$ </span>
-          {content}
+          <span>{content}</span>
         </ContainerBlock>
       )}
     </React.Fragment>
