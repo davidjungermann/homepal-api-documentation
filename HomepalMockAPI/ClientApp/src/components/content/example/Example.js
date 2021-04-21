@@ -17,7 +17,7 @@ export const Example = ({ children, header, copy, token}) => {
   };
 
   const handleAuthCopy = () => {
-    navigator.clipboard.writeText(content + "\n-u " + authToken + ":");
+    navigator.clipboard.writeText(content.join('') + "\n-u " + authToken + ":");
     setCopied(true);
   };
 
