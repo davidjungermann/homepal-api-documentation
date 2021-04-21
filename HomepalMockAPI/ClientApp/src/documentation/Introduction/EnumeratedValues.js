@@ -13,9 +13,14 @@ export const EnumeratedValues = ({ history }) => {
         <Description>
           <TextUnit header="Enumerated Values">
             <p>
-              Some resources have <b>enumerated values</b>.
+              Some resources have <b>enumerated values</b>. Essentially, this
+              means that an attribute for an object can be one of several
+              options.
             </p>
-            
+            <p>
+              Where applicable, these enumerated values will be listed along
+              with the resource.
+            </p>
           </TextUnit>
         </Description>
         <Usage>{/* Usage */}</Usage>
