@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { ContainerBlock } from "../../container-block/ContainerBlock";
-import nextId from "react-id-generator";
 
 import "./BodyDescription.scss";
 
@@ -25,7 +24,7 @@ export const BodyDescription = ({ header, body, copy }) => {
       copied={copied}
       handleLeave={handleLeave}
     >
-      {content}
+      <div>{content}</div>
     </ContainerBlock>
   );
 };
