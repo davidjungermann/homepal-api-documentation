@@ -7,8 +7,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: top;
   box-sizing: border-box;
-  padding: calc(40% * 0.1) calc(40% * 0.1) calc(40% * 0.1) calc(40% * 0.2);
+  padding: calc(40% * 0.2) calc(40% * 0.1) calc(40% * 0.1) calc(40% * 0.2);
   //border: 1px solid blue;
 }
