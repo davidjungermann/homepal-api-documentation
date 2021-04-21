@@ -38,7 +38,7 @@ export const DeleteAgent = ({ history, token }) => {
           </p>
         </TextUnit>
         <h3 className="schema-title title-7">Body Schema</h3>
-        <Table
+        <Table inactiveTable
           cols={[
             {
               Header: "ATTRIBUTE",
@@ -106,12 +106,12 @@ export const DeleteAgent = ({ history, token }) => {
           curl --request DELETE https://localhost:6001/api/agents/1
         </Example>
 
-        <ContainerBlock header="REQUEST BODY EXAMPLE">
-          <p>There is no request body for this endpoint.</p>
+        <ContainerBlock header="REQUEST BODY EXAMPLE" inactiveContainerBlock>
+          <p>{"// "}There is no request body for this endpoint.</p>
         </ContainerBlock>
 
-        <ContainerBlock header="RESPONSE BODY EXAMPLE">
-          <p>There is no response body for this endpoint.</p>
+        <ContainerBlock header="RESPONSE BODY EXAMPLE" inactiveContainerBlock>
+          <p>{"// "}There is no response body for this endpoint.</p>
         </ContainerBlock>
       </Usage>
     </Section>

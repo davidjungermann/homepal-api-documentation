@@ -26,7 +26,7 @@ export const GetAgent = ({ history, token }) => {
           </p>
         </TextUnit>
         <h3 className="schema-title title-7">Body Schema</h3>
-        <Table
+        <Table inactiveTable
           cols={[
             {
               Header: "ATTRIBUTE",
@@ -94,8 +94,8 @@ export const GetAgent = ({ history, token }) => {
           curl --request GET https://localhost:6001/api/agents/1
         </Example>
 
-        <ContainerBlock header="REQUEST BODY EXAMPLE">
-          <p>There is no request body for this endpoint.</p>
+        <ContainerBlock header="REQUEST BODY EXAMPLE" inactiveContainerBlock>
+          <p>{"// "}There is no request body for this endpoint.</p>
         </ContainerBlock>
 
         <BodyDescription
