@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ContainerBlock } from "../../container-block/ContainerBlock";
 import "./Example.scss";
+import ReactDOMServer from 'react-dom/server';
 
 export const Example = ({ children, header, copy, token}) => {
   const [content] = useState(children);
@@ -12,12 +13,20 @@ export const Example = ({ children, header, copy, token}) => {
   }, [token]);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(content.join(''));
+    if (Array.isArray(content)) {
+      navigator.clipboard.writeText(content.join(''));
+    } else {
+      navigator.clipboard.writeText(content);
+    }
     setCopied(true);
   };
 
   const handleAuthCopy = () => {
-    navigator.clipboard.writeText(content.join('') + "-u " + authToken + ":");
+    if (Array.isArray(content)) {
+      navigator.clipboard.writeText(content.join('') + "-u " + authToken + ":");
+    } else {
+      navigator.clipboard.writeText(content + "-u " + authToken + ":");
+    }
     setCopied(true);
   };
 
