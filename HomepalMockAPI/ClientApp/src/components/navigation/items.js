@@ -13,6 +13,7 @@ export const items = [
         ],
       },
       { label: "Authorization", items: [{ label: "Access key" }] },
+      { label: "Enumerated Values" },
       { label: "Validations" },
       {
         label: "Errors",
