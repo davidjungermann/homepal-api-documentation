@@ -33,7 +33,7 @@ export const QueryParameters = ({ history, token }) => {
           <TextUnit header="Pagination" isSubsection>
             <p>
               Pagination is the process of separating digital content into
-              discrete pages. In order to change which and how many records that
+              discrete pages. In order to change which and how many objects that
               are returned <span className="code-badge">offset</span>
               and <span className="code-badge">limit</span> are used as query
               parameters.
@@ -110,7 +110,7 @@ export const QueryParameters = ({ history, token }) => {
         <Description>
           <TextUnit header="Sorting" isSubsection>
             <p>
-              Sorting is the process of arranging records in a certain order. In
+              Sorting is the process of arranging objects in a certain order. In
               order to sort a collection according to a certain field,{" "}
               <span className="code-badge">sort</span> is used as a query
               parameter.
@@ -152,6 +152,11 @@ export const QueryParameters = ({ history, token }) => {
             resource. If the server does not support sorting as specified in the
             query parameter sort, it returns error{" "}
             <span className="code-badge">400 Bad Request</span>.
+          </p>
+          <p>
+            <span className="code-badge">sort</span> can be applied for
+            endpoints that return several objects. It is listed as a parameter
+            in the <b>Path Schema</b> where applicable for a given resource.
           </p>
         </Description>
         <Usage>

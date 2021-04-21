@@ -25,12 +25,10 @@ export const CreateBuilding = ({ history, token }) => {
             <span className="code-badge">Building</span>.
           </p>
           <p>
-            Since a <span className="code-badge">Building</span> is part of a{" "}
-            <span className="code-badge">RealEstate</span>, the{" "}
-            <span className="code-badge">real_estate_id</span> attribute must be
-            defined, and needs to refer to a{" "}
-            <span className="code-badge">RealEstate</span> in the Homebase API,
-            when creating a new <span className="code-badge">Building</span>.
+            The <span className="code-badge">real_estate_id</span> attribute{" "}
+            <b>must</b> refer to an already existing{" "}
+            <span className="code-badge">id</span> attribute in{" "}
+            <span className="code-badge">RealEstate</span>.
           </p>
         </TextUnit>
         <h3 className="schema-title title-7">Body Schema</h3>
@@ -111,7 +109,8 @@ export const CreateBuilding = ({ history, token }) => {
           </ReturnsItem>
         </Returns>
         <h3 className="schema-title title-7">Path Schema</h3>
-        <Table inactiveTable
+        <Table
+          inactiveTable
           cols={[
             {
               Header: "PARAMETER",

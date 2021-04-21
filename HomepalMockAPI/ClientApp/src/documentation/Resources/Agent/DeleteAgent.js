@@ -24,21 +24,10 @@ export const DeleteAgent = ({ history, token }) => {
             From this endpoint, you can delete an
             <span className="code-badge">Agent</span>.
           </p>
-          <p>
-            Since
-            <span className="code-badge">Agent</span> is a superclass of{" "}
-            <span className="code-badge">Customer</span> and{" "}
-            <span className="code-badge">Owner</span>, deletion of an{" "}
-            <span className="code-badge">Agent</span> propagates, resulting in
-            deletion of resources for{" "}
-            <span className="code-badge">Customer</span> and{" "}
-            <span className="code-badge">Owners</span>, if the{" "}
-            <span className="code-badge">Agent</span> is defined as either of
-            the subclasses.
-          </p>
         </TextUnit>
         <h3 className="schema-title title-7">Body Schema</h3>
-        <Table inactiveTable
+        <Table
+          inactiveTable
           cols={[
             {
               Header: "ATTRIBUTE",

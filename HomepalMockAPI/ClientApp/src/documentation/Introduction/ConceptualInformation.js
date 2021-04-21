@@ -113,7 +113,7 @@ export const ConceptualInformation = ({ history }) => {
               class_descriptor: "ResidentialPremise",
               price: 3483,
               description: "Apartment in central Malmö",
-              size: "73 m²",
+              size: 73,
               customer_id: 5,
               owner_id: 1,
               building_id: 1,
