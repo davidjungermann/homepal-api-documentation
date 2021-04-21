@@ -68,11 +68,16 @@ export const ConceptualInformation = ({ history }) => {
               developers should consider when using the API.
             </p>
             <p>
+              All objects have a unique identifier, which <b>cannot</b> be
+              modified.
+            </p>
+            <p>
               The database is built on a <b>foreign key</b> structure. This
               means that objects in the API often are related to other objects
-              based on an <b>unique identifier</b> present in the related
+              based on the <b>unique identifier</b> present in the related
               object.
             </p>
+
             <p>
               An example of this is <span className="code-badge">Leasable</span>
               , which has three separate foreign keys that relate the object to
@@ -94,7 +99,7 @@ export const ConceptualInformation = ({ history }) => {
               higher up in the hierarchy, like{" "}
               <span className="code-badge">Building</span>, is deleted. Objects
               from other resources, like{" "}
-              <span className="code-badge">Leasables</span>, that depend on the
+              <span className="code-badge">Leasables</span>, that reference the
               deleted object, will also be deleted.
             </p>
           </TextUnit>

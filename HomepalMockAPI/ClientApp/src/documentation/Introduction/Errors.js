@@ -116,6 +116,22 @@ export const Errors = ({ history }) => {
                 ),
                 col2: "BadRequest",
               },
+              {
+                col1: (
+                  <TableItem description="The server cannot find the requested resource.">
+                    404
+                  </TableItem>
+                ),
+                col2: "NotFound",
+              },
+              {
+                col1: (
+                  <TableItem description="The server is not functioning as intended.">
+                    500
+                  </TableItem>
+                ),
+                col2: "InternalServerError",
+              },
             ]}
           ></Table>
         </Description>

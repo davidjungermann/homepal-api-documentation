@@ -4,6 +4,7 @@ import { Description } from "../../components/description/Description";
 import { Section } from "../../components/section/Section";
 import { Usage } from "../../components/usage/Usage";
 import { SectionWrapper } from "../../components/content/section-wrapper/SectionWrapper";
+import { NavHashLink as Link } from "react-router-hash-link";
 
 export const Validations = ({ history }) => {
   return (
@@ -12,8 +13,13 @@ export const Validations = ({ history }) => {
         <Description>
           <TextUnit header="Validations">
             <p>
-              Currently there are no validations of data inputs to the Homebase API.
+              For the purpose of this prototype, there are currently no
+              validations of data inputs to the Homebase API, other than the
+              basic typing constraints placed on attributes for objects, as well
+              as the key constraints described in{" "}
+              <Link to="#database-properties">Database Properties</Link>.
             </p>
+            <p>Typing constraints for attributes are described under each resource. </p>
           </TextUnit>
         </Description>
         <Usage>{/* Usage */}</Usage>
