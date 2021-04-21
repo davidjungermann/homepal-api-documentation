@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { ContainerBlock } from "../../container-block/ContainerBlock";
 import "./Example.scss";
-import ReactDOMServer from 'react-dom/server';
 
-export const Example = ({ children, header, copy, token}) => {
+export const Example = ({ children, header, copy, token }) => {
   const [content] = useState(children);
   const [copied, setCopied] = useState(false);
   const [authToken, setAuthToken] = useState(token);
@@ -13,20 +12,12 @@ export const Example = ({ children, header, copy, token}) => {
   }, [token]);
 
   const handleCopy = () => {
-    if (Array.isArray(content)) {
-      navigator.clipboard.writeText(content.join(''));
-    } else {
-      navigator.clipboard.writeText(content);
-    }
+    navigator.clipboard.writeText(content);
     setCopied(true);
   };
 
   const handleAuthCopy = () => {
-    if (Array.isArray(content)) {
-      navigator.clipboard.writeText(content.join('') + "-u " + authToken + ":");
-    } else {
-      navigator.clipboard.writeText(content + "-u " + authToken + ":");
-    }
+    navigator.clipboard.writeText(content + " -u " + authToken + ":");
     setCopied(true);
   };
 
@@ -46,8 +37,8 @@ export const Example = ({ children, header, copy, token}) => {
             handleLeave={handleLeave}
             token={authToken}
           >
-            {/* <span className="dollar-sign">$ </span> */}
-            <pre>{content}</pre>
+            <span className="dollar-sign">$ </span>
+            {content}
           </ContainerBlock>
         </React.Fragment>
       ) : (
@@ -58,8 +49,8 @@ export const Example = ({ children, header, copy, token}) => {
           copied={copied}
           handleLeave={handleLeave}
         >
-          {/* <span className="dollar-sign">$ </span> */}
-          <span>{content}</span>
+          <span className="dollar-sign">$ </span>
+          {content}
         </ContainerBlock>
       )}
     </React.Fragment>
