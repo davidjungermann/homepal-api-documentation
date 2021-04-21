@@ -106,7 +106,7 @@ export const UpdateAgent = ({ history, token }) => {
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>
           curl --header "Content-Type: application/json" --request PUT --data
-          '&#123;"id":"1","name":"NewAgent"&#125;'
+          '&#123;"id":"1","name":"Updated Agent"&#125;'
           https://localhost:6001/api/agents
         </Example>
 
@@ -115,7 +115,7 @@ export const UpdateAgent = ({ history, token }) => {
           copy
           body={{
             id: "1",
-            name: "Mitt Malmö",
+            name: "Updated Agent",
           }}
         ></BodyDescription>
 

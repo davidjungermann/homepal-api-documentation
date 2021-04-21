@@ -27,13 +27,16 @@ export const ConceptualInformation = ({ history }) => {
               </a>
               , which is an open ontology for real estate standards. The
               ontology describes the data model of a building and its
-              components. <b>Note:</b> For the purpose of this prototype, the ontology has
-              been simplified.
+              components. <b>Note:</b> For the purpose of this prototype, the
+              ontology has been simplified.
             </p>
             <p>
               To get a better conceptual understanding of the API's resources
               and their relations we recommend the{" "}
-              <Link to="#conceptual-overview" smooth>Conceptual overview</Link>.
+              <Link to="#conceptual-overview" smooth>
+                Conceptual overview
+              </Link>
+              .
             </p>
           </TextUnit>
         </Description>
@@ -127,8 +130,8 @@ export const ConceptualInformation = ({ history }) => {
           <TextUnit header="Enumerated Values" isSubsection>
             <p>
               Some resources have <b>enumerated values</b>. Essentially, this
-              means that an attribute for an object can be one of several
-              options.
+              means that an attribute for an object can be one of several,
+              predetermined options.
             </p>
             <p>
               Where applicable, these enumerated values will be listed along
