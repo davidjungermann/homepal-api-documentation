@@ -10,9 +10,14 @@ import { EndpointList } from "../../../components/content/endpoint-list/Endpoint
 import { Endpoint } from "../../../components/content/endpoint/Endpoint";
 import { BodyDescription } from "../../../components/content/body-description/BodyDescription";
 import { NavHashLink as Link } from "react-router-hash-link";
+import { CreateRealEstate } from "./CreateRealEstate";
+import { DeleteRealEstate } from "./DeleteRealEstate";
+import { GetRealEstate } from "./GetRealEstate";
+import { GetRealEstates } from "./GetRealEstates";
+import { UpdateRealEstate } from "./UpdateRealEstate";
 import "../../../index.scss";
 
-export const RealEstate = ({ history }) => {
+export const RealEstate = ({ history, token }) => {
   return (
     <SectionWrapper>
       <Section id="realestate" history={history}>
@@ -118,6 +123,13 @@ export const RealEstate = ({ history }) => {
           ></BodyDescription>
         </Usage>
       </Section>
+
+      <GetRealEstates history={history} token={token}/>
+      <GetRealEstate history={history} token={token}/>
+      <CreateRealEstate history={history} token={token}/>
+      <UpdateRealEstate history={history} token={token}/>
+      <DeleteRealEstate history={history} token={token}/>
+
     </SectionWrapper>
   );
 };

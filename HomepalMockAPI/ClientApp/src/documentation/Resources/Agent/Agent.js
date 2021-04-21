@@ -10,9 +10,14 @@ import { EndpointList } from "../../../components/content/endpoint-list/Endpoint
 import { Endpoint } from "../../../components/content/endpoint/Endpoint";
 import { BodyDescription } from "../../../components/content/body-description/BodyDescription";
 import { NavHashLink as Link } from "react-router-hash-link";
+import { CreateAgent } from "./CreateAgent";
+import { DeleteAgent } from "./DeleteAgent";
+import { GetAgent } from "./GetAgent";
+import { GetAgents } from "./GetAgents";
+import { UpdateAgent } from "./UpdateAgent";
 import "../../../index.scss";
 
-export const Agent = ({ history }) => {
+export const Agent = ({ history, token }) => {
   return (
     <SectionWrapper>
       <Section id="agent" history={history}>
@@ -102,6 +107,13 @@ export const Agent = ({ history }) => {
           ></BodyDescription>
         </Usage>
       </Section>
+      
+      <GetAgents history={history} token={token}/>
+      <GetAgent history={history} token={token}/>
+      <CreateAgent history={history} token={token}/>
+      <UpdateAgent history={history} token={token}/>
+      <DeleteAgent history={history} token={token}/>
+      
     </SectionWrapper>
   );
 };

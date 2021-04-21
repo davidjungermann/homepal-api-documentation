@@ -10,9 +10,12 @@ import { EndpointList } from "../../../components/content/endpoint-list/Endpoint
 import { Endpoint } from "../../../components/content/endpoint/Endpoint";
 import { BodyDescription } from "../../../components/content/body-description/BodyDescription";
 import { NavHashLink as Link } from "react-router-hash-link";
+import { CreateRegion } from "./CreateRegion";
+import { DeleteRegion } from "./DeleteRegion";
+import { GetRegions } from "./GetRegions";
 import "../../../index.scss";
 
-export const Region = ({ history }) => {
+export const Region = ({ history, token }) => {
   return (
     <SectionWrapper>
       <Section id="region" history={history}>
@@ -77,6 +80,11 @@ export const Region = ({ history }) => {
           ></BodyDescription>
         </Usage>
       </Section>
+
+      <GetRegions history={history} token={token}/>
+      <CreateRegion history={history} token={token}/>
+      <DeleteRegion history={history} token={token}/>
+
     </SectionWrapper>
   );
 };

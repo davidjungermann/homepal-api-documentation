@@ -10,9 +10,12 @@ import { EndpointList } from "../../../components/content/endpoint-list/Endpoint
 import { Endpoint } from "../../../components/content/endpoint/Endpoint";
 import { BodyDescription } from "../../../components/content/body-description/BodyDescription";
 import { NavHashLink as Link } from "react-router-hash-link";
+import { CreateOwner } from "./CreateOwner";
+import { DeleteOwner } from "./DeleteOwner";
+import { GetOwners } from "./GetOwners";
 import "../../../index.scss";
 
-export const Owner = ({ history }) => {
+export const Owner = ({ history, token }) => {
   return (
     <SectionWrapper>
       <Section id="owner" history={history}>
@@ -91,6 +94,11 @@ export const Owner = ({ history }) => {
           ></BodyDescription>
         </Usage>
       </Section>
+
+      <GetOwners history={history} token={token}/>
+      <CreateOwner history={history} token={token}/>
+      <DeleteOwner history={history} token={token}/>
+
     </SectionWrapper>
   );
 };

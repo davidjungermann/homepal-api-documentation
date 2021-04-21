@@ -10,9 +10,14 @@ import { EndpointList } from "../../../components/content/endpoint-list/Endpoint
 import { Endpoint } from "../../../components/content/endpoint/Endpoint";
 import { BodyDescription } from "../../../components/content/body-description/BodyDescription";
 import { NavHashLink as Link } from "react-router-hash-link";
+import { CreateBuilding } from "./CreateBuilding";
+import { DeleteBuilding } from "./DeleteBuilding";
+import { GetBuilding } from "./GetBuilding";
+import { GetBuildings } from "./GetBuildings";
+import { UpdateBuilding } from "./UpdateBuilding";
 import "../../../index.scss";
 
-export const Building = ({ history }) => {
+export const Building = ({ history, token }) => {
   return (
     <SectionWrapper>
       <Section id="building" history={history}>
@@ -175,6 +180,13 @@ export const Building = ({ history }) => {
           ></BodyDescription>
         </Usage>
       </Section>
+
+      <GetBuildings history={history} token={token}/>
+      <GetBuilding history={history} token={token}/>
+      <CreateBuilding history={history} token={token}/>
+      <UpdateBuilding history={history} token={token}/>
+      <DeleteBuilding history={history} token={token}/>
+
     </SectionWrapper>
   );
 };

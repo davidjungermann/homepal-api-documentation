@@ -10,9 +10,12 @@ import { EndpointList } from "../../../components/content/endpoint-list/Endpoint
 import { Endpoint } from "../../../components/content/endpoint/Endpoint";
 import { BodyDescription } from "../../../components/content/body-description/BodyDescription";
 import { NavHashLink as Link } from "react-router-hash-link";
+import { CreateCustomer } from "./CreateCustomer";
+import { DeleteCustomer } from "./DeleteCustomer";
+import { GetCustomers } from "./GetCustomers";
 import "../../../index.scss";
 
-export const Customer = ({ history }) => {
+export const Customer = ({ history, token }) => {
   return (
     <SectionWrapper>
       <Section id="customer" history={history}>
@@ -91,6 +94,11 @@ export const Customer = ({ history }) => {
           ></BodyDescription>
         </Usage>
       </Section>
+
+      <GetCustomers history={history} token={token}/>
+      <CreateCustomer history={history} token={token}/>
+      <DeleteCustomer history={history} token={token}/>
+
     </SectionWrapper>
   );
 };

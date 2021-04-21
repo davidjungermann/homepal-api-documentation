@@ -10,9 +10,14 @@ import { EndpointList } from "../../../components/content/endpoint-list/Endpoint
 import { Endpoint } from "../../../components/content/endpoint/Endpoint";
 import { BodyDescription } from "../../../components/content/body-description/BodyDescription";
 import { NavHashLink as Link } from "react-router-hash-link";
+import { CreateLeasable } from "./CreateLeasable";
+import { DeleteLeasable } from "./DeleteLeasable";
+import { GetLeasable } from "./GetLeasable";
+import { GetLeasables } from "./GetLeasables";
+import { UpdateLeasable } from "./UpdateLeasable";
 import "../../../index.scss";
 
-export const Leasable = ({ history }) => {
+export const Leasable = ({ history, token }) => {
   return (
     <SectionWrapper>
       <Section id="leasable" history={history}>
@@ -114,8 +119,8 @@ export const Leasable = ({ history }) => {
               },
               {
                 col1: (
-                  <TableItem description="ID of Building that Leasable belongs to.">
-                    building_id
+                  <TableItem description="ID of Leasable that Leasable belongs to.">
+                    Leasable_id
                   </TableItem>
                 ),
                 col2: "Integer",
@@ -225,11 +230,18 @@ export const Leasable = ({ history }) => {
               size: "73 m²",
               customer_id: 5,
               owner_id: 1,
-              building_id: 1,
+              Leasable_id: 1,
             }}
           ></BodyDescription>
         </Usage>
       </Section>
+
+      <GetLeasables history={history} token={token}/>
+      <GetLeasable history={history} token={token}/>
+      <CreateLeasable history={history} token={token}/>
+      <UpdateLeasable history={history} token={token}/>
+      <DeleteLeasable history={history} token={token}/>
+
     </SectionWrapper>
   );
 };
