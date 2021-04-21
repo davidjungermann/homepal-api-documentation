@@ -96,7 +96,7 @@ export const QueryParameters = ({ history, token }) => {
             <span className="code-badge">offset</span> and{" "}
             <span className="code-badge">limit</span> can be applied for
             endpoints that return several objects. They are listed as parameters
-            in the <b>Path Schema</b> where applicable for a given resource.
+            in the <b>Path Schema</b> under every resource (if applicable).
           </p>
         </Description>
         <Usage>

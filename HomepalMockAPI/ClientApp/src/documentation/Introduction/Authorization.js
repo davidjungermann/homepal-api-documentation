@@ -30,7 +30,7 @@ export const Authorization = ({
               fail. API requests without authentication will also fail.
             </p>
             <p>
-              You can generate keys in <Link to="#access-key">Access key</Link>,
+              You can generate keys in <Link to="#access-key">Access key</Link>{" "}
               in order to test the API from within the documentation using the
               examples, or using the same access key in your own environment.
             </p>

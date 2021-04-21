@@ -47,7 +47,7 @@ export const Versioning = ({ history }) => {
               Planned upcoming deprecations of the Homebase API are listed below:
             </p>
           </TextUnit>
-          <Table
+          <Table inactiveTable
             cols={[
               {
                 Header: "DEPRECATION",

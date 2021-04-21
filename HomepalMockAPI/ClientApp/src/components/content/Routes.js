@@ -42,7 +42,6 @@ import { DeleteRealEstate } from "../../documentation/Resources/RealEstate/Delet
 import { GetRegions } from "../../documentation/Resources/Region/GetRegions";
 import { CreateRegion } from "../../documentation/Resources/Region/CreateRegion";
 import { DeleteRegion } from "../../documentation/Resources/Region/DeleteRegion";
-import { EnumeratedValues } from "../../documentation/Introduction/EnumeratedValues";
 
 export const routes = [
   {
@@ -64,11 +63,6 @@ export const routes = [
         valid={valid}
         setValid={setValid}
       ></Authorization>
-    ),
-  },
-  {
-    main: ({ history }) => (
-      <EnumeratedValues history={history}></EnumeratedValues>
     ),
   },
   {
