@@ -17,7 +17,7 @@ export const Example = ({ children, header, copy, token}) => {
   };
 
   const handleAuthCopy = () => {
-    navigator.clipboard.writeText(content.join('') + "\n-u " + authToken + ":");
+    navigator.clipboard.writeText(content.join('') + "-u " + authToken + ":");
     setCopied(true);
   };
 
@@ -37,7 +37,7 @@ export const Example = ({ children, header, copy, token}) => {
             handleLeave={handleLeave}
             token={authToken}
           >
-            <span className="dollar-sign">$ </span>
+            {/* <span className="dollar-sign">$ </span> */}
             <pre>{content}</pre>
           </ContainerBlock>
         </React.Fragment>
@@ -49,7 +49,7 @@ export const Example = ({ children, header, copy, token}) => {
           copied={copied}
           handleLeave={handleLeave}
         >
-          <span className="dollar-sign">$ </span>
+          {/* <span className="dollar-sign">$ </span> */}
           <span>{content}</span>
         </ContainerBlock>
       )}

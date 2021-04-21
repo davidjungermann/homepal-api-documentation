@@ -39,7 +39,7 @@ export const ContainerBlock = ({
       {token ? (
         <div className="container-block-content">
           {content}
-          {" -u " + token + ":"}
+          {"-u " + token + ":"}
         </div>
       ) : (
         <div className="container-block-content">{content}</div>
