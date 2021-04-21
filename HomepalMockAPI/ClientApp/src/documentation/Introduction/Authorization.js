@@ -30,7 +30,7 @@ export const Authorization = ({
               fail. API requests without authentication will also fail.
             </p>
             <p>
-              You can generate keys in <Link to="#access-key" smooth>Access key</Link>{" "}
+              You can generate keys in <Link to="#generate-access-key" smooth>Access key</Link>{" "}
               in order to test the API from within the documentation using the
               examples, or using the same access key in your own environment.
             </p>
@@ -38,9 +38,9 @@ export const Authorization = ({
         </Description>
         <Usage></Usage>
       </Section>
-      <Section id="access-key" history={history}>
+      <Section id="generate-access-key" history={history}>
         <Description>
-          <TextUnit header="Access key" isSubsection>
+          <TextUnit header="Generate Access Key" isSubsection>
             <p>
               Generate an access key and include it in your requests in order to
               be authorized.

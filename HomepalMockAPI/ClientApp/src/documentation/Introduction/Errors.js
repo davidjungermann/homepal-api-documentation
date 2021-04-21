@@ -93,7 +93,7 @@ export const Errors = ({ history }) => {
 
       <Section id="error-codes" history={history}>
         <Description>
-          <TextUnit header="Error codes" isSubsection>
+          <TextUnit header="Error Codes" isSubsection>
             <p>Hombase API uses the following response status codes:</p>
           </TextUnit>
           <Table

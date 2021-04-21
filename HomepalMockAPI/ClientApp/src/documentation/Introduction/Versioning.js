@@ -45,7 +45,7 @@ export const Versioning = ({ history }) => {
 
       <Section id="upcoming-deprecations" history={history}>
         <Description>
-          <TextUnit header="Upcoming deprecations" isSubsection>
+          <TextUnit header="Upcoming Deprecations" isSubsection>
             <p>
               Planned upcoming deprecations of the Homebase API are listed
               below:
