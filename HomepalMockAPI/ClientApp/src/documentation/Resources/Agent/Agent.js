@@ -29,7 +29,7 @@ export const Agent = ({ history, token }) => {
             </p>
             <p>
               Agent is a <b>superclass</b> of{" "}
-              <Link to="#customer">
+              <Link to="#customer" smooth>
                 <span className="code-badge">Customer</span>
               </Link>{" "}
               and{" "}

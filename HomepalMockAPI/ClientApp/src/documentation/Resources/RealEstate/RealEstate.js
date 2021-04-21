@@ -27,6 +27,15 @@ export const RealEstate = ({ history, token }) => {
               A <span className="code-badge">RealEstate</span> describes a
               RealEstate in the Homebase API.
             </p>
+            <p>
+              A RealEstate is a part of a{" "}
+              <span className="code-badge">
+                <Link to="#region" smooth>
+                  Region
+                </Link>
+              </span>
+              .
+            </p>
           </TextUnit>
           <Table
             cols={[
@@ -124,12 +133,11 @@ export const RealEstate = ({ history, token }) => {
         </Usage>
       </Section>
 
-      <GetRealEstates history={history} token={token}/>
-      <GetRealEstate history={history} token={token}/>
-      <CreateRealEstate history={history} token={token}/>
-      <UpdateRealEstate history={history} token={token}/>
-      <DeleteRealEstate history={history} token={token}/>
-
+      <GetRealEstates history={history} token={token} />
+      <GetRealEstate history={history} token={token} />
+      <CreateRealEstate history={history} token={token} />
+      <UpdateRealEstate history={history} token={token} />
+      <DeleteRealEstate history={history} token={token} />
     </SectionWrapper>
   );
 };

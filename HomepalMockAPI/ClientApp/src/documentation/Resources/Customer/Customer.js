@@ -29,15 +29,14 @@ export const Customer = ({ history, token }) => {
 
             <p>
               Customer is a <b>subclass</b> of{" "}
-              <Link to="#agent">
+              <Link to="#agent" smooth>
                 <span className="code-badge">Agent</span>
               </Link>
-              . The <span className="code-badge">id</span>{" "}
-              attribute references the <span className="code-badge">id</span>{" "}
-              attribute in <span className="code-badge">Agent</span>.
-              Subsequently, this means that a{" "}
-              <span className="code-badge">Customer</span> must also be defined
-              as an <span className="code-badge">Agent</span>.
+              . The <span className="code-badge">id</span> attribute references
+              the <span className="code-badge">id</span> attribute in{" "}
+              <span className="code-badge">Agent</span>. Subsequently, this
+              means that a <span className="code-badge">Customer</span> must
+              also be defined as an <span className="code-badge">Agent</span>.
             </p>
           </TextUnit>
           <Table
@@ -95,10 +94,9 @@ export const Customer = ({ history, token }) => {
         </Usage>
       </Section>
 
-      <GetCustomers history={history} token={token}/>
-      <CreateCustomer history={history} token={token}/>
-      <DeleteCustomer history={history} token={token}/>
-
+      <GetCustomers history={history} token={token} />
+      <CreateCustomer history={history} token={token} />
+      <DeleteCustomer history={history} token={token} />
     </SectionWrapper>
   );
 };

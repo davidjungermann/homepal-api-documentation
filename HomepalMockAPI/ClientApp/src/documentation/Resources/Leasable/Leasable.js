@@ -25,16 +25,19 @@ export const Leasable = ({ history, token }) => {
           <TextUnit header="Leasable">
             <p>
               A <span className="code-badge">Leasable</span> describes a
-              leasable space in the Homebase API. Leasable is part of{" "}
-              <Link to="#building">
+              leasable space in the Homebase API.
+            </p>
+            <p>
+              Leasable is part of{" "}
+              <Link to="#building" smooth>
                 <span className="code-badge">Building</span>
               </Link>{" "}
               and has an{" "}
-              <Link to="#owner">
+              <Link to="#owner" smooth>
                 <span className="code-badge">Owner</span>
               </Link>
               , as well as a
-              <Link to="#customer">
+              <Link to="#customer" smooth>
                 <span className="code-badge">Customer</span>
               </Link>
               .
@@ -236,12 +239,11 @@ export const Leasable = ({ history, token }) => {
         </Usage>
       </Section>
 
-      <GetLeasables history={history} token={token}/>
-      <GetLeasable history={history} token={token}/>
-      <CreateLeasable history={history} token={token}/>
-      <UpdateLeasable history={history} token={token}/>
-      <DeleteLeasable history={history} token={token}/>
-
+      <GetLeasables history={history} token={token} />
+      <GetLeasable history={history} token={token} />
+      <CreateLeasable history={history} token={token} />
+      <UpdateLeasable history={history} token={token} />
+      <DeleteLeasable history={history} token={token} />
     </SectionWrapper>
   );
 };

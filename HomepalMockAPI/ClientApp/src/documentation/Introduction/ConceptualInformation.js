@@ -33,7 +33,7 @@ export const ConceptualInformation = ({ history }) => {
             <p>
               To get a better conceptual understanding of the API's resources
               and their relations we recommend the{" "}
-              <Link to="#conceptual-overview">Conceptual overview</Link>.
+              <Link to="#conceptual-overview" smooth>Conceptual overview</Link>.
             </p>
           </TextUnit>
         </Description>
