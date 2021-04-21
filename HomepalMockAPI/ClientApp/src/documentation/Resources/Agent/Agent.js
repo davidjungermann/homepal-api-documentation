@@ -20,7 +20,10 @@ export const Agent = ({ history }) => {
           <TextUnit header="Agent">
             <p>
               An <span className="code-badge">Agent</span> describes a person or
-              legal person in the Homebase API. Agent is a <b>superclass</b> of{" "}
+              legal person in the Homebase API.
+            </p>
+            <p>
+              Agent is a <b>superclass</b> of{" "}
               <Link to="#customer">
                 <span className="code-badge">Customer</span>
               </Link>{" "}

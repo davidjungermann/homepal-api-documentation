@@ -29,7 +29,7 @@ export const Customer = ({ history }) => {
               <Link to="#agent">
                 <span className="code-badge">Agent</span>
               </Link>
-              . This means that the <span className="code-badge">id</span>{" "}
+              . The <span className="code-badge">id</span>{" "}
               attribute references the <span className="code-badge">id</span>{" "}
               attribute in <span className="code-badge">Agent</span>.
               Subsequently, this means that a{" "}

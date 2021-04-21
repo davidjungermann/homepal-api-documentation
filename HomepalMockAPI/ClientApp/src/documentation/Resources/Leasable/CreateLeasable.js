@@ -23,6 +23,16 @@ export const CreateLeasable = ({ history, token }) => {
             From this endpoint, you can create a new
             <span className="code-badge">Leasable</span>.
           </p>
+          <p>
+            The <span className="code-badge">customer_id</span>,{" "}
+            <span className="code-badge">owner_id</span> and{" "}
+            <span className="code-badge">building_id</span> attributes{" "}
+            <b>must</b> refer to an already existing{" "}
+            <span className="code-badge">id</span> attributes in{" "}
+            <span className="code-badge">Customer</span>,{" "}
+            <span className="code-badge">Owner</span> and{" "}
+            <span className="code-badge">Building</span>.
+          </p>
         </TextUnit>
         <h3 className="schema-title title-7">Body Schema</h3>
         <Table

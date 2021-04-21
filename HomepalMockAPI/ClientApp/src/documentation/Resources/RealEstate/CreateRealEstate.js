@@ -24,12 +24,10 @@ export const CreateRealEstate = ({ history, token }) => {
             <span className="code-badge">RealEstate</span>.
           </p>
           <p>
-            Since a <span className="code-badge">RealEstate</span> is part of a{" "}
-            <span className="code-badge">Region</span>, the{" "}
-            <span className="code-badge">region_name</span> attribute must be
-            defined, and needs to refer to a{" "}
-            <span className="code-badge">Region</span> in the Homebase API, when
-            creating a new <span className="code-badge">RealEstate</span>.
+            The <span className="code-badge">owner_id</span> attribute{" "}
+            <b>must</b> refer to an already existing{" "}
+            <span className="code-badge">id</span> attribute in{" "}
+            <span className="code-badge">Owner</span>.
           </p>
         </TextUnit>
         <h3 className="schema-title title-7">Body Schema</h3>
