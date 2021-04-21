@@ -19,9 +19,11 @@ export const QueryParameters = ({ history, token }) => {
               data in a specific way.
             </p>
             <p>
-              Query Parameters are passed after a{" "}
-              <span className="code-badge">?</span> in the URL of the
-              endpoint. See examples below.
+              Query Parameters are passed with{" "}
+              <span className="code-badge">?</span> for the first parameter, and{" "}
+              <span className="code-badge">&</span> for subsequent parameters.
+              These are passed along with the URL to the endpoint, which is
+              illustrated in the examples below.
             </p>
           </TextUnit>
         </Description>
@@ -101,7 +103,7 @@ export const QueryParameters = ({ history, token }) => {
         </Description>
         <Usage>
           <Example header="USAGE" token={token} copy>
-            curl https://homebase-api.homepal.se/v1/buildings?offset=1&limit=100
+            curl https://localhost:6001/api/buildings?offset=1&limit=100
           </Example>
         </Usage>
       </Section>
@@ -161,8 +163,7 @@ export const QueryParameters = ({ history, token }) => {
         </Description>
         <Usage>
           <Example header="USAGE" token={token} copy>
-            curl
-            https://homebase-api.homepal.se/v1/buildings?sort=class_descriptor
+            curl https://localhost:6001/api/buildings?sort=street_name
           </Example>
         </Usage>
       </Section>
