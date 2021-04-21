@@ -18,19 +18,22 @@ export const Versioning = ({ history }) => {
               The current version is <span className="code-badge">v1</span>.
             </p>
             <p>
-              Homepal will implement changes into current API versions, without a new version release, 
-              as long as the changes being introduced will not interfere on a greater scale with your integration. 
+              Homepal will implement changes into current API versions, without
+              a new version release, as long as the changes being introduced
+              will not interfere on a greater scale with your integration.
             </p>
             <p>
-              In come cases, endpoints and functionalities can be replaced by others and thus deprecetad. 
-              This will always be announced <b>6 months in advance</b> via:
+              In come cases, endpoints and functionalities can be replaced by
+              others and thus deprecetad. This will always be announced{" "}
+              <b>6 months in advance</b> via:
               <ul>
                 <li>recurring email reminders.</li>
-                <li>in {" "}
-                  <Link to="#upcoming-deprecations">
-                    Upcoming Deprecations
+                <li>
+                  in{" "}
+                  <Link to="#upcoming-deprecations" smooth>
+                    Upcoming deprecations
                   </Link>
-                .
+                  .
                 </li>
                 <li>information message in your Dashboard.</li>
               </ul>
@@ -44,10 +47,12 @@ export const Versioning = ({ history }) => {
         <Description>
           <TextUnit header="Upcoming Deprecations" isSubsection>
             <p>
-              Planned upcoming deprecations of the Homebase API are listed below:
+              Planned upcoming deprecations of the Homebase API are listed
+              below:
             </p>
           </TextUnit>
-          <Table inactiveTable
+          <Table
+            inactiveTable
             cols={[
               {
                 Header: "DEPRECATION",
@@ -65,8 +70,7 @@ export const Versioning = ({ history }) => {
             values={[
               {
                 col1: (
-                  <TableItem description="There are no planned upcoming changes.">
-                  </TableItem>
+                  <TableItem description="There are no planned upcoming changes."></TableItem>
                 ),
                 col2: "",
                 col3: "",

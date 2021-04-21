@@ -29,7 +29,7 @@ export const Owner = ({ history, token }) => {
 
             <p>
               Owner is a <b>subclass</b> of{" "}
-              <Link to="#agent">
+              <Link to="#agent" smooth>
                 <span className="code-badge">Agent</span>
               </Link>
               . The <span className="code-badge">id</span>{" "}

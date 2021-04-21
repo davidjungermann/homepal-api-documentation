@@ -29,11 +29,11 @@ export const Agent = ({ history, token }) => {
             </p>
             <p>
               Agent is a <b>superclass</b> of{" "}
-              <Link to="#customer">
+              <Link to="#customer" smooth>
                 <span className="code-badge">Customer</span>
               </Link>{" "}
               and{" "}
-              <Link to="#owner">
+              <Link to="#owner" smooth>
                 <span className="code-badge">Owner</span>
               </Link>
               .
@@ -110,13 +110,12 @@ export const Agent = ({ history, token }) => {
           ></BodyDescription>
         </Usage>
       </Section>
-      
-      <GetAgents history={history} token={token}/>
-      <GetAgent history={history} token={token}/>
-      <CreateAgent history={history} token={token}/>
-      <UpdateAgent history={history} token={token}/>
-      <DeleteAgent history={history} token={token}/>
-      
+
+      <GetAgents history={history} token={token} />
+      <GetAgent history={history} token={token} />
+      <CreateAgent history={history} token={token} />
+      <UpdateAgent history={history} token={token} />
+      <DeleteAgent history={history} token={token} />
     </SectionWrapper>
   );
 };
