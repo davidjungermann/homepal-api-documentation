@@ -6,8 +6,11 @@ export const items = [
     items: [
       { label: "About the API" },
       {
-        label: "Conceptual information",
-        items: [{ label: "Conceptual Overview" }, { label: "Super classes" }],
+        label: "Conceptual Information",
+        items: [
+          { label: "Conceptual Overview" },
+          { label: "Database Properties" },
+        ],
       },
       { label: "Authorization", items: [{ label: "Access key" }] },
       { label: "Validations" },
