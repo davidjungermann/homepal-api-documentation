@@ -19,9 +19,9 @@ export const QueryParameters = ({ history, token }) => {
               data in a specific way.
             </p>
             <p>
-              Query Parameters are passed with{" "}
-              <span className="code-badge">?</span> with the URL of the
-              endpoint, see examples below.
+              Query Parameters are passed after a{" "}
+              <span className="code-badge">?</span> in the URL of the
+              endpoint. See examples below.
             </p>
           </TextUnit>
         </Description>

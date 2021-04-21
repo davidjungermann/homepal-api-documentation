@@ -13,11 +13,12 @@ export const items = [
           { label: "Enumerated Values" },
         ],
       },
-      { label: "Authorization", items: [{ label: "Access key" }] },
+      { label: "Authorization", 
+        items: [{ label: "Generate Access Key" }] },
       { label: "Validations" },
       {
         label: "Errors",
-        items: [{ label: "Error codes" }],
+        items: [{ label: "Error Codes" }],
       },
       {
         label: "Query Parameters",
@@ -25,7 +26,7 @@ export const items = [
       },
       {
         label: "Versioning",
-        items: [{ label: "Upcoming deprecations" }],
+        items: [{ label: "Upcoming Deprecations" }],
       },
     ],
   },
