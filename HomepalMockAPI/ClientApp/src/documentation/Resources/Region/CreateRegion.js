@@ -92,14 +92,14 @@ export const CreateRegion = ({ history, token }) => {
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>
           curl --header "Content-Type: application/json" --request POST --data
-          '&#123;"name":"Skåne"&#125;' https://localhost:6001/api/regions
+          '&#123;"name":"Uppland"&#125;' https://localhost:6001/api/regions
         </Example>
 
         <BodyDescription
           header={"REQUEST BODY EXAMPLE"}
           copy
           body={{
-            name: "Skåne",
+            name: "Uppland",
           }}
         ></BodyDescription>
 

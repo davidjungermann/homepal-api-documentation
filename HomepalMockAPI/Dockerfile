@@ -30,8 +30,8 @@ COPY HomepalMock.db /app/publish
 FROM mcr.microsoft.com/dotnet/aspnet:5.0-buster-slim
 
 # Expose port 5000 to your local machine so you can access the app.
-EXPOSE 6000
-ENV ASPNETCORE_URLS http://*:6000
+EXPOSE 6001
+ENV ASPNETCORE_URLS https://*:6001
 
 # Copy the published app to this new runtime-only container.
 COPY --from=build /app/publish .
