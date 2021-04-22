@@ -13,7 +13,9 @@ export const NavigationItem = ({
   fontWeight,
   ...rest
 }) => {
-  const [open, setOpen] = useState("navigation-sub-list");
+  const [open, setOpen] = useState(
+    depth === 1 ? "navigation-sub-list-closed" : "navigation-sub-list"
+  );
 
   const handleOpen = () => {
     if (open === "navigation-sub-list") {
