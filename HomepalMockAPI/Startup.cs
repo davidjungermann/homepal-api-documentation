@@ -74,8 +74,8 @@ namespace HomepalMockAPI
             //     app.UseHsts();
             // }
 
-             app.UseExceptionHandler("/error");
-            //app.UseHttpsRedirection();
+            app.UseExceptionHandler("/error");
+            app.UseHttpsRedirection();
             app.UseSwagger();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
