@@ -16,7 +16,6 @@ export const TokenContainer = ({ children, header, copy }) => {
   };
 
   return (
-    <React.Fragment>
       <ContainerBlock
         header={header}
         copy={copy}
@@ -26,6 +25,5 @@ export const TokenContainer = ({ children, header, copy }) => {
       >
         {content}
       </ContainerBlock>
-    </React.Fragment>
   );
 };

@@ -12,12 +12,13 @@
 }
 
 .container-block {
-  margin: 10px 10px 10px 10px;
+  margin: 10px 0px 10px 0px;
   background-color: $gray-1;
   border-radius: 6px;
   border: 1px solid $gray-2;
   box-sizing: border-box;
-  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
 }
 
 .container-block-content {
