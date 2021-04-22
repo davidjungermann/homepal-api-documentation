@@ -13,19 +13,21 @@ export const QueryParameters = ({ history, token }) => {
     <SectionWrapper>
       <Section id="query-parameters" history={history}>
         <Description>
-          <TextUnit header="Query Parameters">
-            <p>
-              Homebase utilizes query parameters for presenting the returned
-              data in a specific way.
-            </p>
-            <p>
-              Query Parameters are passed with{" "}
-              <span className="code-badge">?</span> for the first parameter, and{" "}
-              <span className="code-badge">&</span> for subsequent parameters.
-              These are passed along with the URL to the endpoint, which is
-              illustrated in the examples below.
-            </p>
-          </TextUnit>
+          <div className="padding-100">
+            <TextUnit header="Query Parameters">
+              <p>
+                Homebase utilizes query parameters for presenting the returned
+                data in a specific way.
+              </p>
+              <p>
+                Query Parameters are passed with{" "}
+                <span className="code-badge">?</span> for the first parameter,
+                and <span className="code-badge">&</span> for subsequent
+                parameters. These are passed along with the URL to the endpoint,
+                which is illustrated in the examples below.
+              </p>
+            </TextUnit>
+          </div>
         </Description>
         <Usage>{/* Usage */}</Usage>
       </Section>
