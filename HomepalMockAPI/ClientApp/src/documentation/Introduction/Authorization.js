@@ -53,7 +53,6 @@ export const Authorization = ({
           </TextUnit>
         </Description>
         <Usage>
-          {" "}
           <Auth
             token={token}
             setToken={setToken}

@@ -23,7 +23,7 @@ export const Auth = ({ token, setToken, valid, setValid }) => {
           Generate access key
         </button>
       ) : (
-        <TokenContainer className="token" header="YOUR API KEY" copy>
+        <TokenContainer header="YOUR API KEY" copy>
           {token}
         </TokenContainer>
       )}
