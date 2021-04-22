@@ -2,7 +2,6 @@ import React from "react";
 import { ContainerBlock } from "../../../components/container-block/ContainerBlock";
 import { BodyDescription } from "../../../components/content/body-description/BodyDescription";
 import { EndpointExample } from "../../../components/content/endpoint-example/EndpointExample";
-import { EndpointList } from "../../../components/content/endpoint-list/EndpointList";
 import { Endpoint } from "../../../components/content/endpoint/Endpoint";
 import { Example } from "../../../components/content/example/Example";
 import { Returns } from "../../../components/content/returns/Returns";

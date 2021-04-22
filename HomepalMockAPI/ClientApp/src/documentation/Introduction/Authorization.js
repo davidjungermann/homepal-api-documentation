@@ -39,7 +39,7 @@ export const Authorization = ({
         </Description>
         <Usage>
           <ContainerBlock header="ACCESS KEY USAGE">
-            curl {"\n"}
+            curl &lt;URL&gt;{"\n"}
             -u &lt;YOUR&#95;API&#95;KEY&gt;:
           </ContainerBlock>
           <p className="small">
