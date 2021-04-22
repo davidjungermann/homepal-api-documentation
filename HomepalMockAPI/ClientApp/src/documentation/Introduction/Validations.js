@@ -11,22 +11,24 @@ export const Validations = ({ history }) => {
     <SectionWrapper>
       <Section id="validations" history={history}>
         <Description>
-          <TextUnit header="Validations">
-            <p>
-              For the purpose of this prototype, there are currently no
-              validations of data inputs to the Homebase API, other than the
-              basic typing constraints placed on attributes for objects, as well
-              as the key constraints described in{" "}
-              <Link to="#database-properties">
-                Database Properties
-              </Link>
-              .
-            </p>
-            <p>
-              Typing constraints for attributes are described under each
-              resource.{" "}
-            </p>
-          </TextUnit>
+          <div className="padding-100">
+            <TextUnit header="Validations">
+              <p>
+                For the purpose of this prototype, there are currently no
+                validations of data inputs to the Homebase API, other than the
+                basic typing constraints placed on attributes for objects, as well
+                as the key constraints described in{" "}
+                <Link to="#database-properties">
+                  Database Properties
+                </Link>
+                .
+              </p>
+              <p>
+                Typing constraints for attributes are described under each
+                resource.{" "}
+              </p>
+            </TextUnit>
+          </div>
         </Description>
         <Usage>{/* Usage */}</Usage>
       </Section>

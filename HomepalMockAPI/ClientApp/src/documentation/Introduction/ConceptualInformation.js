@@ -124,17 +124,19 @@ export const ConceptualInformation = ({ history }) => {
 
       <Section id="enumerated-values" history={history}>
         <Description>
-          <TextUnit header="Enumerated Values" isSubsection>
-            <p>
-              Some resources have <b>enumerated values</b>. Essentially, this
-              means that an attribute for an object can be one of several,
-              predetermined options.
-            </p>
-            <p>
-              Where applicable, these enumerated values will be listed along
-              with the resource.
-            </p>
-          </TextUnit>
+          <div className="padding-100">
+            <TextUnit header="Enumerated Values" isSubsection>
+              <p>
+                Some resources have <b>enumerated values</b>. Essentially, this
+                means that an attribute for an object can be one of several,
+                predetermined options.
+              </p>
+              <p>
+                Where applicable, these enumerated values will be listed along
+                with the resource.
+              </p>
+            </TextUnit>
+          </div>
         </Description>
         <Usage>{/* Usage */}</Usage>
       </Section>

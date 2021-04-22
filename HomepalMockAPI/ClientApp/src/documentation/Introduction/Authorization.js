@@ -6,6 +6,7 @@ import { Usage } from "../../components/usage/Usage";
 import { Auth } from "../../components/auth/Auth";
 import { SectionWrapper } from "../../components/content/section-wrapper/SectionWrapper";
 import { NavHashLink as Link } from "react-router-hash-link";
+import { ContainerBlock } from "../../components/container-block/ContainerBlock";
 
 export const Authorization = ({
   history,
@@ -36,29 +37,41 @@ export const Authorization = ({
             </p>
           </TextUnit>
         </Description>
-        <Usage></Usage>
+        <Usage>
+          <ContainerBlock header="ACCESS KEY USAGE">
+            curl {"\n"}
+            -u &lt;YOUR&#95;API&#95;KEY&gt;:
+          </ContainerBlock>
+          <p className="small">
+            The -u flag specifies the key, and the colon prevents cURL from asking for a password.
+          </p>
+        </Usage>
       </Section>
       <Section id="generate-access-key" history={history}>
         <Description>
-          <TextUnit header="Generate Access Key" isSubsection>
-            <p>
-              Generate an access key and include it in your requests in order to
-              be authorized.
-            </p>
-            <p>
-              Once generated, your access key is inserted and included in all
-              the usage examples in the reference documentation, so you can test
-              any example right away.
-            </p>
-          </TextUnit>
+          <div className="padding-100">
+            <TextUnit header="Generate Access Key" isSubsection>
+              <p>
+                Generate an access key and include it in your requests in order to
+                be authorized.
+              </p>
+              <p>
+                Once generated, your access key is inserted and included in all
+                the usage examples in the reference documentation, so you can test
+                any example right away.
+              </p>
+            </TextUnit>
+          </div>
         </Description>
         <Usage>
-          <Auth
-            token={token}
-            setToken={setToken}
-            valid={valid}
-            setValid={setValid}
-          ></Auth>
+          <div className="padding-100">
+            <Auth
+              token={token}
+              setToken={setToken}
+              valid={valid}
+              setValid={setValid}
+            ></Auth>
+          </div>
         </Usage>
       </Section>
     </SectionWrapper>
