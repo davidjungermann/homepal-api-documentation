@@ -7,7 +7,7 @@ import "./EndpointList.scss";
 export const EndpointList = ({ children, header }) => {
   return (
     <ContainerBlock header={header} copy={false}>
-      <ul className="navigation-sub-list">
+      <ul>
         {children.map((endpoint) => {
           return <li key={nextId()}>{endpoint}</li>;
         })}
