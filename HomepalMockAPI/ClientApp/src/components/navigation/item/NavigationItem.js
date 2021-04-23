@@ -11,17 +11,38 @@ export const NavigationItem = ({
   nextId,
   formatUrl,
   fontWeight,
+  history,
   ...rest
 }) => {
   const [open, setOpen] = useState(
-    depth === 1 ? "navigation-sub-list-closed" : "navigation-sub-list"
+    depth === 1 ? "navigation-sub-list-closed" : "navigation-sub-list-open"
   );
+  const [previousSeciton, setPreviousSeciton] = useState("");
+
+  history.listen((location) => {
+    // location is an object like window.location
+    //console.log(location.hash);
+
+    if ("#" + formatUrl(label) === location.hash && depth === 1) {
+      handleOpen();
+    } else {
+      console.log("hej");
+    }
+  });
+
+  const handleEnter = () => {
+    setOpen("navigation-sub-list-open");
+  };
+
+  const handleLeave = () => {
+    setOpen("navigation-sub-list-closed");
+  };
 
   const handleOpen = () => {
-    if (open === "navigation-sub-list") {
+    if (open === "navigation-sub-list-open") {
       setOpen("navigation-sub-list-closed");
     } else {
-      setOpen("navigation-sub-list");
+      setOpen("navigation-sub-list-open");
     }
   };
 
@@ -35,10 +56,7 @@ export const NavigationItem = ({
 
   const renderLinkItem = () => {
     return (
-      <div
-        className="navigation-item-container"
-        onClick={() => (depth === 1 ? handleOpen(label) : () => {})}
-      >
+      <div className="navigation-item-container">
         <Link
           to={"#" + formatUrl(label)}
           activeClassName="active"
@@ -73,6 +91,7 @@ export const NavigationItem = ({
                 nextId={nextId}
                 formatUrl={formatUrl}
                 fontWeight={fontWeight}
+                history={history}
                 {...subItem}
               />
             );

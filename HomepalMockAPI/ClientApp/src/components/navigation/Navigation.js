@@ -30,6 +30,7 @@ export const Navigation = ({ items, formatUrl, history }) => {
                   nextId={nextId}
                   formatUrl={formatUrl}
                   fontWeight={600}
+                  history={history}
                   {...sidebarItem}
                 />
               </div>
