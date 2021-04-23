@@ -9,7 +9,6 @@ const SectionContent = (props) => {
   let className = "section-container";
 
   if (inViewport && setCurrentSection) {
-    props.history.push("/#" + props.id);
     setCurrentSection(props.id);
   }
 

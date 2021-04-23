@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Navigation } from "./components/navigation/Navigation";
 import { items } from "./components/navigation/items";
 import { routes } from "./components/content/Routes";
@@ -22,6 +22,10 @@ function App() {
       .replace(/\s/g, "-")
       .replace(/[A-Z][a-z]*/g, (str) => str.toLowerCase());
   };
+
+  useEffect(() => {
+    history.push("/#" + currentSection);
+  }, [currentSection, history]);
 
   const renderRoutes = () => {
     return routes.map((route, index) => (
