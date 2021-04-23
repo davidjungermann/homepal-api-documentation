@@ -13,9 +13,13 @@ import { Section } from "../../../components/section/Section";
 import { Usage } from "../../../components/usage/Usage";
 import "../../../index.scss";
 
-export const DeleteRegion = ({ history, token }) => {
+export const DeleteRegion = ({ history, token, setCurrentSection }) => {
   return (
-    <Section id="delete-region" history={history}>
+    <Section
+      id="delete-region"
+      history={history}
+      setCurrentSection={setCurrentSection}
+    >
       <Description>
         <TextUnit header="Delete Region">
           <p>
@@ -24,7 +28,8 @@ export const DeleteRegion = ({ history, token }) => {
           </p>
         </TextUnit>
         <h3 className="schema-title title-7">Body Schema</h3>
-        <Table inactiveTable
+        <Table
+          inactiveTable
           cols={[
             {
               Header: "ATTRIBUTE",

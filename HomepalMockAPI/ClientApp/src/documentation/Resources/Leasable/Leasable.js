@@ -17,10 +17,14 @@ import { GetLeasables } from "./GetLeasables";
 import { UpdateLeasable } from "./UpdateLeasable";
 import "../../../index.scss";
 
-export const Leasable = ({ history, token }) => {
+export const Leasable = ({ history, token, setCurrentSection }) => {
   return (
     <SectionWrapper>
-      <Section id="leasable" history={history}>
+      <Section
+        id="leasable"
+        history={history}
+        setCurrentSection={setCurrentSection}
+      >
         <Description>
           <TextUnit header="Leasable">
             <p>
@@ -239,11 +243,31 @@ export const Leasable = ({ history, token }) => {
         </Usage>
       </Section>
 
-      <GetLeasables history={history} token={token} />
-      <GetLeasable history={history} token={token} />
-      <CreateLeasable history={history} token={token} />
-      <UpdateLeasable history={history} token={token} />
-      <DeleteLeasable history={history} token={token} />
+      <GetLeasables
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      />
+      <GetLeasable
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      />
+      <CreateLeasable
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      />
+      <UpdateLeasable
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      />
+      <DeleteLeasable
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      />
     </SectionWrapper>
   );
 };

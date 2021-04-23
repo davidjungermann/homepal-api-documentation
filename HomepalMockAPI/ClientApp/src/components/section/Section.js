@@ -4,12 +4,13 @@ import handleViewport from "react-in-viewport";
 import "./Section.scss";
 
 const SectionContent = (props) => {
-  const { forwardedRef, inViewport } = props;
+  const { forwardedRef, inViewport, setCurrentSection } = props;
   //var [height, setHeight] = useState(0);
   let className = "section-container";
 
-  if (inViewport) {
+  if (inViewport && setCurrentSection) {
     props.history.push("/#" + props.id);
+    setCurrentSection(props.id);
   }
 
   // useEffect(() => {

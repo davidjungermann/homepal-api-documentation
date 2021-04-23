@@ -16,59 +16,132 @@ import { Region } from "../../documentation/Resources/Region/Region";
 
 export const routes = [
   {
-    main: ({ history, token }) => (
-      <AboutTheApi history={history} token={token}></AboutTheApi>
+    main: ({ history, token, setCurrentSection }) => (
+      <AboutTheApi
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      ></AboutTheApi>
     ),
   },
   {
-    main: ({ history }) => (
-      <ConceptualInformation history={history}></ConceptualInformation>
+    main: ({ history, setCurrentSection }) => (
+      <ConceptualInformation
+        history={history}
+        setCurrentSection={setCurrentSection}
+      ></ConceptualInformation>
     ),
   },
   {
-    main: ({ history, token, setToken, valid, setValid }) => (
+    main: ({
+      history,
+      token,
+      setToken,
+      valid,
+      setValid,
+      setCurrentSection,
+    }) => (
       <Authorization
         history={history}
         token={token}
         setToken={setToken}
         valid={valid}
         setValid={setValid}
+        setCurrentSection={setCurrentSection}
       ></Authorization>
     ),
   },
   {
-    main: ({ history }) => <Validations history={history}></Validations>,
-  },
-  {
-    main: ({ history }) => <Errors history={history}></Errors>,
-  },
-  {
-    main: ({ history, token }) => (
-      <QueryParameters history={history} token={token}></QueryParameters>
+    main: ({ history, setCurrentSection }) => (
+      <Validations
+        history={history}
+        setCurrentSection={setCurrentSection}
+      ></Validations>
     ),
   },
   {
-    main: ({ history }) => <Versioning history={history}></Versioning>,
+    main: ({ history, setCurrentSection }) => (
+      <Errors history={history} setCurrentSection={setCurrentSection}></Errors>
+    ),
   },
   {
-    main: ({ history, token }) => <Agent history={history} token={token}></Agent>,
+    main: ({ history, token, setCurrentSection }) => (
+      <QueryParameters
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      ></QueryParameters>
+    ),
   },
   {
-    main: ({ history, token }) => <Building history={history} token={token}></Building>,
+    main: ({ history, setCurrentSection }) => (
+      <Versioning
+        history={history}
+        setCurrentSection={setCurrentSection}
+      ></Versioning>
+    ),
   },
   {
-    main: ({ history, token }) => <Customer history={history} token={token}></Customer>,
+    main: ({ history, token, setCurrentSection }) => (
+      <Agent
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      ></Agent>
+    ),
   },
   {
-    main: ({ history, token }) => <Leasable history={history} token={token}></Leasable>,
+    main: ({ history, token, setCurrentSection }) => (
+      <Building
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      ></Building>
+    ),
   },
   {
-    main: ({ history, token }) => <Owner history={history} token={token}></Owner>,
+    main: ({ history, token, setCurrentSection }) => (
+      <Customer
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      ></Customer>
+    ),
   },
   {
-    main: ({ history, token }) => <RealEstate history={history} token={token}></RealEstate>,
+    main: ({ history, token, setCurrentSection }) => (
+      <Leasable
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      ></Leasable>
+    ),
   },
   {
-    main: ({ history, token }) => <Region history={history} token={token}></Region>,
+    main: ({ history, token, setCurrentSection }) => (
+      <Owner
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      ></Owner>
+    ),
+  },
+  {
+    main: ({ history, token, setCurrentSection }) => (
+      <RealEstate
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      ></RealEstate>
+    ),
+  },
+  {
+    main: ({ history, token, setCurrentSection }) => (
+      <Region
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      ></Region>
+    ),
   },
 ];

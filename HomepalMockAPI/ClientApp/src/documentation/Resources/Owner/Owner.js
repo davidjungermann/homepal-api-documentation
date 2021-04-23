@@ -15,16 +15,20 @@ import { DeleteOwner } from "./DeleteOwner";
 import { GetOwners } from "./GetOwners";
 import "../../../index.scss";
 
-export const Owner = ({ history, token }) => {
+export const Owner = ({ history, token, setCurrentSection }) => {
   return (
     <SectionWrapper>
-      <Section id="owner" history={history}>
+      <Section
+        id="owner"
+        history={history}
+        setCurrentSection={setCurrentSection}
+      >
         <Description>
           <TextUnit header="Owner">
             <p>
-              An <span className="code-badge">Owner</span> describes a person
-              or legal person in the Homebase API, currently acting as a
-              Owner in the context.
+              An <span className="code-badge">Owner</span> describes a person or
+              legal person in the Homebase API, currently acting as a Owner in
+              the context.
             </p>
 
             <p>
@@ -32,12 +36,11 @@ export const Owner = ({ history, token }) => {
               <Link to="#agent">
                 <span className="code-badge">Agent</span>
               </Link>
-              . The <span className="code-badge">id</span>{" "}
-              attribute references the <span className="code-badge">id</span>{" "}
-              attribute in <span className="code-badge">Agent</span>.
-              Subsequently, this means that a{" "}
-              <span className="code-badge">Owner</span> must also be defined
-              as an <span className="code-badge">Agent</span>.
+              . The <span className="code-badge">id</span> attribute references
+              the <span className="code-badge">id</span> attribute in{" "}
+              <span className="code-badge">Agent</span>. Subsequently, this
+              means that a <span className="code-badge">Owner</span> must also
+              be defined as an <span className="code-badge">Agent</span>.
             </p>
           </TextUnit>
           <Table
@@ -95,10 +98,21 @@ export const Owner = ({ history, token }) => {
         </Usage>
       </Section>
 
-      <GetOwners history={history} token={token}/>
-      <CreateOwner history={history} token={token}/>
-      <DeleteOwner history={history} token={token}/>
-
+      <GetOwners
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      />
+      <CreateOwner
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      />
+      <DeleteOwner
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      />
     </SectionWrapper>
   );
 };

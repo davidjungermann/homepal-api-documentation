@@ -8,10 +8,14 @@ import { Table } from "../../components/content/table/Table";
 import { TableItem } from "../../components/content/table/TableItem";
 import { NavHashLink as Link } from "react-router-hash-link";
 
-export const Versioning = ({ history }) => {
+export const Versioning = ({ history, setCurrentSection }) => {
   return (
     <SectionWrapper>
-      <Section id="versioning" history={history}>
+      <Section
+        id="versioning"
+        history={history}
+        setCurrentSection={setCurrentSection}
+      >
         <Description>
           <TextUnit header="Versioning">
             <p>
@@ -30,9 +34,7 @@ export const Versioning = ({ history }) => {
                 <li>recurring email reminders.</li>
                 <li>
                   in{" "}
-                  <Link to="#upcoming-deprecations">
-                    Upcoming deprecations
-                  </Link>
+                  <Link to="#upcoming-deprecations">Upcoming deprecations</Link>
                   .
                 </li>
                 <li>information message in your Dashboard.</li>

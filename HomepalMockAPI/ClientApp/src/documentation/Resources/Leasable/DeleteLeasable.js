@@ -13,9 +13,13 @@ import { Section } from "../../../components/section/Section";
 import { Usage } from "../../../components/usage/Usage";
 import "../../../index.scss";
 
-export const DeleteLeasable = ({ history, token }) => {
+export const DeleteLeasable = ({ history, token, setCurrentSection }) => {
   return (
-    <Section id="delete-leasable" history={history}>
+    <Section
+      id="delete-leasable"
+      history={history}
+      setCurrentSection={setCurrentSection}
+    >
       <Description>
         <TextUnit header="Delete Leasable">
           <p>
@@ -24,7 +28,8 @@ export const DeleteLeasable = ({ history, token }) => {
           </p>
         </TextUnit>
         <h3 className="schema-title title-7">Body Schema</h3>
-        <Table inactiveTable
+        <Table
+          inactiveTable
           cols={[
             {
               Header: "ATTRIBUTE",

@@ -8,10 +8,10 @@ import { Table } from "../../components/content/table/Table";
 import { TableItem } from "../../components/content/table/TableItem";
 import { Example } from "../../components/content/example/Example";
 
-export const QueryParameters = ({ history, token }) => {
+export const QueryParameters = ({ history, token, setCurrentSection }) => {
   return (
     <SectionWrapper>
-      <Section id="query-parameters" history={history}>
+      <Section id="query-parameters" history={history} setCurrentSection={setCurrentSection}>
         <Description>
           <TextUnit header="Query Parameters">
             <p>

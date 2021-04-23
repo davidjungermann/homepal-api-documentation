@@ -17,10 +17,14 @@ import { GetRealEstates } from "./GetRealEstates";
 import { UpdateRealEstate } from "./UpdateRealEstate";
 import "../../../index.scss";
 
-export const RealEstate = ({ history, token }) => {
+export const RealEstate = ({ history, token, setCurrentSection }) => {
   return (
     <SectionWrapper>
-      <Section id="realestate" history={history}>
+      <Section
+        id="realestate"
+        history={history}
+        setCurrentSection={setCurrentSection}
+      >
         <Description>
           <TextUnit header="RealEstate">
             <p>
@@ -30,9 +34,7 @@ export const RealEstate = ({ history, token }) => {
             <p>
               A RealEstate is a part of a{" "}
               <span className="code-badge">
-                <Link to="#region">
-                  Region
-                </Link>
+                <Link to="#region">Region</Link>
               </span>
               .
             </p>
@@ -133,11 +135,31 @@ export const RealEstate = ({ history, token }) => {
         </Usage>
       </Section>
 
-      <GetRealEstates history={history} token={token} />
-      <GetRealEstate history={history} token={token} />
-      <CreateRealEstate history={history} token={token} />
-      <UpdateRealEstate history={history} token={token} />
-      <DeleteRealEstate history={history} token={token} />
+      <GetRealEstates
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      />
+      <GetRealEstate
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      />
+      <CreateRealEstate
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      />
+      <UpdateRealEstate
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      />
+      <DeleteRealEstate
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      />
     </SectionWrapper>
   );
 };

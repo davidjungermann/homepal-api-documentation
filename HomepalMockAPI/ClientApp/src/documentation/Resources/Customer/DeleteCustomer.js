@@ -15,9 +15,13 @@ import { Section } from "../../../components/section/Section";
 import { Usage } from "../../../components/usage/Usage";
 import "../../../index.scss";
 
-export const DeleteCustomer = ({ history, token }) => {
+export const DeleteCustomer = ({ history, token, setCurrentSection }) => {
   return (
-    <Section id="delete-customer" history={history}>
+    <Section
+      id="delete-customer"
+      history={history}
+      setCurrentSection={setCurrentSection}
+    >
       <Description>
         <TextUnit header="Delete Customer">
           <p>

@@ -8,10 +8,10 @@ import { Table } from "../../components/content/table/Table";
 import { TableItem } from "../../components/content/table/TableItem";
 import { BodyDescription } from "../../components/content/body-description/BodyDescription";
 
-export const Errors = ({ history }) => {
+export const Errors = ({ history, setCurrentSection }) => {
   return (
     <SectionWrapper>
-      <Section id="errors" history={history}>
+      <Section id="errors" history={history} setCurrentSection={setCurrentSection}>
         <Description>
           <TextUnit header="Errors">
             <p>

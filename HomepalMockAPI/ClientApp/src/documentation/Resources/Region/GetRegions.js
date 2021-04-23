@@ -14,9 +14,13 @@ import { Section } from "../../../components/section/Section";
 import { Usage } from "../../../components/usage/Usage";
 import "../../../index.scss";
 
-export const GetRegions = ({ history, token }) => {
+export const GetRegions = ({ history, token, setCurrentSection }) => {
   return (
-    <Section id="get-regions" history={history}>
+    <Section
+      id="get-regions"
+      history={history}
+      setCurrentSection={setCurrentSection}
+    >
       <Description>
         <TextUnit header="Get Regions">
           <p>
@@ -25,7 +29,8 @@ export const GetRegions = ({ history, token }) => {
           </p>
         </TextUnit>
         <h3 className="schema-title title-7">Body Schema</h3>
-        <Table inactiveTable
+        <Table
+          inactiveTable
           cols={[
             {
               Header: "ATTRIBUTE",

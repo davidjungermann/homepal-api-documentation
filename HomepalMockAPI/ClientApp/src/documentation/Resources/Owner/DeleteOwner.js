@@ -13,9 +13,13 @@ import { Section } from "../../../components/section/Section";
 import { Usage } from "../../../components/usage/Usage";
 import "../../../index.scss";
 
-export const DeleteOwner = ({ history, token }) => {
+export const DeleteOwner = ({ history, token, setCurrentSection }) => {
   return (
-    <Section id="delete-owner" history={history}>
+    <Section
+      id="delete-owner"
+      history={history}
+      setCurrentSection={setCurrentSection}
+    >
       <Description>
         <TextUnit header="Delete Owner">
           <p>

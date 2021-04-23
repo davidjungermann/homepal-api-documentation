@@ -13,10 +13,15 @@ export const Authorization = ({
   setToken,
   valid,
   setValid,
+  setCurrentSection,
 }) => {
   return (
     <SectionWrapper>
-      <Section id="authorization" history={history}>
+      <Section
+        id="authorization"
+        history={history}
+        setCurrentSection={setCurrentSection}
+      >
         <Description>
           <TextUnit header="Authorization">
             <p>
@@ -30,9 +35,10 @@ export const Authorization = ({
               fail. API requests without authentication will also fail.
             </p>
             <p>
-              You can generate keys in <Link to="#generate-access-key">Access key</Link>{" "}
-              in order to test the API from within the documentation using the
-              examples, or using the same access key in your own environment.
+              You can generate keys in{" "}
+              <Link to="#generate-access-key">Access key</Link> in order to test
+              the API from within the documentation using the examples, or using
+              the same access key in your own environment.
             </p>
           </TextUnit>
         </Description>

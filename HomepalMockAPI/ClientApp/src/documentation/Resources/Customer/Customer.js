@@ -15,10 +15,14 @@ import { DeleteCustomer } from "./DeleteCustomer";
 import { GetCustomers } from "./GetCustomers";
 import "../../../index.scss";
 
-export const Customer = ({ history, token }) => {
+export const Customer = ({ history, token, setCurrentSection }) => {
   return (
     <SectionWrapper>
-      <Section id="customer" history={history}>
+      <Section
+        id="customer"
+        history={history}
+        setCurrentSection={setCurrentSection}
+      >
         <Description>
           <TextUnit header="Customer">
             <p>
@@ -94,9 +98,21 @@ export const Customer = ({ history, token }) => {
         </Usage>
       </Section>
 
-      <GetCustomers history={history} token={token} />
-      <CreateCustomer history={history} token={token} />
-      <DeleteCustomer history={history} token={token} />
+      <GetCustomers
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      />
+      <CreateCustomer
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      />
+      <DeleteCustomer
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      />
     </SectionWrapper>
   );
 };

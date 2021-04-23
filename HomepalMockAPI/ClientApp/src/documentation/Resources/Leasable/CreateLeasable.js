@@ -14,9 +14,13 @@ import { Section } from "../../../components/section/Section";
 import { Usage } from "../../../components/usage/Usage";
 import "../../../index.scss";
 
-export const CreateLeasable = ({ history, token }) => {
+export const CreateLeasable = ({ history, token, setCurrentSection }) => {
   return (
-    <Section id="create-leasable" history={history}>
+    <Section
+      id="create-leasable"
+      history={history}
+      setCurrentSection={setCurrentSection}
+    >
       <Description>
         <TextUnit header="Create Leasable">
           <p>

@@ -6,10 +6,14 @@ import { Usage } from "../../components/usage/Usage";
 import { SectionWrapper } from "../../components/content/section-wrapper/SectionWrapper";
 import { NavHashLink as Link } from "react-router-hash-link";
 
-export const Validations = ({ history }) => {
+export const Validations = ({ history, setCurrentSection }) => {
   return (
     <SectionWrapper>
-      <Section id="validations" history={history}>
+      <Section
+        id="validations"
+        history={history}
+        setCurrentSection={setCurrentSection}
+      >
         <Description>
           <TextUnit header="Validations">
             <p>
@@ -17,10 +21,7 @@ export const Validations = ({ history }) => {
               validations of data inputs to the Homebase API, other than the
               basic typing constraints placed on attributes for objects, as well
               as the key constraints described in{" "}
-              <Link to="#database-properties">
-                Database Properties
-              </Link>
-              .
+              <Link to="#database-properties">Database Properties</Link>.
             </p>
             <p>
               Typing constraints for attributes are described under each

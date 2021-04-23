@@ -17,7 +17,7 @@ import { GetBuildings } from "./GetBuildings";
 import { UpdateBuilding } from "./UpdateBuilding";
 import "../../../index.scss";
 
-export const Building = ({ history, token }) => {
+export const Building = ({ history, token, setCurrentSection }) => {
   return (
     <SectionWrapper>
       <Section id="building" history={history}>
@@ -181,12 +181,31 @@ export const Building = ({ history, token }) => {
         </Usage>
       </Section>
 
-      <GetBuildings history={history} token={token}/>
-      <GetBuilding history={history} token={token}/>
-      <CreateBuilding history={history} token={token}/>
-      <UpdateBuilding history={history} token={token}/>
-      <DeleteBuilding history={history} token={token}/>
-
+      <GetBuildings
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      />
+      <GetBuilding
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      />
+      <CreateBuilding
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      />
+      <UpdateBuilding
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      />
+      <DeleteBuilding
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      />
     </SectionWrapper>
   );
 };

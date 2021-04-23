@@ -14,9 +14,13 @@ import { Section } from "../../../components/section/Section";
 import { Usage } from "../../../components/usage/Usage";
 import "../../../index.scss";
 
-export const CreateRegion = ({ history, token }) => {
+export const CreateRegion = ({ history, token, setCurrentSection }) => {
   return (
-    <Section id="create-region" history={history}>
+    <Section
+      id="create-region"
+      history={history}
+      setCurrentSection={setCurrentSection}
+    >
       <Description>
         <TextUnit header="Create Region">
           <p>
@@ -43,9 +47,7 @@ export const CreateRegion = ({ history, token }) => {
           values={[
             {
               col1: (
-                <TableItem description="Name of the Region.">
-                  name
-                </TableItem>
+                <TableItem description="Name of the Region.">name</TableItem>
               ),
               col2: "String",
               col3: "Required",
@@ -66,7 +68,8 @@ export const CreateRegion = ({ history, token }) => {
           </ReturnsItem>
         </Returns>
         <h3 className="schema-title title-7">Path Schema</h3>
-        <Table inactiveTable
+        <Table
+          inactiveTable
           cols={[
             {
               Header: "PARAMETER",

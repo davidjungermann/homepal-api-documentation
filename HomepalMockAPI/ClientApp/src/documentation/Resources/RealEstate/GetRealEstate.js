@@ -14,9 +14,13 @@ import { Section } from "../../../components/section/Section";
 import { Usage } from "../../../components/usage/Usage";
 import "../../../index.scss";
 
-export const GetRealEstate = ({ history, token }) => {
+export const GetRealEstate = ({ history, token, setCurrentSection }) => {
   return (
-    <Section id="get-realestate" history={history}>
+    <Section
+      id="get-realestate"
+      history={history}
+      setCurrentSection={setCurrentSection}
+    >
       <Description>
         <TextUnit header="Get RealEstate">
           <p>

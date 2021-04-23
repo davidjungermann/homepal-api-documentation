@@ -13,9 +13,13 @@ import { Section } from "../../../components/section/Section";
 import { Usage } from "../../../components/usage/Usage";
 import "../../../index.scss";
 
-export const DeleteRealEstate = ({ history, token }) => {
+export const DeleteRealEstate = ({ history, token, setCurrentSection }) => {
   return (
-    <Section id="delete-realestate" history={history}>
+    <Section
+      id="delete-realestate"
+      history={history}
+      setCurrentSection={setCurrentSection}
+    >
       <Description>
         <TextUnit header="Delete RealEstate">
           <p>
@@ -24,7 +28,8 @@ export const DeleteRealEstate = ({ history, token }) => {
           </p>
         </TextUnit>
         <h3 className="schema-title title-7">Body Schema</h3>
-        <Table inactiveTable
+        <Table
+          inactiveTable
           cols={[
             {
               Header: "ATTRIBUTE",

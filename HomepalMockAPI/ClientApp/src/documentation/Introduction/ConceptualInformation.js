@@ -10,10 +10,14 @@ import { Table } from "../../components/content/table/Table";
 import { TableItem } from "../../components/content/table/TableItem";
 import { BodyDescription } from "../../components/content/body-description/BodyDescription";
 
-export const ConceptualInformation = ({ history }) => {
+export const ConceptualInformation = ({ history, setCurrentSection }) => {
   return (
     <SectionWrapper>
-      <Section id="conceptual-information" history={history}>
+      <Section
+        id="conceptual-information"
+        history={history}
+        setCurrentSection={setCurrentSection}
+      >
         <Description>
           <TextUnit header="Conceptual Information">
             <p>

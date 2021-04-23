@@ -14,9 +14,13 @@ import { Section } from "../../../components/section/Section";
 import { Usage } from "../../../components/usage/Usage";
 import "../../../index.scss";
 
-export const CreateOwner = ({ history, token }) => {
+export const CreateOwner = ({ history, token, setCurrentSection }) => {
   return (
-    <Section id="create-owner" history={history}>
+    <Section
+      id="create-owner"
+      history={history}
+      setCurrentSection={setCurrentSection}
+    >
       <Description>
         <TextUnit header="Create Owner">
           <p>

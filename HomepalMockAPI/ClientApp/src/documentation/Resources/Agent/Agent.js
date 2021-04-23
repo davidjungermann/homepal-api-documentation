@@ -17,7 +17,7 @@ import { GetAgents } from "./GetAgents";
 import { UpdateAgent } from "./UpdateAgent";
 import "../../../index.scss";
 
-export const Agent = ({ history, token }) => {
+export const Agent = ({ history, token, setCurrentSection }) => {
   return (
     <SectionWrapper>
       <Section id="agent" history={history}>
@@ -111,11 +111,31 @@ export const Agent = ({ history, token }) => {
         </Usage>
       </Section>
 
-      <GetAgents history={history} token={token} />
-      <GetAgent history={history} token={token} />
-      <CreateAgent history={history} token={token} />
-      <UpdateAgent history={history} token={token} />
-      <DeleteAgent history={history} token={token} />
+      <GetAgents
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      />
+      <GetAgent
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      />
+      <CreateAgent
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      />
+      <UpdateAgent
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      />
+      <DeleteAgent
+        history={history}
+        token={token}
+        setCurrentSection={setCurrentSection}
+      />
     </SectionWrapper>
   );
 };

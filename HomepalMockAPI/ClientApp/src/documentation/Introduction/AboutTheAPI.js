@@ -9,10 +9,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
 import { NavHashLink as Link } from "react-router-hash-link";
 
-export const AboutTheApi = ({ history, token }) => {
+export const AboutTheApi = ({ history, token, setCurrentSection }) => {
   return (
     <SectionWrapper>
-      <Section id="about-the-api" history={history}>
+      <Section id="about-the-api" history={history} setCurrentSection={setCurrentSection}>
         <Description>
           <TextUnit header="Homebase API" headerSize="3">
             <p>

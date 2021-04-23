@@ -15,6 +15,7 @@ function App() {
 
   const [token, setToken] = useState("");
   const [valid, setValid] = useState(false);
+  const [currentSection, setCurrentSection] = useState("about-the-api");
 
   const formatUrl = (label) => {
     return label
@@ -35,6 +36,7 @@ function App() {
             setToken={setToken}
             valid={valid}
             setValid={setValid}
+            setCurrentSection={setCurrentSection}
           />
         }
       />

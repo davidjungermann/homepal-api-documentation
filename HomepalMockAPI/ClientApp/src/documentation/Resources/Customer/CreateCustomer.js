@@ -14,9 +14,13 @@ import { Section } from "../../../components/section/Section";
 import { Usage } from "../../../components/usage/Usage";
 import "../../../index.scss";
 
-export const CreateCustomer = ({ history, token }) => {
+export const CreateCustomer = ({ history, token, setCurrentSection }) => {
   return (
-    <Section id="create-customer" history={history}>
+    <Section
+      id="create-customer"
+      history={history}
+      setCurrentSection={setCurrentSection}
+    >
       <Description>
         <TextUnit header="Create Customer">
           <p>
@@ -24,9 +28,9 @@ export const CreateCustomer = ({ history, token }) => {
             <span className="code-badge">Customer</span>.
           </p>
           <p>
-            The <span className="code-badge">id</span> attribute <b>must</b> refer to
-            an already existing <span className="code-badge">id</span> attribute
-            in <span className="code-badge">Agent</span>.
+            The <span className="code-badge">id</span> attribute <b>must</b>{" "}
+            refer to an already existing <span className="code-badge">id</span>{" "}
+            attribute in <span className="code-badge">Agent</span>.
           </p>
         </TextUnit>
         <h3 className="schema-title title-7">Body Schema</h3>
