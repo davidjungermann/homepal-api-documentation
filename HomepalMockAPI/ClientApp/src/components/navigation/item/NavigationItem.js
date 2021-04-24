@@ -20,31 +20,32 @@ export const NavigationItem = ({
   const [previousSeciton, setPreviousSeciton] = useState("");
 
   history.listen((location) => {
-    // location is an object like window.location
-    //console.log(location.hash);
-
-    if ("#" + formatUrl(label) === location.hash && depth === 1) {
-      handleOpen();
-    } else {
-      console.log("hej");
+    if (depth === 1) {
+      if (
+        open === "navigation-sub-list-open" &&
+        "#" + formatUrl(label) === location.hash
+      ) {
+        setOpen("navigation-sub-list-open");
+      } else if (
+        open === "navigation-sub-list-open" &&
+        "#" + formatUrl(label) !== location.hash
+      ) {
+        setOpen("navigation-sub-list-closed");
+      } else if (
+        open === "navigation-sub-list-closed" &&
+        "#" + formatUrl(label) === location.hash
+      ) {
+        setOpen("navigation-sub-list-open");
+      } else if (
+        open === "navigation-sub-list-closed" &&
+        "#" + formatUrl(label) !== location.hash
+      ) {
+        setOpen("navigation-sub-list-closed");
+      }
+    } else if (depth === 2) {
+      setOpen("navigation-sub-list-closed");
     }
   });
-
-  const handleEnter = () => {
-    setOpen("navigation-sub-list-open");
-  };
-
-  const handleLeave = () => {
-    setOpen("navigation-sub-list-closed");
-  };
-
-  const handleOpen = () => {
-    if (open === "navigation-sub-list-open") {
-      setOpen("navigation-sub-list-closed");
-    } else {
-      setOpen("navigation-sub-list-open");
-    }
-  };
 
   const renderHeaderItem = () => {
     return (
