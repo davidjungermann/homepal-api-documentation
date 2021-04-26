@@ -15,9 +15,10 @@ export const NavigationItem = ({
   ...rest
 }) => {
   const [open, setOpen] = useState(
-    depth === 1 ? "navigation-sub-list-closed" : "navigation-sub-list-open"
+    depth === 1 || depth === 2
+      ? "navigation-sub-list-closed"
+      : "navigation-sub-list-open"
   );
-  const [previousSeciton, setPreviousSeciton] = useState("");
 
   history.listen((location) => {
     if (depth === 1) {
@@ -42,8 +43,6 @@ export const NavigationItem = ({
       ) {
         setOpen("navigation-sub-list-closed");
       }
-    } else if (depth === 2) {
-      setOpen("navigation-sub-list-closed");
     }
   });
 
@@ -108,6 +107,13 @@ export const NavigationItem = ({
     return (
       <React.Fragment>
         {renderHeaderItem()}
+        {renderNextItem()}
+      </React.Fragment>
+    );
+  } else if (depth === 1) {
+    return (
+      <React.Fragment>
+        {renderLinkItem()}
         {renderNextItem()}
       </React.Fragment>
     );
