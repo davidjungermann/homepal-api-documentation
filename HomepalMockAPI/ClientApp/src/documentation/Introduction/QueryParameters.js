@@ -141,7 +141,7 @@ export const QueryParameters = ({ history, token }) => {
                   <TableItem
                     description="Sets the key to sort after.
                   By default the collection will be arranged in ascending order, in order to sort in descending order add a minus (U+002D HYPHEN-MINUS, “-“) before the sorting field.
-                  In order to sort a collection on multiple fields use comma-separation (U+002C COMMA, “,”) between the sorting fields."
+                  "
                   >
                     sort
                   </TableItem>
