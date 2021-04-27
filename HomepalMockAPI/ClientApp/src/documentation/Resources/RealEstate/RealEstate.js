@@ -84,7 +84,7 @@ export const RealEstate = ({ history, token }) => {
                     owner_id
                   </TableItem>
                 ),
-                col2: "String",
+                col2: "Integer",
                 col3: "Required",
               },
             ]}
@@ -127,7 +127,7 @@ export const RealEstate = ({ history, token }) => {
               id: 1,
               name: "Alfa",
               region_name: "Skåne",
-              owner_id: "1",
+              owner_id: 1,
             }}
           ></BodyDescription>
         </Usage>

@@ -105,7 +105,7 @@ export const GetRealEstate = ({ history, token }) => {
             id: 1,
             name: "Alfa",
             region_name: "Skåne",
-            owner_id: "1",
+            owner_id: 1,
           }}
         ></BodyDescription>
       </Usage>

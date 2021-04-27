@@ -123,19 +123,19 @@ export const GetRealEstates = ({ history, token }) => {
               id: 2,
               name: "Beta",
               region_name: "Norrland",
-              owner_id: "2",
+              owner_id: 2,
             },
             {
               id: 3,
               name: "Gamma",
               region_name: "Södermanland",
-              owner_id: "3",
+              owner_id: 3,
             },
             {
               id: 4,
               name: "Theta",
               region_name: "Dalarna",
-              owner_id: "4",
+              owner_id: 4,
             },
           ]}
         ></BodyDescription>
