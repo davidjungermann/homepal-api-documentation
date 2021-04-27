@@ -14,7 +14,6 @@ export const NavigationItem = ({
   history,
   ...rest
 }) => {
-<<<<<<< HEAD
   const [open, setOpen] = useState(
     depth === 1 || depth === 2
       ? "navigation-sub-list-closed"
@@ -134,17 +133,6 @@ export const NavigationItem = ({
       }
     }
   });
-=======
-  const [open, setOpen] = useState("navigation-sub-list");
-
-  const handleOpen = () => {
-    if (open === "navigation-sub-list") {
-      setOpen("navigation-sub-list-closed");
-    } else {
-      setOpen("navigation-sub-list");
-    }
-  };
->>>>>>> main
 
   const renderHeaderItem = () => {
     return (
@@ -156,14 +144,7 @@ export const NavigationItem = ({
 
   const renderLinkItem = () => {
     return (
-<<<<<<< HEAD
       <div className="navigation-item-container">
-=======
-      <div
-        className="navigation-item-container"
-        onClick={() => (depth === 1 ? handleOpen(label) : () => {})}
-      >
->>>>>>> main
         <Link
           to={"#" + formatUrl(label)}
           activeClassName="active"
