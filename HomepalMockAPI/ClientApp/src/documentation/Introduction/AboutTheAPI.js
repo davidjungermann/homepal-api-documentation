@@ -1,5 +1,6 @@
 import React from "react";
 import { ContainerBlock } from "../../components/container-block/ContainerBlock";
+import { EndpointExample } from "../../components/content/endpoint-example/EndpointExample"
 import { TextUnit } from "../../components/content/text-unit/TextUnit";
 import { Description } from "../../components/description/Description";
 import { Section } from "../../components/section/Section";
@@ -79,9 +80,9 @@ export const AboutTheApi = ({ history, token }) => {
           </TextUnit>
         </Description>
         <Usage>
-          <ContainerBlock header="BASE URL" copy>
+          <EndpointExample header="BASE URL" baseUrl="https://localhost:6001/api" copy>
             https://localhost:6001/api
-          </ContainerBlock>
+          </EndpointExample>
           <TextUnit header="Usage examples" headerSize="7">
             <p>
               By default, the Homebase API Docs demonstrates usage examples with{" "}
