@@ -198,13 +198,6 @@ export const NavigationItem = ({
         {renderNextItem()}
       </React.Fragment>
     );
-  } else if (depth === 1) {
-    return (
-      <React.Fragment>
-        {renderLinkItem()}
-        {renderNextItem()}
-      </React.Fragment>
-    );
   } else {
     return (
       <React.Fragment>
