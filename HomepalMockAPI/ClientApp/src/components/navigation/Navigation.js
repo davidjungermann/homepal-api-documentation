@@ -18,7 +18,7 @@ export const Navigation = ({ items, formatUrl, history }) => {
         </div>
 
         <select id="version" name="version">
-            <option value="v1">v1 (latest)</option>
+          <option value="v1">v1 (latest)</option>
         </select>
 
         <ul className="navigation-list">

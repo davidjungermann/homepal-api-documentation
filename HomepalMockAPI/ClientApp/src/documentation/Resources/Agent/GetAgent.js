@@ -26,7 +26,8 @@ export const GetAgent = ({ history, token }) => {
           </p>
         </TextUnit>
         <h3 className="schema-title title-7">Body Schema</h3>
-        <Table inactiveTable
+        <Table
+          inactiveTable
           cols={[
             {
               Header: "ATTRIBUTE",

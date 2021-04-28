@@ -1,4 +1,4 @@
-@import '../../index.scss';
+@import "../../index.scss";
 
 .navigation-container {
   background-color: $gray-1;
@@ -16,7 +16,7 @@
   }
 
   &::-webkit-scrollbar-track {
-	  border-radius: 12px;
+    border-radius: 12px;
     margin-left: 10px;
     margin-right: 10px;
   }
@@ -27,11 +27,11 @@
   }
 
   &::-webkit-scrollbar-track:hover {
-    background: $gray-3; 
+    background: $gray-3;
   }
 
   &::-webkit-scrollbar-thumb:hover {
-    background: $gray-4; 
+    background: $gray-4;
   }
 }
 
@@ -48,7 +48,7 @@
 }
 
 .navigation-list-header {
- margin-top: 24px;
+  margin-top: 24px;
 }
 
 .navigation-header {
@@ -57,7 +57,7 @@
   justify-content: left;
   align-items: center;
 
-  color: $lime-dark!important;
+  color: $lime-dark !important;
   font-weight: 600;
 }
 

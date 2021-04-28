@@ -9,7 +9,3 @@
 
 **Load image from file:**
 `sudo docker load < homepalmockapi.tar.gz`
-
-
-
-

@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700;900&display=swap");
 
 //Primary colors
 $midnight: #0c273b;
@@ -47,8 +47,8 @@ $midnight-7: #0e2c44;
 $red: #ed9593;
 
 //Fonts
-$primary-font: 'Poppins', 'Helvetica Neue', sans-serif;
-$code-font: 'Source Code Pro', monospace;
+$primary-font: "Poppins", "Helvetica Neue", sans-serif;
+$code-font: "Source Code Pro", monospace;
 
 .title-1 {
   font-size: 64pt;
@@ -127,7 +127,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: $midnight;
   padding: 0;
   margin: 0;
@@ -159,7 +164,7 @@ b {
 
 a {
   .code-badge {
-    color: inherit!important;
+    color: inherit !important;
   }
 }
 

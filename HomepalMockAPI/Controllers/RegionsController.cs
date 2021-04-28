@@ -46,7 +46,7 @@ namespace HomepalMockAPI.Controllers
         public async Task<ActionResult<int>> Delete(string name)
         {
             var result = await regionsRepository.Delete(name);
-            
+
             if (result == 0)
             {
                 return NotFound();

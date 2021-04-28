@@ -80,7 +80,8 @@ export const UpdateAgent = ({ history, token }) => {
           </ReturnsItem>
         </Returns>
         <h3 className="schema-title title-7">Path Schema</h3>
-        <Table inactiveTable
+        <Table
+          inactiveTable
           cols={[
             {
               Header: "PARAMETER",

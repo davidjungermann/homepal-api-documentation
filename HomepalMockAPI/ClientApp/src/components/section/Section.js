@@ -26,4 +26,3 @@ const SectionContent = (props) => {
 export const Section = handleViewport(SectionContent, {
   rootMargin: "-40% -40% -60% -40%",
 });
-  

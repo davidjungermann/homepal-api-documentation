@@ -19,9 +19,10 @@ export const Versioning = ({ history }) => {
                 The current version is <span className="code-badge">v1</span>.
               </p>
               <p>
-                Homepal will implement changes into current API versions, without
-                a new version release, as long as the changes being introduced
-                will not interfere on a greater scale with your integration.
+                Homepal will implement changes into current API versions,
+                without a new version release, as long as the changes being
+                introduced will not interfere on a greater scale with your
+                integration.
               </p>
               <p>
                 In come cases, endpoints and functionalities can be replaced by

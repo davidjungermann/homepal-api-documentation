@@ -16,14 +16,14 @@ export const TokenContainer = ({ children, header, copy }) => {
   };
 
   return (
-      <ContainerBlock
-        header={header}
-        copy={copy}
-        handleCopy={handleCopy}
-        copied={copied}
-        handleLeave={handleLeave}
-      >
-        {content}
-      </ContainerBlock>
+    <ContainerBlock
+      header={header}
+      copy={copy}
+      handleCopy={handleCopy}
+      copied={copied}
+      handleLeave={handleLeave}
+    >
+      {content}
+    </ContainerBlock>
   );
 };

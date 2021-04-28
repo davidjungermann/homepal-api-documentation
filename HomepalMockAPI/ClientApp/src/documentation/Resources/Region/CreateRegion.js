@@ -43,9 +43,7 @@ export const CreateRegion = ({ history, token }) => {
           values={[
             {
               col1: (
-                <TableItem description="Name of the Region.">
-                  name
-                </TableItem>
+                <TableItem description="Name of the Region.">name</TableItem>
               ),
               col2: "String",
               col3: "Required",
@@ -66,7 +64,8 @@ export const CreateRegion = ({ history, token }) => {
           </ReturnsItem>
         </Returns>
         <h3 className="schema-title title-7">Path Schema</h3>
-        <Table inactiveTable
+        <Table
+          inactiveTable
           cols={[
             {
               Header: "PARAMETER",

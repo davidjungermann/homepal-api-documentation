@@ -51,24 +51,38 @@ export const routes = [
     main: ({ history }) => <Versioning history={history}></Versioning>,
   },
   {
-    main: ({ history, token }) => <Agent history={history} token={token}></Agent>,
+    main: ({ history, token }) => (
+      <Agent history={history} token={token}></Agent>
+    ),
   },
   {
-    main: ({ history, token }) => <Building history={history} token={token}></Building>,
+    main: ({ history, token }) => (
+      <Building history={history} token={token}></Building>
+    ),
   },
   {
-    main: ({ history, token }) => <Customer history={history} token={token}></Customer>,
+    main: ({ history, token }) => (
+      <Customer history={history} token={token}></Customer>
+    ),
   },
   {
-    main: ({ history, token }) => <Leasable history={history} token={token}></Leasable>,
+    main: ({ history, token }) => (
+      <Leasable history={history} token={token}></Leasable>
+    ),
   },
   {
-    main: ({ history, token }) => <Owner history={history} token={token}></Owner>,
+    main: ({ history, token }) => (
+      <Owner history={history} token={token}></Owner>
+    ),
   },
   {
-    main: ({ history, token }) => <RealEstate history={history} token={token}></RealEstate>,
+    main: ({ history, token }) => (
+      <RealEstate history={history} token={token}></RealEstate>
+    ),
   },
   {
-    main: ({ history, token }) => <Region history={history} token={token}></Region>,
+    main: ({ history, token }) => (
+      <Region history={history} token={token}></Region>
+    ),
   },
 ];

@@ -24,9 +24,9 @@ export const CreateCustomer = ({ history, token }) => {
             <span className="code-badge">Customer</span>.
           </p>
           <p>
-            The <span className="code-badge">id</span> attribute <b>must</b> refer to
-            an already existing <span className="code-badge">id</span> attribute
-            in <span className="code-badge">Agent</span>.
+            The <span className="code-badge">id</span> attribute <b>must</b>{" "}
+            refer to an already existing <span className="code-badge">id</span>{" "}
+            attribute in <span className="code-badge">Agent</span>.
           </p>
         </TextUnit>
         <h3 className="schema-title title-7">Body Schema</h3>

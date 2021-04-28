@@ -181,12 +181,11 @@ export const Building = ({ history, token }) => {
         </Usage>
       </Section>
 
-      <GetBuildings history={history} token={token}/>
-      <GetBuilding history={history} token={token}/>
-      <CreateBuilding history={history} token={token}/>
-      <UpdateBuilding history={history} token={token}/>
-      <DeleteBuilding history={history} token={token}/>
-
+      <GetBuildings history={history} token={token} />
+      <GetBuilding history={history} token={token} />
+      <CreateBuilding history={history} token={token} />
+      <UpdateBuilding history={history} token={token} />
+      <DeleteBuilding history={history} token={token} />
     </SectionWrapper>
   );
 };

@@ -149,7 +149,8 @@ export const UpdateBuilding = ({ history, token }) => {
         </Example>
 
         <BodyDescription
-          header={"REQUEST BODY EXAMPLE"}c
+          header={"REQUEST BODY EXAMPLE"}
+          c
           copy
           body={{
             id: 1,

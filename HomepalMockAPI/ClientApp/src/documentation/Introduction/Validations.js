@@ -16,12 +16,9 @@ export const Validations = ({ history }) => {
               <p>
                 For the purpose of this prototype, there are currently no
                 validations of data inputs to the Homebase API, other than the
-                basic typing constraints placed on attributes for objects, as well
-                as the key constraints described in{" "}
-                <Link to="#database-properties">
-                  Database Properties
-                </Link>
-                .
+                basic typing constraints placed on attributes for objects, as
+                well as the key constraints described in{" "}
+                <Link to="#database-properties">Database Properties</Link>.
               </p>
               <p>
                 Typing constraints for attributes are described under each

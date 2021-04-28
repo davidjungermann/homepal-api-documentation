@@ -13,8 +13,7 @@ export const items = [
           { label: "Enumerated Values" },
         ],
       },
-      { label: "Authorization", 
-        items: [{ label: "Generate Access Key" }] },
+      { label: "Authorization", items: [{ label: "Generate Access Key" }] },
       { label: "Validations" },
       {
         label: "Errors",

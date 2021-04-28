@@ -26,7 +26,8 @@ export const GetAgents = ({ history, token }) => {
           </p>
         </TextUnit>
         <h3 className="schema-title title-7">Body Schema</h3>
-        <Table inactiveTable
+        <Table
+          inactiveTable
           cols={[
             {
               Header: "ATTRIBUTE",
@@ -107,7 +108,8 @@ export const GetAgents = ({ history, token }) => {
           <Endpoint request="GET" baseUrl="api/agents"></Endpoint>
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>
-          curl --request GET https://localhost:6001/api/agents?limit=3&offset=1&sort=name
+          curl --request GET
+          https://localhost:6001/api/agents?limit=3&offset=1&sort=name
         </Example>
 
         <ContainerBlock header="REQUEST BODY EXAMPLE" inactiveContainerBlock>

@@ -22,8 +22,8 @@ export const Region = ({ history, token }) => {
         <Description>
           <TextUnit header="Region">
             <p>
-              A <span className="code-badge">Region</span> describes a
-              Region in the Homebase API.
+              A <span className="code-badge">Region</span> describes a Region in
+              the Homebase API.
             </p>
           </TextUnit>
           <Table
@@ -44,7 +44,9 @@ export const Region = ({ history, token }) => {
             values={[
               {
                 col1: (
-                  <TableItem description="Unique name of Region.">name</TableItem>
+                  <TableItem description="Unique name of Region.">
+                    name
+                  </TableItem>
                 ),
                 col2: "String",
                 col3: "Required",
@@ -81,10 +83,9 @@ export const Region = ({ history, token }) => {
         </Usage>
       </Section>
 
-      <GetRegions history={history} token={token}/>
-      <CreateRegion history={history} token={token}/>
-      <DeleteRegion history={history} token={token}/>
-
+      <GetRegions history={history} token={token} />
+      <CreateRegion history={history} token={token} />
+      <DeleteRegion history={history} token={token} />
     </SectionWrapper>
   );
 };
