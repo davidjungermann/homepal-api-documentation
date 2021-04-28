@@ -3,6 +3,7 @@ import { NavigationItem } from "./item/NavigationItem";
 import nextId from "react-id-generator";
 
 import "./Navigation.scss";
+import { HeaderItem } from "./header/HeaderItem";
 
 export const Navigation = ({ items, formatUrl, history }) => {
   return (
@@ -22,20 +23,29 @@ export const Navigation = ({ items, formatUrl, history }) => {
         </select>
 
         <ul className="navigation-list">
-          {items.map((sidebarItem) => {
-            return (
-              <div key={nextId()} className="navigation-list-header">
-                <NavigationItem
-                  key={nextId()}
-                  nextId={nextId}
-                  formatUrl={formatUrl}
-                  fontWeight={600}
-                  history={history}
-                  {...sidebarItem}
-                />
-              </div>
-            );
-          })}
+          <div key={nextId()} className="navigation-list-header">
+            <HeaderItem>Introduction</HeaderItem>
+            <NavigationItem
+              key={nextId()}
+              nextId={nextId}
+              formatUrl={formatUrl}
+              fontWeight={600}
+              history={history}
+              label="Test"
+            />
+          </div>
+
+          <div key={nextId()} className="navigation-list-header">
+            <HeaderItem>Resources</HeaderItem>
+            <NavigationItem
+              key={nextId()}
+              nextId={nextId}
+              formatUrl={formatUrl}
+              fontWeight={600}
+              history={history}
+              label="Test"
+            />
+          </div>
         </ul>
       </div>
     </React.Fragment>
