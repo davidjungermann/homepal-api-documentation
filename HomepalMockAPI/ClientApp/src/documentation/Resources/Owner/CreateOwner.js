@@ -48,7 +48,7 @@ export const CreateOwner = ({ history, token }) => {
           values={[
             {
               col1: (
-                <TableItem description="The id of Owner subject for creation.">
+                <TableItem description="The ID of Owner subject for creation.">
                   id
                 </TableItem>
               ),
