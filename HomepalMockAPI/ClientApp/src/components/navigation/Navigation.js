@@ -4,6 +4,7 @@ import { HeaderItem } from "./header/HeaderItem";
 import { NavigationItem } from "./navigation-unit/NavigationItem";
 
 import "./Navigation.scss";
+import { HeaderItem } from "./header/HeaderItem";
 
 export const Navigation = ({ items, formatUrl, history }) => {
   return (
