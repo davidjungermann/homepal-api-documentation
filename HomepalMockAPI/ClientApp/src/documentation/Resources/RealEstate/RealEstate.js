@@ -32,7 +32,10 @@ export const RealEstate = ({ history, token }) => {
               <span className="code-badge">
                 <Link to="#region">Region</Link>
               </span>
-              .
+              , and has an{" "}
+              <span className="code-badge">
+                <Link to="#region">Owner</Link>
+              </span>
             </p>
           </TextUnit>
           <Table
