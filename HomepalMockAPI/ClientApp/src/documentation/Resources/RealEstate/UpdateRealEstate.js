@@ -82,8 +82,8 @@ export const UpdateRealEstate = ({ history, token }) => {
         <Returns>
           <ReturnsItem icon="success">
             On success, the HTTP status code in the response header is{" "}
-            <span className="code-badge">200 OK</span> and the requested
-            resources are displayed in the response body.
+            <span className="code-badge">200 OK</span>, and response body
+            contains the number of affected rows.
           </ReturnsItem>
 
           <ReturnsItem icon="error">
