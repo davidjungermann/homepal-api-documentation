@@ -1,9 +1,9 @@
 import React from "react";
-import { NavigationItem } from "./item/NavigationItem";
 import nextId from "react-id-generator";
+import { HeaderItem } from "./header/HeaderItem";
+import { NavigationItem } from "./navigation-unit/NavigationItem";
 
 import "./Navigation.scss";
-import { HeaderItem } from "./header/HeaderItem";
 
 export const Navigation = ({ items, formatUrl, history }) => {
   return (
@@ -26,25 +26,9 @@ export const Navigation = ({ items, formatUrl, history }) => {
           <div key={nextId()} className="navigation-list-header">
             <HeaderItem>Introduction</HeaderItem>
             <NavigationItem
-              key={nextId()}
-              nextId={nextId}
+              label="About the API"
               formatUrl={formatUrl}
-              fontWeight={600}
-              history={history}
-              label="Test"
-            />
-          </div>
-
-          <div key={nextId()} className="navigation-list-header">
-            <HeaderItem>Resources</HeaderItem>
-            <NavigationItem
-              key={nextId()}
-              nextId={nextId}
-              formatUrl={formatUrl}
-              fontWeight={600}
-              history={history}
-              label="Test"
-            />
+            ></NavigationItem>
           </div>
         </ul>
       </div>

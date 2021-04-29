@@ -1,16 +1,16 @@
 import React from "react";
 import { NavHashLink as Link } from "react-router-hash-link";
-import "./NavigationItem.scss";
+import "./NavigationSubItem.scss";
 
-export const NavigationItem = ({ label, formatUrl }) => {
+export const NavigationSubItem = ({ children, formatUrl }) => {
   return (
     <div className="navigation-item-container">
       <Link
-        to={"#" + formatUrl(label)}
+        to={"#" + formatUrl(children.toString())}
         activeClassName="active"
         className="list-item-label"
       >
-        <span>{label}</span>
+        <span>{children}</span>
       </Link>
     </div>
   );
