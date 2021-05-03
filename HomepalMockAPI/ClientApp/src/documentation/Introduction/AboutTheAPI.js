@@ -31,13 +31,13 @@ export const AboutTheApi = ({ history, token }) => {
                 REST principles
               </a>
               . All routes described are protected and requires a key-based
-              authentication. The responses of the API are based on{" "}
+              authentication. The data format used in Homebase API is{" "}
               <a
                 href="https://jsonapi.org"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                https://jsonapi.org
+                JSON
               </a>
               . Error handling is done via{" "}
               <a

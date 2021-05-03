@@ -25,8 +25,8 @@ export const Versioning = ({ history }) => {
                 integration.
               </p>
               <p>
-                In come cases, endpoints and functionalities can be replaced by
-                others and thus deprecetad. This will always be announced{" "}
+                In some cases, endpoints and functionalities can be replaced by
+                others and, will thus be marked as deprecated. This will always be announced{" "}
                 <b>6 months in advance</b> via:
                 <ul>
                   <li>recurring email reminders.</li>
