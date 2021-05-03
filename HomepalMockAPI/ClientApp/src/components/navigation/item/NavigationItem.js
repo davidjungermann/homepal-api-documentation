@@ -71,7 +71,6 @@ export const NavigationItem = ({
           location.hash === "#delete-region"
         ) {
           setOpen("navigation-sub-list-open");
-          console.log("haj");
         } else {
           setOpen("navigation-sub-list-closed");
         }
