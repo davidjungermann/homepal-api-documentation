@@ -1,6 +1,8 @@
 import React from "react";
-import { NavigationItem } from "./item/NavigationItem";
 import nextId from "react-id-generator";
+import { HeaderItem } from "./header/HeaderItem";
+import { NavigationItem } from "./navigation-unit/NavigationItem";
+import { NavigationUnit } from "./navigation-unit/NavigationUnit";
 
 import "./Navigation.scss";
 
@@ -20,22 +22,250 @@ export const Navigation = ({ items, formatUrl, history }) => {
         <select id="version" name="version">
           <option value="v1">v1 (latest)</option>
         </select>
-
+        {/* If more than one navigation item is passed to NavigationUnit, the first item becomes the header, and subsequent items are placed in a list. */}
         <ul className="navigation-list">
-          {items.map((sidebarItem) => {
-            return (
-              <div key={nextId()} className="navigation-list-header">
-                <NavigationItem
-                  key={nextId()}
-                  nextId={nextId}
-                  formatUrl={formatUrl}
-                  fontWeight={600}
-                  history={history}
-                  {...sidebarItem}
-                />
-              </div>
-            );
-          })}
+          <div key={nextId()} className="navigation-list-header">
+            <HeaderItem>Introduction</HeaderItem>
+          </div>
+          <div key={nextId()} className="navigation-list-content">
+            <NavigationUnit history={history} formatUrl={formatUrl}>
+              <NavigationItem
+                label="About the API"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+            </NavigationUnit>
+            <NavigationUnit history={history} formatUrl={formatUrl}>
+              <NavigationItem
+                label="Conceptual Information"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Conceptual Overview"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Database Properties"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Enumerated Values"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+            </NavigationUnit>
+            <NavigationUnit history={history} formatUrl={formatUrl}>
+              <NavigationItem
+                label="Authorization"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Generate Access Key"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+            </NavigationUnit>
+            <NavigationUnit history={history} formatUrl={formatUrl}>
+              <NavigationItem
+                label="Validations"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+            </NavigationUnit>
+            <NavigationUnit history={history} formatUrl={formatUrl}>
+              <NavigationItem
+                label="Errors"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Error Codes"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+            </NavigationUnit>
+            <NavigationUnit history={history} formatUrl={formatUrl}>
+              <NavigationItem
+                label="Query Parameters"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Pagination"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Sorting"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+            </NavigationUnit>
+            <NavigationUnit history={history} formatUrl={formatUrl}>
+              <NavigationItem
+                label="Versioning"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Upcoming Deprecations"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+            </NavigationUnit>
+          </div>
+          <div key={nextId()} className="navigation-list-header">
+            <HeaderItem>Resources</HeaderItem>
+          </div>
+          <div key={nextId()} className="navigation-list-content">
+            <NavigationUnit history={history} formatUrl={formatUrl}>
+              <NavigationItem
+                label="Agent"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Get Agents"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Get Agent"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Create Agent"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Update Agent"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Delete Agent"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+            </NavigationUnit>
+            <NavigationUnit history={history} formatUrl={formatUrl}>
+              <NavigationItem
+                label="Building"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Get Buildings"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Get Building"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Create Building"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Update Building"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Delete Building"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+            </NavigationUnit>
+            <NavigationUnit history={history} formatUrl={formatUrl}>
+              <NavigationItem
+                label="Customer"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Get Customers"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Create Customer"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Delete Customer"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+            </NavigationUnit>
+            <NavigationUnit history={history} formatUrl={formatUrl}>
+              <NavigationItem
+                label="Leasable"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Get Leasables"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Get Leasable"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Create Leasable"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Update Leasable"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Delete Leasable"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+            </NavigationUnit>
+            <NavigationUnit history={history} formatUrl={formatUrl}>
+              <NavigationItem
+                label="Owner"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Get Owners"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Create Owner"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Delete Owner"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+            </NavigationUnit>
+            <NavigationUnit history={history} formatUrl={formatUrl}>
+              <NavigationItem
+                label="RealEstate"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Get RealEstates"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Get RealEstate"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Create RealEstate"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Update RealEstate"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Delete RealEstate"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+            </NavigationUnit>
+            <NavigationUnit history={history} formatUrl={formatUrl}>
+              <NavigationItem
+                label="Regions"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Get Regions"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Create Region"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Delete Region"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+            </NavigationUnit>
+          </div>
         </ul>
       </div>
     </React.Fragment>

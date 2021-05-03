@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Navigation } from "./components/navigation/Navigation";
-import { items } from "./components/navigation/items";
 import { routes } from "./components/content/Routes";
 import { BrowserRouter as Route } from "react-router-dom";
 import { Content } from "./components/content/Content";
@@ -47,7 +46,6 @@ function App() {
       <div className="body">
         <Navigation
           className="navigation"
-          items={items}
           formatUrl={formatUrl}
           history={history}
         />
