@@ -6,7 +6,7 @@ import { NavigationUnit } from "./navigation-unit/NavigationUnit";
 
 import "./Navigation.scss";
 
-export const Navigation = ({ items, formatUrl, history }) => {
+export const Navigation = ({ formatUrl, history }) => {
   return (
     <React.Fragment>
       <div className="navigation-container">

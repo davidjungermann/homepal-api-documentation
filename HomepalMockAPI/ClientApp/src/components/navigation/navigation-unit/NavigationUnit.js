@@ -21,10 +21,13 @@ export const NavigationUnit = ({ children, history, formatUrl }) => {
       </div>
     );
   } else if (count > 1) {
-    const firstNavigationItem = Children.toArray(children[0]);
+    const firstNavigationItem = children[0];
     var labels = [];
-    Children.map(children, (item) => {
+    var test = Children.map(children, (item, index) => {
       labels.push("#" + formatUrl(item.props.label));
+      if (index !== 0) {
+        return item;
+      }
     });
 
     history.listen((location) => {
@@ -41,13 +44,7 @@ export const NavigationUnit = ({ children, history, formatUrl }) => {
           {firstNavigationItem}
         </div>
 
-        <ul className={open}>
-          {Children.map(children, (item, index) => {
-            if (index !== 0) {
-              return item;
-            }
-          })}
-        </ul>
+        <ul className={open}>{test}</ul>
       </div>
     );
   }
