@@ -2,6 +2,7 @@ import React from "react";
 import nextId from "react-id-generator";
 import { HeaderItem } from "./header/HeaderItem";
 import { NavigationItem } from "./navigation-unit/NavigationItem";
+import { NavigationUnit } from "./navigation-unit/NavigationUnit";
 
 import "./Navigation.scss";
 
@@ -25,10 +26,22 @@ export const Navigation = ({ items, formatUrl, history }) => {
         <ul className="navigation-list">
           <div key={nextId()} className="navigation-list-header">
             <HeaderItem>Introduction</HeaderItem>
-            <NavigationItem
-              label="About the API"
-              formatUrl={formatUrl}
-            ></NavigationItem>
+            <NavigationUnit>
+              <NavigationItem
+                label="About the API"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+            </NavigationUnit>
+            <NavigationUnit>
+              <NavigationItem
+                label="Conceptual Information"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Conceptual Overview"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+            </NavigationUnit>
           </div>
         </ul>
       </div>
