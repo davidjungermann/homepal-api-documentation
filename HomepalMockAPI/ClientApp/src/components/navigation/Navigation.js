@@ -22,7 +22,7 @@ export const Navigation = ({ items, formatUrl, history }) => {
         <select id="version" name="version">
           <option value="v1">v1 (latest)</option>
         </select>
-
+        {/* If more than one navigation item is passed to NavigationUnit, the first item becomes the header, and subsequent items are placed in a list. */}
         <ul className="navigation-list">
           <div key={nextId()} className="navigation-list-header">
             <HeaderItem>Introduction</HeaderItem>
