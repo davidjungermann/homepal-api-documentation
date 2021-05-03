@@ -26,6 +26,8 @@ export const Navigation = ({ items, formatUrl, history }) => {
         <ul className="navigation-list">
           <div key={nextId()} className="navigation-list-header">
             <HeaderItem>Introduction</HeaderItem>
+          </div>
+          <div key={nextId()} className="navigation-list-content">
             <NavigationUnit>
               <NavigationItem
                 label="About the API"
@@ -39,6 +41,227 @@ export const Navigation = ({ items, formatUrl, history }) => {
               ></NavigationItem>
               <NavigationItem
                 label="Conceptual Overview"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Database Properties"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Enumerated Values"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+            </NavigationUnit>
+            <NavigationUnit>
+              <NavigationItem
+                label="Authorization"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Generate Access Key"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+            </NavigationUnit>
+            <NavigationUnit>
+              <NavigationItem
+                label="Validations"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+            </NavigationUnit>
+            <NavigationUnit>
+              <NavigationItem
+                label="Errors"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Error Codes"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+            </NavigationUnit>
+            <NavigationUnit>
+              <NavigationItem
+                label="Query Parameters"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Pagination"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Sorting"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+            </NavigationUnit>
+            <NavigationUnit>
+              <NavigationItem
+                label="Versioning"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Upcoming Deprecations"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+            </NavigationUnit>
+          </div>
+          <div key={nextId()} className="navigation-list-header">
+            <HeaderItem>Resources</HeaderItem>
+          </div>
+          <div key={nextId()} className="navigation-list-content">
+            <NavigationUnit>
+              <NavigationItem
+                label="Agent"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Get Agents"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Get Agent"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Create Agent"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Update Agent"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Delete Agent"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+            </NavigationUnit>
+            <NavigationUnit>
+              <NavigationItem
+                label="Building"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Get Buildings"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Get Building"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Create Building"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Update Building"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Delete Building"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+            </NavigationUnit>
+            <NavigationUnit>
+              <NavigationItem
+                label="Customer"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Get Customers"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Create Customer"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Delete Customer"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+            </NavigationUnit>
+            <NavigationUnit>
+              <NavigationItem
+                label="Leasable"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Get Leasables"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Get Leasable"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Create Leasable"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Update Leasable"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Delete Leasable"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+            </NavigationUnit>
+            <NavigationUnit>
+              <NavigationItem
+                label="Owner"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Get Owners"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Create Owner"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Delete Owner"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+            </NavigationUnit>
+            <NavigationUnit>
+              <NavigationItem
+                label="RealEstate"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Get RealEstates"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Get RealEstate"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Create RealEstate"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Update RealEstate"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Delete RealEstate"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+            </NavigationUnit>
+            <NavigationUnit>
+              <NavigationItem
+                label="Regions"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Get Regions"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Create Region"
+                formatUrl={formatUrl}
+              ></NavigationItem>
+              <NavigationItem
+                label="Delete Region"
                 formatUrl={formatUrl}
               ></NavigationItem>
             </NavigationUnit>
