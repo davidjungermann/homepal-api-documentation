@@ -28,21 +28,13 @@ export const Navigation = ({ items, formatUrl, history }) => {
             <HeaderItem>Introduction</HeaderItem>
           </div>
           <div key={nextId()} className="navigation-list-content">
-            <NavigationUnit
-              history={history}
-              formatUrl={formatUrl}
-              start="About the API"
-            >
+            <NavigationUnit history={history} formatUrl={formatUrl}>
               <NavigationItem
                 label="About the API"
                 formatUrl={formatUrl}
               ></NavigationItem>
             </NavigationUnit>
-            <NavigationUnit
-              history={history}
-              formatUrl={formatUrl}
-              start="Conceptual Information"
-            >
+            <NavigationUnit history={history} formatUrl={formatUrl}>
               <NavigationItem
                 label="Conceptual Information"
                 formatUrl={formatUrl}
@@ -60,11 +52,7 @@ export const Navigation = ({ items, formatUrl, history }) => {
                 formatUrl={formatUrl}
               ></NavigationItem>
             </NavigationUnit>
-            <NavigationUnit
-              history={history}
-              formatUrl={formatUrl}
-              start="Authorization"
-            >
+            <NavigationUnit history={history} formatUrl={formatUrl}>
               <NavigationItem
                 label="Authorization"
                 formatUrl={formatUrl}
@@ -74,21 +62,13 @@ export const Navigation = ({ items, formatUrl, history }) => {
                 formatUrl={formatUrl}
               ></NavigationItem>
             </NavigationUnit>
-            <NavigationUnit
-              history={history}
-              formatUrl={formatUrl}
-              start="Validations"
-            >
+            <NavigationUnit history={history} formatUrl={formatUrl}>
               <NavigationItem
                 label="Validations"
                 formatUrl={formatUrl}
               ></NavigationItem>
             </NavigationUnit>
-            <NavigationUnit
-              history={history}
-              formatUrl={formatUrl}
-              start="Errors"
-            >
+            <NavigationUnit history={history} formatUrl={formatUrl}>
               <NavigationItem
                 label="Errors"
                 formatUrl={formatUrl}
@@ -98,11 +78,7 @@ export const Navigation = ({ items, formatUrl, history }) => {
                 formatUrl={formatUrl}
               ></NavigationItem>
             </NavigationUnit>
-            <NavigationUnit
-              history={history}
-              formatUrl={formatUrl}
-              start="Query Parameters"
-            >
+            <NavigationUnit history={history} formatUrl={formatUrl}>
               <NavigationItem
                 label="Query Parameters"
                 formatUrl={formatUrl}
@@ -116,11 +92,7 @@ export const Navigation = ({ items, formatUrl, history }) => {
                 formatUrl={formatUrl}
               ></NavigationItem>
             </NavigationUnit>
-            <NavigationUnit
-              history={history}
-              formatUrl={formatUrl}
-              start="Versioning"
-            >
+            <NavigationUnit history={history} formatUrl={formatUrl}>
               <NavigationItem
                 label="Versioning"
                 formatUrl={formatUrl}
@@ -135,11 +107,7 @@ export const Navigation = ({ items, formatUrl, history }) => {
             <HeaderItem>Resources</HeaderItem>
           </div>
           <div key={nextId()} className="navigation-list-content">
-            <NavigationUnit
-              history={history}
-              formatUrl={formatUrl}
-              start="Agent"
-            >
+            <NavigationUnit history={history} formatUrl={formatUrl}>
               <NavigationItem
                 label="Agent"
                 formatUrl={formatUrl}
@@ -165,11 +133,7 @@ export const Navigation = ({ items, formatUrl, history }) => {
                 formatUrl={formatUrl}
               ></NavigationItem>
             </NavigationUnit>
-            <NavigationUnit
-              history={history}
-              formatUrl={formatUrl}
-              start="Building"
-            >
+            <NavigationUnit history={history} formatUrl={formatUrl}>
               <NavigationItem
                 label="Building"
                 formatUrl={formatUrl}
@@ -195,11 +159,7 @@ export const Navigation = ({ items, formatUrl, history }) => {
                 formatUrl={formatUrl}
               ></NavigationItem>
             </NavigationUnit>
-            <NavigationUnit
-              history={history}
-              formatUrl={formatUrl}
-              start="Customer"
-            >
+            <NavigationUnit history={history} formatUrl={formatUrl}>
               <NavigationItem
                 label="Customer"
                 formatUrl={formatUrl}
@@ -217,11 +177,7 @@ export const Navigation = ({ items, formatUrl, history }) => {
                 formatUrl={formatUrl}
               ></NavigationItem>
             </NavigationUnit>
-            <NavigationUnit
-              history={history}
-              formatUrl={formatUrl}
-              start="Leasable"
-            >
+            <NavigationUnit history={history} formatUrl={formatUrl}>
               <NavigationItem
                 label="Leasable"
                 formatUrl={formatUrl}
@@ -247,11 +203,7 @@ export const Navigation = ({ items, formatUrl, history }) => {
                 formatUrl={formatUrl}
               ></NavigationItem>
             </NavigationUnit>
-            <NavigationUnit
-              history={history}
-              formatUrl={formatUrl}
-              start="Owner"
-            >
+            <NavigationUnit history={history} formatUrl={formatUrl}>
               <NavigationItem
                 label="Owner"
                 formatUrl={formatUrl}
@@ -269,11 +221,7 @@ export const Navigation = ({ items, formatUrl, history }) => {
                 formatUrl={formatUrl}
               ></NavigationItem>
             </NavigationUnit>
-            <NavigationUnit
-              history={history}
-              formatUrl={formatUrl}
-              start="RealEstate"
-            >
+            <NavigationUnit history={history} formatUrl={formatUrl}>
               <NavigationItem
                 label="RealEstate"
                 formatUrl={formatUrl}
@@ -299,13 +247,9 @@ export const Navigation = ({ items, formatUrl, history }) => {
                 formatUrl={formatUrl}
               ></NavigationItem>
             </NavigationUnit>
-            <NavigationUnit
-              history={history}
-              formatUrl={formatUrl}
-              start="Region"
-            >
+            <NavigationUnit history={history} formatUrl={formatUrl}>
               <NavigationItem
-                label="Region"
+                label="Regions"
                 formatUrl={formatUrl}
               ></NavigationItem>
               <NavigationItem

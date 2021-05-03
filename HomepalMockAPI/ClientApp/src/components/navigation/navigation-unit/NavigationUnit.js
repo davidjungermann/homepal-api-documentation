@@ -1,17 +1,10 @@
 import React, { Children, useState } from "react";
 import "./NavigationUnit.scss";
 
-export const NavigationUnit = ({ children, history, formatUrl, start }) => {
-  const count = Children.count(children);
+export const NavigationUnit = ({ children, history, formatUrl }) => {
   const [open, setOpen] = useState("navigation-unit-list-closed");
 
-  history.listen((location) => {
-    if (location.hash === "#" + formatUrl(start)) {
-      setOpen("navigation-unit-list-open");
-    } else {
-      setOpen("navigation-unit-list-closed");
-    }
-  });
+  const count = Children.count(children);
 
   const toggleOpen = () => {
     if (open === "navigation-unit-list-closed") {
@@ -29,6 +22,19 @@ export const NavigationUnit = ({ children, history, formatUrl, start }) => {
     );
   } else if (count > 1) {
     const firstNavigationItem = Children.toArray(children[0]);
+    var labels = [];
+    Children.map(children, (item) => {
+      labels.push("#" + formatUrl(item.props.label));
+    });
+
+    history.listen((location) => {
+      if (labels.includes(location.hash)) {
+        setOpen("navigation-unit-list-open");
+      } else {
+        setOpen("navigation-unit-list-closed");
+      }
+    });
+
     return (
       <div className="navigation-unit-container">
         <div className="navigation-unit-header" onClick={() => toggleOpen()}>
