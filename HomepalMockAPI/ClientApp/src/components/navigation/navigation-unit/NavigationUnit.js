@@ -4,6 +4,7 @@ import "./NavigationUnit.scss";
 export const NavigationUnit = ({ children }) => {
   const count = Children.count(children);
   const [open, setOpen] = useState("navigation-unit-list-closed");
+  const [currentItem, setCurrentItem] = useState(null);
 
   const toggleOpen = () => {
     if (open === "navigation-unit-list-closed") {
