@@ -108,8 +108,9 @@ export const QueryParameters = ({ history, token }) => {
           <p>
             <span className="code-badge">offset</span> and{" "}
             <span className="code-badge">limit</span> can be applied for
-            endpoints that return several objects. They are listed as parameters
-            in the <b>Path Schema</b> under every resource, if applicable.
+            endpoints that return <b>several</b> objects. They are listed as
+            parameters in the <b>Path Schema</b> where applicable for a given
+            resource.
           </p>
         </Description>
         <Usage>
@@ -163,14 +164,12 @@ export const QueryParameters = ({ history, token }) => {
             ]}
           ></Table>
           <p>
-            In Homebase API, it is possible to sort on all attributes for a
-            given resource, for the endpoints that retrieve <b>several</b>{" "}
-            objects.
-          </p>
-          <p>
+            In Homebase API, it is possible to sort on all attributes present in
+            an object for a given resource.{" "}
             <span className="code-badge">sort</span> can be applied for
-            endpoints that return several objects. It is listed as a parameter
-            in the <b>Path Schema</b> where applicable for a given resource.
+            endpoints that return <b>several</b> objects. It is listed as a
+            parameter in the <b>Path Schema</b> where applicable for a given
+            resource.
           </p>
         </Description>
         <Usage>
