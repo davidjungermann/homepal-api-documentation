@@ -108,7 +108,7 @@ export const GetRegions = ({ history, token }) => {
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>
           curl --request GET
-          https://localhost:6001/api/regions?limit=3&offset=1&sort=name
+          http://localhost:6001/api/regions?limit=3&offset=1&sort=name
         </Example>
 
         <ContainerBlock header="REQUEST BODY EXAMPLE" inactiveContainerBlock>

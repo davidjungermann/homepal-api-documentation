@@ -137,7 +137,7 @@ export const CreateBuilding = ({ history, token }) => {
           curl --header "Content-Type: application/json" --request POST --data
           '&#123;"class_descriptor":"ApartmentBuilding",
           "street_name":"Skånegatan", "street_number":"20", "postal_code":"223
-          33", "real_estate_id":"1"&#125;' https://localhost:6001/api/buildings
+          33", "real_estate_id":"1"&#125;' http://localhost:6001/api/buildings
         </Example>
 
         <BodyDescription

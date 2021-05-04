@@ -5,13 +5,13 @@ import { TokenContainer } from "../content/token-container/TokenContainer";
 
 export const Auth = ({ token, setToken, valid, setValid }) => {
   const fetchToken = async () => {
-    const response = await axios.get("https://localhost:6001/api/authtoken");
+    const response = await axios.get("http://localhost:6001/api/authtoken");
     setToken(response.data.value);
   };
 
   // const validateToken = async () => {
   //   const response = await axios.get(
-  //     "https://localhost:6001/api/authtoken/" + token
+  //     "http://localhost:6001/api/authtoken/" + token
   //   );
   //   setValid(response.data.isValid.toString());
   // };

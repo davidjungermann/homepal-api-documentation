@@ -108,7 +108,7 @@ export const GetCustomers = ({ history, token }) => {
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>
           curl --request GET
-          https://localhost:6001/api/customers?limit=3&offset=1&sort=id
+          http://localhost:6001/api/customers?limit=3&offset=1&sort=id
         </Example>
 
         <ContainerBlock header="REQUEST BODY EXAMPLE" inactiveContainerBlock>

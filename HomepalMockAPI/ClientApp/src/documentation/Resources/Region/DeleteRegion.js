@@ -90,7 +90,7 @@ export const DeleteRegion = ({ history, token }) => {
           <Endpoint request="DELETE" baseUrl="api/regions/{name}"></Endpoint>
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>
-          curl --request DELETE https://localhost:6001/api/regions/Skåne
+          curl --request DELETE http://localhost:6001/api/regions/Skåne
         </Example>
 
         <ContainerBlock header="REQUEST BODY EXAMPLE" inactiveContainerBlock>

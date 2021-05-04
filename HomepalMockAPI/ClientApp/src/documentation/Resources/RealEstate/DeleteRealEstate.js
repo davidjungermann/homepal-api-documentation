@@ -90,7 +90,7 @@ export const DeleteRealEstate = ({ history, token }) => {
           <Endpoint request="DELETE" baseUrl="api/realestates/{id}"></Endpoint>
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>
-          curl --request DELETE https://localhost:6001/api/realestates/1
+          curl --request DELETE http://localhost:6001/api/realestates/1
         </Example>
 
         <ContainerBlock header="REQUEST BODY EXAMPLE" inactiveContainerBlock>

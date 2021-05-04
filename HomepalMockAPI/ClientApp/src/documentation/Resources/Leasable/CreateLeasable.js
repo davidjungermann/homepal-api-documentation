@@ -160,7 +160,7 @@ export const CreateLeasable = ({ history, token }) => {
           '&#123;"class_descriptor":"ResidentialPremise", "price":"3483",
           "description":"New apartment in central Malmö", "size":"73",
           "customer_id":"5", "owner_id":"1", "building_id":"1"&#125;'
-          https://localhost:6001/api/leasables
+          http://localhost:6001/api/leasables
         </Example>
 
         <BodyDescription

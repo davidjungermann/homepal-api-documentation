@@ -91,7 +91,7 @@ export const GetRealEstate = ({ history, token }) => {
           <Endpoint request="GET" baseUrl="api/realestates/{id}"></Endpoint>
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>
-          curl --request GET https://localhost:6001/api/realestates/1
+          curl --request GET http://localhost:6001/api/realestates/1
         </Example>
 
         <ContainerBlock header="REQUEST BODY EXAMPLE" inactiveContainerBlock>

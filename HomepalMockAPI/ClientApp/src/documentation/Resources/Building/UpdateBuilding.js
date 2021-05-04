@@ -145,7 +145,7 @@ export const UpdateBuilding = ({ history, token }) => {
           '&#123;"id":"1", "class_descriptor":"ApartmentBuilding",
           "street_name":"Updated Street", "street_number":"20",
           "postal_code":"223 33", "real_estate_id":"1"&#125;'
-          https://localhost:6001/api/buildings
+          http://localhost:6001/api/buildings
         </Example>
 
         <BodyDescription

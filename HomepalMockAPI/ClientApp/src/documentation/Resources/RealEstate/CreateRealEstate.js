@@ -116,7 +116,7 @@ export const CreateRealEstate = ({ history, token }) => {
         <Example header="USAGE EXAMPLE" token={token} copy>
           curl --header "Content-Type: application/json" --request POST --data
           '&#123;"name":"New RealEstate", "region_name":"Skåne",
-          "owner_id":"1"&#125;' https://localhost:6001/api/realestates
+          "owner_id":"1"&#125;' http://localhost:6001/api/realestates
         </Example>
 
         <BodyDescription

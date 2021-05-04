@@ -88,10 +88,10 @@ export const AboutTheApi = ({ history, token }) => {
         <Usage>
           <EndpointExample
             header="BASE URL"
-            baseUrl="https://localhost:6001/"
+            baseUrl="http://localhost:6001/"
             copy
           >
-            https://localhost:6001/
+            http://localhost:6001/
           </EndpointExample>
           <TextUnit header="Usage examples" headerSize="7">
             <p>
@@ -103,7 +103,7 @@ export const AboutTheApi = ({ history, token }) => {
               >
                 cURL
               </a>{" "}
-              to interact with the API over HTTPS.
+              to interact with the API over HTTP.
             </p>
           </TextUnit>
         </Usage>

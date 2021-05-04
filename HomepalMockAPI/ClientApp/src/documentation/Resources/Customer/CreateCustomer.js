@@ -98,7 +98,7 @@ export const CreateCustomer = ({ history, token }) => {
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>
           curl --header "Content-Type: application/json" --request POST --data
-          '&#123;"id":"1"&#125;' https://localhost:6001/api/customers
+          '&#123;"id":"1"&#125;' http://localhost:6001/api/customers
         </Example>
 
         <BodyDescription

@@ -98,7 +98,7 @@ export const CreateOwner = ({ history, token }) => {
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>
           curl --header "Content-Type: application/json" --request POST --data
-          '&#123;"id":"8"&#125;' https://localhost:6001/api/owners
+          '&#123;"id":"8"&#125;' http://localhost:6001/api/owners
         </Example>
 
         <BodyDescription

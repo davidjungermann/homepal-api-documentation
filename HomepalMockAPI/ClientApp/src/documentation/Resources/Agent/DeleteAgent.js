@@ -92,7 +92,7 @@ export const DeleteAgent = ({ history, token }) => {
           <Endpoint request="DELETE" baseUrl="api/agents/{id}"></Endpoint>
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>
-          curl --request DELETE https://localhost:6001/api/agents/1
+          curl --request DELETE http://localhost:6001/api/agents/1
         </Example>
 
         <ContainerBlock header="REQUEST BODY EXAMPLE" inactiveContainerBlock>

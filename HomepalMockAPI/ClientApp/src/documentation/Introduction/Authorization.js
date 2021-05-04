@@ -27,8 +27,8 @@ export const Authorization = ({
             </p>
             <p>
               API keys must be included in all requests made to the API. All API
-              requests must be made over HTTPS. Calls made over plain HTTP will
-              fail. API requests without authentication will also fail.
+              requests must be made over HTTP. API requests without
+              authentication will also fail.
             </p>
             <p>
               You can generate keys in{" "}

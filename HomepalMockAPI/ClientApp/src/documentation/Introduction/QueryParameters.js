@@ -105,7 +105,7 @@ export const QueryParameters = ({ history, token }) => {
         </Description>
         <Usage>
           <Example header="USAGE" token={token} copy>
-            curl https://localhost:6001/api/buildings?offset=1&limit=100
+            curl http://localhost:6001/api/buildings?offset=1&limit=100
           </Example>
         </Usage>
       </Section>
@@ -165,7 +165,7 @@ export const QueryParameters = ({ history, token }) => {
         </Description>
         <Usage>
           <Example header="USAGE" token={token} copy>
-            curl https://localhost:6001/api/buildings?sort=street_name
+            curl http://localhost:6001/api/buildings?sort=street_name
           </Example>
         </Usage>
       </Section>

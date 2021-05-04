@@ -162,7 +162,7 @@ export const UpdateLeasable = ({ history, token }) => {
           '&#123;"id":"1", "class_descriptor":"ResidentialPremise",
           "price":"3483", "description":"Updated apartment in central Malmö",
           "size":"73", "customer_id":"5", "owner_id":"1",
-          "building_id":"1"&#125;' https://localhost:6001/api/leasables
+          "building_id":"1"&#125;' http://localhost:6001/api/leasables
         </Example>
 
         <BodyDescription
