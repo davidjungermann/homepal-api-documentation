@@ -55,12 +55,16 @@ export const QueryParameters = ({ history, token }) => {
             <p>
               Offset sets how many objects should be skipped before collecting
               the result set. The default value for{" "}
-              <span className="code-badge">offset</span> is <b>0</b>.
+              <span className="code-badge">offset</span> is <b>0</b>. This
+              default value is applied if this query parameter is omitted from
+              the request.
             </p>
             <p>
               Limit sets the maximum number of objects that are returned in the
               result set. The default value for{" "}
-              <span className="code-badge">limit</span> is <b>10</b>.
+              <span className="code-badge">limit</span> is <b>10</b>. This
+              default value is applied if this query parameter is omitted from
+              the request.
             </p>
           </TextUnit>
           <Table
