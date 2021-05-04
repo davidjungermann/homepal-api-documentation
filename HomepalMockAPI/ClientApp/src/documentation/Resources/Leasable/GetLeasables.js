@@ -108,7 +108,7 @@ export const GetLeasables = ({ history, token }) => {
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>
           curl --request GET
-          http://localhost:6001/api/leasables?limit=3&offset=1&sort=price
+          http://localhost:6001/api/leasables
         </Example>
 
         <ContainerBlock header="REQUEST BODY EXAMPLE" inactiveContainerBlock>

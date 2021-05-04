@@ -109,7 +109,7 @@ export const GetAgents = ({ history, token }) => {
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>
           curl --request GET
-          http://localhost:6001/api/agents?limit=3&offset=1&sort=name
+          http://localhost:6001/api/agents
         </Example>
 
         <ContainerBlock header="REQUEST BODY EXAMPLE" inactiveContainerBlock>

@@ -109,7 +109,7 @@ export const GetBuildings = ({ history, token }) => {
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>
           curl --request GET
-          http://localhost:6001/api/buildings?limit=3&offset=1&sort=street_number
+          http://localhost:6001/api/buildings
         </Example>
 
         <ContainerBlock header="REQUEST BODY EXAMPLE" inactiveContainerBlock>

@@ -108,7 +108,7 @@ export const GetOwners = ({ history, token }) => {
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>
           curl --request GET
-          http://localhost:6001/api/owners?limit=3&offset=1&sort=id
+          http://localhost:6001/api/owners
         </Example>
 
         <ContainerBlock header="REQUEST BODY EXAMPLE" inactiveContainerBlock>
