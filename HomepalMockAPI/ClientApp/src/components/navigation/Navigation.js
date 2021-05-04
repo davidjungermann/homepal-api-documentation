@@ -263,7 +263,7 @@ export const Navigation = ({ formatUrl, history }) => {
 
             <NavigationUnit history={history} formatUrl={formatUrl}>
               <NavigationItem
-                label="Regions"
+                label="Region"
                 formatUrl={formatUrl}
               ></NavigationItem>
               <NavigationItem

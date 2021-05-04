@@ -1,5 +1,4 @@
 import React from "react";
-import { ContainerBlock } from "../../components/container-block/ContainerBlock";
 import { EndpointExample } from "../../components/content/endpoint-example/EndpointExample";
 import { TextUnit } from "../../components/content/text-unit/TextUnit";
 import { Description } from "../../components/description/Description";

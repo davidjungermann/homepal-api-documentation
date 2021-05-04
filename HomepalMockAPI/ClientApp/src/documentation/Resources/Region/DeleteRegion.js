@@ -17,7 +17,7 @@ export const DeleteRegion = ({ history, token }) => {
   return (
     <Section id="delete-region" history={history}>
       <Description>
-        <TextUnit header="Delete Region">
+        <TextUnit header="Delete Region" isSubsection>
           <p>
             From this endpoint, you can delete a
             <span className="code-badge">Region</span>.

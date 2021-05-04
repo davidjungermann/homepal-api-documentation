@@ -18,7 +18,7 @@ export const GetOwners = ({ history, token }) => {
   return (
     <Section id="get-owners" history={history}>
       <Description>
-        <TextUnit header="Get Owners">
+        <TextUnit header="Get Owners" isSubsection>
           <p>
             From this endpoint, you can retrieve information on several
             <span className="code-badge">Owners</span>.

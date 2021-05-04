@@ -18,7 +18,7 @@ export const GetLeasables = ({ history, token }) => {
   return (
     <Section id="get-leasables" history={history}>
       <Description>
-        <TextUnit header="Get Leasables">
+        <TextUnit header="Get Leasables" isSubsection>
           <p>
             From this endpoint, you can retrieve information on several
             <span className="code-badge">Leasables</span>.

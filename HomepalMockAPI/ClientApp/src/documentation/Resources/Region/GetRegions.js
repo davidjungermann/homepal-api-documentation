@@ -18,7 +18,7 @@ export const GetRegions = ({ history, token }) => {
   return (
     <Section id="get-regions" history={history}>
       <Description>
-        <TextUnit header="Get Regions">
+        <TextUnit header="Get Regions" isSubsection>
           <p>
             From this endpoint, you can retrieve information on several
             <span className="code-badge">Regions</span>.

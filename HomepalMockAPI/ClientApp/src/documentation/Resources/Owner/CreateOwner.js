@@ -18,7 +18,7 @@ export const CreateOwner = ({ history, token }) => {
   return (
     <Section id="create-owner" history={history}>
       <Description>
-        <TextUnit header="Create Owner">
+        <TextUnit header="Create Owner" isSubsection>
           <p>
             From this endpoint, you can create a new
             <span className="code-badge">Owner</span>.

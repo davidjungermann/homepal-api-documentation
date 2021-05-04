@@ -18,7 +18,7 @@ export const CreateLeasable = ({ history, token }) => {
   return (
     <Section id="create-leasable" history={history}>
       <Description>
-        <TextUnit header="Create Leasable">
+        <TextUnit header="Create Leasable" isSubsection>
           <p>
             From this endpoint, you can create a new
             <span className="code-badge">Leasable</span>.

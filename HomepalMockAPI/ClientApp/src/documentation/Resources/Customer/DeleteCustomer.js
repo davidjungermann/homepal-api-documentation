@@ -19,7 +19,7 @@ export const DeleteCustomer = ({ history, token }) => {
   return (
     <Section id="delete-customer" history={history}>
       <Description>
-        <TextUnit header="Delete Customer">
+        <TextUnit header="Delete Customer" isSubsection>
           <p>
             From this endpoint, you can delete an
             <span className="code-badge">Customer</span>.

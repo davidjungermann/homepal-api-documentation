@@ -18,7 +18,7 @@ export const GetCustomers = ({ history, token }) => {
   return (
     <Section id="get-customers" history={history}>
       <Description>
-        <TextUnit header="Get Customers">
+        <TextUnit header="Get Customers" isSubsection>
           <p>
             From this endpoint, you can retrieve information on several
             <span className="code-badge">Customers</span>.

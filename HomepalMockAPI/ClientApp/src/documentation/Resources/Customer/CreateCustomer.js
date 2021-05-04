@@ -18,7 +18,7 @@ export const CreateCustomer = ({ history, token }) => {
   return (
     <Section id="create-customer" history={history}>
       <Description>
-        <TextUnit header="Create Customer">
+        <TextUnit header="Create Customer" isSubsection>
           <p>
             From this endpoint, you can create a new
             <span className="code-badge">Customer</span>.

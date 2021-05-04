@@ -17,7 +17,7 @@ export const DeleteLeasable = ({ history, token }) => {
   return (
     <Section id="delete-leasable" history={history}>
       <Description>
-        <TextUnit header="Delete Leasable">
+        <TextUnit header="Delete Leasable" isSubsection>
           <p>
             From this endpoint, you can delete a
             <span className="code-badge">Leasable</span>.

@@ -18,7 +18,7 @@ export const CreateRegion = ({ history, token }) => {
   return (
     <Section id="create-region" history={history}>
       <Description>
-        <TextUnit header="Create Region">
+        <TextUnit header="Create Region" isSubsection>
           <p>
             From this endpoint, you can create a new
             <span className="code-badge">Region</span>.

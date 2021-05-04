@@ -18,7 +18,7 @@ export const CreateBuilding = ({ history, token }) => {
   return (
     <Section id="create-building" history={history}>
       <Description>
-        <TextUnit header="Create Building">
+        <TextUnit header="Create Building" isSubsection>
           <p>
             From this endpoint, you can create a new
             <span className="code-badge">Building</span>.
