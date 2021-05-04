@@ -4,14 +4,16 @@ import "./NavigationItem.scss";
 
 export const NavigationItem = ({ label, formatUrl }) => {
   return (
-    <div className="navigation-item-container">
+    
       <Link
         to={"#" + formatUrl(label)}
         activeClassName="active"
         className="list-item-label"
       >
-        <span>{label}</span>
+        <div className="navigation-item-container">
+          <div className="active-marker" />
+          <span>{label}</span>
+        </div>
       </Link>
-    </div>
   );
 };

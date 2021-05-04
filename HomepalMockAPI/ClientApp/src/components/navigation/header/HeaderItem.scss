@@ -3,6 +3,7 @@
 .list-item-label {
   color: rgba($gray-6, 0.75);
   text-decoration: none;
+  width: 100%;
 }
 
 .list-item-label:hover {
@@ -10,25 +11,22 @@
 }
 
 .navigation-item-container {
+  position: relative;
+  z-index: 0;
+
   margin-bottom: 2%;
   margin-top: 2%;
   user-select: none;
   white-space: nowrap;
   width: 100%;
 
-  /*
-  .active {
-    color: $lime-dark;
-    background: rgba($emerald, 0.2);
-    text-decoration: none;
-    padding: 2px 120% 2px 0px;
-    border-radius: 5px;
-  }
+  //border: 1px solid red;
+}
 
-  .active:hover {
-    color: $lime-dark;
+.navigation-unit-list-open {
+  span {
+    margin-left: 12px;
   }
-  */
 }
 
 .navigation-item-container:hover {
@@ -43,4 +41,28 @@
 
 .faded {
   color: $gray-5;
+}
+
+.navigation-unit-container {
+  .active {
+    span {
+      position: relative;
+      color: $lime-dark;
+      z-index: 0;
+    }
+
+    .active-marker {
+      position: absolute;
+      z-index: 0;
+      transform: translateX(-24px);
+      width: calc(100% + 24px);
+      height: 100%;
+      border-radius: 0px 5px 5px 0px;
+      background: rgba($emerald, 0.2);
+    }
+  }
+
+  span {
+    font-size: 10.5pt;
+  }
 }
