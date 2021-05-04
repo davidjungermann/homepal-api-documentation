@@ -53,18 +53,17 @@ export const QueryParameters = ({ history, token }) => {
               parameters.
             </p>
             <p>
-              The default value for <span className="code-badge">offset</span>{" "}
-              is <b>0</b>. Offset sets how many objects should be skipped before
-              collecting the result set.
+              Offset sets how many objects should be skipped before collecting
+              the result set. The default value for{" "}
+              <span className="code-badge">offset</span> is <b>0</b>.
             </p>
             <p>
-              The default value for <span className="code-badge">limit</span> is{" "}
-              <b>10</b>. Limit sets the maximum number of objects that are
-              returned in the result set.
+              Limit sets the maximum number of objects that are returned in the
+              result set. The default value for{" "}
+              <span className="code-badge">limit</span> is <b>10</b>.
             </p>
           </TextUnit>
           <Table
-            //values och cols här kan flyttas ut i en separat fil för att det ska bli lättare att läsa!
             cols={[
               {
                 Header: "QUERY PARAMETER",
