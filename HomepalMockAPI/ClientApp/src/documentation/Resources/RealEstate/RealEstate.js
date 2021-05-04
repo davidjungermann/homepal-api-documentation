@@ -34,7 +34,7 @@ export const RealEstate = ({ history, token }) => {
               </span>
               , and has an{" "}
               <span className="code-badge">
-                <Link to="#region">Owner</Link>
+                <Link to="#owner">Owner</Link>
               </span>
             </p>
           </TextUnit>

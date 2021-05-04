@@ -1,7 +1,7 @@
 import React from "react";
 import nextId from "react-id-generator";
 import { HeaderItem } from "./header/HeaderItem";
-import { NavigationItem } from "./navigation-unit/NavigationItem";
+import { NavigationItem } from "./item/NavigationItem";
 import { NavigationUnit } from "./navigation-unit/NavigationUnit";
 
 import "./Navigation.scss";
@@ -263,7 +263,7 @@ export const Navigation = ({ formatUrl, history }) => {
 
             <NavigationUnit history={history} formatUrl={formatUrl}>
               <NavigationItem
-                label="Regions"
+                label="Region"
                 formatUrl={formatUrl}
               ></NavigationItem>
               <NavigationItem

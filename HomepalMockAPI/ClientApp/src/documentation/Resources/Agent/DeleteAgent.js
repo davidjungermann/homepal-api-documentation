@@ -19,7 +19,7 @@ export const DeleteAgent = ({ history, token }) => {
   return (
     <Section id="delete-agent" history={history}>
       <Description>
-        <TextUnit header="Delete Agent">
+        <TextUnit header="Delete Agent" isSubsection>
           <p>
             From this endpoint, you can delete an
             <span className="code-badge">Agent</span>.

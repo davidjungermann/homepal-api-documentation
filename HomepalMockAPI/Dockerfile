@@ -6,7 +6,7 @@ FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 # Fetch and install Node 10. Make sure to include the --yes parameter 
 # to automatically accept prompts during install, or it'll fail.
 
-RUN curl --silent --location https://deb.nodesource.com/setup_15.x | bash -
+RUN curl --silent --location https://deb.nodesource.com/setup_14.x | bash -
 RUN apt-get install --yes nodejs
 
 # Copy the source from your machine onto the container.
@@ -29,7 +29,7 @@ COPY HomepalMock.db /app/publish
 # that can still run the app.
 FROM mcr.microsoft.com/dotnet/aspnet:5.0-buster-slim
 
-# Expose port 5000 to your local machine so you can access the app.
+# Expose port 6001 to your local machine so you can access the app.
 EXPOSE 6001
 ENV ASPNETCORE_URLS https://*:6001
 

@@ -19,7 +19,7 @@ export const UpdateBuilding = ({ history, token }) => {
   return (
     <Section id="update-building" history={history}>
       <Description>
-        <TextUnit header="Update Building">
+        <TextUnit header="Update Building" isSubsection>
           <p>
             From this endpoint, you can edit an
             <span className="code-badge">Building</span>.

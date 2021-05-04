@@ -18,7 +18,7 @@ export const UpdateRealEstate = ({ history, token }) => {
   return (
     <Section id="update-realestate" history={history}>
       <Description>
-        <TextUnit header="Update RealEstate">
+        <TextUnit header="Update RealEstate" isSubsection>
           <p>
             From this endpoint, you can edit an
             <span className="code-badge">RealEstate</span>.

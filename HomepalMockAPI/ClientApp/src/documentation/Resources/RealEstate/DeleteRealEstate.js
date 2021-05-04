@@ -17,7 +17,7 @@ export const DeleteRealEstate = ({ history, token }) => {
   return (
     <Section id="delete-realestate" history={history}>
       <Description>
-        <TextUnit header="Delete RealEstate">
+        <TextUnit header="Delete RealEstate" isSubsection>
           <p>
             From this endpoint, you can delete a
             <span className="code-badge">RealEstate</span>.

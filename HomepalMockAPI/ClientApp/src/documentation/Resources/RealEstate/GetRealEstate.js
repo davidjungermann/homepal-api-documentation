@@ -18,7 +18,7 @@ export const GetRealEstate = ({ history, token }) => {
   return (
     <Section id="get-realestate" history={history}>
       <Description>
-        <TextUnit header="Get RealEstate">
+        <TextUnit header="Get RealEstate" isSubsection>
           <p>
             From this endpoint, you can retrieve information about a
             <span className="code-badge">RealEstate</span>.

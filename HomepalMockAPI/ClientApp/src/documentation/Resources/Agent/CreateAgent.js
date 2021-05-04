@@ -19,7 +19,7 @@ export const CreateAgent = ({ history, token }) => {
   return (
     <Section id="create-agent" history={history}>
       <Description>
-        <TextUnit header="Create Agent">
+        <TextUnit header="Create Agent" isSubsection>
           <p>
             From this endpoint, you can create a new
             <span className="code-badge">Agent</span>.
@@ -57,7 +57,7 @@ export const CreateAgent = ({ history, token }) => {
           <ReturnsItem icon="success">
             On success, the HTTP status code in the response header is{" "}
             <span className="code-badge">201 CREATED</span>, and response body
-            contains the number of affected rows. 
+            contains the number of affected rows.
           </ReturnsItem>
 
           <ReturnsItem icon="error">

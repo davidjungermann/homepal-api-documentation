@@ -19,7 +19,7 @@ export const GetAgent = ({ history, token }) => {
   return (
     <Section id="get-agent" history={history}>
       <Description>
-        <TextUnit header="Get Agent">
+        <TextUnit header="Get Agent" isSubsection>
           <p>
             From this endpoint, you can retrieve information about an
             <span className="code-badge">Agent</span>.

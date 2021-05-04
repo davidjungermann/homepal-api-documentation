@@ -18,7 +18,7 @@ export const UpdateLeasable = ({ history, token }) => {
   return (
     <Section id="update-leasable" history={history}>
       <Description>
-        <TextUnit header="Update Leasable">
+        <TextUnit header="Update Leasable" isSubsection>
           <p>
             From this endpoint, you can edit an
             <span className="code-badge">Leasable</span>.

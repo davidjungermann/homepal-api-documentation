@@ -65,7 +65,7 @@ export const ArchitecturalOverview = ({ history }) => {
                   <ArchitecturalObject
                     history={history}
                     title="Region"
-                    link="region"
+                    link="regions"
                     cardinalities={[["bottom-right", "1"]]}
                   >
                     <FontAwesomeIcon icon={faMapMarkedAlt} />

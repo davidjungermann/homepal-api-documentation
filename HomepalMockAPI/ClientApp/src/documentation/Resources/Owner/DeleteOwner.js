@@ -17,7 +17,7 @@ export const DeleteOwner = ({ history, token }) => {
   return (
     <Section id="delete-owner" history={history}>
       <Description>
-        <TextUnit header="Delete Owner">
+        <TextUnit header="Delete Owner" isSubsection>
           <p>
             From this endpoint, you can delete an
             <span className="code-badge">Owner</span>.
