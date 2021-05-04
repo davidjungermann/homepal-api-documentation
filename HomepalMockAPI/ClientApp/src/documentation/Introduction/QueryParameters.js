@@ -7,13 +7,14 @@ import { SectionWrapper } from "../../components/content/section-wrapper/Section
 import { Table } from "../../components/content/table/Table";
 import { TableItem } from "../../components/content/table/TableItem";
 import { Example } from "../../components/content/example/Example";
+import { ContainerBlock } from "../../components/container-block/ContainerBlock";
 
 export const QueryParameters = ({ history, token }) => {
   return (
     <SectionWrapper>
       <Section id="query-parameters" history={history}>
         <Description>
-          <div className="padding-100">
+          <div>
             <TextUnit header="Query Parameters">
               <p>
                 Homebase utilizes query parameters for presenting the returned
@@ -24,12 +25,21 @@ export const QueryParameters = ({ history, token }) => {
                 <span className="code-badge">?</span> for the first parameter,
                 and <span className="code-badge">&</span> for subsequent
                 parameters. These are passed along with the URL to the endpoint,
-                which is illustrated in the examples below.
+                which is illustrated in the usage example to the right.
+              </p>
+              <p>
+                Query Parameters are always optional, and are never a
+                requirement in order to retrieve data from Homebase API.
               </p>
             </TextUnit>
           </div>
         </Description>
-        <Usage>{/* Usage */}</Usage>
+        <Usage>
+          <Example header="USAGE" token={token} copy>
+            curl
+            http://localhost:6001/api/buildings?first_query_parameter=value&second_query_parameter=value
+          </Example>
+        </Usage>
       </Section>
 
       <Section id="pagination" history={history}>
@@ -119,6 +129,12 @@ export const QueryParameters = ({ history, token }) => {
               <span className="code-badge">sort</span> is used as a query
               parameter.
             </p>
+            <p>
+              By default the collection will be arranged in <b>ascending </b>{" "}
+              order. In order to sort in <b>descending</b> order add a minus,
+              "-", before the attribute to base the sort on, see the usage
+              example for descending order to the right.
+            </p>
           </TextUnit>
           <Table
             cols={[
@@ -138,11 +154,7 @@ export const QueryParameters = ({ history, token }) => {
             values={[
               {
                 col1: (
-                  <TableItem
-                    description="Sets the key to sort after.
-                  By default the collection will be arranged in ascending order, in order to sort in descending order add a minus (U+002D HYPHEN-MINUS, “-“) before the sorting field.
-                  "
-                  >
+                  <TableItem description="Sets the attribute to base the sort on.">
                     sort
                   </TableItem>
                 ),
@@ -152,10 +164,9 @@ export const QueryParameters = ({ history, token }) => {
             ]}
           ></Table>
           <p>
-            The supported keys to sort after are listed within every documented
-            resource. If the server does not support sorting as specified in the
-            query parameter sort, it returns error{" "}
-            <span className="code-badge">400 Bad Request</span>.
+            In Homebase API, it is possible to sort on all attributes for a
+            given resource, for the endpoints that retrieve <b>several</b>{" "}
+            objects.
           </p>
           <p>
             <span className="code-badge">sort</span> can be applied for
@@ -164,8 +175,12 @@ export const QueryParameters = ({ history, token }) => {
           </p>
         </Description>
         <Usage>
-          <Example header="USAGE" token={token} copy>
+          <Example header="USAGE ASCENDING ORDER" token={token} copy>
             curl http://localhost:6001/api/buildings?sort=street_name
+          </Example>
+
+          <Example header="USAGE DESCENDING ORDER" token={token} copy>
+            curl http://localhost:6001/api/buildings?sort=-street_name
           </Example>
         </Usage>
       </Section>
