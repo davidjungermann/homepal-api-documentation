@@ -60,16 +60,23 @@ export const AboutTheApi = ({ history, token }) => {
             <p>
               The documentation starts of by describing general information
               about the API that is always applied, and is later organized by
-              resource type of the API. For each resource type, the
-              documentation lists:
+              resource type of the API. For each resource, the documentation
+              lists:
             </p>
             <ul>
               <li>the available endpoints,</li>
-              <li>one or more data representations,</li>
-              <li>JSON objects,</li>
-              <li>the supported methods (GET, POST, PUT, DELETE),</li>
-              <li>at least one usage example.</li>
+              <li>body and path schemas for available endpoints,</li>
+              <li>information on what an endpoint returns,</li>
+              <li>response and request body examples,</li>
+              <li>usage examples for available endpoints</li>
             </ul>
+            <p>
+              Conceptual information concerning a given resource, along with
+              descriptions of body and path schemas, and information on what a
+              given endpoint returns is always presented in the left column.
+              Endpoints, response and request body examples, as well as usage
+              examples are always presented in the right column.
+            </p>
             <p className="small">
               <FontAwesomeIcon icon={faExclamationTriangle} /> The API changes
               every now and then, and endpoints are deprecated. If you are using
