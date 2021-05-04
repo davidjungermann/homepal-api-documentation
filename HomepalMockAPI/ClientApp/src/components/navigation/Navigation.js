@@ -1,7 +1,7 @@
 import React from "react";
 import nextId from "react-id-generator";
 import { HeaderItem } from "./header/HeaderItem";
-import { NavigationItem } from "./navigation-unit/NavigationItem";
+import { NavigationItem } from "./item/NavigationItem";
 import { NavigationUnit } from "./navigation-unit/NavigationUnit";
 
 import "./Navigation.scss";
