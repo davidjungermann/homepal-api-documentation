@@ -5,7 +5,9 @@
   overflow-y: scroll;
   overflow-x: hidden;
   min-width: fit-content;
-  padding: 24px 72px 0px 24px;
+  width: 280px;
+  padding-left: 24px;
+  padding-top: 24px;
   border-right: 1px solid $gray-2;
 
   &::-webkit-scrollbar {
@@ -77,3 +79,4 @@ select {
     outline: none;
   }
 }
+

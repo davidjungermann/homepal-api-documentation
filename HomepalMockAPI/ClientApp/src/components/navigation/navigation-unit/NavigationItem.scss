@@ -16,17 +16,19 @@
   white-space: nowrap;
   width: 100%;
 
+  /*
   .active {
     color: $lime-dark;
     background: rgba($emerald, 0.2);
     text-decoration: none;
-    padding: 2px 120% 2px 0px;
+    padding: 2px 2px 2px 2px;
     border-radius: 5px;
   }
 
   .active:hover {
     color: $lime-dark;
   }
+  */
 }
 
 .navigation-item-container:hover {
@@ -51,4 +53,8 @@
 
 .faded {
   color: $gray-5;
+}
+
+span {
+  font-size: 10.5pt;
 }

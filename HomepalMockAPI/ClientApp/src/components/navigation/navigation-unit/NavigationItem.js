@@ -11,6 +11,7 @@ export const NavigationItem = ({ label, formatUrl }) => {
         activeClassName="active"
         className="list-item-label"
       >
+        
         <span>{label}</span>
       </Link>
     </div>
