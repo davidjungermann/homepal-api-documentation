@@ -19,13 +19,18 @@
   user-select: none;
   white-space: nowrap;
   width: 100%;
-
-  //border: 1px solid red;
 }
 
 .navigation-unit-list-open {
   span {
     margin-left: 12px;
+    font-size: 10pt!important;
+
+    &::before {
+      content: "–";
+      margin-right: 8px;
+      color: $gray-3;
+    }
   }
 }
 
@@ -64,5 +69,12 @@
 
   span {
     font-size: 10.5pt;
+  }
+}
+
+.navigation-unit-header {
+  .toggle-arrow {
+    float: right;
+    margin-right: 8px;
   }
 }

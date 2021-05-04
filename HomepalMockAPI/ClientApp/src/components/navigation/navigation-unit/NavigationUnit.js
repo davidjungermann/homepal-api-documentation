@@ -1,5 +1,6 @@
 import React, { Children, useState } from "react";
 import "./NavigationUnit.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const NavigationUnit = ({ children, history, formatUrl }) => {
   const [open, setOpen] = useState("navigation-unit-list-closed");
