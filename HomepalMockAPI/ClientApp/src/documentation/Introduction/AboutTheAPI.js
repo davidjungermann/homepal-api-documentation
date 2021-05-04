@@ -82,10 +82,10 @@ export const AboutTheApi = ({ history, token }) => {
         <Usage>
           <EndpointExample
             header="BASE URL"
-            baseUrl="https://localhost:6001/api"
+            baseUrl="https://localhost:6001/"
             copy
           >
-            https://localhost:6001/api
+            https://localhost:6001/
           </EndpointExample>
           <TextUnit header="Usage examples" headerSize="7">
             <p>
