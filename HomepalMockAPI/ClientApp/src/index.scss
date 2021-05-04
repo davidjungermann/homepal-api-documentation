@@ -50,6 +50,12 @@ $red: #ed9593;
 $primary-font: "Poppins", "Helvetica Neue", sans-serif;
 $code-font: "Source Code Pro", monospace;
 
+//Selection
+::selection {
+  color: $lime-dark;
+  background: rgba($emerald, 0.2);
+}
+
 .title-1 {
   font-size: 64pt;
   font-weight: 700;
