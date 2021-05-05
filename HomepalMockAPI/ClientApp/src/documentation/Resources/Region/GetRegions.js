@@ -49,19 +49,6 @@ export const GetRegions = ({ history, token }) => {
             },
           ]}
         ></Table>
-        <Returns>
-          <ReturnsItem icon="success">
-            On success, the HTTP status code in the response header is{" "}
-            <span className="code-badge">200 OK</span> and the requested
-            resources are displayed in the response body.
-          </ReturnsItem>
-
-          <ReturnsItem icon="error">
-            On error, the header status code is an{" "}
-            <a href="#errors">error code</a>, and the response body contains an
-            error object.
-          </ReturnsItem>
-        </Returns>
         <h3 className="schema-title title-7">Path Schema</h3>
         <Table
           cols={[
@@ -101,6 +88,19 @@ export const GetRegions = ({ history, token }) => {
             },
           ]}
         ></Table>
+        <Returns>
+          <ReturnsItem icon="success">
+            On success, the HTTP status code in the response header is{" "}
+            <span className="code-badge">200 OK</span> and the requested
+            resources are displayed in the response body.
+          </ReturnsItem>
+
+          <ReturnsItem icon="error">
+            On error, the header status code is an{" "}
+            <a href="#errors">error code</a>, and the response body contains an
+            error object.
+          </ReturnsItem>
+        </Returns>
       </Description>
       <Usage>
         <EndpointExample header="ENDPOINT" copy baseUrl="api/regions">
