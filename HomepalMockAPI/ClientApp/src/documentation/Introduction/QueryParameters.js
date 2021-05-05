@@ -6,7 +6,6 @@ import { Usage } from "../../components/usage/Usage";
 import { SectionWrapper } from "../../components/content/section-wrapper/SectionWrapper";
 import { Table } from "../../components/content/table/Table";
 import { TableItem } from "../../components/content/table/TableItem";
-import { Example } from "../../components/content/example/Example";
 import { NavHashLink as Link } from "react-router-hash-link";
 import { ContainerBlock } from "../../components/container-block/ContainerBlock";
 

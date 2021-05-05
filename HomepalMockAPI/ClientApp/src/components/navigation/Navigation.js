@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import nextId from "react-id-generator";
 import { HeaderItem } from "./header/HeaderItem";
 import { NavigationItem } from "./item/NavigationItem";
@@ -7,28 +7,46 @@ import { NavigationUnit } from "./navigation-unit/NavigationUnit";
 import "./Navigation.scss";
 
 export const Navigation = ({ formatUrl, history }) => {
-  function getOS() {
-    var userAgent = window.navigator.userAgent,
-      platform = window.navigator.platform,
-      macosPlatforms = ["Macintosh", "MacIntel", "MacPPC", "Mac68K"],
+  const [showSearchInformation, setShowSearchInformation] = useState(false);
+
+  const getOS = () => {
+    var platform = window.navigator.platform,
+      macosPlatforms = ["Macintosh", "MacIntel", "MacPPC", "Mac68K", "darwin"],
       windowsPlatforms = ["Win32", "Win64", "Windows", "WinCE"],
-      iosPlatforms = ["iPhone", "iPad", "iPod"],
       os = null;
 
     if (macosPlatforms.indexOf(platform) !== -1) {
-      os = "Mac OS";
-    } else if (iosPlatforms.indexOf(platform) !== -1) {
-      os = "iOS";
+      os = "Mac";
     } else if (windowsPlatforms.indexOf(platform) !== -1) {
       os = "Windows";
-    } else if (/Android/.test(userAgent)) {
-      os = "Android";
     } else if (!os && /Linux/.test(platform)) {
       os = "Linux";
     }
 
     return os;
-  }
+  };
+
+  const searchDescription = () => {
+    let os = getOS();
+
+    if (os === "Linux" || os === "Windows") {
+      return "The Homebase API docs is a single page. Use Ctrl + F to search in your browser!";
+    } else if (os === "Mac") {
+      return "The Homebase API docs is a single page. Use Cmd + F to search in your browser!";
+    } else {
+      return "The Homebase API docs is a single page. Use the search bar in your browser!";
+    }
+  };
+
+  const renderSearchInformation = () => {
+    const description = searchDescription();
+
+    return (
+      <React.Fragment>
+        {showSearchInformation && <span>{description}</span>}
+      </React.Fragment>
+    );
+  };
 
   return (
     <React.Fragment>
@@ -40,7 +58,6 @@ export const Navigation = ({ formatUrl, history }) => {
           <span id="docs-text" className="title-7">
             Docs
           </span>
-          <button onClick={() => alert(getOS())}>Search</button>
         </div>
 
         <select id="version" name="version">
@@ -50,6 +67,9 @@ export const Navigation = ({ formatUrl, history }) => {
         {/* If more than one navigation item is passed to NavigationUnit, the first item becomes the header, and subsequent items are placed in a list. */}
 
         <ul className="navigation-list">
+          <button onClick={() => setShowSearchInformation(true)}>Search</button>
+          <button onClick={() => setShowSearchInformation(false)}>Close</button>
+          {renderSearchInformation()}
           <div key={nextId()} className="navigation-list-header">
             <HeaderItem>Introduction</HeaderItem>
           </div>
