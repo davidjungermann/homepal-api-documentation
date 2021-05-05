@@ -90,16 +90,25 @@ select {
   display: flex;
   flex-direction: row;
 
-  width: 184px;
+  width: 220px;
+  box-sizing: border-box;
   background: $white;
   border-radius: 5px;
   border: 1px solid $gray-2;
-  padding: 4px 16px 4px 16px;
+  padding: 4px 8px 4px 16px;
+
+  animation: fadeIn 0.25s ease forwards; 
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 .close-popup {
   color: $gray-6;
   padding: 4px;
+  margin: 0px;
 }
 
 .description {
@@ -118,12 +127,10 @@ select {
   }
 
   &:hover {
-    background: $gray-2;
     color: $midnight-7;
   }
 
   &:active {
-    background: none;
     color: $midnight;
   }
 }
@@ -149,12 +156,11 @@ select {
   }
 
   &:hover {
-    background: $gray-2;
     color: $midnight-7;
+    border: 1px solid $gray-3;
   }
 
   &:active {
-    background: none;
     color: $midnight;
   }
 }
