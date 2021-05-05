@@ -86,6 +86,7 @@ export const AboutTheApi = ({ history, token }) => {
           </TextUnit>
         </Description>
         <Usage>
+        <div className="padding-50"/>
           <EndpointExample
             header="BASE URL"
             baseUrl="http://localhost:6001/"
@@ -93,7 +94,11 @@ export const AboutTheApi = ({ history, token }) => {
           >
             http://localhost:6001/
           </EndpointExample>
-          <TextUnit header="Usage examples" headerSize="7">
+          <div className="padding-50"/>
+          <TextUnit header="LOOKING FOR EXAMPLES?" headerSize="7">
+            <p>
+              This right column is used for demonstrating <b>endpoints</b>, <b>usage</b>, <b>response</b>- and <b>request body</b> examples throughout the documentation.
+            </p>
             <p>
               By default, the Homebase API Docs demonstrates usage examples with{" "}
               <a
