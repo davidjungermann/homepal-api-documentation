@@ -31,9 +31,8 @@ FROM mcr.microsoft.com/dotnet/aspnet:5.0-buster-slim
 
 # Expose port 6001 to your local machine so you can access the app.
 EXPOSE 6001
-EXPOSE 6002
-ENV ASPNETCORE_URLS https://*:6001
-ENV ASPNETCORE_URLS http://*:6002
+ENV ASPNETCORE_URLS http://*:6001
+
 
 # Copy the published app to this new runtime-only container.
 COPY --from=build /app/publish .

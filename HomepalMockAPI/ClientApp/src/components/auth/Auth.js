@@ -5,7 +5,7 @@ import { TokenContainer } from "../content/token-container/TokenContainer";
 
 export const Auth = ({ token, setToken, valid, setValid }) => {
   const fetchToken = async () => {
-    const response = await axios.get("http://localhost:6001/api/authtoken");
+    const response = await axios.get("/api/authtoken");
     setToken(response.data.value);
   };
 
