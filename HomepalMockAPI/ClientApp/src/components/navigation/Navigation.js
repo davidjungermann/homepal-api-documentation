@@ -68,6 +68,7 @@ export const Navigation = ({ formatUrl, history }) => {
 
         <ul className="navigation-list">
           <button onClick={() => setShowSearchInformation(true)}>Search</button>
+          <button onClick={() => setShowSearchInformation(false)}>Close</button>
           {renderSearchInformation()}
           <div key={nextId()} className="navigation-list-header">
             <HeaderItem>Introduction</HeaderItem>
