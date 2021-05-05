@@ -6,8 +6,6 @@ import { Section } from "../../components/section/Section";
 import { Usage } from "../../components/usage/Usage";
 import { SectionWrapper } from "../../components/content/section-wrapper/SectionWrapper";
 import { NavHashLink as Link } from "react-router-hash-link";
-import { Table } from "../../components/content/table/Table";
-import { TableItem } from "../../components/content/table/TableItem";
 import { BodyDescription } from "../../components/content/body-description/BodyDescription";
 
 export const ConceptualInformation = ({ history }) => {

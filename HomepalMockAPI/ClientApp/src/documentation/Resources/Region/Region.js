@@ -9,7 +9,6 @@ import { TableItem } from "../../../components/content/table/TableItem";
 import { EndpointList } from "../../../components/content/endpoint-list/EndpointList";
 import { Endpoint } from "../../../components/content/endpoint/Endpoint";
 import { BodyDescription } from "../../../components/content/body-description/BodyDescription";
-import { NavHashLink as Link } from "react-router-hash-link";
 import { CreateRegion } from "./CreateRegion";
 import { DeleteRegion } from "./DeleteRegion";
 import { GetRegions } from "./GetRegions";
