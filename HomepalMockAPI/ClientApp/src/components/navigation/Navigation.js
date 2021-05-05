@@ -3,6 +3,8 @@ import nextId from "react-id-generator";
 import { HeaderItem } from "./header/HeaderItem";
 import { NavigationItem } from "./item/NavigationItem";
 import { NavigationUnit } from "./navigation-unit/NavigationUnit";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes, faSearch } from "@fortawesome/free-solid-svg-icons";
 
 import "./Navigation.scss";
 
@@ -30,11 +32,11 @@ export const Navigation = ({ formatUrl, history }) => {
     let os = getOS();
 
     if (os === "Linux" || os === "Windows") {
-      return "The Homebase API docs is a single page. Use Ctrl + F to search in your browser!";
+      return <span>The Homebase API docs is a single page. Use <b>Ctrl + F</b> to search in your browser!</span>;
     } else if (os === "Mac") {
-      return "The Homebase API docs is a single page. Use Cmd + F to search in your browser!";
+      return <span>The Homebase API docs is a single page. Use <b>Cmd + F</b> to search in your browser!</span>;
     } else {
-      return "The Homebase API docs is a single page. Use the search bar in your browser!";
+      return <span>The Homebase API docs is a single page. Use the search bar in your browser!</span>;
     }
   };
 
@@ -42,9 +44,22 @@ export const Navigation = ({ formatUrl, history }) => {
     const description = searchDescription();
 
     return (
-      <React.Fragment>
-        {showSearchInformation && <span>{description}</span>}
-      </React.Fragment>
+      <div className="search-container">
+        {showSearchInformation && 
+          <div className="search-popup">
+            <p className="description small">
+              {description}
+            </p>
+            <div className="close-popup">
+              <button 
+              className="close-popup-button"
+              onClick={() => setShowSearchInformation(false)}>
+                <FontAwesomeIcon icon={faTimes} />
+              </button>
+            </div>
+          </div>
+        }
+      </div>
     );
   };
 
@@ -67,9 +82,13 @@ export const Navigation = ({ formatUrl, history }) => {
         {/* If more than one navigation item is passed to NavigationUnit, the first item becomes the header, and subsequent items are placed in a list. */}
 
         <ul className="navigation-list">
-          <button onClick={() => setShowSearchInformation(true)}>Search</button>
-          <button onClick={() => setShowSearchInformation(false)}>Close</button>
+
+          <button className="search-button" onClick={() => setShowSearchInformation(true)}>
+            <FontAwesomeIcon className="search-icon" icon={faSearch} />
+            Search
+          </button>
           {renderSearchInformation()}
+
           <div key={nextId()} className="navigation-list-header">
             <HeaderItem>Introduction</HeaderItem>
           </div>
