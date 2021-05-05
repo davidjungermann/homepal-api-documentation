@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import nextId from "react-id-generator";
 import { HeaderItem } from "./header/HeaderItem";
 import { NavigationItem } from "./item/NavigationItem";
@@ -7,6 +7,8 @@ import { NavigationUnit } from "./navigation-unit/NavigationUnit";
 import "./Navigation.scss";
 
 export const Navigation = ({ formatUrl, history }) => {
+  const [showSearchInformation, setShowSearchInformation] = useState(false);
+
   const getOS = () => {
     var platform = window.navigator.platform,
       macosPlatforms = ["Macintosh", "MacIntel", "MacPPC", "Mac68K", "darwin"],
@@ -36,6 +38,16 @@ export const Navigation = ({ formatUrl, history }) => {
     }
   };
 
+  const renderSearchInformation = () => {
+    const description = searchDescription();
+
+    return (
+      <React.Fragment>
+        {showSearchInformation && <span>{description}</span>}
+      </React.Fragment>
+    );
+  };
+
   return (
     <React.Fragment>
       <div className="navigation-container">
@@ -46,7 +58,6 @@ export const Navigation = ({ formatUrl, history }) => {
           <span id="docs-text" className="title-7">
             Docs
           </span>
-          <button onClick={() => alert(searchDescription())}>Search</button>
         </div>
 
         <select id="version" name="version">
@@ -56,6 +67,8 @@ export const Navigation = ({ formatUrl, history }) => {
         {/* If more than one navigation item is passed to NavigationUnit, the first item becomes the header, and subsequent items are placed in a list. */}
 
         <ul className="navigation-list">
+          <button onClick={() => setShowSearchInformation(true)}>Search</button>
+          {renderSearchInformation()}
           <div key={nextId()} className="navigation-list-header">
             <HeaderItem>Introduction</HeaderItem>
           </div>
