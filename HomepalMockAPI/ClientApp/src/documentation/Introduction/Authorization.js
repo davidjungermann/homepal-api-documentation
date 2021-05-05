@@ -31,8 +31,12 @@ export const Authorization = ({
               authentication will also fail.
             </p>
             <p>
-              You can generate keys in{" "}
-              <Link to="#generate-access-key">Access key</Link> in order to test
+              You can receive an access key by contacting our{" "}
+              <Link to="#">Support</Link>.
+            </p>
+            <p>
+              You can generate test mode keys in{" "}
+              <Link to="#test-mode-access-key">Test Mode Access Key</Link> in order to test
               the API from within the documentation using the examples, or using
               the same access key in your own environment.
             </p>
@@ -40,8 +44,8 @@ export const Authorization = ({
         </Description>
         <Usage>
           <ContainerBlock header="ACCESS KEY USAGE">
-            curl &lt;URL&gt;{"\n"}
-            -u &lt;YOUR&#95;API&#95;KEY&gt;:
+            curl --request &lt;REQUEST&gt; &lt;URL&gt;{"\n"}
+            -u <b>&lt;YOUR&#95;API&#95;KEY&gt;:</b>
           </ContainerBlock>
           <p className="small">
             The -u flag specifies the key, and the colon prevents cURL from
@@ -49,17 +53,17 @@ export const Authorization = ({
           </p>
         </Usage>
       </Section>
-      <Section id="generate-access-key" history={history}>
+      <Section id="test-mode-access-key" history={history}>
         <Description>
           <div className="padding-100">
-            <TextUnit header="Generate Access Key" isSubsection>
+            <TextUnit header="Test Mode Access Key" isSubsection>
               <p>
-                Generate an access key and include it in your requests in order
-                to be authorized.
+                Generate a test mode access key and include it in your requests in order
+                to be authorized against the test environment.
               </p>
               <p>
-                Once generated, your access key is inserted and included in all
-                the usage examples in the reference documentation, so you can
+                Once generated, your key is inserted and included in all
+                usage examples in the reference documentation in order for you to
                 test any example right away.
               </p>
             </TextUnit>

@@ -86,7 +86,7 @@ export const Navigation = ({ formatUrl, history }) => {
                 formatUrl={formatUrl}
               ></NavigationItem>
               <NavigationItem
-                label="Generate Access Key"
+                label="Test Mode Access Key"
                 formatUrl={formatUrl}
               ></NavigationItem>
             </NavigationUnit>

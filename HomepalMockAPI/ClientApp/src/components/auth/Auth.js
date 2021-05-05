@@ -18,15 +18,24 @@ export const Auth = ({ token, setToken, valid, setValid }) => {
 
   return (
     <div className="authorization-container">
-      {!token ? (
-        <button className="primary-button" onClick={fetchToken}>
-          Generate access key
-        </button>
-      ) : (
-        <TokenContainer header="YOUR API KEY" copy>
-          {token}
-        </TokenContainer>
-      )}
+        <div className="authorization-button">
+          {!token ? (
+            <TokenContainer header="YOUR API KEY" inactiveContainerBlock>
+              <span>{"//"} There is no generated key yet.</span>
+            </TokenContainer>
+            ) : (
+            <TokenContainer header="YOUR API KEY" copy>
+              {token}
+            </TokenContainer>
+          )}
+          <button className="primary-button" onClick={fetchToken}>
+            Generate access key
+          </button>
+          <p className="small">
+            Pressing the button will generate a test mode key and auto-insert 
+            the key in the usage examples of the documentation.
+          </p>
+        </div>
     </div>
   );
 };
