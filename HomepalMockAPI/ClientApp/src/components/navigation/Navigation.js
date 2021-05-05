@@ -32,12 +32,42 @@ export const Navigation = ({ formatUrl, history }) => {
     let os = getOS();
 
     if (os === "Linux" || os === "Windows") {
-      return <span>The Homebase API docs is a single page. Use <b>Ctrl + F</b> to search in your browser!</span>;
+      return (
+        <span>
+          The Homebase API docs is a single page. Use <b>Ctrl + F</b> to search
+          in your browser!
+        </span>
+      );
     } else if (os === "Mac") {
-      return <span>The Homebase API docs is a single page. Use <b>Cmd + F</b> to search in your browser!</span>;
+      return (
+        <span>
+          The Homebase API docs is a single page. Use <b>Cmd + F</b> to search
+          in your browser!
+        </span>
+      );
     } else {
-      return <span>The Homebase API docs is a single page. Use the search bar in your browser!</span>;
+      return (
+        <span>
+          The Homebase API docs is a single page. Use the search bar in your
+          browser!
+        </span>
+      );
     }
+  };
+
+  const handleOpen = () => {
+    setShowSearchInformation(true);
+    handleTimerClose(4000);
+  };
+
+  const handleTimerClose = (timer) => {
+    setTimeout(() => {
+      setShowSearchInformation(false);
+    }, timer);
+  };
+
+  const handleClose = () => {
+    setShowSearchInformation(false);
   };
 
   const renderSearchInformation = () => {
@@ -45,20 +75,19 @@ export const Navigation = ({ formatUrl, history }) => {
 
     return (
       <div className="search-container">
-        {showSearchInformation && 
+        {showSearchInformation && (
           <div className="search-popup">
-            <p className="description small">
-              {description}
-            </p>
+            <p className="description small">{description}</p>
             <div className="close-popup">
-              <button 
-              className="close-popup-button"
-              onClick={() => setShowSearchInformation(false)}>
+              <button
+                className="close-popup-button"
+                onClick={() => handleClose()}
+              >
                 <FontAwesomeIcon icon={faTimes} />
               </button>
             </div>
           </div>
-        }
+        )}
       </div>
     );
   };
@@ -82,8 +111,7 @@ export const Navigation = ({ formatUrl, history }) => {
         {/* If more than one navigation item is passed to NavigationUnit, the first item becomes the header, and subsequent items are placed in a list. */}
 
         <ul className="navigation-list">
-
-          <button className="search-button" onClick={() => setShowSearchInformation(true)}>
+          <button className="search-button" onClick={() => handleOpen()}>
             <FontAwesomeIcon className="search-icon" icon={faSearch} />
             Search
           </button>
