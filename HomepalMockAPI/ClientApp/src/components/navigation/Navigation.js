@@ -7,6 +7,29 @@ import { NavigationUnit } from "./navigation-unit/NavigationUnit";
 import "./Navigation.scss";
 
 export const Navigation = ({ formatUrl, history }) => {
+  function getOS() {
+    var userAgent = window.navigator.userAgent,
+      platform = window.navigator.platform,
+      macosPlatforms = ["Macintosh", "MacIntel", "MacPPC", "Mac68K"],
+      windowsPlatforms = ["Win32", "Win64", "Windows", "WinCE"],
+      iosPlatforms = ["iPhone", "iPad", "iPod"],
+      os = null;
+
+    if (macosPlatforms.indexOf(platform) !== -1) {
+      os = "Mac OS";
+    } else if (iosPlatforms.indexOf(platform) !== -1) {
+      os = "iOS";
+    } else if (windowsPlatforms.indexOf(platform) !== -1) {
+      os = "Windows";
+    } else if (/Android/.test(userAgent)) {
+      os = "Android";
+    } else if (!os && /Linux/.test(platform)) {
+      os = "Linux";
+    }
+
+    return os;
+  }
+
   return (
     <React.Fragment>
       <div className="navigation-container">
@@ -17,6 +40,7 @@ export const Navigation = ({ formatUrl, history }) => {
           <span id="docs-text" className="title-7">
             Docs
           </span>
+          <button onClick={() => alert(getOS())}>Search</button>
         </div>
 
         <select id="version" name="version">
