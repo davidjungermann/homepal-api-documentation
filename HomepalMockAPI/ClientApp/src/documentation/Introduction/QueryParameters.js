@@ -8,6 +8,7 @@ import { Table } from "../../components/content/table/Table";
 import { TableItem } from "../../components/content/table/TableItem";
 import { Example } from "../../components/content/example/Example";
 import { NavHashLink as Link } from "react-router-hash-link";
+import { ContainerBlock } from "../../components/container-block/ContainerBlock";
 
 export const QueryParameters = ({ history, token }) => {
   return (
@@ -24,30 +25,30 @@ export const QueryParameters = ({ history, token }) => {
                 Query parameters are passed with{" "}
                 <span className="code-badge">?</span> for the first parameter,
                 and <span className="code-badge">&</span> for additional
-                parameters. These are passed together with the URL to the endpoint,
-                as illustrated below:
+                parameters. These are passed together with the URL to the
+                endpoint, as illustrated below:
               </p>
               <p>
-              <div className="code-badge">
-                ?first_query_parameter=value&second_query_parameter=value
-              </div>
+                <div className="code-badge">
+                  ?first_query_parameter=value&second_query_parameter=value
+                </div>
               </p>
               <p>
                 Query parameters are <b>always optional</b>, and are never a
                 requirement in order to retrieve data from Homebase API.
-              </p> 
+              </p>
               <p>
                 Read more about available query parameters below in{" "}
-                <Link to="#pagination">Pagination</Link> and <Link to="#pagination">Sorting</Link>.
+                <Link to="#pagination">Pagination</Link> and{" "}
+                <Link to="#pagination">Sorting</Link>.
               </p>
             </TextUnit>
           </div>
         </Description>
         <Usage>
-          <Example header="USAGE" token={token} copy>
-            curl
+          <ContainerBlock header="QUERY PARAMETER EXAMPLE" copy>
             http://localhost:6001/api/buildings?first_query_parameter=value&second_query_parameter=value
-          </Example>
+          </ContainerBlock>
         </Usage>
       </Section>
 
@@ -62,20 +63,18 @@ export const QueryParameters = ({ history, token }) => {
               parameters.
             </p>
             <p>
-              <span className="code-badge">offset</span> sets how many objects 
-              should be skipped before collecting
-              the result set. The default value for{" "}
-              <span className="code-badge">offset</span> is <b>0</b>. This
-              default value is applied if this query parameter is not included in
-              the request.
+              <span className="code-badge">offset</span> sets how many objects
+              should be skipped before collecting the result set. The default
+              value for <span className="code-badge">offset</span> is <b>0</b>.
+              This default value is applied if this query parameter is not
+              included in the request.
             </p>
             <p>
-              <span className="code-badge">limit</span> sets the maximum number 
-              of objects that are returned in the
-              result set. The default value for{" "}
-              <span className="code-badge">limit</span> is <b>10</b>. This
-              default value is applied if this query parameter is not included in
-              the request.
+              <span className="code-badge">limit</span> sets the maximum number
+              of objects that are returned in the result set. The default value
+              for <span className="code-badge">limit</span> is <b>10</b>. This
+              default value is applied if this query parameter is not included
+              in the request.
             </p>
           </TextUnit>
           <Table
@@ -124,7 +123,8 @@ export const QueryParameters = ({ history, token }) => {
             <span className="code-badge">offset</span> and{" "}
             <span className="code-badge">limit</span> can be applied for
             endpoints that return <b>several</b> objects. They are listed as
-            parameters in the <b>path schema</b> of a given resource when applicable.
+            parameters in the <b>path schema</b> of a given resource when
+            applicable.
           </p>
         </Description>
         <Usage>
@@ -145,11 +145,10 @@ export const QueryParameters = ({ history, token }) => {
             </p>
             <p>
               By default the collection will be arranged in <b>ascending </b>{" "}
-              order. In order to sort in <b>descending</b> order add a <span className="code-badge">-</span>
-              {" "}before the attribute to base the sort on, as follows:{" "}
-              <span className="code-badge">
-                ?sort=-value
-              </span>
+              order. In order to sort in <b>descending</b> order add a{" "}
+              <span className="code-badge">-</span> before the attribute to base
+              the sort on, as follows:{" "}
+              <span className="code-badge">?sort=-value</span>
             </p>
           </TextUnit>
           <Table
@@ -183,8 +182,9 @@ export const QueryParameters = ({ history, token }) => {
             In Homebase API, it is possible to sort on all attributes present in
             an object for a given resource.{" "}
             <span className="code-badge">sort</span> can be applied for
-            endpoints that return <b>several</b> objects. They are listed as parameters 
-            in the <b>path schema</b> of a given resource when applicable.
+            endpoints that return <b>several</b> objects. They are listed as
+            parameters in the <b>path schema</b> of a given resource when
+            applicable.
           </p>
         </Description>
         <Usage>

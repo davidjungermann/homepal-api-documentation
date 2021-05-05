@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./HeaderItem.scss";
 
 export const HeaderItem = ({ children }) => {

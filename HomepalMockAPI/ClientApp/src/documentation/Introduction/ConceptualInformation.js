@@ -6,8 +6,6 @@ import { Section } from "../../components/section/Section";
 import { Usage } from "../../components/usage/Usage";
 import { SectionWrapper } from "../../components/content/section-wrapper/SectionWrapper";
 import { NavHashLink as Link } from "react-router-hash-link";
-import { Table } from "../../components/content/table/Table";
-import { TableItem } from "../../components/content/table/TableItem";
 import { BodyDescription } from "../../components/content/body-description/BodyDescription";
 
 export const ConceptualInformation = ({ history }) => {
@@ -69,7 +67,10 @@ export const ConceptualInformation = ({ history }) => {
             </p>
             <p>
               All objects have a unique identifier, which <b>cannot</b> be
-              modified.
+              modified. This identifier is named{" "}
+              <span className="code-badge">id</span> for every resource, and is{" "}
+              <b>generated automatically</b> by the API when an object is
+              created.
             </p>
             <p>
               The database is built on a <b>foreign key</b> structure. This
