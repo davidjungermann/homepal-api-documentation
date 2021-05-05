@@ -18,15 +18,15 @@ export const QueryParameters = ({ history, token }) => {
           <div>
             <TextUnit header="Query Parameters">
               <p>
-                Homebase utilizes query parameters for presenting the returned
-                data in a specific way.
+                Homebase utilizes query parameters for filtering the returned data and
+                presenting it in a specific way. For example by limiting the amount of 
+                returned objects, or sorting it in a certain order.
               </p>
               <p>
                 Query parameters are passed with{" "}
                 <span className="code-badge">?</span> for the first parameter,
                 and <span className="code-badge">&</span> for additional
-                parameters. These are passed together with the URL to the
-                endpoint, as illustrated below:
+                parameters, as follows:
               </p>
               <p>
                 <div className="code-badge">
@@ -34,13 +34,17 @@ export const QueryParameters = ({ history, token }) => {
                 </div>
               </p>
               <p>
+                The query parameters are passed <b>together with the URL</b> of the
+                desired endpoint, as illustrated in the right column example.
+              </p>
+              <p>
                 Query parameters are <b>always optional</b>, and are never a
                 requirement in order to retrieve data from Homebase API.
               </p>
               <p>
-                Read more about available query parameters below in{" "}
+                Homebase API uses query parameters for{" "}
                 <Link to="#pagination">Pagination</Link> and{" "}
-                <Link to="#pagination">Sorting</Link>.
+                <Link to="#pagination">Sorting</Link> of returned data.
               </p>
             </TextUnit>
           </div>
@@ -108,7 +112,7 @@ export const QueryParameters = ({ history, token }) => {
               {
                 col1: (
                   <TableItem
-                    description="Sets the numbers of objects to return in the result set.
+                    description="Sets the maximum number of objects that are returned in the result set.
                   Default: 10"
                   >
                     limit
@@ -119,7 +123,7 @@ export const QueryParameters = ({ history, token }) => {
               },
             ]}
           ></Table>
-          <p>
+          <p className="small">
             <span className="code-badge">offset</span> and{" "}
             <span className="code-badge">limit</span> can be applied for
             endpoints that return <b>several</b> objects. They are listed as
@@ -128,9 +132,9 @@ export const QueryParameters = ({ history, token }) => {
           </p>
         </Description>
         <Usage>
-          <Example header="USAGE" token={token} copy>
-            curl http://localhost:6001/api/buildings?offset=1&limit=100
-          </Example>
+          <ContainerBlock header="QUERY PARAMETER EXAMPLE" copy>
+            http://localhost:6001/api/buildings?offset=1&limit=100
+          </ContainerBlock>
         </Usage>
       </Section>
 
@@ -148,7 +152,7 @@ export const QueryParameters = ({ history, token }) => {
               order. In order to sort in <b>descending</b> order add a{" "}
               <span className="code-badge">-</span> before the attribute to base
               the sort on, as follows:{" "}
-              <span className="code-badge">?sort=-value</span>
+              <span className="code-badge">sort=-value</span>
             </p>
           </TextUnit>
           <Table
@@ -178,8 +182,8 @@ export const QueryParameters = ({ history, token }) => {
               },
             ]}
           ></Table>
-          <p>
-            In Homebase API, it is possible to sort on all attributes present in
+          <p className="small">
+            It is possible to sort on all attributes present in
             an object for a given resource.{" "}
             <span className="code-badge">sort</span> can be applied for
             endpoints that return <b>several</b> objects. They are listed as
@@ -188,13 +192,12 @@ export const QueryParameters = ({ history, token }) => {
           </p>
         </Description>
         <Usage>
-          <Example header="USAGE ASCENDING ORDER" token={token} copy>
-            curl http://localhost:6001/api/buildings?sort=street_name
-          </Example>
-
-          <Example header="USAGE DESCENDING ORDER" token={token} copy>
-            curl http://localhost:6001/api/buildings?sort=-street_name
-          </Example>
+          <ContainerBlock header="QUERY PARAMETER EXAMPLE (ASC)" copy>
+            http://localhost:6001/api/buildings?sort=street_name
+          </ContainerBlock>
+          <ContainerBlock header="QUERY PARAMETER EXAMPLE (DESC)" copy>
+            http://localhost:6001/api/buildings?sort=-street_name
+          </ContainerBlock>
         </Usage>
       </Section>
     </SectionWrapper>
