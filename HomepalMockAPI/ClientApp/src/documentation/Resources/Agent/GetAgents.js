@@ -108,8 +108,7 @@ export const GetAgents = ({ history, token }) => {
           <Endpoint request="GET" baseUrl="api/agents"></Endpoint>
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>
-          curl --request GET
-          http://localhost:6001/api/agents
+          curl --request GET http://localhost:6001/api/agents
         </Example>
 
         <ContainerBlock header="REQUEST BODY EXAMPLE" inactiveContainerBlock>
@@ -120,9 +119,18 @@ export const GetAgents = ({ history, token }) => {
           header={"RESPONSE BODY EXAMPLE"}
           copy
           body={[
-            { id: 6, name: "Fia Andersson" },
-            { id: 8, name: "Kent Larsson" },
-            { id: 3, name: "Kingens bostäder" },
+            {
+              id: 1,
+              name: "Mitt Malmö",
+            },
+            {
+              id: 2,
+              name: "Norrlandshus",
+            },
+            {
+              id: 3,
+              name: "Kingens bostäder",
+            },
           ]}
         ></BodyDescription>
       </Usage>

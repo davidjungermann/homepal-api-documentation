@@ -108,8 +108,7 @@ export const GetBuildings = ({ history, token }) => {
           <Endpoint request="GET" baseUrl="api/buildings"></Endpoint>
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>
-          curl --request GET
-          http://localhost:6001/api/buildings
+          curl --request GET http://localhost:6001/api/buildings
         </Example>
 
         <ContainerBlock header="REQUEST BODY EXAMPLE" inactiveContainerBlock>
@@ -121,14 +120,6 @@ export const GetBuildings = ({ history, token }) => {
           copy
           body={[
             {
-              id: 2,
-              class_descriptor: "ApartmentBuilding",
-              street_name: "Umeåvägen",
-              street_number: "18",
-              postal_code: "333 44",
-              real_estate_id: 2,
-            },
-            {
               id: 1,
               class_descriptor: "ApartmentBuilding",
               street_name: "Skånegatan",
@@ -137,12 +128,20 @@ export const GetBuildings = ({ history, token }) => {
               real_estate_id: 1,
             },
             {
-              id: 4,
-              class_descriptor: "EnvironmentalBuilding",
-              street_name: "Hockeygatan",
-              street_number: "76",
-              postal_code: "141 21",
-              real_estate_id: 4,
+              id: 2,
+              class_descriptor: "ApartmentBuilding",
+              street_name: "Umeåvägen",
+              street_number: "18",
+              postal_code: "333 44",
+              real_estate_id: 2,
+            },
+            {
+              id: 3,
+              class_descriptor: "LaundryBuilding",
+              street_name: "Drottninggatan",
+              street_number: "12",
+              postal_code: "453 11",
+              real_estate_id: 3,
             },
           ]}
         ></BodyDescription>

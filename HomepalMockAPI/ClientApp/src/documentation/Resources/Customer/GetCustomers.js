@@ -107,8 +107,7 @@ export const GetCustomers = ({ history, token }) => {
           <Endpoint request="GET" baseUrl="api/customers"></Endpoint>
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>
-          curl --request GET
-          http://localhost:6001/api/customers
+          curl --request GET http://localhost:6001/api/customers
         </Example>
 
         <ContainerBlock header="REQUEST BODY EXAMPLE" inactiveContainerBlock>
@@ -120,13 +119,13 @@ export const GetCustomers = ({ history, token }) => {
           copy
           body={[
             {
+              id: 5,
+            },
+            {
               id: 6,
             },
             {
               id: 7,
-            },
-            {
-              id: 8,
             },
           ]}
         ></BodyDescription>

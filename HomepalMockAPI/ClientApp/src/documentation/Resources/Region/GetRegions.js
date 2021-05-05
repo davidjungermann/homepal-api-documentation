@@ -119,13 +119,13 @@ export const GetRegions = ({ history, token }) => {
           copy
           body={[
             {
-              name: "Halland",
-            },
-            {
               name: "Skåne",
             },
             {
-              name: "Småland",
+              name: "Norrland",
+            },
+            {
+              name: "Södermanland",
             },
           ]}
         ></BodyDescription>

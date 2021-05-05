@@ -107,8 +107,7 @@ export const GetRealEstates = ({ history, token }) => {
           <Endpoint request="GET" baseUrl="api/realestates"></Endpoint>
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>
-          curl --request GET
-          http://localhost:6001/api/realestates
+          curl --request GET http://localhost:6001/api/realestates
         </Example>
 
         <ContainerBlock header="REQUEST BODY EXAMPLE" inactiveContainerBlock>
@@ -120,6 +119,12 @@ export const GetRealEstates = ({ history, token }) => {
           copy
           body={[
             {
+              id: 1,
+              name: "Alfa",
+              region_name: "Skåne",
+              owner_id: 1,
+            },
+            {
               id: 2,
               name: "Beta",
               region_name: "Norrland",
@@ -130,12 +135,6 @@ export const GetRealEstates = ({ history, token }) => {
               name: "Gamma",
               region_name: "Södermanland",
               owner_id: 3,
-            },
-            {
-              id: 4,
-              name: "Theta",
-              region_name: "Dalarna",
-              owner_id: 4,
             },
           ]}
         ></BodyDescription>

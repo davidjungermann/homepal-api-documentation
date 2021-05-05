@@ -107,8 +107,7 @@ export const GetLeasables = ({ history, token }) => {
           <Endpoint request="GET" baseUrl="api/leasables"></Endpoint>
         </EndpointExample>
         <Example header="USAGE EXAMPLE" token={token} copy>
-          curl --request GET
-          http://localhost:6001/api/leasables
+          curl --request GET http://localhost:6001/api/leasables
         </Example>
 
         <ContainerBlock header="REQUEST BODY EXAMPLE" inactiveContainerBlock>
@@ -120,15 +119,14 @@ export const GetLeasables = ({ history, token }) => {
           copy
           body={[
             {
-              id: 3,
-              class_descriptor: "StoragePremise",
-              price: 1500,
-              description:
-                "Storage unit in connection with Laundry in Stockholm",
-              size: 10,
-              customer_id: 7,
-              owner_id: 3,
-              building_id: 3,
+              id: 1,
+              class_descriptor: "ResidentialPremise",
+              price: 3483,
+              description: "Apartment in central Malmö",
+              size: 73,
+              customer_id: 5,
+              owner_id: 1,
+              building_id: 1,
             },
             {
               id: 2,
@@ -141,14 +139,15 @@ export const GetLeasables = ({ history, token }) => {
               building_id: 2,
             },
             {
-              id: 1,
-              class_descriptor: "ResidentialPremise",
-              price: 3483,
-              description: "Apartment in central Malmö",
-              size: 73,
-              customer_id: 5,
-              owner_id: 1,
-              building_id: 1,
+              id: 3,
+              class_descriptor: "StoragePremise",
+              price: 1500,
+              description:
+                "Storage unit in connection with Laundry in Stockholm",
+              size: 10,
+              customer_id: 7,
+              owner_id: 3,
+              building_id: 3,
             },
           ]}
         ></BodyDescription>
