@@ -63,11 +63,12 @@ export const AboutTheApi = ({ history, token }) => {
               lists:
             </p>
             <ul>
+              <li>the object,</li>
               <li>the available endpoints,</li>
               <li>body and path schemas for available endpoints,</li>
               <li>information on what an endpoint returns,</li>
               <li>response and request body examples,</li>
-              <li>usage examples for available endpoints</li>
+              <li>usage examples for available endpoints.</li>
             </ul>
             <p>
               Conceptual information concerning a given resource, along with
